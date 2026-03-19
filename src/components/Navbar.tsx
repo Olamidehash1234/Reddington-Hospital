@@ -5,7 +5,7 @@ import gsap from 'gsap';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled,] = useState(false);
   const mobileMenuRef = useRef(null);
 
   const toggleMenu = () => {
