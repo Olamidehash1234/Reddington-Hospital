@@ -20,7 +20,7 @@ export default function HeroSection() {
             <img src="/icon/illustrations/tp-lft.svg" alt="Decorative Circle" className="absolute top-[50px] left-[0px] -z-10"></img>
             <img src="/icon/illustrations/bt-lft.svg" alt="Decorative Circle" className="absolute bottom-[60px] left-[0px] -z-10"></img>
 
-            <div className="px-[16px] py-[40px] lg:py-[47px] lg:px-[80px]  mx-auto">
+            <div className="px-[16px] py-[40px] lg:pt-[47px] lg:pb-0 lg:px-[80px]  mx-auto">
                 {/* Main Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2  lg:gap-12 items-center mb-12">
                     {/* Left Side - Text Content */}
