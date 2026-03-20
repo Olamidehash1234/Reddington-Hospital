@@ -1,5 +1,5 @@
 import HeroSection from './hero';
-// import WhyChooseUs from './whychooseus';
+import Clients from './clients';
 // import AboutPage from './about';
 // import ServicesPage from './services';
 // import TestimonialPage from './testimonial';
@@ -11,7 +11,7 @@ const Homepage = () => {
   return (
     <div>
         <HeroSection />
-        {/* <WhyChooseUs /> */}
+        <Clients />
         {/* <AboutPage /> */}
         {/* <ServicesPage /> */}
         {/* <TestimonialPage /> */}
