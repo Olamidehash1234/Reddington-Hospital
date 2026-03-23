@@ -59,7 +59,7 @@ export default function HeroSection() {
                         <div className="grid grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-[30px]">
                             {stats.map((stat, index) => (
                                 <div key={index} className="flex flex-col items-center text-center">
-                                    <p className="text-[18px] lg:text-3xl font-medium text-white mb-1 lg:mb-2">
+                                    <p className="text-[18px] lg:text-[40px] font-medium text-white mb-1 lg:mb-2">
                                         {stat.value}
                                     </p>
                                     <p className="text-[12px] text-white opacity-90">
