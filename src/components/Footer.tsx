@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = () => {
   const imgSvg = 'https://www.figma.com/api/mcp/asset/89ac3c38-b4a1-40fe-b990-a42e225b6ff8';
   const imgGroup = 'https://www.figma.com/api/mcp/asset/04eb9db4-ef2a-4bae-92a6-584a758317e8';
