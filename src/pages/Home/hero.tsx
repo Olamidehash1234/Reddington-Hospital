@@ -8,7 +8,7 @@ export default function HeroSection() {
     ];
 
     return (
-        <section className="relative lg:pt-[120px] pt-[70px] pb-8 lg:pb-0 overflow-hidden">
+        <section className="relative lg:pt-[120px] pt-[70px] overflow-hidden">
             {/* Decorative circles - positioned absolutely */}
             <img src="/icon/illustrations/tp-lft.svg" alt="Decorative Circle" className="absolute top-[50px] left-[0px] -z-10"></img>
             <img src="/icon/illustrations/tp-lft2.svg" alt="Decorative Circle" className="absolute top-[-20px] left-[340px] -z-10"></img>
@@ -20,12 +20,12 @@ export default function HeroSection() {
             <img src="/icon/illustrations/tp-lft.svg" alt="Decorative Circle" className="absolute top-[50px] left-[0px] -z-10"></img>
             <img src="/icon/illustrations/bt-lft.svg" alt="Decorative Circle" className="absolute bottom-[60px] left-[0px] -z-10"></img>
 
-            <div className="px-[16px] py-[40px] lg:pt-[47px] lg:pb-0 lg:px-[80px]  mx-auto">
+            <div className="px-[16px] pt-[40px] lg:pt-[47px] lg:pb-0 lg:px-[80px]  mx-auto">
                 {/* Main Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-2  lg:gap-12 items-center mb-12">
                     {/* Left Side - Text Content */}
                     <div className="flex flex-col justify-center">
-                        <h1 className="text-[26px] lg:text-5xl font-normal text-[#000000] mb-6 leading-tight">
+                        <h1 className="text-[26px] lg:text-5xl font-normal text-[#000000] mb-6 leading-tight" style={{ fontFamily: 'TexGyreAdventor' }}>
                             Welcome To Reddington<br />
                             <span>Multispecialist Hospital</span>
                         </h1>
