@@ -1,9 +1,8 @@
 export default function BlogSection() {
   // Assets taken from the Figma node 546:5865
   const heroImg =
-    'https://www.figma.com/api/mcp/asset/6db81169-06c0-44de-b26f-3980ee7194c9';
-  const arrowDownIcon = 'https://www.figma.com/api/mcp/asset/a39edeb5-6277-4d45-b239-9ef9be998e99';
-  const headerUnderline = 'https://www.figma.com/api/mcp/asset/ee4978e9-b91d-4e3d-86e4-2a7ff78c50d7';
+    'image/home/blog/heart.png';
+  // const headerUnderline = 'https://www.figma.com/api/mcp/asset/ee4978e9-b91d-4e3d-86e4-2a7ff78c50d7';
 
   const featured = {
     title: 'WHAT DO YOU KNOW ABOUT YOUR HEART',
@@ -29,44 +28,36 @@ export default function BlogSection() {
   ];
 
   return (
-    <section className="relative bg-white overflow-hidden py-[60px] lg:py-[90px]">
+    <section className="relative bg-white overflow-hidden py-[60px] lg:py-[80px]">
+      <div className="flex items-center gap-3 mb-4 lg:mb-[0px]">
+        <div className="h-0.5 w-[20px] lg:w-[70px] bg-[#E40714]"></div>
+        <span className="text-[#E40714] font-medium text-sm lg:text-[15px]">
+          Testimonials
+        </span>
+      </div>
       <div className="relative mx-auto px-[16px] lg:px-[80px]">
-        {/* Header */}
-        <div className="flex flex-col gap-[18px] lg:flex-row lg:items-start lg:justify-between">
-          <div className="flex flex-col">
-            <div className="flex items-center gap-3">
-              <div className="h-[2px] w-[30px] lg:w-[50px] bg-[#E40714]" />
-              <span className="text-[#E40714] font-medium text-[14px] lg:text-[16px]">
-                Blog &amp; News
-              </span>
+        <div className="flex flex-row justify-between items-end">
+          {/* Header */}
+          <h2
+            className="mt-[0px] text-black font-['TexGyreAdventor'] text-[32px] lg:text-[36px] leading-tight"
+            style={{ fontFamily: 'TexGyreAdventor' }}
+          >
+            Latest News From Us
+          </h2>
+          <div className="flex flex-col gap-[18px] lg:flex-row lg:items-start lg:justify-between">
+            <div className="flex items-center justify-start lg:justify-end">
+              <button className="bg-[#E40714] text-white px-[30px] py-[14px] rounded-[20px] font-semibold text-[14px] whitespace-nowrap">
+                Read More News
+              </button>
             </div>
-            <img
-              src={headerUnderline}
-              alt=""
-              aria-hidden="true"
-              className="mt-[10px] w-[70px] h-auto"
-            />
-          </div>
-
-          <div className="flex items-center justify-start lg:justify-end">
-            <button className="bg-[#E40714] text-white px-[30px] py-[14px] rounded-[20px] font-semibold text-[14px] whitespace-nowrap">
-              Read More News
-            </button>
           </div>
         </div>
 
-        <h2
-          className="mt-[14px] text-black font-['TexGyreAdventor'] text-[32px] lg:text-[36px] leading-tight"
-          style={{ fontFamily: 'TexGyreAdventor' }}
-        >
-          Latest News From Us
-        </h2>
-
         {/* Cards */}
-        <div className="mt-[36px] lg:mt-[46px] flex flex-col lg:flex-row lg:items-stretch lg:gap-[40px] gap-[28px]">
+        <div className="mt-[36px] lg:mt-[46px] flex flex-col lg:grid lg:grid-cols-2 lg:gap-[20px] gap-[20px]">
           {/* Featured card */}
-          <article className="relative lg:w-[606px] w-full rounded-[12px] overflow-hidden shadow-[0px_4px_4px_0px_rgba(247,133,132,0.05)] flex-none">
-            <div className="aspect-[606/632] w-full">
+          <article className="relative w-full rounded-[12px] overflow-hidden shadow-[0px_4px_4px_0px_rgba(247,133,132,0.05)] flex-none">
+            <div className="lg:h-[632px] w-full">
               <img
                 src={heroImg}
                 alt=""
@@ -79,19 +70,18 @@ export default function BlogSection() {
             <div
               className="absolute left-0 right-0 bottom-0 w-full rounded-b-[12px]"
               style={{
-                backgroundImage:
-                  'linear-gradient(180deg, rgba(228, 7, 20, 0.10) 0%, rgba(228, 7, 20, 0.92) 70%, rgb(228, 7, 20) 100%)',
+                backgroundImage: 'linear-gradient(197deg, rgba(228, 7, 20, 0.10) -141.18%, #E40714 88.2%)', backdropFilter: "blur(2px)",
               }}
             >
               <div className="p-[18px] flex items-end justify-between gap-[16px]">
                 <div className="flex flex-col gap-[10px]">
-                  <h3 className="text-white font-semibold text-[18px] leading-[22px]">
+                  <h3 className="text-white font-semibold text-[18px] leading-[30px]">
                     {featured.title}
                   </h3>
                   <p className="text-white font-medium text-[14px] leading-[19px]">
                     {featured.date}
                   </p>
-                  <p className="text-white/90 font-medium text-[14px] leading-[19px] text-ellipsis overflow-hidden">
+                  <p className="text-white/90 font-medium text-[14px] max-w-[483px] leading-[19px] overflow-hidden">
                     {featured.description}
                   </p>
                 </div>
@@ -100,13 +90,13 @@ export default function BlogSection() {
                 <button
                   type="button"
                   aria-label="Read more"
-                  className="w-[56px] h-[56px] rounded-full bg-[#E40714] flex items-center justify-center flex-none"
+                  className="flex items-center justify-center flex-none"
                 >
                   <img
-                    src={arrowDownIcon}
+                    src="/icon/arrow.svg"
                     alt=""
                     aria-hidden="true"
-                    className="w-[24px] h-[24px]"
+                    className=""
                   />
                 </button>
               </div>
@@ -139,13 +129,13 @@ export default function BlogSection() {
                     {item.date}
                   </p>
 
-                  <p className="text-[#e40714] font-medium text-[14px] leading-[19px] underline w-fit">
-                    Read More
-                  </p>
-
-                  <p className="font-normal text-[#2d2d2d] text-[14px] leading-[19px] overflow-hidden text-ellipsis whitespace-nowrap">
+                  <p className="font-normal text-[#2d2d2d] text-[14px] leading-[19px] overflow-hidden text-ellipsis">
                     {item.description}
                   </p>
+
+                  <button className="text-[#e40714] font-medium text-[14px] leading-[19px] underline w-fit mt-[10px]">
+                    Read More
+                  </button>
                 </div>
               </article>
             ))}
