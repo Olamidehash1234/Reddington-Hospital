@@ -1,9 +1,10 @@
 import HeroSection from './hero';
 import Clients from './clients';
-// import AboutPage from './about';
-// import ServicesPage from './services';
-// import TestimonialPage from './testimonial';
-// import FAQ from './FAQ'
+import Aboutsection from './about';
+import ServicesPage from './services';
+import DoctorsSection from './doctors';
+import TestimonialPage from './testimonials';
+import BlogPage from './blog';
 // import Partners from './partners'
 // import Feedback from './feedback'
 
@@ -12,10 +13,11 @@ const Homepage = () => {
     <div>
         <HeroSection />
         <Clients />
-        {/* <AboutPage /> */}
-        {/* <ServicesPage /> */}
-        {/* <TestimonialPage /> */}
-        {/* <FAQ/> */}
+        <Aboutsection />
+        <ServicesPage />
+        <DoctorsSection />
+        <TestimonialPage />
+        <BlogPage/>
         {/* <Partners /> */}
         {/* <Feedback /> */}
     </div>
