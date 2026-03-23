@@ -5,8 +5,9 @@ import ServicesPage from './services';
 import DoctorsSection from './doctors';
 import TestimonialPage from './testimonials';
 import BlogPage from './blog';
-// import Partners from './partners'
-// import Feedback from './feedback'
+import InsurancePartners from './insurance'
+import HMOsection from './HMO'
+import Newsletter from './Newsletter';
 
 const Homepage = () => {
   return (
@@ -18,8 +19,9 @@ const Homepage = () => {
         <DoctorsSection />
         <TestimonialPage />
         <BlogPage/>
-        {/* <Partners /> */}
-        {/* <Feedback /> */}
+        <InsurancePartners />
+        <HMOsection />
+        <Newsletter />
     </div>
   );
 };
