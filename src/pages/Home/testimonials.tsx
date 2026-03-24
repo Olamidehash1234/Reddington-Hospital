@@ -35,12 +35,10 @@ export default function TestimonialPage() {
   const [activeIndex, setActiveIndex] = useState(0);
   const active = testimonials[activeIndex] ?? testimonials[0];
 
-  // Figma assets (used directly for arrows/icons)
-  const arrowLeftIcon = 'https://www.figma.com/api/mcp/asset/a3898837-1443-452a-8b1c-cd0f15400491';
-  const arrowRightIcon = 'https://www.figma.com/api/mcp/asset/d18aeee2-9cf7-4e01-bc00-24c3ef5c41a2';
+  const arrowLeftIcon = '/icon/arrow-left.svg';
+  const arrowRightIcon = '/icon/arrow-right.svg';
 
-  // Star asset (node 546:5927 / 546:5931 pipeline in Figma)
-  const starImg = 'https://www.figma.com/api/mcp/asset/d28fdafd-ce5d-43be-b687-72bacc13abbe';
+  const starImg = '/icon/star.svg';
 
   const stars = useMemo(() => Array.from({ length: 5 }, (_, i) => i), []);
 
@@ -48,9 +46,9 @@ export default function TestimonialPage() {
   const onNext = () => setActiveIndex((i) => (i + 1) % testimonials.length);
 
   return (
-    <section className="relative bg-white overflow-hidden py-[60px] lg:py-[80px]">
+    <section className="relative bg-white overflow-hidden py-[40px] lg:py-[80px]">
 
-      <div className="flex items-center gap-3 mb-4 lg:mb-[0px]">
+      <div className="flex items-center gap-3 mb-[10px] lg:mb-[0px]">
         <div className="h-0.5 w-[20px] lg:w-[70px] bg-[#E40714]"></div>
         <span className="text-[#E40714] font-medium text-sm lg:text-[15px]">
           Testimonials
@@ -75,11 +73,11 @@ export default function TestimonialPage() {
         {/* Header */}
         <div className="relative">
           <h2
-            className="text-[#000000] text-[32px] lg:text-[45px] leading-tight mb-[10px]" style={{ fontFamily: 'TexGyreAdventor' }}
+            className="text-[#000000] text-[24px] lg:text-[45px] leading-tight mb-[10px]" style={{ fontFamily: 'TexGyreAdventor' }}
           >
             What Our Patients Say
           </h2>
-          <p className="text-[#000000] text-[16px] font-medium  lg:text-[15px] leading-[19px]">
+          <p className="text-[#000000] text-[13px] font-medium  lg:text-[15px] leading-[19px]">
             Hear from our patients who have experienced our world-class care
           </p>
         </div>
@@ -107,7 +105,7 @@ export default function TestimonialPage() {
 
                       <img src="/icon/quote.svg" alt="" />
 
-                      <p className="font-medium text-[16px] lg:text-[18px] leading-[26px] text-[#000000]">
+                      <p className="font-medium text-[15px] lg:text-[18px] leading-[26px] text-[#000000]">
                         {active.text}
                       </p>
 
@@ -131,7 +129,7 @@ export default function TestimonialPage() {
                             {active.initial}
                           </span>
                         </div>
-                        <p className="font-medium text-[16px] text-black whitespace-nowrap">
+                        <p className="font-medium text-[14px] lg:text-[16px] text-black whitespace-nowrap">
                           {active.name}
                         </p>
                       </div>
@@ -146,7 +144,7 @@ export default function TestimonialPage() {
               type="button"
               onClick={onNext}
               aria-label="Next testimonial"
-              className="hidden lg:flex items-center justify-center w-[60px] h-[60px] rotate-180 justify-self-end"
+              className="hidden lg:flex items-center justify-center w-[60px] h-[60px] justify-self-end"
             >
               <img src={arrowRightIcon} alt="" className="w-full h-full" />
             </button>

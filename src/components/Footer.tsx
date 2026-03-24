@@ -32,9 +32,9 @@ const Footer = () => {
   return (
     <footer className="bg-white text-[#2d2d2d] border-t border-[#2d2d2d]/10">
       <div className="px-[16px] lg:px-[80px] py-[50px] lg:py-[60px]">
-        <div className="flex flex-wrap justify-between lg:flex-row gap-[55px]">
+        <div className="flex flex-wrap justify-between lg:flex-row gap-[40px] lg:gap-[55px]">
           <div className="flex flex-col">
-            <div className="flex items-start gap-[18px]">
+            <div className="flex items-start">
               <img src="/icon/footer-logo.svg" alt="" />
             </div>
 

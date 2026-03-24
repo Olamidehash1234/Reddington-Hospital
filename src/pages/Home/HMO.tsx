@@ -52,8 +52,8 @@ export default function InsurancePartners() {
     <div
       className="flex-none"
       style={{
-        width: w,
-        height: h,
+        width: `clamp(${Math.round(w * 0.65)}px, 18vw, ${w}px)`,
+        height: `clamp(${Math.round(h * 0.65)}px, 18vw, ${h}px)`,
       }}
     >
       <img src={src} alt="" aria-hidden="true" className="w-full h-full object-contain" />
@@ -64,7 +64,7 @@ export default function InsurancePartners() {
     <section className="bg-[#F9F9F9] py-[60px] lg:py-[80px]">
       <div className="relative mx-auto px-[16px] lg:px-[80px]">
         <h2
-          className="text-[#1a1a1a] text-[36px] text-center leading-[30px]"
+          className="text-[#1a1a1a] lg:text-[36px] text-[24px] text-center leading-[30px]"
           style={{ fontFamily: 'TexGyreAdventor' }}
         >
           Our HMO Partners

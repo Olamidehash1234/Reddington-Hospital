@@ -3,55 +3,55 @@ export default function InsurancePartners() {
     {
       name: "Shell",
       logo: (
-        <img src="/icon/clients/shell.svg" alt="" className="w-auto h-auto object-cover"/>
+        <img src="/icon/clients/shell.svg" alt="" className="h-full w-full object-contain"/>
       )
     },
     {
       name: "Maritime Insurance",
       logo: (
-        <img src="/icon/clients/maritime.svg" alt="" className="w-auto h-auto object-cover"/>
+        <img src="/icon/clients/maritime.svg" alt="" className="h-full w-full object-contain"/>
       )
     },
     {
       name: "Access Bank",
       logo: (
-        <img src="/icon/clients/access.svg" alt="" className="w-auto h-auto object-cover"/>
+        <img src="/icon/clients/access.svg" alt="" className="h-full w-full object-contain"/>
       )
     },
     {
       name: "Oando",
       logo: (
-       <img src="/icon/clients/oando.svg" alt="" className="w-auto h-auto object-cover"/>
+       <img src="/icon/clients/oando.svg" alt="" className="h-full w-full object-contain"/>
       )
     },
     {
       name: "This day",
       logo: (
-        <img src="/icon/clients/thisday.svg" alt="" className="w-auto h-auto object-cover"/>
+        <img src="/icon/clients/thisday.svg" alt="" className="h-full w-full object-contain"/>
       )
     },
     {
       name: "Total",
       logo: (
-        <img src="/icon/clients/total.svg" alt="" className="w-auto h-auto object-cover"/>
+        <img src="/icon/clients/total.svg" alt="" className="h-full w-full object-contain"/>
       )
     },
     {
       name: "Bua",
       logo: (
-        <img src="/icon/clients/bua.svg" alt="" className="w-auto h-auto object-cover" />
+        <img src="/icon/clients/bua.svg" alt="" className="h-full w-full object-contain" />
       )
     },
     {
       name: "Flower mill",
       logo: (
-        <img src="/icon/clients/flowermill.svg" alt="" className="w-auto h-auto object-cover" />
+        <img src="/icon/clients/flowermill.svg" alt="" className="h-full w-full object-contain" />
       )
     },
     {
       name: "Tolara",
       logo: (
-        <img src="/icon/clients/tolara.svg" alt="" className="w-auto h-auto object-cover" />
+        <img src="/icon/clients/tolara.svg" alt="" className="h-full w-full object-contain" />
       )
     }
   ];
@@ -70,11 +70,11 @@ export default function InsurancePartners() {
           {/* Partners Marquee */}
           <div className="flex-1">
             <div className=" overflow-x-hidden scrollbar-hide pr-4 lg:pr-8">
-              <div className="flex items-center gap-[40px] lg:gap-[30px] animate-marquee whitespace-nowrap">
+              <div className="flex items-center gap-[22px] lg:gap-[30px] animate-marquee whitespace-nowrap">
                 {partners.map((partner, index) => (
                   <div
                     key={index}
-                    className="flex items-center justify-center h-auto lg:h-auto transition-opacity hover:opacity-80 min-w-[200px]"
+                    className="flex items-center justify-center h-[40px] lg:h-[50px] transition-opacity hover:opacity-80 min-w-[132px] lg:min-w-[190px]"
                   >
                     {partner.logo}
                   </div>
@@ -83,7 +83,7 @@ export default function InsurancePartners() {
                 {partners.map((partner, index) => (
                   <div
                     key={`dup-${index}`}
-                    className="flex items-center justify-center h-auto lg:h-auto transition-opacity hover:opacity-80 min-w-[200px]"
+                    className="flex items-center justify-center h-[40px] lg:h-[50px] transition-opacity hover:opacity-80 min-w-[132px] lg:min-w-[190px]"
                   >
                     {partner.logo}
                   </div>
@@ -104,7 +104,14 @@ export default function InsurancePartners() {
         }
         .animate-marquee {
           display: flex;
-          animation: marquee 20s linear infinite;
+          width: max-content;
+          animation: marquee 42s linear infinite;
+          will-change: transform;
+        }
+        @media (min-width: 1024px) {
+          .animate-marquee {
+            animation-duration: 28s;
+          }
         }
         @keyframes marquee {
           0% { transform: translateX(0); }

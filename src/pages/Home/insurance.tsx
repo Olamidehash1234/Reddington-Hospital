@@ -55,7 +55,7 @@ export default function InsurancePartners() {
       { src: logos.r65, w: 100, h: 100 },
       { src: logos.r78, w: 150, h: 48 },
       { src: logos.r79, w: 100, h: 100 },
-      { src: logos.r80, w: 200, h: 40 },
+      { src: logos.r80, w: 150, h: 40 },
     ],
   ];
 
@@ -63,8 +63,8 @@ export default function InsurancePartners() {
     <div
       className="flex-none"
       style={{
-        width: w,
-        height: h,
+        width: `clamp(${Math.round(w * 0.65)}px, 18vw, ${w}px)`,
+        height: `clamp(${Math.round(h * 0.65)}px, 18vw, ${h}px)`,
       }}
     >
       <img src={src} alt="" aria-hidden="true" className="w-full h-full object-contain" />
@@ -72,10 +72,10 @@ export default function InsurancePartners() {
   );
 
   return (
-    <section className="bg-[rgba(228,7,20,0.05)] py-[60px] lg:py-[80px]">
-      <div className="relative max-w-[1440px] mx-auto px-[16px] lg:px-[80px]">
+    <section className="bg-[rgba(228,7,20,0.05)] py-[40px] lg:py-[80px]">
+      <div className="relative mx-auto px-[16px] lg:px-[80px]">
         <h2
-          className="text-[#1a1a1a] text-[36px] text-center leading-[30px]"
+          className="text-[#1a1a1a] lg:text-[36px] text-[24px] text-center leading-[30px]"
           style={{ fontFamily: 'TexGyreAdventor' }}
         >
           Our International Insurance Partners
@@ -85,7 +85,7 @@ export default function InsurancePartners() {
           {rows.map((row, rowIdx) => (
             <div
               key={rowIdx}
-              className="flex flex-wrap justify-center items-center gap-x-[30px] gap-y-[22px]"
+              className="grid grid-cols-3 lg:flex lg:flex-wrap justify-center items-center gap-x-[30px] gap-y-[22px]"
             >
               {row.map((p, idx) => (
                 <Logo key={idx} src={p.src} w={p.w} h={p.h} />
