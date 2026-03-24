@@ -37,11 +37,11 @@ export default function ServicesPage() {
 
                     <div className="mt-[30px] flex flex-col gap-[14px] lg:gap-[16px] lg:flex-row w-full">
                         <div className="flex flex-col gap-[14px] w-full lg:w-[35%]">
-                            <div className="h-[170px] rounded-[12px] overflow-hidden">
+                            <div className="h-[170px] lg:h-[219px] rounded-[12px] overflow-hidden">
                                 <img src="/image/home/grid-1.png" alt="" className="w-full h-full object-cover" />
                             </div>
-                            <div className="w-full lg:h-[373px] h-[170px] lg:rounded-[16px] rounded-[12px] overflow-hidden">
-                                <img src="/image/home/grid-2.png" alt="" className="w-full object-cover" />
+                            <div className="lg:h-[373px] h-[170px] lg:rounded-[16px] rounded-[12px] overflow-hidden">
+                                <img src="/image/home/grid-2.png" alt="" className="w-full h-full object-cover" />
                             </div>
                         </div>
 

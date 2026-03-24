@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import gsap from 'gsap';
 
@@ -7,9 +7,15 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled,] = useState(false);
   const mobileMenuRef = useRef(null);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const isActiveLink = (href: string) => {
+    if (href === '/') return location.pathname === '/';
+    return location.pathname === href || location.pathname.startsWith(`${href}/`);
   };
 
   // useEffect(() => {
@@ -47,8 +53,8 @@ export default function Navbar() {
   const navLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Services', href: '/services' },
-    { name: 'Find a Doctor', href: '/' },
-    { name: 'Our Branches', href: '/' },
+    { name: 'Find a Doctor', href: '/doctor' },
+    { name: 'Our Branches', href: '/branches' },
     { name: 'Contact Us', href: '/contact' },
   ];
 
@@ -88,7 +94,9 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="text-white text-[14px] font-medium hover:opacity-80 transition-opacity"
+                  className={`relative text-white text-[14px] font-medium transition-all duration-300 after:absolute after:left-0 after:-bottom-[1px] after:h-[1px] after:w-full after:bg-white after:origin-left after:transition-transform after:duration-300 ${
+                    isActiveLink(link.href) ? 'after:scale-x-100' : 'after:scale-x-0 hover:after:scale-x-100'
+                  }`}
                 >
                   {link.name}
                 </Link>
@@ -140,7 +148,9 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.href}
-                className="text-white text-sm font-medium hover:opacity-80 transition-opacity px-2 py-2"
+                className={`relative text-white text-sm font-medium transition-all duration-300 px-2 py-2 after:absolute after:left-2 after:right-2 after:-bottom-[2px] after:h-[2px] after:bg-white after:origin-left after:transition-transform after:duration-300 ${
+                  isActiveLink(link.href) ? 'after:scale-x-100' : 'after:scale-x-0 hover:after:scale-x-100'
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

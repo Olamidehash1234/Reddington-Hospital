@@ -23,5 +23,23 @@
     scroll-behavior: smooth;
   }
 
+  ::selection {
+    background: #E40714;
+    color: #FFFFFF;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #FFFFFF;
+    /* border: 0.5px solid #E40714; */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #E40714;
+    border-radius: 2px;
+  }
   
 }
