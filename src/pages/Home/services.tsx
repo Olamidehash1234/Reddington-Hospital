@@ -15,13 +15,13 @@ export default function ServicesPage() {
                         <div>
                             <div>
                                 <h1 className="text-[#000000] tracking-tight leading-[24px] lg:leading-[100%] lg:tracking-[-1.8px]">
-                                    <span className=" text-[24px] lg:text-[44px]" style={{ fontFamily: 'TexGyreAdventor' }}>
+                                    <span className=" text-[20px] lg:text-[44px]" style={{ fontFamily: 'TexGyreAdventor' }}>
                                         Comprehensive Medical Services
                                     </span>
                                 </h1>
                             </div>
 
-                            <div className="mt-[20px] lg:max-w-[561px] lg:mt-[15px] text-[#02070D] text-[14px] lg:text-[16px] lg:leading-[27px] leading-[20px] space-y-4">
+                            <div className="mt-[10px] lg:max-w-[561px] lg:mt-[15px] text-[#02070D] text-[13px] lg:text-[16px] lg:leading-[27px] leading-[20px] space-y-4">
                                 <p>
                                     The most advanced independent tertiary hospital with the highest standards of technology and professional expertise.
                                 </p>
@@ -29,45 +29,49 @@ export default function ServicesPage() {
                         </div>
 
                         <div>
-                            <button className="px-[40px] text-[14px] font-semibold rounded-[20px] py-[16px] bg-[#E40714] text-[#FFFFFF]">
+                            <button className="hidden lg:block px-[40px] text-[14px] font-semibold rounded-[20px] py-[16px] bg-[#E40714] text-[#FFFFFF]">
                                 View All Services
                             </button>
                         </div>
                     </div>
 
-                    <div className="mt-[40px] flex flex-col gap-[40px] lg:gap-[16px] lg:flex-row w-full">
-                        <div className="flex flex-col gap-[16px] w-full lg:w-[35%]">
-                            <div className="">
-                                <img src="/image/home/grid-1.png" alt="" className="w-full object-cover" />
+                    <div className="mt-[30px] flex flex-col gap-[14px] lg:gap-[16px] lg:flex-row w-full">
+                        <div className="flex flex-col gap-[14px] w-full lg:w-[35%]">
+                            <div className="h-[170px] rounded-[12px] overflow-hidden">
+                                <img src="/image/home/grid-1.png" alt="" className="w-full h-full object-cover" />
                             </div>
-                            <div className="w-full lg:h-[373px] rounded-[16px] overflow-hidden">
+                            <div className="w-full lg:h-[373px] h-[170px] lg:rounded-[16px] rounded-[12px] overflow-hidden">
                                 <img src="/image/home/grid-2.png" alt="" className="w-full object-cover" />
                             </div>
                         </div>
 
-                        <div className="flex flex-col gap-[16px] w-full lg:w-[65%]">
+                        <div className="flex flex-col gap-[14px] w-full lg:w-[65%]">
                             {/* first div inside the second div */}
-                            <div className="flex flex-row gap-[16px] w-full">
-                                <div className="w-full lg:w-[65%] lg:h-[375px] rounded-[16px] overflow-hidden">
+                            <div className="flex lg:flex-row flex-col gap-[16px] w-full">
+                                <div className="w-full lg:w-[65%] h-[170px] lg:h-[375px] lg:rounded-[16px] rounded-[12px] overflow-hidden">
                                     <img src="/image/home/grid-3.png" alt="" className="w-full h-full object-cover" />
                                 </div>
-                                <div className="w-full lg:w-[35%] lg:h-[375px] rounded-[16px] overflow-hidden">
+                                <div className="w-full lg:w-[35%] h-[170px] lg:h-[375px] lg:rounded-[16px] rounded-[12px] overflow-hidden">
                                     <img src="/image/home/grid-4.png" alt="" className="w-full h-full object-cover" />
                                 </div>
                             </div>
 
                             {/* second div inside the second div */}
-                            <div className="flex flex-row gap-[16px] w-full">
-                                <div className="w-full lg:h-[217px] rounded-[16px] overflow-hidden">
+                            <div className="flex lg:flex-row flex-col gap-[14px] w-full">
+                                <div className="w-full lg:h-[217px] h-[170px] lg:rounded-[16px] rounded-[12px] overflow-hidden">
                                     <img src="/image/home/grid-5.png" alt="" className="w-full h-full object-cover"/>
                                 </div>
 
-                                <div className="w-full lg:h-[217px] rounded-[16px] overflow-hidden">
+                                <div className="w-full lg:h-[217px] h-[170px] lg:rounded-[16px] rounded-[12px] overflow-hidden">
                                     <img src="/image/home/grid-6.png" alt="" className="w-full h-full object-cover"/>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <button className="block lg:hidden mt-[20px] mb-[40px] w-full px-[40px] text-[13px] font-semibold rounded-[12px] py-[14px] bg-[#E40714] text-[#FFFFFF]">
+                                View All Services
+                    </button>
                 </div>
             </div>
         </section>

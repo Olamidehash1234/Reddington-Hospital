@@ -25,7 +25,7 @@ export default function Navbar() {
         gsap.fromTo(
           mobileMenuRef.current,
           { opacity: 0, scaleY: 0, transformOrigin: 'top' },
-          { opacity: 1, scaleY: 1, duration: 0.3, ease: 'back.out' }
+          { opacity: 1, scaleY: 1, duration: 0.2, ease: 'back.out' }
         );
       } else {
         gsap.to(
@@ -34,6 +34,14 @@ export default function Navbar() {
         );
       }
     }
+  }, [isOpen]);
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [isOpen]);
 
   const navLinks = [
@@ -46,6 +54,14 @@ export default function Navbar() {
 
   return (
     <>
+      <div
+        className={`fixed inset-0 bg-black/45 z-40 transition-opacity duration-200 lg:hidden ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={() => setIsOpen(false)}
+        aria-hidden="true"
+      />
+
       {/* Main Navbar */}
       <nav className={`max-w-[2600px] mx-auto fixed z-50 ${
         isScrolled 
