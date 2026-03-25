@@ -39,14 +39,6 @@ export default function DoctorsSection() {
 
     const itemsPerView = 4;
     const totalSlides = Math.ceil(doctors.length / itemsPerView);
-
-    // const nextSlide = () => {
-    //     setCurrentIndex((prev) => (prev + 1) % totalSlides);
-    // };
-
-    // const prevSlide = () => {
-    //     setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
-    // };
     const goToSlide = (index: number) => setCurrentIndex(index);
 
     const visibleDoctors = doctors.slice(

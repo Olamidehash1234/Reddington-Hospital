@@ -3,8 +3,8 @@ export default function Herosection() {
         <section className="relative bg-[#F9F9F9] py-[40px] lg:pt-[40px] lg:pb-[80px]">
 
             <img src="/icon/illustrations/tp-lft.svg" alt="Decorative Circle" className="absolute bottom-[-90px] left-[0px] z-10"></img>
-            <img src="/icon/illustrations/md.svg" alt="Decorative Circle" className="absolute top-[140px] lg:left-[520px] z-10"></img>
-            <img src="/icon/illustrations/md.svg" alt="Decorative Circle" className="absolute top-[260px] lg:right-[520px] z-10"></img>
+            <img src="/icon/illustrations/md.svg" alt="Decorative Circle" className="absolute top-[240px] lg:top-[140px] lg:left-[520px] z-10"></img>
+            <img src="/icon/illustrations/md.svg" alt="Decorative Circle" className="absolute top-[470px] lg:top-[260px] right-[90px] lg:right-[520px] z-10"></img>
             <img src="/icon/illustrations/hst-rgt.svg" alt="Decorative Circle" className="absolute top-[0px] lg:top-[0px] right-[0px] z-10"></img>
 
 
@@ -17,7 +17,7 @@ export default function Herosection() {
                 </div>
 
                 <div className="px-[16px] lg:px-[80px]">
-                    <div className="space-y-[20px] lg:space-y-[35px] text-[13px] lg:text-[16px] lg:leading-[24px] leading-[19px] trackiing-[-3%]">
+                    <div className="space-y-[20px] lg:space-y-[35px] text-[13px] lg:text-[16px] lg:leading-[24px] leading-[20px] trackiing-[-3%]">
                         <p>
                             For over two decades, the Reddington Healthcare Group has stood as a pioneer in Nigerian medicine, renowned for attracting world-class specialist doctors and surgeons. As the first independent hospital in Nigeria to receive full international accreditation, our commitment to excellence is proven. Today, our network spans multiple multi-specialist hospitals and dedicated sub-specialty clinics across Lagos, ensuring that expert, patient-centred care is always within your reach.
                         </p>

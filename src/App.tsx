@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import Consult from './pages/Consultation'
 // import PatientPortal from './pages/patientPortal'
 import Contact from './pages/Contact';
+import Awards from './pages/Awards';
 // import FeedbackForm from './pages/feedbackform';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           {/* <Route path="/feedback" element={<FeedbackForm />} /> */}
           {/* <Route path="/patient-portal" element={<PatientPortal />} /> */}
           <Route path="/contact" element={<Contact />} />
+          <Route path="/awards" element={<Awards />} />
         </Route>
       </Routes>
     </BrowserRouter>

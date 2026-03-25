@@ -1,17 +1,17 @@
 export default function Accreditation() {
     return (
         <section className="bg-[#F9F9F9] px-[16px] lg:px-[80px] py-[40px] lg:py-[80px]">
-            <div className="relative bg-[#E40714] px-[16px] lg:px-[40px] py-[20px] lg:py-[80px] rounded-[] lg:rounded-[20px]">
+            <div className="relative bg-[#E40714] px-[16px] lg:px-[40px] py-[40px] lg:py-[80px] rounded-[20px] lg:rounded-[20px]">
 
                 <img src="/icon/illustrations/flower.svg" alt="Decorative Circle" className="absolute top-[0px] left-[0px] z-10"></img>
                 <img src="/icon/illustrations/flower2.svg" alt="Decorative Circle" className="absolute bottom-[0px] lg:bottom-[0px] right-[0px] z-10"></img>
 
                 <div className="justify-center items-center text-center mb-[10px] lg:mb-[20px]">
-                    <h1 className="text-[#FFFFFF] text-[24px] lg:text-[32px] text-center lg:leading-[100%] mb-[10px] lg:mb-[25px]" style={{ fontFamily: "TexGyreAdventor" }}>
+                    <h1 className="text-[#FFFFFF] text-[22px] lg:text-[32px] text-center leading-[24px] lg:leading-[100%] mb-[20px] lg:mb-[25px]" style={{ fontFamily: "TexGyreAdventor" }}>
                         International Accreditation & Quality Standards
                     </h1>
 
-                    <div className="space-y-[20px] text-[#FFFFFF] justify-center items-center lg:space-y-[30px] text-[13px] lg:text-[16px] lg:leading-[24px] leading-[19px]">
+                    <div className="space-y-[20px] text-[#FFFFFF] justify-center items-center lg:space-y-[30px] text-[13px] lg:text-[16px] lg:leading-[24px] leading-[20px]">
                         <p>
                             Quality is not a badge we wear—it is the foundation upon which Reddington is built. In 2013, we made history as the first independent private hospital in Nigeria to receive full international accreditation from COHSASA, the South Africa-based global healthcare accreditation body. This alone would have been a landmark achievement, but we did not stop there.
                         </p>
