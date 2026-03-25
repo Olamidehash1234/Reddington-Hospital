@@ -1,12 +1,12 @@
 export default function Breakthrough() {
     return (
-        <section className="relative bg-[#E4071405] px-[16px] lg:px-[80px] py-[40px] lg:py-[80px]">
-            <div className="flex flex-col items-center text-center justify-center gap-3">
-                <h1 className="text-[#000000] text-[24px] lg:text-[32px] text-center" style={{ fontFamily: "TexGyreAdventor" }}>
+        <section className="relative bg-[#E4071405] px-[16px] lg:px-[80px] py-[20px] lg:py-[80px]">
+            <div className="flex flex-col items-center text-center justify-center gap-[20px]">
+                <h1 className="text-[#000000] text-[24px] leading-[100%] lg:text-[32px] text-center" style={{ fontFamily: "TexGyreAdventor" }}>
                     Our Medical Breakthrough & Innovation
                 </h1>
 
-                <div className="space-y-[20px] lg:space-y-[35px] text-[13px] lg:text-[16px] lg:leading-[24px] leading-[19px]">
+                <div className="space-y-[20px] lg:space-y-[35px] text-[13px] lg:text-[16px] lg:leading-[24px] leading-[20px]">
                     <p>
                         At Reddington, we have never been content to simply follow standards—we exist to set them. Since our founding, we have positioned ourselves at the vanguard of medical progress in Nigeria, consistently introducing groundbreaking technologies and procedures that have redefined what is possible in healthcare delivery across the nation
                     </p>

@@ -30,7 +30,9 @@ const Footer = () => {
   const mediaLinks = ['Blog & Article', 'News & Events', 'Careers'];
 
   return (
-    <footer className="relative bg-white text-[#2d2d2d] border-t border-[#2d2d2d]/10">
+    <footer className="relative bg-white text-[#2d2d2d] border-t border-[#2d2d2d]/10 overflow-hidden">
+      <img src="/icon/illustrations/ft-1.svg" alt="Decorative Circle" className="absolute bottom-[0px] left-[0px] z-10"></img>
+
       <div className="px-[16px] lg:px-[80px] py-[50px] lg:py-[60px]">
         <div className="flex flex-wrap justify-between lg:flex-row gap-[40px] lg:gap-[55px]">
           <div className="flex flex-col">

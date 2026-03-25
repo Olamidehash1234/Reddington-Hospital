@@ -37,16 +37,16 @@ export default function Newsletter() {
         </div>
       </div>
 
-      <div className="relative mx-auto flex flex-col lg:flex-row items-start lg:items-end justify-between gap-[24px]">
+      <div className="relative flex flex-col lg:flex-row items-start lg:items-end justify-between gap-[24px]">
         {/* Text */}
-        <div className="space-y-[10px] lg:space-y-[14px] lg:max-w-[620px]">
+        <div className="space-y-[10px] lg:space-y-[14px]">
           <h1
             className="text-white text-[22px] lg:text-[36px] leading-[24px] lg:leading-[normal]"
             style={{ fontFamily: 'TexGyreAdventor' }}
           >
             Stay Updated with Health Tips
           </h1>
-          <p className=" text-[12px] lg:text-[16px] font-medium leading-[19px] text-[#FFFFFF]">
+          <p className=" text-[12px] lg:text-[16px] lg:max-w-[620px] font-medium leading-[19px] lg:leading-normal text-[#FFFFFF]">
             Subscribe to our newsletter for healthy living tips, hospital news, and exclusive health insights from our
             medical experts.
           </p>
