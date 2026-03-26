@@ -1,0 +1,58 @@
+export const services = [
+    {
+        id: 1,
+        title: 'Family Medicine (Primary Care)',
+        image: '/image/services/family-medicine.jpg',
+        description: 'Your first point of contact for everyday health concerns, our Family Medicine clinic provides comprehensive, continuous care for individuals and families of all ages. From managing acute illnesses and chronic conditions to preventive health advice and routine check-ups, our experienced general practitioners take time to understand your complete health picture. We build lasting relationships with our patients, ensuring that whether you need treatment for a minor ailment or guidance toward specialist care, you always have a trusted medical home.',
+        fullDescription: 'Your first point of contact for everyday health concerns, our Family Medicine clinic provides comprehensive, continuous care for individuals and families of all ages. From managing acute illnesses and chronic conditions to preventive health advice and routine check-ups, our experienced general practitioners take time to understand your complete health picture. We build lasting relationships with our patients, ensuring that whether you need treatment for a minor ailment or guidance toward specialist care, you always have a trusted medical home..',
+    },
+    {
+        id: 2,
+        title: 'Cardiology',
+        image: '/image/services/cardiology.jpg',
+        description: 'Comprehensive heart care, from diagnostic testing and cardiac catheterisation to interventional procedures and rehabilitation—helping you maintain a healthy, active heart.',
+        fullDescription: 'Comprehensive heart care, from diagnostic testing and cardiac catheterisation to interventional procedures and rehabilitation—helping you maintain a healthy, active heart.',
+    },
+    {
+        id: 3,
+        title: 'General Surgery',
+        image: '/image/services/general-surgery.jpg',
+        description: 'Expert surgical care for a wide range of conditions, utilising both open and minimally invasive techniques to ensure optimal recovery and outcomes.',
+        fullDescription: 'Expert surgical care for a wide range of conditions, utilising both open and minimally invasive techniques to ensure optimal recovery and outcomes.',
+    },
+    {
+        id: 4,
+        title: 'Orthopaedics',
+        image: '/image/services/orthopaedics.jpg',
+        description: 'Treatment for bone, joint, and muscle conditions, including sports injuries, degenerative diseases, and trauma—helping you restore mobility and regain quality of life.',
+        fullDescription: 'Treatment for bone, joint, and muscle conditions, including sports injuries, degenerative diseases, and trauma—helping you restore mobility and regain quality of life.',
+    },
+    {
+        id: 5,
+        title: 'Paediatrics',
+        image: '/image/services/paediatrics.jpg',
+        description: 'Specialized medical care for infants, children, and adolescents, focusing on growth, development, and disease prevention. Our paediatric team provides compassionate care tailored to each child\'s unique needs.',
+        fullDescription: 'Specialized medical care for infants, children, and adolescents, focusing on growth, development, and disease prevention. Our paediatric team provides compassionate care tailored to each child\'s unique needs.',
+    },
+    {
+        id: 6,
+        title: 'Obstetrics & Gynaecology',
+        image: '/image/services/obstetrics.jpg',
+        description: 'Comprehensive women\'s healthcare including prenatal care, delivery, and postpartum support. Our OB/GYN specialists provide expert care throughout every stage of a woman\'s life.',
+        fullDescription: 'Comprehensive women\'s healthcare including prenatal care, delivery, and postpartum support. Our OB/GYN specialists provide expert care throughout every stage of a woman\'s life.',
+    },
+    {
+        id: 7,
+        title: 'Neurology',
+        image: '/image/services/neurology.jpg',
+        description: 'Diagnosis and treatment of nervous system disorders including stroke, epilepsy, and neurological conditions. Our neurologists are equipped with advanced diagnostic tools and treatment options.',
+        fullDescription: 'Diagnosis and treatment of nervous system disorders including stroke, epilepsy, and neurological conditions. Our neurologists are equipped with advanced diagnostic tools and treatment options.',
+    },
+    {
+        id: 8,
+        title: 'Oncology',
+        image: '/image/services/oncology.jpg',
+        description: 'Comprehensive cancer care with a multidisciplinary team approach including chemotherapy, radiation therapy, and surgical oncology. We provide compassionate support throughout your cancer treatment journey.',
+        fullDescription: 'Comprehensive cancer care with a multidisciplinary team approach including chemotherapy, radiation therapy, and surgical oncology. We provide compassionate support throughout your cancer treatment journey.',
+    },
+];
