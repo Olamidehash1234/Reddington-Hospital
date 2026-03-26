@@ -19,7 +19,7 @@ export default function AwardsSection() {
                 </div>
 
                 <Link to={"/awards"}>
-                    <button className=" bg-white text-[#E40714] px-[28px] py-[18px] rounded-full font-medium text-[14px] hover:bg-gray-100 transition-colors whitespace-nowrap">
+                    <button className="hidden lg:block bg-white text-[#E40714] px-[28px] py-[18px] rounded-full font-medium text-[14px] hover:bg-gray-100 transition-colors whitespace-nowrap">
                         View All Awards
                     </button>
                 </Link>
@@ -38,6 +38,12 @@ export default function AwardsSection() {
                     International honours include the Pan African International Magazine Award of Excellence for Most Outstanding Private Healthcare Provider (2018) and recognition from Africamed as an Excellent Partner. Our Chairman has also been personally honoured—with the St. Racheal's Pharma Professional Excellence Award (2020) and the African Students' Union Parliament Award for Hard Work and Dedication to National Development (2015)—reflecting leadership that inspires excellence at every level.
                 </p>
             </div>
+
+            <Link to={"/awards"}>
+                <button className="block w-full mt-[30px] lg:hidden bg-white text-[#E40714] px-[28px] py-[14px] rounded-[12px] font-medium text-[14px] hover:bg-gray-100 transition-colors whitespace-nowrap">
+                    View All Awards
+                </button>
+            </Link>
         </div>
     )
 }

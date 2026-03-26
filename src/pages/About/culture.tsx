@@ -16,26 +16,46 @@ export default function Culture() {
                     </p>
 
                     {/* Vision + Core Values (from Figma) */}
-                    <div className="mt-[20px] lg:mt-[50px] flex flex-col gap-[16px] lg:gap-[40px]">
+                    <div className="mt-[20px] lg:mt-[50px] flex flex-col gap-[20px] lg:gap-[40px]">
                         {/* Our Vision card */}
                         <div className="w-full">
                             {/* Mobile layout */}
-                            <div className="lg:hidden rounded-[12px] bg-[#E40714] text-white px-[16px] py-[16px]">
-                                <div className="flex items-center gap-[12px]">
-                                    <div className="shrink-0 rounded-[10px] bg-[rgba(247,133,132,0.5)] p-[10px]">
-                                        <img
-                                            alt=""
-                                            className="block size-[24px]"
-                                            src="https://www.figma.com/api/mcp/asset/6b76120b-8902-4ce8-abfb-909be94d90f2"
-                                        />
+                            <div className="flex flex-col gap-[20px]">
+                                <div className="lg:hidden rounded-[12px] border border-[#E40714] text-white px-[16px] py-[16px]">
+                                    <div className="flex items-center gap-[12px]">
+                                        <div className="shrink-0 rounded-[10px]">
+                                            <img
+                                                alt=""
+                                                className="block size-[35px]"
+                                                src="/icon/mission.svg"
+                                            />
+                                        </div>
+                                        <p className=" text-[20px] text-[#000000] leading-[normal]" style={{ fontFamily: "TexGyreAdventor" }}>
+                                            Our Mission
+                                        </p>
                                     </div>
-                                    <p className=" text-[20px] leading-[normal]" style={{ fontFamily: "TexGyreAdventor" }}>
-                                        Our Vision
+                                    <p className="mt-[12px] text-[#1A1A1A] font-medium text-[13px] leading-[20px]">
+                                        To deliver a comprehensive first-world medical service exceeding all expectations of our valued patients.
                                     </p>
                                 </div>
-                                <p className="mt-[12px] font-medium text-[14px] leading-[20px]">
-                                    To be Nigeria&apos;s most advanced independent tertiary hospital working to the highest standards of technology and of care.
-                                </p>
+                                
+                                <div className="lg:hidden rounded-[12px] bg-[#E40714] text-white px-[16px] py-[16px]">
+                                    <div className="flex items-center gap-[12px]">
+                                        <div className="shrink-0">
+                                            <img
+                                                alt=""
+                                                className="block size-[35px]"
+                                                src="/icon/vision.svg"
+                                            />
+                                        </div>
+                                        <p className=" text-[20px] leading-[normal]" style={{ fontFamily: "TexGyreAdventor" }}>
+                                            Our Vision
+                                        </p>
+                                    </div>
+                                    <p className="mt-[12px] font-medium text-[13px] leading-[20px]">
+                                        To be Nigeria&apos;s most advanced independent tertiary hospital working to the highest standards of technology and of care.
+                                    </p>
+                                </div>
                             </div>
 
                             {/* Desktop layout (pixel-matched to Figma frame) */}
@@ -79,7 +99,7 @@ export default function Culture() {
                         {/* Our Core Values panel */}
                         <div className="w-full">
                             {/* Mobile layout */}
-                            <div className="lg:hidden rounded-[12px] border border-[#E40714] bg-white px-[16px] py-[16px]">
+                            <div className="lg:hidden rounded-[12px] border border-[#E40714] bg-white px-[16px] py-[25px]">
                                 <p className="text-[20px] leading-[normal] text-black">
                                     Our Core Values
                                 </p>
@@ -92,7 +112,7 @@ export default function Culture() {
 
                                 <div className="mt-[18px] grid grid-cols-1 gap-[18px]">
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
-                                        <div className="flex items-start gap-[12px]">
+                                        <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
                                                 <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/aa2a5e94-2e16-484f-844a-e97fd996bf87" />
                                             </div>
@@ -106,7 +126,7 @@ export default function Culture() {
                                     </div>
 
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
-                                        <div className="flex items-start gap-[12px]">
+                                        <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
                                                 <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/f9b4d700-a2ce-431b-99a6-e1e4600e3249" />
                                             </div>
@@ -120,7 +140,7 @@ export default function Culture() {
                                     </div>
 
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
-                                        <div className="flex items-start gap-[12px]">
+                                        <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
                                                 <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/fe58af18-9cb7-4de9-8540-0f06096d5b1a" />
                                             </div>
@@ -134,7 +154,7 @@ export default function Culture() {
                                     </div>
 
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
-                                        <div className="flex items-start gap-[12px]">
+                                        <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
                                                 <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/7c655244-0cdd-4ce8-a4d0-3a61c540dd66" />
                                             </div>
@@ -148,7 +168,7 @@ export default function Culture() {
                                     </div>
 
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
-                                        <div className="flex items-start gap-[12px]">
+                                        <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
                                                 <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/90c93c59-a46f-4471-a9ce-caf5b72bb610" />
                                             </div>
@@ -162,7 +182,7 @@ export default function Culture() {
                                     </div>
 
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
-                                        <div className="flex items-start gap-[12px]">
+                                        <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
                                                 <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/07209bb9-5141-40bc-8b2d-b0db497ba07a" />
                                             </div>
@@ -176,7 +196,7 @@ export default function Culture() {
                                     </div>
 
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
-                                        <div className="flex items-start gap-[12px]">
+                                        <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
                                                 <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/f10b304b-1593-496c-83cb-629942a0e884" />
                                             </div>
@@ -190,7 +210,7 @@ export default function Culture() {
                                     </div>
 
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
-                                        <div className="flex items-start gap-[12px]">
+                                        <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
                                                 <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/f3658aa0-1b3d-4836-9fd5-f5f1c861775d" />
                                             </div>
