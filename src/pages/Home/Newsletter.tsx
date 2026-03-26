@@ -54,7 +54,7 @@ export default function Newsletter() {
 
         {/* Input + button frame */}
         <form onSubmit={onSubmit} className="w-full lg:w-[613px]">
-          <div className="w-full border-[1.5px] border-solid border-white rounded-[12px] px-[20px] py-[14px] lg:py-[10px] flex flex-col lg:flex-row items-center gap-[10px]">
+          <div className="w-full border-[1.5px] border-solid border-white rounded-[12px] px-[14px] py-[14px] lg:py-[10px] flex flex-col lg:flex-row items-center gap-[10px]">
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
