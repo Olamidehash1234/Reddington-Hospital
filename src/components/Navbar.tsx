@@ -54,7 +54,7 @@ export default function Navbar() {
     { name: 'About Us', href: '/about' },
     { name: 'Our Services', href: '/services' },
     { name: 'Find a Doctor', href: '/doctor' },
-    { name: 'Our Branches', href: '/branches' },
+    { name: 'Our Branches', href: '/our-branches' },
     { name: 'Contact Us', href: '/contact' },
   ];
 
