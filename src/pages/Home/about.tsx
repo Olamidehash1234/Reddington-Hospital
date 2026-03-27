@@ -1,6 +1,6 @@
 export default function HeroEuracare() {
     // Update to new video ID and parameters
-    const videoId = "";
+    const videoId = "lf4LaNDlgcI";
     const videoSrc = `https://www.youtube.com/embed/${videoId}?si=Q6VFw_wxLDZvBzs2`;
 
     return (
