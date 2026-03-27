@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import Consult from './pages/Consultation'
 import Doctor from './pages/Doctor'
 import Ourbranches from './pages/OurBranches'
+import BranchDetail from './pages/OurBranches/BranchDetail'
 import Contact from './pages/Contact';
 import Awards from './pages/Awards';
 // import FeedbackForm from './pages/feedbackform';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/appointment" element={<Consult />} />
           <Route path="/doctor" element={<Doctor />} />
           <Route path="/our-branches" element={<Ourbranches />} />
+          <Route path="/branches/:id" element={<BranchDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/awards" element={<Awards />} />
         </Route>
