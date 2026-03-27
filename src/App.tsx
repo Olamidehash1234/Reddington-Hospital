@@ -4,7 +4,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Consult from './pages/Consultation'
-// import PatientPortal from './pages/patientPortal'
+import Doctor from './pages/Doctor'
+import Ourbranches from './pages/OurBranches'
 import Contact from './pages/Contact';
 import Awards from './pages/Awards';
 // import FeedbackForm from './pages/feedbackform';
@@ -18,8 +19,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/appointment" element={<Consult />} />
-          {/* <Route path="/feedback" element={<FeedbackForm />} /> */}
-          {/* <Route path="/patient-portal" element={<PatientPortal />} /> */}
+          <Route path="/doctor" element={<Doctor />} />
+          <Route path="/our-branches" element={<Ourbranches />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/awards" element={<Awards />} />
         </Route>
