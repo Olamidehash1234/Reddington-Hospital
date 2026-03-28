@@ -3,6 +3,13 @@ export type Service = {
     image: string
 }
 
+export type Doctor = {
+    id: number
+    name: string
+    specialization: string
+    image: string
+}
+
 export type Branch = {
     id: number
     name: string
@@ -12,11 +19,13 @@ export type Branch = {
     fullDescription: string
     image: string
     services: Service[]
+    doctors: Doctor[]
     servicesDescription?: string
 }
 
 const PLACEHOLDER_IMG = "/image/branches/placeholder.png"
 const SERVICE_PLACEHOLDER = "/image/services/placeholder.png"
+const DOCTOR_IMG = "/image/Awards/hero.png"
 
 export const branches: Branch[] = [
     {
@@ -38,6 +47,17 @@ export const branches: Branch[] = [
             { name: "Coronary Care Unit", image: SERVICE_PLACEHOLDER },
             { name: "Operating Theatres", image: SERVICE_PLACEHOLDER },
         ],
+        doctors: [
+            { id: 1, name: "Dr. Abiodun Osibamowo", specialization: "Medical Director", image: DOCTOR_IMG },
+            { id: 2, name: "Dr. Seyi Oyesola", specialization: "Critical Care Consultant", image: DOCTOR_IMG },
+            { id: 3, name: "Dr. Omoye Olisikola", specialization: "Consultant Radiologist", image: DOCTOR_IMG },
+            { id: 4, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG },
+            { id: 5, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG },
+            { id: 6, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG },
+            { id: 7, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG },
+            { id: 8, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG },
+            { id: 9, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG },
+        ],
         servicesDescription: "Multi and Sub-Specialty care across all disciplines"
     },
     {
@@ -53,6 +73,12 @@ export const branches: Branch[] = [
             { name: "Pediatrics", image: SERVICE_PLACEHOLDER },
             { name: "Obstetrics & Gynecology", image: SERVICE_PLACEHOLDER },
             { name: "Laboratory Services", image: SERVICE_PLACEHOLDER },
+        ],
+        doctors: [
+            { id: 5, name: "Dr. John Afolabi", specialization: "Consultant OB/GYN", image: DOCTOR_IMG },
+            { id: 6, name: "Dr. Chukwu Ifeanyi", specialization: "Consultant Pediatrician", image: DOCTOR_IMG },
+            { id: 7, name: "Dr. Ngozi Okafor", specialization: "Consultant Physician", image: DOCTOR_IMG },
+            { id: 8, name: "Dr. Tunde Adeniyi", specialization: "Laboratory Director", image: DOCTOR_IMG },
         ],
     },
     {
@@ -70,6 +96,12 @@ export const branches: Branch[] = [
             { name: "Mental Health", image: SERVICE_PLACEHOLDER },
             { name: "Wellness Programs", image: SERVICE_PLACEHOLDER },
         ],
+        doctors: [
+            { id: 9, name: "Dr. Muyiwa Fagbohun", specialization: "Consultant Gynecologist", image: DOCTOR_IMG },
+            { id: 10, name: "Dr. Choma Olieigbe", specialization: "General Surgeon", image: DOCTOR_IMG },
+            { id: 11, name: "Dr. Folake Adewale", specialization: "Psychiatrist", image: DOCTOR_IMG },
+            { id: 12, name: "Dr. Ismail Hassan", specialization: "Wellness Physician", image: DOCTOR_IMG },
+        ],
     },
     {
         id: 4,
@@ -84,6 +116,12 @@ export const branches: Branch[] = [
             { name: "Diagnostics", image: SERVICE_PLACEHOLDER },
             { name: "Day Surgery", image: SERVICE_PLACEHOLDER },
             { name: "Physical Therapy", image: SERVICE_PLACEHOLDER },
+        ],
+        doctors: [
+            { id: 13, name: "Dr. Kunle Fadeji", specialization: "Specialist Consultant", image: DOCTOR_IMG },
+            { id: 14, name: "Dr. Adekunle Adeniyi", specialization: "Diagnostic Expert", image: DOCTOR_IMG },
+            { id: 15, name: "Dr. Sade Okafor", specialization: "Day Surgery Specialist", image: DOCTOR_IMG },
+            { id: 16, name: "Dr. Bolade Oluyinka", specialization: "Physiotherapist", image: DOCTOR_IMG },
         ],
     },
     {
@@ -101,6 +139,12 @@ export const branches: Branch[] = [
             { name: "MRI", image: SERVICE_PLACEHOLDER },
             { name: "Radiological Reporting", image: SERVICE_PLACEHOLDER },
         ],
+        doctors: [
+            { id: 17, name: "Dr. Olutayo Bamisile", specialization: "Chief Radiologist", image: DOCTOR_IMG },
+            { id: 18, name: "Dr. Chioma Eze", specialization: "Consultant Radiologist", image: DOCTOR_IMG },
+            { id: 19, name: "Dr. Adebayo Oladele", specialization: "Interventional Radiologist", image: DOCTOR_IMG },
+            { id: 20, name: "Dr. Kemi Adesanya", specialization: "Ultrasound Specialist", image: DOCTOR_IMG },
+        ],
     },
     {
         id: 6,
@@ -117,6 +161,12 @@ export const branches: Branch[] = [
             { name: "Biopsy Services", image: SERVICE_PLACEHOLDER },
             { name: "Health Education", image: SERVICE_PLACEHOLDER },
         ],
+        doctors: [
+            { id: 21, name: "Dr. Femi Okafor", specialization: "Breast Surgeon", image: DOCTOR_IMG },
+            { id: 22, name: "Dr. Nneka Ezeoke", specialization: "Consultant Gynaecologist", image: DOCTOR_IMG },
+            { id: 23, name: "Dr. Akin Oluwaseun", specialization: "Ultrasound Specialist", image: DOCTOR_IMG },
+            { id: 24, name: "Dr. Rukayat Suliat", specialization: "Breast Care Nurse", image: DOCTOR_IMG },
+        ],
     },
     {
         id: 7,
@@ -131,6 +181,12 @@ export const branches: Branch[] = [
             { name: "Trauma Care", image: SERVICE_PLACEHOLDER },
             { name: "ICU/HDU", image: SERVICE_PLACEHOLDER },
             { name: "Anaesthesia", image: SERVICE_PLACEHOLDER },
+        ],
+        doctors: [
+            { id: 25, name: "Dr. Tunde Oladimeji", specialization: "Chief Surgeon", image: DOCTOR_IMG },
+            { id: 26, name: "Dr. Chineze Obi", specialization: "Consultant Anaesthetist", image: DOCTOR_IMG },
+            { id: 27, name: "Dr. James Udeh", specialization: "ICU Specialist", image: DOCTOR_IMG },
+            { id: 28, name: "Dr. Amina Safiya", specialization: "Trauma Surgeon", image: DOCTOR_IMG },
         ],
     },
     {
@@ -147,6 +203,12 @@ export const branches: Branch[] = [
             { name: "Burn Injury Treatment", image: SERVICE_PLACEHOLDER },
             { name: "Cosmetic Consultations", image: SERVICE_PLACEHOLDER },
         ],
+        doctors: [
+            { id: 29, name: "Dr. Stanley Okoro", specialization: "Plastic Surgeon", image: DOCTOR_IMG },
+            { id: 30, name: "Dr. Zainab Ibrahim", specialization: "Reconstructive Specialist", image: DOCTOR_IMG },
+            { id: 31, name: "Dr. David Omokaro", specialization: "Aesthetic Surgeon", image: DOCTOR_IMG },
+            { id: 32, name: "Dr. Chisom Nwankwo", specialization: "Burn Care Specialist", image: DOCTOR_IMG },
+        ],
     },
     {
         id: 9,
@@ -162,6 +224,12 @@ export const branches: Branch[] = [
             { name: "Advanced Imaging", image: SERVICE_PLACEHOLDER },
             { name: "Preventive Medicine", image: SERVICE_PLACEHOLDER },
             { name: "Wellness Programs", image: SERVICE_PLACEHOLDER },
+        ],
+        doctors: [
+            { id: 33, name: "Dr. Babatunde Adeleke", specialization: "Wellness Director", image: DOCTOR_IMG },
+            { id: 34, name: "Dr. Victoria Okonkwo", specialization: "Preventive Medicine", image: DOCTOR_IMG },
+            { id: 35, name: "Dr. Oluwaseun Adeyemi", specialization: "Preventive Cardiologist", image: DOCTOR_IMG },
+            { id: 36, name: "Dr. Morenike Adesuwa", specialization: "Nutritionist", image: DOCTOR_IMG },
         ],
     },
 ]

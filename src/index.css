@@ -16,7 +16,7 @@
 
 @layer base {
   html {
-    font-family: 'montserrat',system-ui, sans-serif;
+    font-family: 'montserrat', system-ui, sans-serif;
     background-color: #FFFFFF;
     margin: 0 auto;
     max-width: 2500px !important;
@@ -41,5 +41,123 @@
     background: #E40714;
     border-radius: 2px;
   }
-  
+
+  /*
+   * Navbar breakpoints (match design):
+   * - max 1024px: hamburger + slide menu; emergency inside menu; backdrop when open
+   * - 1025px–1400px: same menu width as floating nav (30px inset); emergency in header beside hamburger; hide emergency in menu; backdrop when open
+   * - min 1401px: full desktop nav + inline emergency; no hamburger / no mobile menu
+   */
+
+  /* Backdrop: only on viewports where the flyout menu exists */
+  .navbar-menu-backdrop {
+    display: none;
+  }
+
+  @media (max-width: 1400px) {
+    .navbar-menu-backdrop {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1401px) {
+    .navbar-menu-backdrop {
+      display: none !important;
+    }
+  }
+
+  /* Mobile menu panel: align horizontal edges with floating nav bar */
+  .navbar-mobile-menu-position {
+    left: 12px;
+    right: 12px;
+    box-sizing: border-box;
+    /* Stretch between insets (avoid shrink-to-content “L” gap on the right) */
+    width: auto;
+    max-width: none;
+  }
+
+  /*
+   * Outer is flex column so the red panel spans full width between left/right.
+   * (Row flex + default flex-basis made the inner panel only as wide as the link column.)
+   */
+  .navbar-mobile-menu.navbar-mobile-menu-outer {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .navbar-mobile-menu2 {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Match floating nav inset (Tailwind `lg` = 1024px uses 30px left/right) */
+  @media (min-width: 1024px) and (max-width: 1400px) {
+    .navbar-mobile-menu-position {
+      left: 30px !important;
+      right: 30px !important;
+    }
+  }
+
+  /* Full desktop: show link row + desktop emergency; hide hamburger & flyout */
+  @media (min-width: 1401px) {
+    .navbar-desktop-nav {
+      display: flex !important;
+    }
+
+    .navbar-emergency-mid {
+      display: none !important;
+    }
+
+    .navbar-mobile-btn {
+      display: none !important;
+    }
+
+    .navbar-mobile-menu {
+      display: none !important;
+    }
+  }
+
+  /* Tablet mid: hamburger + flyout; emergency in header (not in menu) */
+  @media (min-width: 1025px) and (max-width: 1400px) {
+    .navbar-desktop-nav {
+      display: none !important;
+    }
+
+    .navbar-mobile-btn {
+      display: flex !important;
+    }
+
+    .navbar-mobile-menu {
+      display: flex !important;
+    }
+
+    .navbar-emergency-mid {
+      display: flex !important;
+    }
+
+    .navbar-emergency-mobile {
+      display: none !important;
+    }
+
+    .navbar-mobile-menu2 {
+      padding-top: 40px !important;
+      padding-bottom: 30px !important;
+    }
+  }
+
+  /* Small mobile: hide mid header emergency; show emergency inside menu */
+  @media (max-width: 1024px) {
+    .navbar-emergency-mid {
+      display: none !important;
+    }
+
+    .navbar-mobile-btn {
+      display: flex !important;
+    }
+
+    .navbar-mobile-menu {
+      display: flex !important;
+    }
+  }
+
 }
