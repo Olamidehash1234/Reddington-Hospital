@@ -36,7 +36,7 @@ export default function DoctorCard({ doctor, className = '' }: DoctorCardProps) 
             <div className="relative w-full flex flex-col gap-[5px] items-start">
                 {/* Doctor Name */}
                 <h3
-                    className="text-white uppercase text-[15px] leading-[24px] font-semibold not-italic"
+                    className="text-white uppercase text-[14px] leading-[22px] font-semibold not-italic"
                     style={{ fontFamily: 'TexGyreAdventor' }}
                 >
                     {doctor.name}
@@ -44,7 +44,7 @@ export default function DoctorCard({ doctor, className = '' }: DoctorCardProps) 
                 <div className="w-[42px] h-[1px] bg-[#FFFFFF] mt-[0px]"></div>
 
                 {/* Doctor Specialization */}
-                <p className="text-white text-[14px] leading-[14px] font-medium tracking-[-0.28px]">
+                <p className="text-white text-[13px] leading-[14px] font-medium tracking-[-0.28px]">
                     {doctor.specialization}
                 </p>
             </div>

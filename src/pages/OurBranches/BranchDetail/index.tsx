@@ -5,6 +5,7 @@ import BranchAbout from "./About"
 import BranchServices from "./Services"
 import BranchDoctors from "./Doctors"
 import BranchContact from './Contact'
+import Newsletter from "../../Home/Newsletter"
 
 export default function BranchDetail() {
     const { id } = useParams<{ id: string }>()
@@ -26,6 +27,7 @@ export default function BranchDetail() {
             <BranchServices />
             <BranchDoctors />
             <BranchContact />
+            <Newsletter />
         </div>
     )
 }

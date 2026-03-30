@@ -1,6 +1,8 @@
 export type Service = {
     name: string
     image: string
+    description?: string
+    fullDescription?: string
 }
 
 export type Doctor = {
@@ -18,14 +20,29 @@ export type Branch = {
     description: string
     fullDescription: string
     image: string
+    Heroimage?: string
     services: Service[]
     doctors: Doctor[]
     servicesDescription?: string
+    emails?: string[]
+    contact?: string[]
+    emergency?: string
 }
 
 const PLACEHOLDER_IMG = "/image/branches/placeholder.png"
+const Heroimage = "/image/branches/hero.png"
+const FamilyMedicine = "/image/branches/medicine.png"
+const EmergencyCare = "/image/branches/emergency.png"
+const CATHLAB = "/image/branches/cathlab.png"
+const Diagnostic = "/image/branches/diagnostic.png"
+const MSL = "/image/branches/msl.png"
+const Intensive = "/image/branches/intensive.png"
+const Urgent = "/image/branches/urgent.png"
+const coronary = "/image/branches/coronary.png"
+const Operating = "/image/branches/operating.png"
 const SERVICE_PLACEHOLDER = "/image/services/placeholder.png"
-const DOCTOR_IMG = "/image/Awards/hero.png"
+const DOCTOR_IMG = "/image/home/doctor/dct-1.png"
+const Pharmacy = "/image/branches/Pharmacy.png"
 
 export const branches: Branch[] = [
     {
@@ -37,28 +54,32 @@ export const branches: Branch[] = [
         fullDescription: "Our flagship hospital and the heart of the Reddington Hospital Group, this multi-specialist tertiary facility has set the standard for private healthcare in Nigeria since 2006. It serves as the hub for our most complex medical and surgical cases, bringing together an unparalleled team of consultants and cutting-edge technology under one roof.",
         image: PLACEHOLDER_IMG,
         services: [
-            { name: "Family Medicine", image: SERVICE_PLACEHOLDER },
-            { name: "24-hour Emergency Care", image: SERVICE_PLACEHOLDER },
-            { name: "Cardiac Catheterisation Laboratory (CATH LAB)", image: SERVICE_PLACEHOLDER },
-            { name: "Full Diagnostic and Imaging Services", image: SERVICE_PLACEHOLDER },
-            { name: "Medical Science Laboratory", image: SERVICE_PLACEHOLDER },
-            { name: "Primary and Urgent Care", image: SERVICE_PLACEHOLDER },
-            { name: "Intensive Care Unit", image: SERVICE_PLACEHOLDER },
-            { name: "Coronary Care Unit", image: SERVICE_PLACEHOLDER },
-            { name: "Operating Theatres", image: SERVICE_PLACEHOLDER },
+            { name: "Family Medicine", image: FamilyMedicine },
+            { name: "24-hour Emergency Care", image: EmergencyCare },
+            { name: "Cardiac Catheterisation Laboratory (CATH LAB)", image: CATHLAB },
+            { name: "Full Diagnostic and Imaging Services", image: Diagnostic },
+            { name: "Medical Science Laboratory", image: MSL },
+            { name: "Primary and Urgent Care", image: Urgent },
+            { name: "Intensive Care Unit", image: Intensive },
+            { name: "Coronary Care Unit", image: coronary },
+            { name: "Operating Theatres", image: Operating },
         ],
         doctors: [
             { id: 1, name: "Dr. Abiodun Osibamowo", specialization: "Medical Director", image: DOCTOR_IMG },
-            { id: 2, name: "Dr. Seyi Oyesola", specialization: "Critical Care Consultant", image: DOCTOR_IMG },
-            { id: 3, name: "Dr. Omoye Olisikola", specialization: "Consultant Radiologist", image: DOCTOR_IMG },
-            { id: 4, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG },
-            { id: 5, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG },
-            { id: 6, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG },
-            { id: 7, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG },
-            { id: 8, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG },
+            { id: 2, name: "DR. LAWSON BABAJIDE", specialization: "CONSULTANT ORTHO SURG", image: DOCTOR_IMG },
+            { id: 3, name: "DR. OMOYELE OLUSOLA", specialization: "CONSULTANT RADIOLOGIST", image: DOCTOR_IMG },
+            { id: 4, name: "DR. JIMOH ADEKUNLE", specialization: "CONSULTANT FAMILY PHYSICIAN", image: DOCTOR_IMG },
+            { id: 5, name: "DR. OKUNEYE TAOFEEK", specialization: "CONSULTANT FAMILY PHYSICIAN", image: DOCTOR_IMG },
+            { id: 6, name: "DR. OSHUN JOY", specialization: "CARDIOLOGY CONSULTANT", image: DOCTOR_IMG },
+            { id: 7, name: "DR. NWOSE PASCHAL", specialization: "CONSULTANT GENERAL SURGEON", image: DOCTOR_IMG },
+            { id: 8, name: "DR. ALAWODE ADENIYI", specialization: "CONSULTANT INTENSIVIST/ANAESTHESIA", image: DOCTOR_IMG },
             { id: 9, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG },
         ],
-        servicesDescription: "Multi and Sub-Specialty care across all disciplines"
+        servicesDescription: "Multi and Sub-Specialty care across all disciplines",
+        emails: ["customerservices@reddingtonhospital.com", "info@reddingtonhospital.com"],
+        contact: ["0201-2715346-8", "0201-2715340", "0916 535 9769"],
+        emergency: "0201-2715344",
+        Heroimage: Heroimage
     },
     {
         id: 2,
@@ -66,20 +87,35 @@ export const branches: Branch[] = [
         location: "39 Isaac John Street, Ikeja GRA, Lagos",
         address: "39 Isaac John Street, Ikeja GRA, Lagos",
         description: "For nearly two decades, Reddington Hospital Ikeja has served as a trusted healthcare partner to com...",
-        fullDescription: "For nearly two decades, Reddington Hospital Ikoyi has served as a trusted healthcare partner to communities across Lagos. With modern facilities and experienced medical staff, we deliver quality healthcare services with a focus on patient satisfaction and clinical excellence.",
+        fullDescription: "For nearly two decades, Reddington Hospital Ikeja has served as a trusted healthcare partner to communities across the Lagos mainland. This one-stop multi-specialist facility brings together experienced consultants, comprehensive diagnostic capabilities, and emergency care in a convenient location, ensuring mainland residents have access to the same quality care our group is renowned for.",
         image: PLACEHOLDER_IMG,
         services: [
-            { name: "General Medicine", image: SERVICE_PLACEHOLDER },
-            { name: "Pediatrics", image: SERVICE_PLACEHOLDER },
-            { name: "Obstetrics & Gynecology", image: SERVICE_PLACEHOLDER },
-            { name: "Laboratory Services", image: SERVICE_PLACEHOLDER },
+            { name: "Family Medicine", image: FamilyMedicine },
+            { name: "24-hour Emergency Care", image: EmergencyCare },
+            { name: "Full Diagnostic Services", image: Diagnostic },
+            { name: "Outpatient Clinics", image: Urgent },
+            { name: "Pharmacy", image: Pharmacy },
+            { name: "Maternity Services", image: coronary },
+            { name: "Laboratory Services", image: MSL },
+            { name: "Surgery", image: Operating },
+            { name: "Paediatrics", image: Urgent },
+            { name: "Cardiology Care", image: Pharmacy },
         ],
         doctors: [
-            { id: 5, name: "Dr. John Afolabi", specialization: "Consultant OB/GYN", image: DOCTOR_IMG },
-            { id: 6, name: "Dr. Chukwu Ifeanyi", specialization: "Consultant Pediatrician", image: DOCTOR_IMG },
-            { id: 7, name: "Dr. Ngozi Okafor", specialization: "Consultant Physician", image: DOCTOR_IMG },
-            { id: 8, name: "Dr. Tunde Adeniyi", specialization: "Laboratory Director", image: DOCTOR_IMG },
+            { id: 5, name: "DR. OLUFISAYO BALOGUN", specialization: "CONSULTANT O&G /MEDICAL DIRECTOR", image: DOCTOR_IMG },
+            { id: 6, name: "DR. VALENTINE OKWARA", specialization: "CONSULTANT O&G", image: DOCTOR_IMG },
+            { id: 7, name: "DR. TAFA OSUNLAJA", specialization: "CONSULTANT ANASTHETIST", image: DOCTOR_IMG },
+            { id: 8, name: "DR. EYITAYO OLONADE", specialization: "CONSULTANT PAEDIATRICIAN", image: DOCTOR_IMG },
+            { id: 9, name: "DR. EMMANUEL CHUKWURAH", specialization: "CONSULTANT PAEDIATRICIAN", image: DOCTOR_IMG },
+            // { id: 10, name: "DR. EYITAYO OLONADE", specialization: "CONSULTANT RADIOLOGIST", image: DOCTOR_IMG },
+            { id: 10, name: "DR. KENNETH OCHULOR", specialization: "CONSULTANT CARDIOLOGIST", image: DOCTOR_IMG },
+            { id: 10, name: "DR. DORKA DORA BEKEE", specialization: "CONSULTANT PAEDIATRICIAN", image: DOCTOR_IMG },
+            { id: 10, name: "DR ALIYU ABDULMUMEEN", specialization: "EVENING FAMILY PHYSICIAN", image: DOCTOR_IMG },
         ],
+        emails: ["enquiries@reddingtonhospital.com"],
+        contact: ["0707 870 1595", "0707 876 0874"],
+        servicesDescription: "All Specialty care",
+        Heroimage : Heroimage 
     },
     {
         id: 3,
@@ -112,10 +148,26 @@ export const branches: Branch[] = [
         fullDescription: "The Maxy Super-specialty Centre is a unique, multi-disciplinary ambulatory care facility designed to deliver specialized outpatient services with world-class standards. Our centre focuses on providing comprehensive diagnostic and therapeutic services.",
         image: PLACEHOLDER_IMG,
         services: [
-            { name: "Specialized Consultations", image: SERVICE_PLACEHOLDER },
-            { name: "Diagnostics", image: SERVICE_PLACEHOLDER },
-            { name: "Day Surgery", image: SERVICE_PLACEHOLDER },
-            { name: "Physical Therapy", image: SERVICE_PLACEHOLDER },
+            { 
+                name: "Specialized Consultations", 
+                image: SERVICE_PLACEHOLDER,
+                description: "Expert medical consultations across various specialties"
+            },
+            { 
+                name: "Diagnostics", 
+                image: SERVICE_PLACEHOLDER,
+                description: "Advanced diagnostic services and testing"
+            },
+            { 
+                name: "Day Surgery", 
+                image: SERVICE_PLACEHOLDER,
+                description: "Minimally invasive surgical procedures"
+            },
+            { 
+                name: "Physical Therapy", 
+                image: SERVICE_PLACEHOLDER,
+                description: "Comprehensive rehabilitation and therapy services"
+            },
         ],
         doctors: [
             { id: 13, name: "Dr. Kunle Fadeji", specialization: "Specialist Consultant", image: DOCTOR_IMG },
@@ -123,6 +175,8 @@ export const branches: Branch[] = [
             { id: 15, name: "Dr. Sade Okafor", specialization: "Day Surgery Specialist", image: DOCTOR_IMG },
             { id: 16, name: "Dr. Bolade Oluyinka", specialization: "Physiotherapist", image: DOCTOR_IMG },
         ],
+        emails: ["crm@maxycentre.com"],
+        contact: ["0803 588 6227", "0810 129 1300"]
     },
     {
         id: 5,
