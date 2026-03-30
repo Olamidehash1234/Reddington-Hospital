@@ -11,7 +11,7 @@ export default function BranchHero() {
     return (
         <div className="relative h-[300px] w-full lg:h-[424px] overflow-hidden">
             <img
-                src={branch.image}
+                src={branch.Heroimage}
                 alt={branch.name}
                 className="h-full w-full object-cover"
             />
