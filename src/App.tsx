@@ -9,6 +9,7 @@ import Ourbranches from './pages/OurBranches'
 import BranchDetail from './pages/OurBranches/BranchDetail'
 import Contact from './pages/Contact';
 import Awards from './pages/Awards';
+import Career from './pages/Career'
 // import FeedbackForm from './pages/feedbackform';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/branches/:name" element={<BranchDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/awards" element={<Awards />} />
+          <Route path="/career" element={<Career />} />
         </Route>
       </Routes>
     </BrowserRouter>

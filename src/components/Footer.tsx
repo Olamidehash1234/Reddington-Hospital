@@ -27,7 +27,11 @@ const Footer = () => {
     'Clinical Specialities',
   ];
 
-  const mediaLinks = ['Blog & Article', 'News & Events', 'Careers'];
+  const mediaLinks = [
+    { text: 'Blog & Article', path: '#' },
+    { text: 'News & Events', path: '#' },
+    { text: 'Careers', path: '/career' }
+  ];
 
   return (
     <footer className="relative bg-white text-[#2d2d2d] border-t border-[#2d2d2d]/10 overflow-hidden">
@@ -104,10 +108,10 @@ const Footer = () => {
                 Media
               </h3>
               <ul className="mt-[18px] space-y-[14px] text-[#2D2D2D] text-[14px] lg:text-[15px] leading-[19px]">
-                {mediaLinks.map((t) => (
-                  <li key={t}>
-                    <Link to="#" className="hover:opacity-80 text-[#2D2D2D]">
-                      {t}
+                {mediaLinks.map((item) => (
+                  <li key={item.text}>
+                    <Link to={item.path} className="hover:opacity-80 text-[#2D2D2D]">
+                      {item.text}
                     </Link>
                   </li>
                 ))}
