@@ -1,11 +1,10 @@
 import { branches } from "../../../data/branches"
 import { useParams } from "react-router-dom"
-
+import { branchNameToSlug } from "../../../utils/slugify"
 
 export default function BranchContact() {
-    const { id } = useParams<{ id: string }>()
-    const branchId = parseInt(id || "1", 10)
-    const branch = branches.find((b) => b.id === branchId)
+    const { name } = useParams<{ name: string }>()
+    const branch = branches.find((b) => branchNameToSlug(b.name) === name)
 
     return (
         <section className="bg-[#F9F9F9] px-[16px] py-[40px] lg:py-[60px] lg:px-[80px]">

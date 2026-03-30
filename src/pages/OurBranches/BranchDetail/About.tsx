@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom"
 import { branches } from "../../../data/branches"
+import { branchNameToSlug } from "../../../utils/slugify"
 
 export default function BranchAbout() {
-    const { id } = useParams<{ id: string }>()
-    const branchId = parseInt(id || "1", 10)
-    const branch = branches.find((b) => b.id === branchId)
+    const { name } = useParams<{ name: string }>()
+    const branch = branches.find((b) => branchNameToSlug(b.name) === name)
 
     if (!branch) return null
 

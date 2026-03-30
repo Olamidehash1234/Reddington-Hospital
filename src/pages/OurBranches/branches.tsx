@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { branches } from "../../data/branches"
-
+import { branchNameToSlug } from '../../utils/slugify'
 export default function Branches() {
     const navigate = useNavigate()
 
@@ -27,7 +27,7 @@ export default function Branches() {
                             </h3>
 
                             {/* Location */}
-                            <div className="flex gap-[8px] mb-[16px]">
+                            <div className="flex flex-row gap-[8px] mb-[16px]">
                                 <img
                                     src="/icon/location.svg"
                                     alt="location"
@@ -45,7 +45,7 @@ export default function Branches() {
 
                             {/* Learn More Button */}
                             <button
-                                onClick={() => navigate(`/branches/${branch.id}`)}
+                                onClick={() => navigate(`/branches/${branchNameToSlug(branch.name)}`)}
                                 className="text-[#E40714] font-semibold text-[13px] hover:underline text-left inline"
                             >
                                 Learn More

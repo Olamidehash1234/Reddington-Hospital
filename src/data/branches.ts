@@ -1,7 +1,7 @@
 export type Service = {
     name: string
     image: string
-    description?: string
+    description?: string | string[]
     fullDescription?: string
 }
 
@@ -43,6 +43,8 @@ const Operating = "/image/branches/operating.png"
 const SERVICE_PLACEHOLDER = "/image/services/placeholder.png"
 const DOCTOR_IMG = "/image/home/doctor/dct-1.png"
 const Pharmacy = "/image/branches/Pharmacy.png"
+const Dental = "/image/branches/dental.png"
+const Blog = "/image/home/blog/heart.png"
 
 export const branches: Branch[] = [
     {
@@ -107,7 +109,6 @@ export const branches: Branch[] = [
             { id: 7, name: "DR. TAFA OSUNLAJA", specialization: "CONSULTANT ANASTHETIST", image: DOCTOR_IMG },
             { id: 8, name: "DR. EYITAYO OLONADE", specialization: "CONSULTANT PAEDIATRICIAN", image: DOCTOR_IMG },
             { id: 9, name: "DR. EMMANUEL CHUKWURAH", specialization: "CONSULTANT PAEDIATRICIAN", image: DOCTOR_IMG },
-            // { id: 10, name: "DR. EYITAYO OLONADE", specialization: "CONSULTANT RADIOLOGIST", image: DOCTOR_IMG },
             { id: 10, name: "DR. KENNETH OCHULOR", specialization: "CONSULTANT CARDIOLOGIST", image: DOCTOR_IMG },
             { id: 10, name: "DR. DORKA DORA BEKEE", specialization: "CONSULTANT PAEDIATRICIAN", image: DOCTOR_IMG },
             { id: 10, name: "DR ALIYU ABDULMUMEEN", specialization: "EVENING FAMILY PHYSICIAN", image: DOCTOR_IMG },
@@ -115,7 +116,7 @@ export const branches: Branch[] = [
         emails: ["enquiries@reddingtonhospital.com"],
         contact: ["0707 870 1595", "0707 876 0874"],
         servicesDescription: "All Specialty care",
-        Heroimage : Heroimage 
+        Heroimage: Heroimage
     },
     {
         id: 3,
@@ -145,38 +146,79 @@ export const branches: Branch[] = [
         location: "14 Akin Olugbade Street, V. I, Lagos 106104",
         address: "14 Akin Olugbade Street, V. I, Lagos 106104",
         description: "The Maxy Super-specialty Centre is a unique, multi-disciplinary ambulatory care facility designed to de...",
-        fullDescription: "The Maxy Super-specialty Centre is a unique, multi-disciplinary ambulatory care facility designed to deliver specialized outpatient services with world-class standards. Our centre focuses on providing comprehensive diagnostic and therapeutic services.",
+        fullDescription: "The Maxy Super-specialty Centre is a unique, multi-disciplinary ambulatory care facility designed to deliver high-quality care in an office-like environment, away from traditional hospital bureaucracy. Staffed by a carefully selected group of highly skilled clinicians, the centre focuses on day-case and outpatient specialty services, ensuring patients receive safe, effective, and efficient care according to internationally accepted guidelines.",
         image: PLACEHOLDER_IMG,
         services: [
-            { 
-                name: "Specialized Consultations", 
-                image: SERVICE_PLACEHOLDER,
-                description: "Expert medical consultations across various specialties"
+            {
+                name: "Maxy Dental Centre",
+                image: Dental,
+                description: [
+                    "Cosmetic Dentistry",
+                    "Invisalign",
+                    "Teeth Whitening",
+                    "Implants",
+                    "Orthodontics",
+                    "Oral and Maxillofacial Surgery"
+                ]
             },
-            { 
-                name: "Diagnostics", 
-                image: SERVICE_PLACEHOLDER,
-                description: "Advanced diagnostic services and testing"
+            {
+                name: "Maxy ENT Centre",
+                image: Blog,
+                description: [
+                    "Ophthalmic consultations",
+                    "Glaucoma treatment",
+                    "Cataract surgery",
+                    "Diabetic retinopathy evaluation",
+                ]
             },
-            { 
-                name: "Day Surgery", 
-                image: SERVICE_PLACEHOLDER,
-                description: "Minimally invasive surgical procedures"
+            {
+                name: "Maxy Endoscopy Centre",
+                image: Blog,
+                description: [
+                    "Colonoscopy",
+                    "Gastroscopy",
+                    "Bronchoscopy",
+                    "Therapeutic endoscopic procedures",
+                ]
             },
-            { 
-                name: "Physical Therapy", 
-                image: SERVICE_PLACEHOLDER,
-                description: "Comprehensive rehabilitation and therapy services"
+            {
+                name: "Physiotherapy Centre",
+                image: Blog,
+                description: [
+                    "vices rendered",
+                    "Joint manipulation",
+                    "Rehabilitation",
+                    "Sports injury treatment",
+                ]
+            },
+            {
+                name: "Audiology & Vestibular Clinic",
+                image: Dental,
+                description: [
+                    "Hearing tests",
+                    "Hearing aid services",
+                    "Balance disorders",
+                ]
+            },
+            {
+                name: "Neurodiagnostic Centre",
+                image: Blog,
+                description: [
+                    "Ambulatory EEG Monitoring",
+                    "Transcranial Doppler Ultrasound",
+                ]
             },
         ],
         doctors: [
             { id: 13, name: "Dr. Kunle Fadeji", specialization: "Specialist Consultant", image: DOCTOR_IMG },
             { id: 14, name: "Dr. Adekunle Adeniyi", specialization: "Diagnostic Expert", image: DOCTOR_IMG },
             { id: 15, name: "Dr. Sade Okafor", specialization: "Day Surgery Specialist", image: DOCTOR_IMG },
-            { id: 16, name: "Dr. Bolade Oluyinka", specialization: "Physiotherapist", image: DOCTOR_IMG },
+            
         ],
         emails: ["crm@maxycentre.com"],
-        contact: ["0803 588 6227", "0810 129 1300"]
+        contact: ["0803 588 6227", "0810 129 1300"],
+        Heroimage: Heroimage,
+        servicesDescription: "Multi and Sub-Specialty care across all disciplines"
     },
     {
         id: 5,
