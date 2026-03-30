@@ -1,37 +1,36 @@
 import { useParams } from "react-router-dom"
 import { branches } from "../../../data/branches"
-import { useState, useEffect } from "react"
-import type { CSSProperties } from "react"
+import { branchNameToSlug } from "../../../utils/slugify"
+// import { useState, useEffect } from "react"
 
 export default function BranchServices() {
-    const { id } = useParams<{ id: string }>()
-    const branchId = parseInt(id || "1", 10)
-    const branch = branches.find((b) => b.id === branchId)
-    const [expandedServiceId, setExpandedServiceId] = useState<number | null>(null)
+    const { name } = useParams<{ name: string }>()
+    const branch = branches.find((b) => branchNameToSlug(b.name) === name)
+    // const [expandedServiceId, setExpandedServiceId] = useState<number | null>(null)
 
     if (!branch) return null
 
-    // Close expanded description when clicking outside
-    useEffect(() => {
-        if (expandedServiceId === null || branchId !== 4) return
+    // // Close expanded description when clicking outside
+    // useEffect(() => {
+    //     if (expandedServiceId === null || branchId !== 4) return
 
-        function handleClickOutside(event: MouseEvent) {
-            const target = event.target as HTMLElement | null
-            if (!target) return
+    //     function handleClickOutside(event: MouseEvent) {
+    //         const target = event.target as HTMLElement | null
+    //         if (!target) return
 
-            const expandedCard = target.closest<HTMLElement>(
-                `[data-service-card-id="${expandedServiceId}"]`
-            )
+    //         const expandedCard = target.closest<HTMLElement>(
+    //             `[data-service-card-id="${expandedServiceId}"]`
+    //         )
 
-            if (!expandedCard) setExpandedServiceId(null)
-        }
+    //         if (!expandedCard) setExpandedServiceId(null)
+    //     }
 
-        document.addEventListener("mousedown", handleClickOutside)
-        return () => document.removeEventListener("mousedown", handleClickOutside)
-    }, [expandedServiceId, branchId])
+    //     document.addEventListener("mousedown", handleClickOutside)
+    //     return () => document.removeEventListener("mousedown", handleClickOutside)
+    // }, [expandedServiceId, branchId])
 
     // Render Maxy Special Centre with detailed descriptions
-    if (branchId === 4) {
+    if (branch.name === "Reddington Maxy Super-Specialty Centre") {
         return (
             <section className="bg-[#E4071405] px-4 py-10 lg:px-[80px] lg:py-[80px]">
                 <div className="text-center mb-[40px] lg:mb-[60px]">
@@ -71,10 +70,17 @@ export default function BranchServices() {
                                 <h3 className="font-medium text-[14px] lg:text-[16px] tracking-[-0.5px] leading-[26px] mb-[20px]">
                                     {service.name}
                                 </h3>
+                                <p className="text-[13px] lg:text-[14px] leading-[24px] text-[#2D2D2DCC] tracking-[-0.5px]">Services rendered:</p>
                                 {service.description && (
-                                    <p className="text-[13px] text-[#2D2D2DCC] leading-[20px] lg:leading-[22px]">
-                                        {service.description}
-                                    </p>
+                                    <ul className="text-[13px] ml-[12px] text-[#2D2D2DCC] leading-[20px] lg:leading-[22px] list-disc list-inside">
+                                        {Array.isArray(service.description) ? (
+                                            service.description.map((item, i) => (
+                                                <li key={i}>{item}</li>
+                                            ))
+                                        ) : (
+                                            <li>{service.description}</li>
+                                        )}
+                                    </ul>
                                 )}
                             </div>
                         </div>
@@ -100,7 +106,7 @@ export default function BranchServices() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 gap-[20px] sm:grid-cols-2 lg:grid-cols-3 lg:gap-[24px]">
+                <div className="grid grid-cols-1 gap-[20px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-[24px]">
                     {branch.services.map((service, index) => (
                         <div
                             key={index}
