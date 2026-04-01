@@ -2,28 +2,28 @@ import { Link } from "react-router-dom"
 import { useState, useEffect, useRef, type Key } from "react"
 
 const serviceCards = [
-    { 
-        title: 'Cardiology', 
+    {
+        title: 'Cardiology',
         images: ['/image/home/cardiology-1.jpg', '/image/home/grid-1.png', '/image/home/cardiology-2.jpg']
     },
-    { 
-        title: 'Diagnostic Imaging', 
+    {
+        title: 'Diagnostic Imaging',
         images: ['/image/home/img-1.jpg', '/image/home/img-2.jpg', '/image/home/img-3.jpg']
     },
-    { 
-        title: 'Surgical Services', 
+    {
+        title: 'Surgical Services',
         images: ['/image/home/surg-1.jpg', '/image/home/surg-2.jpg', '/image/home/surg-3.jpg']
     },
-    { 
-        title: 'Emergency Services', 
+    {
+        title: 'Emergency Services',
         images: ['/image/home/emerg-1.jpg', '/image/home/emerg-2.jpg']
     },
-    { 
-        title: 'Clinical Laboratory', 
+    {
+        title: 'Clinical Laboratory',
         images: ['/image/home/lab-1.jpg', '/image/home/lab-2.jpg', '/image/home/lab-3.jpg']
     },
-    { 
-        title: 'Endoscopy', 
+    {
+        title: 'Endoscopy',
         images: ['/image/home/endo-1.jpg']
     },
 ];
@@ -61,7 +61,7 @@ const ServiceCard = ({ card, height }: { card: typeof serviceCards[0]; height: s
     };
 
     return (
-        <div 
+        <div
             className="relative rounded-[12px] overflow-hidden group cursor-pointer"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -74,13 +74,12 @@ const ServiceCard = ({ card, height }: { card: typeof serviceCards[0]; height: s
                         key={index}
                         src={image}
                         alt={card.title}
-                        className={`w-full h-full object-cover transition-all duration-300 ease-out absolute inset-0 ${
-                            index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                        }`}
+                        className={`w-full h-full object-cover transition-all duration-300 ease-out absolute inset-0 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                            }`}
                     />
                 ))}
                 {/* Title overlay at bottom */}
-                <h3 className="absolute bottom-0 left-0 right-0 text-white font-medium text-[14px] lg:text-[15px] py-[21px] px-[30px]" style={{backgroundImage : 'linear-gradient(140deg, rgba(26, 26, 26, 0.00) -44.46%, rgba(26, 26, 26, 0.64) 77.1%)'}}>
+                <h3 className="absolute bottom-0 left-0 right-0 text-white font-semibold text-[14px] lg:text-[15px] py-[21px] px-[30px]" style={{ backgroundImage: 'linear-gradient(140deg, rgba(26, 26, 26, 0.00) -44.46%, rgba(26, 26, 26, 0.64) 77.1%)' }}>
                     {card.title}
                 </h3>
             </div>
@@ -129,14 +128,14 @@ export default function ServicesPage() {
                     <div className="mt-[30px] flex flex-col gap-[14px] lg:gap-[16px] lg:flex-row w-full">
                         <div className="flex flex-col gap-[14px] w-full lg:w-[35%]">
                             {/* Service Card 1 */}
-                            <ServiceCard 
-                                card={serviceCards[0]} 
+                            <ServiceCard
+                                card={serviceCards[0]}
                                 height="h-[170px] lg:h-[219px]"
                             />
 
                             {/* Service Card 2 */}
-                            <ServiceCard 
-                                card={serviceCards[1]} 
+                            <ServiceCard
+                                card={serviceCards[1]}
                                 height="lg:h-[373px] h-[170px]"
                             />
                         </div>
@@ -146,16 +145,16 @@ export default function ServicesPage() {
                             <div className="flex lg:flex-row flex-col gap-[16px] w-full">
                                 {/* Service Card 3 */}
                                 <div className="w-full lg:w-[65%]">
-                                    <ServiceCard 
-                                        card={serviceCards[2]} 
+                                    <ServiceCard
+                                        card={serviceCards[2]}
                                         height="h-[170px] lg:h-[375px]"
                                     />
                                 </div>
 
                                 {/* Service Card 4 */}
                                 <div className="w-full lg:w-[35%]">
-                                    <ServiceCard 
-                                        card={serviceCards[3]} 
+                                    <ServiceCard
+                                        card={serviceCards[3]}
                                         height="h-[170px] lg:h-[375px]"
                                     />
                                 </div>
@@ -165,16 +164,16 @@ export default function ServicesPage() {
                             <div className="flex lg:flex-row flex-col gap-[14px] w-full">
                                 {/* Service Card 5 */}
                                 <div className="w-full">
-                                    <ServiceCard 
-                                        card={serviceCards[4]} 
+                                    <ServiceCard
+                                        card={serviceCards[4]}
                                         height="lg:h-[217px] h-[170px]"
                                     />
                                 </div>
 
                                 {/* Service Card 6 */}
                                 <div className="w-full">
-                                    <ServiceCard 
-                                        card={serviceCards[5]} 
+                                    <ServiceCard
+                                        card={serviceCards[5]}
                                         height="lg:h-[217px] h-[170px]"
                                     />
                                 </div>

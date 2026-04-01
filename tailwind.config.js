@@ -17,7 +17,7 @@ export default {
         },
       },
       animation: {
-        bounce: 'bounce 0.6s infinite',
+        bounce: 'bounce 0.7s infinite',
         imageHover: 'imageHover 0.3s ease-out forwards',
       },
     },
