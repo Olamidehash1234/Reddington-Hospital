@@ -2,9 +2,9 @@ interface DoctorCardProps {
     doctor: {
         id: number;
         name: string;
-        specialization: string;
+        specialty: string;
         image: string;
-        location: string;
+        hospital: string;
     };
     className?: string;
 }
@@ -14,7 +14,7 @@ export default function DoctorCard({ doctor, className = '' }: DoctorCardProps) 
         <div className={`flex flex-col items-center ${className}`}>
             {/* Doctor Image Card */}
             <div className="relative mb-[20px] w-full z-20">
-                <div className="relative w-full h-[305px] lg:h-[305px]">
+                <div className="relative w-full h-[350px] lg:h-[400px]">
                     {/* Photo */}
                     {/* Inset photo + asymmetric corner rounding (only TL + BR) */}
                     <div className="absolute bottom-[3.93%] left-[3.45%] right-[3.79%] top-[3.28%] overflow-hidden rounded-br-[52px] rounded-tl-[52px] rounded-bl-none rounded-tr-none lg:bottom-[10px] lg:left-[10px] lg:right-[11px] lg:top-[10px] lg:rounded-br-[52px] lg:rounded-tl-[52px]">
@@ -50,11 +50,11 @@ export default function DoctorCard({ doctor, className = '' }: DoctorCardProps) 
 
                 {/* Doctor Specialization */}
                 <p className="text-white text-[14px] leading-[14px] font-medium tracking-[-0.28px]">
-                    {doctor.specialization}
+                    {doctor.specialty}
                 </p>
 
                 <p className="text-white text-[14px] leading-[24px]" style={{fontFamily: 'TexGyreAdventor'}}>
-                    {doctor.location}
+                    {doctor.hospital}
                 </p>
             </div>
         </div>

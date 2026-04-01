@@ -5,8 +5,8 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
     return (
         <div className="flex w-full flex-col items-start">
             <div className="relative z-20 mb-[20px] w-full">
-                <div className="relative h-[300px] w-full sm:h-[305px] lg:h-[305px]">
-                    <div className="absolute bottom-[3.93%] left-[3.45%] right-[3.79%] top-[3.28%] overflow-hidden rounded-br-[52px] rounded-tl-[52px] rounded-bl-none rounded-tr-none lg:bottom-[10px] lg:left-[10px] lg:right-[11px] lg:top-[10px] lg:rounded-br-[52px] lg:rounded-tl-[52px]">
+                <div className="relative h-[300px] w-full sm:h-[400px] lg:h-[400px]">
+                    <div className="absolute bottom-[3.93%] border left-[3.45%] right-[3.79%] top-[3.28%] overflow-hidden rounded-br-[52px] rounded-tl-[52px] rounded-bl-none rounded-tr-none lg:bottom-[10px] lg:left-[10px] lg:right-[11px] lg:top-[10px] lg:rounded-br-[52px] lg:rounded-tl-[52px]">
                         <img
                             src={doctor.image}
                             alt={doctor.name}
@@ -62,7 +62,7 @@ export default function Doctors() {
 
             <div className="mb-[28px] flex flex-col justify-center gap-[20px] lg:mb-[40px] lg:flex-row">
                 <div
-                    className="inline-flex shrink-0 rounded-[20px] border border-[#E40714] p-[8px]"
+                    className="flex lg:rounded-[20px] mx-auto lg:w-auto w-[370px] items-center justify-center rounded-[16px] border border-[#E40714] p-[8px]"
                     role="tablist"
                     aria-label="Doctor groups"
                 >
@@ -71,7 +71,7 @@ export default function Doctors() {
                         role="tab"
                         aria-selected={activeTab === "in-house"}
                         onClick={() => setActiveTab("in-house")}
-                        className={`rounded-[20px] px-[18px] py-[12px] text-[13px] font-semibold transition-colors lg:px-[55px] lg:py-[18px] lg:text-[14px] ${
+                        className={`lg:rounded-[20px] rounded-[16px] px-[18px] py-[12px] text-[13px] font-semibold transition-colors lg:px-[40px] lg:py-[18px] lg:text-[14px] ${
                             activeTab === "in-house"
                                 ? "bg-[#E40714] text-white"
                                 : "bg-transparent text-[#E40714]"
@@ -84,7 +84,7 @@ export default function Doctors() {
                         role="tab"
                         aria-selected={activeTab === "external"}
                         onClick={() => setActiveTab("external")}
-                        className={`rounded-[20px] px-[18px] py-[12px] text-[13px] font-semibold transition-colors lg:px-[20px] lg:py-[18px] lg:text-[14px] ${
+                        className={`lg:rounded-[20px] rounded-[14px] px-[18px] py-[12px] text-[13px] font-semibold transition-colors lg:px-[40px] lg:py-[18px] lg:text-[14px] ${
                             activeTab === "external"
                                 ? "bg-[#E40714] text-white"
                                 : "bg-transparent text-[#E40714]"

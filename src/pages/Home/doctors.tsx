@@ -1,40 +1,9 @@
 import DoctorCard from '../../components/DoctorCard';
 import { Link } from 'react-router-dom'
+import { inHouseDoctors } from '../../data/doctors'
 
 export default function DoctorsSection() {
-    const doctorImage = '/image/home/doctor/dct-1.png';
-    const doctors = [
-        {
-            id: 1,
-            name: 'Dr. Abiodun Osibamowo',
-            specialization: 'Internal Medicine and Medical Director',
-            image: doctorImage,
-            location: "Reddington V.I",
-        },
-        {
-            id: 2,
-            name: 'Dr Seyi Oyesola',
-            specialization: 'Critical Care Consultant',
-            image: doctorImage,
-            location: "Reddington V.I",
-        },
-        {
-            id: 3,
-            name: 'Dr Seyi Oyesola',
-            specialization: 'Critical Care Consultant',
-            image: doctorImage,
-            location: "Reddington V.I",
-        },
-        {
-            id: 4,
-            name: 'Dr Seyi Oyesola',
-            specialization: 'Critical Care Consultant',
-            image: doctorImage,
-            location: "Reddington V.I",
-        },
-    ];
-
-    const visibleDoctors = doctors.slice();
+    const visibleDoctors = inHouseDoctors.slice(0, 4);
 
     return (
         <section className="relative bg-[#E40714] py-[60px] lg:py-[100px] overflow-hidden">
