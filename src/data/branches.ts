@@ -45,16 +45,23 @@ const DOCTOR_IMG = "/image/home/doctor/dct-1.png"
 const Pharmacy = "/image/branches/Pharmacy.png"
 const Dental = "/image/branches/dental.png"
 const Blog = "/image/home/blog/heart.png"
+const VI = "/image/branches/V.I-hero.png"
+const Ikeja = "/image/branches/Ikeja-hero.png"
+const Lekki = "/image/branches/Lekki-hero.png"
+const Breast = "/image/branches/Breast-hero.png"
+const Maxy = "/image/branches/Maxy-hero.png"
+const Davidson = "/image/branches/davidson-hero.png"
+const Wellness = "/image/branches/wellness-hero.png"
 
 export const branches: Branch[] = [
     {
         id: 1,
-        name: "Reddington Multi-Specialist Hospital Victoria Island",
+        name: "Reddington Multi-Specialist Hospital V.I",
         location: "12a Idowu Martins Street, Victoria Island, Lagos",
         address: "12a Idowu Martins Street, Victoria Island, Lagos",
         description: "Our flagship hospital and the heart of the Reddington Healthcare Group, this multi-specialist..",
         fullDescription: "Our flagship hospital and the heart of the Reddington Hospital Group, this multi-specialist tertiary facility has set the standard for private healthcare in Nigeria since 2006. It serves as the hub for our most complex medical and surgical cases, bringing together an unparalleled team of consultants and cutting-edge technology under one roof.",
-        image: PLACEHOLDER_IMG,
+        image: VI,
         services: [
             { name: "Family Medicine", image: FamilyMedicine },
             { name: "24-hour Emergency Care", image: EmergencyCare },
@@ -81,7 +88,7 @@ export const branches: Branch[] = [
         emails: ["customerservices@reddingtonhospital.com", "info@reddingtonhospital.com"],
         contact: ["0201-2715346-8", "0201-2715340", "0916 535 9769"],
         emergency: "0201-2715344",
-        Heroimage: Heroimage
+        Heroimage: VI
     },
     {
         id: 2,
@@ -90,7 +97,7 @@ export const branches: Branch[] = [
         address: "39 Isaac John Street, Ikeja GRA, Lagos",
         description: "For nearly two decades, Reddington Hospital Ikeja has served as a trusted healthcare partner to com...",
         fullDescription: "For nearly two decades, Reddington Hospital Ikeja has served as a trusted healthcare partner to communities across the Lagos mainland. This one-stop multi-specialist facility brings together experienced consultants, comprehensive diagnostic capabilities, and emergency care in a convenient location, ensuring mainland residents have access to the same quality care our group is renowned for.",
-        image: PLACEHOLDER_IMG,
+        image: Ikeja,
         services: [
             { name: "Family Medicine", image: FamilyMedicine },
             { name: "24-hour Emergency Care", image: EmergencyCare },
@@ -116,7 +123,7 @@ export const branches: Branch[] = [
         emails: ["enquiries@reddingtonhospital.com"],
         contact: ["0707 870 1595", "0707 876 0874"],
         servicesDescription: "All Specialty care",
-        Heroimage: Heroimage
+        Heroimage: Ikeja
     },
     {
         id: 3,
@@ -125,7 +132,7 @@ export const branches: Branch[] = [
         address: "15c Admiralty Way, Lekki Phase 1, Lagos",
         description: "A 5-star, one-stop multi-specialist facility established to bring Reddington's signature excelle..",
         fullDescription: "A star, one-stop multi-specialist facility established to bring Reddington's signature excellence and quality care to the Lekki axis. Our facility is equipped with the latest medical technology and staffed with experienced healthcare professionals committed to your wellbeing.",
-        image: PLACEHOLDER_IMG,
+        image: Lekki,
         services: [
             { name: "Consultation", image: SERVICE_PLACEHOLDER },
             { name: "Diagnostics", image: SERVICE_PLACEHOLDER },
@@ -139,6 +146,7 @@ export const branches: Branch[] = [
             { id: 11, name: "Dr. Folake Adewale", specialization: "Psychiatrist", image: DOCTOR_IMG },
             { id: 12, name: "Dr. Ismail Hassan", specialization: "Wellness Physician", image: DOCTOR_IMG },
         ],
+        Heroimage: Lekki,
     },
     {
         id: 4,
@@ -147,7 +155,7 @@ export const branches: Branch[] = [
         address: "14 Akin Olugbade Street, V. I, Lagos 106104",
         description: "The Maxy Super-specialty Centre is a unique, multi-disciplinary ambulatory care facility designed to de...",
         fullDescription: "The Maxy Super-specialty Centre is a unique, multi-disciplinary ambulatory care facility designed to deliver high-quality care in an office-like environment, away from traditional hospital bureaucracy. Staffed by a carefully selected group of highly skilled clinicians, the centre focuses on day-case and outpatient specialty services, ensuring patients receive safe, effective, and efficient care according to internationally accepted guidelines.",
-        image: PLACEHOLDER_IMG,
+        image: Maxy,
         services: [
             {
                 name: "Maxy Dental Centre",
@@ -217,7 +225,7 @@ export const branches: Branch[] = [
         ],
         emails: ["crm@maxycentre.com"],
         contact: ["0803 588 6227", "0810 129 1300"],
-        Heroimage: Heroimage,
+        Heroimage: Maxy,
         servicesDescription: "Multi and Sub-Specialty care across all disciplines"
     },
     {
@@ -226,14 +234,18 @@ export const branches: Branch[] = [
         location: "12a Idowu Martins Street, Victoria Island, Lagos",
         address: "12a Idowu Martins Street, Victoria Island, Lagos",
         description: "As GE Healthcare's chosen reference site for West Africa, Purple Ray Diagnostic Centre represents the...",
-        fullDescription: "As GE Healthcare's reference site for West Africa, Purple Ray Diagnostic Centre represents the latest in imaging technology. We provide comprehensive diagnostic imaging services including CT scans, ultrasound, and X-ray with expert radiological interpretation.",
+        fullDescription: "As GE Healthcare's chosen reference site for West Africa, Purple Ray Diagnostic Centrerepresents the pinnacle of diagnostic imaging in the region. Our mission is to provide the highest standards of diagnostic testing and care, with access to outstanding technology that enables speedy and accurate diagnosis. From our pioneering 64-slice CT scanner to our advanced MRI and digital mammography, every piece of equipment has been selected to support the best possible patient outcomes.",
         image: PLACEHOLDER_IMG,
         services: [
-            { name: "CT Scanning", image: SERVICE_PLACEHOLDER },
-            { name: "Ultrasound", image: SERVICE_PLACEHOLDER },
-            { name: "X-Ray", image: SERVICE_PLACEHOLDER },
-            { name: "MRI", image: SERVICE_PLACEHOLDER },
-            { name: "Radiological Reporting", image: SERVICE_PLACEHOLDER },
+            { name: "64-Slice CT Sca", image: SERVICE_PLACEHOLDER },
+            { name: "1.5 Tesla Digital MRI", image: SERVICE_PLACEHOLDER },
+            { name: "Digital Mammography", image: SERVICE_PLACEHOLDER },
+            { name: "Digital Fluoroscopy", image: SERVICE_PLACEHOLDER },
+            { name: "Digital X-Ray", image: SERVICE_PLACEHOLDER },
+            { name: "4D Ultrasound Scan ", image: SERVICE_PLACEHOLDER },
+            { name: "Cardiac Diagnostic Services (ECG, Holter, Stress ECG, Echocardiography) ", image: SERVICE_PLACEHOLDER },
+            { name: "Full Medical Science Laboratory", image: SERVICE_PLACEHOLDER },
+            { name: "integrated PAS/RIS Systems for remote reporting", image: SERVICE_PLACEHOLDER },
         ],
         doctors: [
             { id: 17, name: "Dr. Olutayo Bamisile", specialization: "Chief Radiologist", image: DOCTOR_IMG },
@@ -241,6 +253,8 @@ export const branches: Branch[] = [
             { id: 19, name: "Dr. Adebayo Oladele", specialization: "Interventional Radiologist", image: DOCTOR_IMG },
             { id: 20, name: "Dr. Kemi Adesanya", specialization: "Ultrasound Specialist", image: DOCTOR_IMG },
         ],
+        emails: ["purpleray@reddingtonhospital.com"],
+        contact: ["0913 735 1756"],
     },
     {
         id: 6,
@@ -248,14 +262,19 @@ export const branches: Branch[] = [
         location: "276A Kofo Abayomi Street, near Intercontinental Hotel, Victoria Island, Lagos",
         address: "276A Kofo Abayomi Street, near Intercontinental Hotel, Victoria Island, Lagos",
         description: "The Breast & Gynae Centre is Nigeria's only dedicate...",
-        fullDescription: "The Breast & Gynae Centre is Nigeria's dedicated facility for comprehensive breast and gynecological care. Our specialized team provides screening, diagnosis, and treatment for all breast and gynecological conditions with compassionate, evidence-based care.",
-        image: PLACEHOLDER_IMG,
+        fullDescription: "The Breast & Gynae Centre is Nigeria's only dedicated women's healthcare centre providing comprehensive, holistic care for women at every life stage. Our mission is to deliver advanced, compassionate, and personalized care that spans wellness, curative treatment, and aesthetic services. By bringing together an exclusive team of UK and Nigeria-based specialists with cutting-edge technology, we have created a model for the future of women's health in West Africa.",
+        image: Breast,
         services: [
-            { name: "Breast Screening", image: SERVICE_PLACEHOLDER },
-            { name: "Gynecological Care", image: SERVICE_PLACEHOLDER },
-            { name: "Ultrasound", image: SERVICE_PLACEHOLDER },
-            { name: "Biopsy Services", image: SERVICE_PLACEHOLDER },
-            { name: "Health Education", image: SERVICE_PLACEHOLDER },
+            { name: "Gynaecology & Reproductive Health", image: SERVICE_PLACEHOLDER },
+            { name: " Fibroid Clinic (offering the full spectrum of management options)", image: SERVICE_PLACEHOLDER },
+            { name: "Breast Health Clinic (preventive, curative, and aesthetic)", image: SERVICE_PLACEHOLDER },
+            { name: "Women's Wellness Clinic", image: SERVICE_PLACEHOLDER },
+            { name: "Weight Loss Clinic", image: SERVICE_PLACEHOLDER },
+            { name: "Comprehensive Medical Check-up", image: SERVICE_PLACEHOLDER },
+            { name: "Fertility Assessment and Infertility Care", image: SERVICE_PLACEHOLDER },
+            { name: "Menopausal Health", image: SERVICE_PLACEHOLDER },
+            { name: "Menopausal Health", image: SERVICE_PLACEHOLDER },
+            { name: "Advanced Women'sImaging (3D Mammography, 3D ABUS, Stereotactic Biopsy, DEXA Bone Density Scan)", image: SERVICE_PLACEHOLDER },
         ],
         doctors: [
             { id: 21, name: "Dr. Femi Okafor", specialization: "Breast Surgeon", image: DOCTOR_IMG },
@@ -263,6 +282,9 @@ export const branches: Branch[] = [
             { id: 23, name: "Dr. Akin Oluwaseun", specialization: "Ultrasound Specialist", image: DOCTOR_IMG },
             { id: 24, name: "Dr. Rukayat Suliat", specialization: "Breast Care Nurse", image: DOCTOR_IMG },
         ],
+        contact: ["0907 277 6884", "0907 197 8966"],
+        emails: ["customerservice@breastandgynae.com"],
+        Heroimage: Breast
     },
     {
         id: 7,
@@ -271,12 +293,19 @@ export const branches: Branch[] = [
         address: "2nd Floor, Reddington Hospital, 12a Idowu Martins Street, Victoria Island, Lagos",
         description: "Named in honour of our founding medical director...",
         fullDescription: "Named in honour of our founding medical director, Dr Neil Davidson FRCP, this state-of-the-art facility represents the pinnacle of integrated surgical and intensive care in Nigeria. What sets the Davidson Centre apart is the tight integration between Surgery, Anaesthesia, and Critical Care teams—a collaboration essential for optimal outcomes following major elective and emergency surgery. Our seven-bedded combined ICU/HDU is equipped with first-world technology and managed by UK-trained intensive care specialists.",
-        image: PLACEHOLDER_IMG,
+        image: Davidson,
         services: [
             { name: "General Surgery", image: SERVICE_PLACEHOLDER },
-            { name: "Trauma Care", image: SERVICE_PLACEHOLDER },
-            { name: "ICU/HDU", image: SERVICE_PLACEHOLDER },
-            { name: "Anaesthesia", image: SERVICE_PLACEHOLDER },
+            { name: "Colorectal Surgery", image: SERVICE_PLACEHOLDER },
+            { name: "Laparoscopic (Keyhole) Surgery", image: SERVICE_PLACEHOLDER },
+            { name: "Orthopaedic and Spinal Surgery", image: SERVICE_PLACEHOLDER },
+            { name: "Cardiothoracic Surgery", image: SERVICE_PLACEHOLDER },
+            { name: "Urology", image: SERVICE_PLACEHOLDER },
+            { name: "Percutaneous Cardiac Interventions ", image: SERVICE_PLACEHOLDER },
+            { name: "Full Intensive Care", image: SERVICE_PLACEHOLDER },
+            { name: "High Dependency Care", image: SERVICE_PLACEHOLDER },
+            { name: "Post-operative Recovery", image: SERVICE_PLACEHOLDER },
+            { name: "Advanced Infection Control (with dedicated CSSD led by UK-trained professional)", image: SERVICE_PLACEHOLDER },
         ],
         doctors: [
             { id: 25, name: "Dr. Tunde Oladimeji", specialization: "Chief Surgeon", image: DOCTOR_IMG },
@@ -284,6 +313,8 @@ export const branches: Branch[] = [
             { id: 27, name: "Dr. James Udeh", specialization: "ICU Specialist", image: DOCTOR_IMG },
             { id: 28, name: "Dr. Amina Safiya", specialization: "Trauma Surgeon", image: DOCTOR_IMG },
         ],
+        contact: ["0201-2715346-8", "0201-2715340", "0916 535 9769"],
+        Heroimage: Davidson
     },
     {
         id: 8,
@@ -294,10 +325,18 @@ export const branches: Branch[] = [
         fullDescription: "The Bodycare Centre is the latest innovation from the Reddington Healthcare Group, offering an extensive range of aesthetic plastic surgery procedures in a confidential and safe environment. Led by highly experienced plastic surgeon Dr Stanley Okoro, who maintains successful practices in both Nigeria and the United States, our team provides customized cosmetic solutions alongside remedial and reconstructive services for congenital defects and burn injuries.",
         image: PLACEHOLDER_IMG,
         services: [
-            { name: "Aesthetic Procedures", image: SERVICE_PLACEHOLDER },
-            { name: "Reconstructive Surgery", image: SERVICE_PLACEHOLDER },
-            { name: "Burn Injury Treatment", image: SERVICE_PLACEHOLDER },
-            { name: "Cosmetic Consultations", image: SERVICE_PLACEHOLDER },
+            { name: "Breast Lift & Enhancement", image: SERVICE_PLACEHOLDER },
+            { name: "Breast Reduction", image: SERVICE_PLACEHOLDER },
+            { name: "Facial Rejuvenation", image: SERVICE_PLACEHOLDER },
+            { name: "Mommy Makeover", image: SERVICE_PLACEHOLDER },
+            { name: "SmartLipo Liposuction", image: SERVICE_PLACEHOLDER },
+            { name: "Tummy Tuck", image: SERVICE_PLACEHOLDER },
+            { name: "Buttock Lift ", image: SERVICE_PLACEHOLDER },
+            { name: "Vaginal Rejuvenation", image: SERVICE_PLACEHOLDER },
+            { name: "Eyelid Surgery", image: SERVICE_PLACEHOLDER },
+            { name: "Botox Treatments", image: SERVICE_PLACEHOLDER },
+            { name: "Post-burn Reconstruction ", image: SERVICE_PLACEHOLDER },
+            { name: "Cleft Palate Repair ", image: SERVICE_PLACEHOLDER },
         ],
         doctors: [
             { id: 29, name: "Dr. Stanley Okoro", specialization: "Plastic Surgeon", image: DOCTOR_IMG },
@@ -305,6 +344,8 @@ export const branches: Branch[] = [
             { id: 31, name: "Dr. David Omokaro", specialization: "Aesthetic Surgeon", image: DOCTOR_IMG },
             { id: 32, name: "Dr. Chisom Nwankwo", specialization: "Burn Care Specialist", image: DOCTOR_IMG },
         ],
+        contact: ["0916 453 8135", "0806 555 1615"],
+        Heroimage: PLACEHOLDER_IMG
     },
     {
         id: 9,
@@ -313,13 +354,16 @@ export const branches: Branch[] = [
         address: "276A Kofo Abayomi Street, near Intercontinental Hotel, Victoria Island, Lagos",
         description: "Good health is our most valuable asset, yet often t...",
         fullDescription: "Good health is our most valuable asset, yet often the most neglected. The Reddington Medical Check-up Centre was established to make comprehensive preventive health screening accessible and convenient. Our flagship Lifescreen programme—the first of its kind in Nigeria—is a total body screening exercise for early detection of tumours and life-threatening abnormalities, assessing your risk for heart disease, diabetes, stroke, and more. Using technology firsts like the 1.5Tesla MRI, 3D Tomo-mammogram, and 3D ABUS, we provide peace of mind through early detection.",
-        image: PLACEHOLDER_IMG,
+        image: Wellness,
         services: [
-            { name: "Full Body Screening", image: SERVICE_PLACEHOLDER },
-            { name: "Health Check-up Packages", image: SERVICE_PLACEHOLDER },
-            { name: "Advanced Imaging", image: SERVICE_PLACEHOLDER },
-            { name: "Preventive Medicine", image: SERVICE_PLACEHOLDER },
-            { name: "Wellness Programs", image: SERVICE_PLACEHOLDER },
+            { name: "Standard Health Screens", image: SERVICE_PLACEHOLDER },
+            { name: "Premier Health Screens", image: SERVICE_PLACEHOLDER },
+            { name: "Silver Lifescreen", image: SERVICE_PLACEHOLDER },
+            { name: "Gold Lifescreen", image: SERVICE_PLACEHOLDER },
+            { name: "Platinum Lifescreen", image: SERVICE_PLACEHOLDER },
+            { name: "Bespoke Corporate and Individual Packages", image: SERVICE_PLACEHOLDER },
+            { name: "Occupational Health Assessment", image: SERVICE_PLACEHOLDER },
+            { name: " Executive Health Physician guidance throughout", image: SERVICE_PLACEHOLDER },
         ],
         doctors: [
             { id: 33, name: "Dr. Babatunde Adeleke", specialization: "Wellness Director", image: DOCTOR_IMG },
@@ -327,5 +371,8 @@ export const branches: Branch[] = [
             { id: 35, name: "Dr. Oluwaseun Adeyemi", specialization: "Preventive Cardiologist", image: DOCTOR_IMG },
             { id: 36, name: "Dr. Morenike Adesuwa", specialization: "Nutritionist", image: DOCTOR_IMG },
         ],
+        contact: ["0909 555 5507", "0909 555 5508", "0903 000 9575"],
+        emails: ["wellness.centre@reddingtonhospital.com"],
+        Heroimage: Wellness
     },
 ]
