@@ -46,7 +46,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Services', href: '/services' },
-    { name: 'Find a Doctor', href: '/doctor' },
+    { name: 'Find a Doctor', href: '/doctors' },
     { name: 'Our Branches', href: '/our-branches' },
     { name: 'Contact Us', href: '/contact' },
   ];
@@ -56,7 +56,7 @@ export default function Navbar() {
       type="button"
       className="text-white items-center hover:underline underline-offset-[4px] space-x-2 px-4 rounded-full flex"
     >
-      <img src="/icon/call.svg" alt="" />
+      <img src="/icon/call.svg" alt="" className="animate-bounce" style={{ animationDelay: '0s' }} />
       <span className="text-sm font-medium">Emergency Response</span>
     </button>
   );
@@ -170,7 +170,7 @@ export default function Navbar() {
                 type="button"
                 className="navbar-emergency-mobile flex items-center space-x-2 text-white hover:underline underline-offset-[4px] w-full justify-center"
               >
-                <img src="/icon/call.svg" alt="" className="w-[30px] h-[30px]" />
+                <img src="/icon/call.svg" alt="" className="w-[30px] h-[30px] animate-bounce" style={{ animationDelay: '0s' }} />
                 <span className="text-white text-sm font-medium">Emergency Response</span>
               </button>
 
