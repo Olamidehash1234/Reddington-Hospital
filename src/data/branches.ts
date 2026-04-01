@@ -30,7 +30,6 @@ export type Branch = {
 }
 
 const PLACEHOLDER_IMG = "/image/branches/placeholder.png"
-const Heroimage = "/image/branches/hero.png"
 const FamilyMedicine = "/image/branches/medicine.png"
 const EmergencyCare = "/image/branches/emergency.png"
 const CATHLAB = "/image/branches/cathlab.png"
