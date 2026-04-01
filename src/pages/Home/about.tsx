@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function HeroEuracare() {
     // Update to new video ID and parameters
     const videoId = "lf4LaNDlgcI";
@@ -36,9 +38,11 @@ export default function HeroEuracare() {
                         </div>
 
                         {/* cta button */}
-                        <button className=" hidden lg:block border border-[#E40714] lg:px-[80px] px-[40px] py-[0px] lg:py-[16px] rounded-[12px] mt-[20px] lg:mt-[45px] font-medium tracking-[-0.84px] text-[14px] leading-[40px] lg:text-[14px] lg:leading-[100%] text-[#E40714]">
-                            Read more...
-                        </button>
+                        <Link to="/about">
+                            <button className=" hidden lg:block border border-[#E40714] lg:px-[80px] px-[40px] py-[0px] lg:py-[16px] rounded-[12px] mt-[20px] lg:mt-[45px] font-medium tracking-[-0.84px] text-[14px] leading-[40px] lg:text-[14px] lg:leading-[100%] text-[#E40714]">
+                                Read more...
+                            </button>
+                        </Link>
                     </div>
 
                     {/* Video column */}
@@ -59,9 +63,11 @@ export default function HeroEuracare() {
                         <span className="sr-only">Promotional video about Euracare treatment</span>
                     </div>
 
-                    <button className=" block lg:hidden border border-[#E40714] lg:px-[80px] px-[40px] py-[0px] lg:py-[16px] rounded-[12px] mb-[40px] lg:mt-[45px] font-medium tracking-[-0.84px] text-[14px] leading-[40px] lg:text-[14px] lg:leading-[100%] text-[#E40714]">
+                    <Link to="/about">
+                        <button className=" block lg:hidden border border-[#E40714] lg:px-[80px] px-[40px] py-[0px] lg:py-[16px] rounded-[12px] mb-[40px] lg:mt-[45px] font-medium tracking-[-0.84px] text-[14px] leading-[40px] lg:text-[14px] lg:leading-[100%] text-[#E40714]">
                             Read more...
-                    </button>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>

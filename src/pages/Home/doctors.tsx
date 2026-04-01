@@ -1,40 +1,9 @@
 import DoctorCard from '../../components/DoctorCard';
 import { Link } from 'react-router-dom'
+import { inHouseDoctors } from '../../data/doctors'
 
 export default function DoctorsSection() {
-    const doctorImage = '/image/home/doctor/dct-1.png';
-    const doctors = [
-        {
-            id: 1,
-            name: 'Dr. Abiodun Osibamowo',
-            specialization: 'Internal Medicine and Medical Director',
-            image: doctorImage,
-            location: "Reddington V.I",
-        },
-        {
-            id: 2,
-            name: 'Dr Seyi Oyesola',
-            specialization: 'Critical Care Consultant',
-            image: doctorImage,
-            location: "Reddington V.I",
-        },
-        {
-            id: 3,
-            name: 'Dr Seyi Oyesola',
-            specialization: 'Critical Care Consultant',
-            image: doctorImage,
-            location: "Reddington V.I",
-        },
-        {
-            id: 4,
-            name: 'Dr Seyi Oyesola',
-            specialization: 'Critical Care Consultant',
-            image: doctorImage,
-            location: "Reddington V.I",
-        },
-    ];
-
-    const visibleDoctors = doctors.slice();
+    const visibleDoctors = inHouseDoctors.slice(0, 4);
 
     return (
         <section className="relative bg-[#E40714] py-[60px] lg:py-[100px] overflow-hidden">
@@ -69,9 +38,11 @@ export default function DoctorsSection() {
                     </div>
 
                     {/* View All Button */}
-                    <button className="hidden lg:block bg-white text-[#E40714] px-[24px] py-[16px] rounded-full font-medium text-[14px] hover:bg-gray-100 transition-colors whitespace-nowrap">
-                        View All Specialists
-                    </button>
+                    <Link to="/doctors">
+                        <button className="hidden lg:block bg-white text-[#E40714] px-[24px] py-[16px] rounded-full font-medium text-[14px] hover:bg-gray-100 transition-colors whitespace-nowrap">
+                            View All Specialists
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Doctors Grid/Carousel */}
@@ -83,7 +54,7 @@ export default function DoctorsSection() {
                     </div>
 
                     {/* Mobile View All Button */}
-                    <Link to ="/doctor">
+                    <Link to="/doctors">
                         <button className="lg:hidden w-full bg-white text-[#E40714] px-[24px] py-[14px] rounded-[12px] font-medium text-[13px] hover:bg-gray-100 transition-colors mt-[30px]">
                             View All Specialists
                         </button>

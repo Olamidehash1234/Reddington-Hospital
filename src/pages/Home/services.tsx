@@ -1,3 +1,92 @@
+import { Link } from "react-router-dom"
+import { useState, useEffect, useRef, type Key } from "react"
+
+const serviceCards = [
+    {
+        title: 'Cardiology',
+        images: ['/image/home/cardiology-1.jpg', '/image/home/grid-1.png', '/image/home/cardiology-2.jpg']
+    },
+    {
+        title: 'Diagnostic Imaging',
+        images: ['/image/home/img-1.jpg', '/image/home/img-2.jpg', '/image/home/img-3.jpg']
+    },
+    {
+        title: 'Surgical Services',
+        images: ['/image/home/surg-1.jpg', '/image/home/surg-2.jpg', '/image/home/surg-3.jpg']
+    },
+    {
+        title: 'Emergency Services',
+        images: ['/image/home/emerg-1.jpg', '/image/home/emerg-2.jpg']
+    },
+    {
+        title: 'Clinical Laboratory',
+        images: ['/image/home/lab-1.jpg', '/image/home/lab-2.jpg', '/image/home/lab-3.jpg']
+    },
+    {
+        title: 'Endoscopy',
+        images: ['/image/home/endo-1.jpg']
+    },
+];
+
+const ServiceCard = ({ card, height }: { card: typeof serviceCards[0]; height: string }) => {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [isHovering, setIsHovering] = useState(false);
+    const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+    useEffect(() => {
+        if (isHovering) {
+            intervalRef.current = setInterval(() => {
+                setCurrentImageIndex((prev) => (prev + 1) % card.images.length);
+            }, 1500);
+        } else {
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+            }
+            setCurrentImageIndex(0);
+        }
+
+        return () => {
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+            }
+        };
+    }, [isHovering, card.images.length]);
+
+    const handleMouseEnter = () => {
+        setIsHovering(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovering(false);
+    };
+
+    return (
+        <div
+            className="relative rounded-[12px] overflow-hidden group cursor-pointer"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onTouchStart={handleMouseEnter}
+            onTouchEnd={handleMouseLeave}
+        >
+            <div className={`${height} w-full bg-gray-100 relative overflow-hidden`}>
+                {card.images.map((image: string | undefined, index: Key | null | undefined) => (
+                    <img
+                        key={index}
+                        src={image}
+                        alt={card.title}
+                        className={`w-full h-full object-cover transition-all duration-300 ease-out absolute inset-0 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                            }`}
+                    />
+                ))}
+                {/* Title overlay at bottom */}
+                <h3 className="absolute bottom-0 left-0 right-0 text-white font-semibold text-[14px] lg:text-[15px] py-[21px] px-[30px]" style={{ backgroundImage: 'linear-gradient(140deg, rgba(26, 26, 26, 0.00) -44.46%, rgba(26, 26, 26, 0.64) 77.1%)' }}>
+                    {card.title}
+                </h3>
+            </div>
+        </div>
+    );
+};
+
 export default function ServicesPage() {
     return (
         <section>
@@ -28,50 +117,75 @@ export default function ServicesPage() {
                             </div>
                         </div>
 
-                        <div>
+                        <Link to="/services">
                             <button className="hidden lg:block px-[40px] text-[14px] font-semibold rounded-[20px] py-[16px] bg-[#E40714] text-[#FFFFFF]">
                                 View All Services
                             </button>
-                        </div>
+                        </Link>
+
                     </div>
 
                     <div className="mt-[30px] flex flex-col gap-[14px] lg:gap-[16px] lg:flex-row w-full">
                         <div className="flex flex-col gap-[14px] w-full lg:w-[35%]">
-                            <div className="h-[170px] lg:h-[219px] rounded-[12px] overflow-hidden">
-                                <img src="/image/home/grid-1.png" alt="" className="w-full h-full object-cover" />
-                            </div>
-                            <div className="lg:h-[373px] h-[170px] lg:rounded-[16px] rounded-[12px] overflow-hidden">
-                                <img src="/image/home/grid-2.png" alt="" className="w-full h-full object-cover" />
-                            </div>
+                            {/* Service Card 1 */}
+                            <ServiceCard
+                                card={serviceCards[0]}
+                                height="h-[170px] lg:h-[219px]"
+                            />
+
+                            {/* Service Card 2 */}
+                            <ServiceCard
+                                card={serviceCards[1]}
+                                height="lg:h-[373px] h-[170px]"
+                            />
                         </div>
 
                         <div className="flex flex-col gap-[14px] w-full lg:w-[65%]">
                             {/* first div inside the second div */}
                             <div className="flex lg:flex-row flex-col gap-[16px] w-full">
-                                <div className="w-full lg:w-[65%] h-[170px] lg:h-[375px] lg:rounded-[16px] rounded-[12px] overflow-hidden">
-                                    <img src="/image/home/grid-3.png" alt="" className="w-full h-full object-cover" />
+                                {/* Service Card 3 */}
+                                <div className="w-full lg:w-[65%]">
+                                    <ServiceCard
+                                        card={serviceCards[2]}
+                                        height="h-[170px] lg:h-[375px]"
+                                    />
                                 </div>
-                                <div className="w-full lg:w-[35%] h-[170px] lg:h-[375px] lg:rounded-[16px] rounded-[12px] overflow-hidden">
-                                    <img src="/image/home/grid-4.png" alt="" className="w-full h-full object-cover" />
+
+                                {/* Service Card 4 */}
+                                <div className="w-full lg:w-[35%]">
+                                    <ServiceCard
+                                        card={serviceCards[3]}
+                                        height="h-[170px] lg:h-[375px]"
+                                    />
                                 </div>
                             </div>
 
                             {/* second div inside the second div */}
                             <div className="flex lg:flex-row flex-col gap-[14px] w-full">
-                                <div className="w-full lg:h-[217px] h-[170px] lg:rounded-[16px] rounded-[12px] overflow-hidden">
-                                    <img src="/image/home/grid-5.png" alt="" className="w-full h-full object-cover"/>
+                                {/* Service Card 5 */}
+                                <div className="w-full">
+                                    <ServiceCard
+                                        card={serviceCards[4]}
+                                        height="lg:h-[217px] h-[170px]"
+                                    />
                                 </div>
 
-                                <div className="w-full lg:h-[217px] h-[170px] lg:rounded-[16px] rounded-[12px] overflow-hidden">
-                                    <img src="/image/home/grid-6.png" alt="" className="w-full h-full object-cover"/>
+                                {/* Service Card 6 */}
+                                <div className="w-full">
+                                    <ServiceCard
+                                        card={serviceCards[5]}
+                                        height="lg:h-[217px] h-[170px]"
+                                    />
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <button className="block lg:hidden mt-[20px] mb-[40px] w-full px-[40px] text-[13px] font-semibold rounded-[12px] py-[14px] bg-[#E40714] text-[#FFFFFF]">
-                                View All Services
-                    </button>
+                    <Link to="/services">
+                        <button className="block lg:hidden mt-[20px] mb-[40px] w-full px-[40px] text-[13px] font-semibold rounded-[12px] py-[14px] bg-[#E40714] text-[#FFFFFF]">
+                            View All Services
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>
