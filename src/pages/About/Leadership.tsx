@@ -7,7 +7,7 @@ type Leader = {
     image: string
 }
 
-const PLACEHOLDER_IMG = "/image/Awards/hero.png"
+const PLACEHOLDER_IMG = "/image/home/doctor/dct-1.png"
 
 const boardMembers: Leader[] = [
     {
@@ -18,20 +18,20 @@ const boardMembers: Leader[] = [
     },
     {
         id: 2,
-        name: "Dr Olusesan Onabowale",
-        title: "Medical Director of The Heritage Hospital",
+        name: "Mrs. Oludayo Onabowale",
+        title: "Proprietor/CEO of Treasure House School",
         image: PLACEHOLDER_IMG,
     },
     {
         id: 3,
-        name: "Dr Olusesan Onabowale",
-        title: "Medical Director of The Heritage Hospital",
+        name: "Dr Adeyemi Onabowale",
+        title: "Founder of the Reddington Hospital",
         image: PLACEHOLDER_IMG,
     },
     {
         id: 4,
-        name: "Dr Olusesan Onabowale",
-        title: "Medical Director of The Heritage Hospital",
+        name: "Mr Rilwan Adeola",
+        title: "President/CEO of Touch Down Travels",
         image: PLACEHOLDER_IMG,
     },
 ]
@@ -114,9 +114,9 @@ export default function Leadership() {
                 className="pointer-events-none absolute bottom-[0px] left-[0px] z-10 h-[70px] w-[70px] opacity-30 lg:h-auto lg:w-auto"
             />
             <img
-                src="/icon/illustrations/ld-2.png"
+                src="/icon/illustrations/ld-rgt.svg"
                 alt=""
-                className="pointer-events-none absolute right-[0px] top-[0px] z-10 h-[100px] w-[100px] opacity-30 lg:bottom-[0px] lg:top-auto lg:h-auto lg:w-auto"
+                className="pointer-events-none absolute right-[0px] top-[0px] z-10 h-[100px] w-[100px] opacity-30  lg:bottom-[0px] lg:top-0 lg:h-auto lg:w-auto"
             />
 
             <div className="mb-[28px] flex flex-col gap-[20px] lg:mb-[40px] lg:flex-row lg:items-end lg:justify-between">

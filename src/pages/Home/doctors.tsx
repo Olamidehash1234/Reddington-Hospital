@@ -1,51 +1,40 @@
-import { useState } from 'react';
 import DoctorCard from '../../components/DoctorCard';
+import { Link } from 'react-router-dom'
 
 export default function DoctorsSection() {
-    const [currentIndex, setCurrentIndex] = useState(0);
-
     const doctorImage = '/image/home/doctor/dct-1.png';
     const doctors = [
         {
             id: 1,
-            name: 'Dr Seyi Oyesola',
-            specialization: 'Critical Care Consultant',
+            name: 'Dr. Abiodun Osibamowo',
+            specialization: 'Internal Medicine and Medical Director',
             image: doctorImage,
+            location: "Reddington V.I",
         },
         {
             id: 2,
             name: 'Dr Seyi Oyesola',
             specialization: 'Critical Care Consultant',
             image: doctorImage,
+            location: "Reddington V.I",
         },
         {
             id: 3,
             name: 'Dr Seyi Oyesola',
             specialization: 'Critical Care Consultant',
             image: doctorImage,
+            location: "Reddington V.I",
         },
         {
             id: 4,
             name: 'Dr Seyi Oyesola',
             specialization: 'Critical Care Consultant',
             image: doctorImage,
-        },
-        {
-            id: 5,
-            name: 'Dr Seyi Oyesola',
-            specialization: 'Critical Care Consultant',
-            image: doctorImage,
+            location: "Reddington V.I",
         },
     ];
 
-    const itemsPerView = 4;
-    const totalSlides = Math.ceil(doctors.length / itemsPerView);
-    const goToSlide = (index: number) => setCurrentIndex(index);
-
-    const visibleDoctors = doctors.slice(
-        currentIndex * itemsPerView,
-        (currentIndex + 1) * itemsPerView
-    );
+    const visibleDoctors = doctors.slice();
 
     return (
         <section className="relative bg-[#E40714] py-[60px] lg:py-[100px] overflow-hidden">
@@ -94,24 +83,11 @@ export default function DoctorsSection() {
                     </div>
 
                     {/* Mobile View All Button */}
-                    <button className="lg:hidden w-full bg-white text-[#E40714] px-[24px] py-[14px] rounded-[12px] font-medium text-[13px] hover:bg-gray-100 transition-colors mt-[30px]">
-                        View All Specialists
-                    </button>
-                </div>
-
-                {/* Carousel Indicators */}
-                <div className="hidden lg:flex flex items-center justify-center gap-[8px] mt-[50px] lg:mt-[60px]">
-                    {Array.from({ length: totalSlides }).map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => goToSlide(index)}
-                            className={`transition-all duration-300 ${index === currentIndex
-                                ? 'bg-white w-[24px] h-[8px] rounded-full'
-                                : 'bg-white/50 w-[8px] h-[8px] rounded-full hover:bg-white/70'
-                                }`}
-                            aria-label={`Go to slide ${index + 1}`}
-                        />
-                    ))}
+                    <Link to ="/doctor">
+                        <button className="lg:hidden w-full bg-white text-[#E40714] px-[24px] py-[14px] rounded-[12px] font-medium text-[13px] hover:bg-gray-100 transition-colors mt-[30px]">
+                            View All Specialists
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>

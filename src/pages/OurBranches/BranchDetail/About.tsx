@@ -9,7 +9,7 @@ export default function BranchAbout() {
     if (!branch) return null
 
     return (
-        <section className="relative bg-[#F9F9F9] py-[20px] lg:pt-[40px] lg:pb-[80px]">
+        <section className="relative bg-[#F9F9F9] py-[20px] lg:pt-[40px] lg:pb-[80px] overflow-hidden">
             <div className="flex items-center gap-3 mb-[10px] lg:mb-[0px]">
                 <div className="h-0.5 w-[20px] lg:w-[70px] bg-[#E40714]"></div>
                 <span className="text-[#E40714] font-medium text-sm leading-normal lg:text-[36px]" style={{ fontFamily: 'TexGyreAdventor' }}>

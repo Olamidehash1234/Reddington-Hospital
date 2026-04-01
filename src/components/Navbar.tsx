@@ -5,7 +5,6 @@ import gsap from 'gsap';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled,] = useState(false);
   const mobileMenuRef = useRef(null);
   const location = useLocation();
 
@@ -75,7 +74,7 @@ export default function Navbar() {
     <>
       {/* Backdrop: mobile (&lt;1025) + tablet mid (1025–1400) when menu open; hidden ≥1401 */}
       <div
-        className={`navbar-menu-backdrop fixed inset-0 bg-black/45 z-40 transition-opacity duration-200 ${
+        className={`navbar-menu-backdrop inset-0 bg-black/45 z-40 transition-opacity duration-200 ${
           isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         onClick={() => setIsOpen(false)}
@@ -83,16 +82,10 @@ export default function Navbar() {
       />
 
       {/* Main Navbar */}
-      <nav
-        className={`max-w-[2600px] mx-auto fixed z-50 ${
-          isScrolled
-            ? 'top-0 left-0 right-0 w-full'
-            : 'lg:top-[30px] top-[20px] left-[12px] right-[12px] lg:left-[30px] lg:right-[30px]'
-        }`}
-      >
+      <nav className="max-w-[2600px] absolute lg:px-[30px] w-full px-[12px] pt-[20px] lg:pt-[30px] lg:pb-0 z-50">
         <div
           className={`bg-[#E40714] shadow-lg px-6 py-4 lg:py-[23px] lg:px-[40px] ${
-            isScrolled ? 'rounded-none' : isOpen ? 'rounded-t-[30px]' : 'rounded-full'
+            isOpen ? 'rounded-t-[30px]' : 'rounded-full'
           }`}
         >
           <div className="mx-auto flex items-center justify-between gap-3">
@@ -150,15 +143,11 @@ export default function Navbar() {
       {/* Mobile / tablet menu panel — hidden ≥1401px via CSS */}
       <div
         ref={mobileMenuRef}
-        className={`navbar-mobile-menu navbar-mobile-menu-outer fixed z-[100] origin-top navbar-mobile-menu-position flex min-w-0 flex-col box-border ${
-          isScrolled ? 'top-[60px]' : 'top-[97px]'
-        } ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
+        className={`navbar-mobile-menu absolute navbar-mobile-menu-outer top-[90px] z-[50] px-[0px] navbar-mobile-menu-position flex min-w-0 flex-col box-border ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
         style={{ opacity: 0 }}
       >
         <div
-          className={`bg-[#E40714] navbar-mobile-menu2 w-full min-w-0 px-6 py-4 ${
-            !isScrolled ? 'rounded-b-[30px]' : ''
-          }`}
+          className="bg-[#E40714] navbar-mobile-menu2 w-full min-w-0 px-6 py-4 rounded-b-[30px]"
         >
           <div className="flex flex-col space-y-4">
             {navLinks.map((link) => (
