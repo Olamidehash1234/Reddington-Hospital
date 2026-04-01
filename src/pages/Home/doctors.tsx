@@ -69,9 +69,11 @@ export default function DoctorsSection() {
                     </div>
 
                     {/* View All Button */}
-                    <button className="hidden lg:block bg-white text-[#E40714] px-[24px] py-[16px] rounded-full font-medium text-[14px] hover:bg-gray-100 transition-colors whitespace-nowrap">
-                        View All Specialists
-                    </button>
+                    <Link to="/doctors">
+                        <button className="hidden lg:block bg-white text-[#E40714] px-[24px] py-[16px] rounded-full font-medium text-[14px] hover:bg-gray-100 transition-colors whitespace-nowrap">
+                            View All Specialists
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Doctors Grid/Carousel */}
@@ -83,7 +85,7 @@ export default function DoctorsSection() {
                     </div>
 
                     {/* Mobile View All Button */}
-                    <Link to ="/doctor">
+                    <Link to="/doctors">
                         <button className="lg:hidden w-full bg-white text-[#E40714] px-[24px] py-[14px] rounded-[12px] font-medium text-[13px] hover:bg-gray-100 transition-colors mt-[30px]">
                             View All Specialists
                         </button>
