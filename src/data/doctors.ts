@@ -7,7 +7,7 @@ export type Doctor = {
     image: string
 }
 
-const PLACEHOLDER_IMG = "/image/Awards/hero.png"
+const PLACEHOLDER_IMG = "/image/home/doctor/dct-1.png"
 
 export const inHouseDoctors: Doctor[] = [
     {
