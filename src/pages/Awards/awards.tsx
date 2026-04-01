@@ -17,11 +17,11 @@ export default function AwardsMediaSection() {
                 </h2>
 
                 {/* Gallery Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[16px] lg:gap-[27px]">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[20px] lg:gap-[27px]">
                     {awardMedias.map((media) => (
                         <div
                             key={media.id}
-                            className="relative rounded-[12px] overflow-hidden group cursor-pointer h-[250px] lg:h-[300px] shadow-md hover:shadow-lg transition-shadow duration-300"
+                            className="relative rounded-[12px] overflow-hidden group cursor-pointer h-[290px] lg:h-[300px] shadow-md hover:shadow-lg transition-shadow duration-300"
                         >
                             <img
                                 src={media.image}
