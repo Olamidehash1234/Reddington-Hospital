@@ -38,7 +38,7 @@ export default function Culture() {
                                         To deliver a comprehensive first-world medical service exceeding all expectations of our valued patients.
                                     </p>
                                 </div>
-                                
+
                                 <div className="lg:hidden rounded-[12px] bg-[#E40714] text-white px-[16px] py-[16px]">
                                     <div className="flex items-center gap-[12px]">
                                         <div className="shrink-0">
@@ -61,7 +61,7 @@ export default function Culture() {
                             {/* Desktop layout (pixel-matched to Figma frame) */}
                             <div className="grid grid-cols-2 gap-[40px] justify-between">
                                 <div className="relative hidden lg:block rounded-[12px]">
-                                    <img src="/icon/illustrations/mission.svg" alt="mission Frame" className="relative w-full h-full object-cover" />
+                                    <img src="/icon/illustrations/mission.svg" alt="mission Frame" className="relative w-full h-full object-cover border border-[#E40714] rounded-[12px]" />
                                     <div className="absolute left-[26px] top-[25px]">
                                         <img
                                             alt=""
