@@ -28,8 +28,8 @@ const Footer = () => {
   ];
 
   const mediaLinks = [
-    { text: 'Blog & Article', path: '#' },
-    { text: 'News & Events', path: '#' },
+    { text: 'Blog & Article', path: '/blog&insights' },
+    { text: 'News & Events', path: '/blog&insights' },
     { text: 'Careers', path: '/career' }
   ];
 
