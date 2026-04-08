@@ -1,57 +1,59 @@
+import ResponsiveImage from "../../components/ResponsiveImage";
+
 export default function InsurancePartners() {
   const partners = [
     {
       name: "Shell",
       logo: (
-        <img src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606719/shell_j6rsrg.svg" alt="" className="h-full w-full object-contain"/>
+        <ResponsiveImage src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606719/shell_j6rsrg.svg" alt="" className="h-full w-full object-contain" />
       )
     },
     {
       name: "Maritime Insurance",
       logo: (
-        <img src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606732/maritime_rwitq4.svg" alt="" className="h-full w-full object-contain"/>
+        <ResponsiveImage src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606732/maritime_rwitq4.svg" alt="" className="h-full w-full object-contain" />
       )
     },
     {
       name: "Access Bank",
       logo: (
-        <img src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606729/access_qdaijg.svg" alt="" className="h-full w-full object-contain"/>
+        <ResponsiveImage src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606729/access_qdaijg.svg" alt="" className="h-full w-full object-contain" />
       )
     },
     {
       name: "Oando",
       logo: (
-       <img src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606713/oando_zl5ufe.svg" alt="" className="h-full w-full object-contain"/>
+       <ResponsiveImage src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606713/oando_zl5ufe.svg" alt="" className="h-full w-full object-contain" />
       )
     },
     {
       name: "This day",
       logo: (
-        <img src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606718/thisday_diq38c.svg" alt="" className="h-full w-full object-contain"/>
+        <ResponsiveImage src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606718/thisday_diq38c.svg" alt="" className="h-full w-full object-contain" />
       )
     },
     {
       name: "Total",
       logo: (
-        <img src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606721/total_aoaaij.svg" alt="" className="h-full w-full object-contain"/>
+        <ResponsiveImage src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606721/total_aoaaij.svg" alt="" className="h-full w-full object-contain" />
       )
     },
     {
       name: "Bua",
       logo: (
-        <img src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606711/bua_qvba1c.svg" alt="" className="h-full w-full object-contain" />
+        <ResponsiveImage src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606711/bua_qvba1c.svg" alt="" className="h-full w-full object-contain" />
       )
     },
     {
       name: "Flower mill",
       logo: (
-        <img src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606710/flowermill_ll3x8p.svg" alt="" className="h-full w-full object-contain" />
+        <ResponsiveImage src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606710/flowermill_ll3x8p.svg" alt="" className="h-full w-full object-contain" />
       )
     },
     {
       name: "Tolara",
       logo: (
-        <img src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606718/tolara_d7mnxq.svg" alt="" className="h-full w-full object-contain" />
+        <ResponsiveImage src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606718/tolara_d7mnxq.svg" alt="" className="h-full w-full object-contain" />
       )
     }
   ];

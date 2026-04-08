@@ -1,3 +1,5 @@
+import ResponsiveImage from "../../components/ResponsiveImage";
+
 export default function InsurancePartners() {
   // Logo images from Figma (node 546:6029)
   const logos = {
@@ -12,7 +14,7 @@ export default function InsurancePartners() {
     r54: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606650/leadway_pb3suy.svg',
     r55: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606653/twt_lbzn29.svg',
     r57: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606650/mediplan_v3x1sh.svg',
-    r58: '/icon/HMO/nem.svg',
+    r58: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775661208/nem_adkwgm.svg',
     r59: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606641/nnpc_wgidfo.svg',
     r60: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606659/novo_ztnjva.svg',
     r61: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606650/redcare_zhup4z.svg',
@@ -56,7 +58,7 @@ export default function InsurancePartners() {
         height: `clamp(${Math.round(h * 0.65)}px, 18vw, ${h}px)`,
       }}
     >
-      <img src={src} alt="" aria-hidden="true" className="w-full h-full object-contain" />
+      <ResponsiveImage src={src} alt="" aria-hidden="true" className="w-full h-full object-contain" />
     </div>
   );
 

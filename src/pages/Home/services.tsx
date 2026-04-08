@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { useState, useEffect, useRef, type Key } from "react"
+import ResponsiveImage from "../../components/ResponsiveImage"
 
 const serviceAnchorMap: Record<string, string> = {
     Cardiology: "cardiology",
@@ -83,11 +84,16 @@ const ServiceCard = ({ card, height }: { card: typeof serviceCards[0]; height: s
                 onTouchEnd={handleMouseLeave}
             >
                 <div className={`${height} w-full bg-gray-100 relative overflow-hidden`}>
-                    {card.images.map((image: string | undefined, index: Key | null | undefined) => (
-                        <img
+                    {card.images.map((image: string, index: Key | null | undefined) => (
+                        <ResponsiveImage
                             key={index}
                             src={image}
                             alt={card.title}
+                            width={900}
+                            height={700}
+                            crop="fill"
+                            sizes="(min-width: 1024px) 33vw, 100vw"
+                            loading={index === 0 ? "lazy" : "lazy"}
                             className={`w-full h-full object-cover transition-all duration-300 ease-out absolute inset-0 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                                 }`}
                         />
