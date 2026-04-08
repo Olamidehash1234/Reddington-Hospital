@@ -261,16 +261,16 @@ export default function HeroSection() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const slideRefs = useRef<Array<HTMLImageElement | null>>([]);
     const carouselImages = [
-        '/image/home/hero/img1.png',
-        '/image/home/hero/img2.png',
-        '/image/home/hero/img3.png',
-        '/image/home/hero/img4.png',
-        '/image/home/hero/img5.png',
-        '/image/home/hero/img6.png',
-        '/image/home/hero/img7.png',
-        '/image/home/hero/img8.png',
-        '/image/home/hero/img9.png',
-        '/image/home/hero/img10.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603139/img1_esbjjz.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603123/img2_uoyupa.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603165/img3_nordso.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603157/img4_us87jl.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603142/img5_vai25p.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603171/img6_z6of1x.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603175/img7_bxvea5.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603163/img8_kmp8gg.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603171/img9_lcrsfh.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603136/img10_xfidmw.png',
     ];
 
     // Countdown state

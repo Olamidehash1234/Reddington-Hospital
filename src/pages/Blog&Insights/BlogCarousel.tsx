@@ -68,13 +68,13 @@ export default function BlogCarousel() {
 
             {/* Featured Content */}
             <div className="w-full lg:w-3/5 p-6 lg:py-[40px] flex flex-col justify-center">
-              <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">
+              <h3 className="text-2xl lg:text-[24px] font-semibold lg:leading-[24px] text-gray-900 mb-[10px]">
                 {featuredArticle.title}
               </h3>
-              <p className="text-sm lg:text-[20px] font-medium text-[#2D2D2D] mb-4 lg:mb-[40px]">
+              <p className="text-sm lg:text-[18px] font-medium text-[#2D2D2D] mb-4 lg:mb-[40px]">
                 Posted on, {featuredArticle.date}
               </p>
-              <p className="text-gray-700 mb-6 line-clamp-3">
+              <p className="text-gray-700 mb-6 lg:leading-[28.187px] line-clamp-3">
                 {featuredArticle.description}
               </p>
               <a 

@@ -7,11 +7,11 @@ export type Doctor = {
     image: string
 }
 
-const PLACEHOLDER_IMG = "/image/home/doctor/dct-1.png"
-const Abiodun = "/image/home/doctor/dr.abiodun.jpg"
-const Audu = "/image/home/doctor/dr.audu.jpg"
-const Chioma = "/image/home/doctor/dr.chioma.jpg"
-const Muyiwa = "/image/home/doctor/dr.muyiwa.jpg"
+const PLACEHOLDER_IMG = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603078/dct-1_tdhl11.png"
+const Abiodun = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603087/dr.abiodun_ekejvw.jpg"
+const Audu = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603074/dr.audu_pxxbrf.jpg"
+const Chioma = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603084/dr.chioma_rqml1r.jpg"
+const Muyiwa = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603115/dr.muyiwa_kbm5jk.jpg"
 
 export const inHouseDoctors: Doctor[] = [
     {

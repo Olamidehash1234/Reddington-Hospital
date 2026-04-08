@@ -1,9 +1,41 @@
 import { useEffect, useRef, useState } from "react";
 import type { CSSProperties } from "react";
+import { useLocation } from "react-router-dom";
 import { services } from "../../data/services";
+
+const createServiceAnchor = (title: string) =>
+    title
+        .toLowerCase()
+        .replace(/&/g, "and")
+        .replace(/[()]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
 
 export default function ServicesGrid() {
     const [expandedServiceId, setExpandedServiceId] = useState<number | null>(null);
+    const location = useLocation();
+
+    useEffect(() => {
+        if (!location.hash) return;
+
+        const serviceId = location.hash.slice(1);
+
+        const scrollToService = () => {
+            const target = document.getElementById(serviceId);
+            if (!target) return;
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        };
+
+        const frame = window.requestAnimationFrame(() => {
+            window.requestAnimationFrame(scrollToService);
+        });
+
+        return () => window.cancelAnimationFrame(frame);
+    }, [location.hash]);
 
     // Close expanded description when clicking outside the expanded service card.
     useEffect(() => {
@@ -108,8 +140,9 @@ export default function ServicesGrid() {
                     return (
                         <div
                             key={service.id}
+                            id={createServiceAnchor(service.title)}
                             data-service-card-id={service.id}
-                            className="bg-[#E4071405] rounded-2xl transition overflow-hidden flex flex-col cursor-pointer"
+                            className="bg-[#E4071405] rounded-2xl transition overflow-hidden flex flex-col cursor-pointer scroll-mt-28"
                         >
                             <div className="relative h-[200px] lg:h-[240px] w-full bg-gray-100">
                                 <img
