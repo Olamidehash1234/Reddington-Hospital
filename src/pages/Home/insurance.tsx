@@ -1,3 +1,5 @@
+import ResponsiveImage from "../../components/ResponsiveImage";
+
 export default function InsurancePartners() {
   // Logo images from Figma (node 546:6029)
   const logos = {
@@ -67,7 +69,7 @@ export default function InsurancePartners() {
         height: `clamp(${Math.round(h * 0.65)}px, 18vw, ${h}px)`,
       }}
     >
-      <img src={src} alt="" aria-hidden="true" className="w-full h-full object-contain" />
+      <ResponsiveImage src={src} alt="" aria-hidden="true" className="w-full h-full object-contain" />
     </div>
   );
 

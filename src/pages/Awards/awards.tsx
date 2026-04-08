@@ -1,4 +1,5 @@
 import { awardMedias } from '../../data/awardMedias';
+import ResponsiveImage from '../../components/ResponsiveImage';
 
 export default function AwardsMediaSection() {
     return (
@@ -23,11 +24,14 @@ export default function AwardsMediaSection() {
                             key={media.id}
                             className="relative rounded-[12px] overflow-hidden group cursor-pointer h-[290px] lg:h-[300px] shadow-md hover:shadow-lg transition-shadow duration-300"
                         >
-                            <img
+                            <ResponsiveImage
                                 src={media.image}
                                 alt={media.title}
+                                width={640}
+                                height={640}
+                                crop="fill"
+                                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ease-out"
-                                loading="lazy"
                             />
                         </div>
                     ))}

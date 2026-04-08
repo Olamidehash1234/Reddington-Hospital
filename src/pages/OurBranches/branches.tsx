@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { branches } from "../../data/branches"
 import { branchNameToSlug } from '../../utils/slugify'
+import ResponsiveImage from "../../components/ResponsiveImage"
 export default function Branches() {
     const navigate = useNavigate()
 
@@ -12,9 +13,13 @@ export default function Branches() {
                     <div key={branch.id} className="flex flex-col bg-white rounded-2xl overflow-hidden">
                         {/* Image */}
                         <div className="relative h-[200px] w-full bg-gray-100">
-                            <img
+                            <ResponsiveImage
                                 src={branch.image}
                                 alt={branch.name}
+                                width={720}
+                                height={400}
+                                crop="fill"
+                                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                                 className="h-full w-full object-cover"
                             />
                         </div>

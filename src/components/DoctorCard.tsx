@@ -1,3 +1,5 @@
+import ResponsiveImage from "./ResponsiveImage";
+
 interface DoctorCardProps {
     doctor: {
         id: number;
@@ -18,9 +20,14 @@ export default function DoctorCard({ doctor, className = '' }: DoctorCardProps) 
                     {/* Photo */}
                     {/* Inset photo + asymmetric corner rounding (only TL + BR) */}
                     <div className="absolute bottom-[3.93%] left-[3.45%] right-[3.79%] top-[3.28%] overflow-hidden rounded-br-[52px] rounded-tl-[52px] rounded-bl-none rounded-tr-none lg:bottom-[10px] lg:left-[10px] lg:right-[11px] lg:top-[10px] lg:rounded-br-[52px] lg:rounded-tl-[52px]">
-                        <img
+                        <ResponsiveImage
                             src={doctor.image}
                             alt={doctor.name}
+                            width={520}
+                            height={640}
+                            crop="fill"
+                            gravity="face"
+                            sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
                             className="w-full h-full object-cover"
                         />
                     </div>

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { branches as allBranches } from '../../data/branches';
 import { branchNameToSlug } from '../../utils/slugify';
+import ResponsiveImage from '../../components/ResponsiveImage';
 // import Navbar from '../../components/Navbar';
 
 const stats = [
@@ -272,6 +273,10 @@ export default function HeroSection() {
         'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603171/img9_lcrsfh.png',
         'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603136/img10_xfidmw.png',
     ];
+    const loadedSlides = useMemo(() => {
+        const nextIndex = (currentImageIndex + 1) % carouselImages.length;
+        return new Set([0, currentImageIndex, nextIndex]);
+    }, [currentImageIndex, carouselImages.length]);
 
     // Countdown state
     const [displayValues, setDisplayValues] = useState(stats.map(() => 0));
@@ -388,18 +393,26 @@ export default function HeroSection() {
                 <div className="relative mb-8 lg:mb-0">
                     <div className="relative rounded-lg overflow-hidden h-[390px] lg:h-[486px] z-0">
                         {/* Carousel Images with Fade Transition */}
-                        {carouselImages.map((image, index) => (
-                            <img
-                                key={index}
-                                ref={(el) => {
-                                    slideRefs.current[index] = el;
-                                }}
-                                src={image}
-                                alt={`Medical Team ${index + 1}`}
-                                className="absolute inset-0 w-full h-full object-cover"
-                                style={{ opacity: index === 0 ? 1 : 0 }}
-                            />
-                        ))}
+                        {carouselImages.map((image, index) =>
+                            loadedSlides.has(index) ? (
+                                <ResponsiveImage
+                                    key={index}
+                                    ref={(el) => {
+                                        slideRefs.current[index] = el;
+                                    }}
+                                    src={image}
+                                    alt={`Medical Team ${index + 1}`}
+                                    width={1600}
+                                    height={972}
+                                    crop="fill"
+                                    priority={index === 0}
+                                    loading={index === 0 ? "eager" : "lazy"}
+                                    sizes="(min-width: 1024px) 90vw, 100vw"
+                                    className="absolute inset-0 w-full h-full object-cover"
+                                    style={{ opacity: index === 0 ? 1 : 0 }}
+                                />
+                            ) : null
+                        )}
 
                         {/* Image overlay decoration */}
                         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>

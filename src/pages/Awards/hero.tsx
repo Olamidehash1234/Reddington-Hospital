@@ -1,3 +1,5 @@
+import ResponsiveImage from "../../components/ResponsiveImage";
+
 const AwardsSection = () => {
   return (
     <div className="relative h-[300px] lg:h-[424px] overflow-hidden">
@@ -5,7 +7,16 @@ const AwardsSection = () => {
       <div 
         className="absolute inset-0 bg-cover"
       >
-        <img src="/image/Awards/hero.png" alt="" className="w-full h-full object-cover"/>
+        <ResponsiveImage
+          src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603048/hero_qkuxpj.png"
+          alt=""
+          width={1600}
+          height={424}
+          crop="fill"
+          priority
+          sizes="100vw"
+          className="w-full h-full object-cover"
+        />
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#0000001A]"></div>
       </div>
