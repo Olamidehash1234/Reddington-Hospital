@@ -76,7 +76,7 @@ export const inHouseDoctors: Doctor[] = [
         specialty: "Dental Surgeon",
         hospital: "Reddington VI",
         type: "in-house",
-        image: PLACEHOLDER_IMG,
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775663894/DR._LATRE_BAKOSHI_gnyjqk.jpg',
     },
     {
         id: 9,
@@ -92,7 +92,7 @@ export const inHouseDoctors: Doctor[] = [
         specialty: "Orthopaedic Surgeon",
         hospital: "Reddington VI",
         type: "in-house",
-        image: PLACEHOLDER_IMG,
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775664109/DR._BABAJIDE_LAWSON_k7dfeo.jpg',
     },
     {
         id: 11,
@@ -108,7 +108,7 @@ export const inHouseDoctors: Doctor[] = [
         specialty: "Wellness",
         hospital: "Reddington VI",
         type: "in-house",
-        image: PLACEHOLDER_IMG,
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775664208/DR._ESTHER_ADEJINMI_fzj7su.jpg',
     },
     {
         id: 13,
@@ -124,7 +124,7 @@ export const inHouseDoctors: Doctor[] = [
         specialty: "Family Medicine",
         hospital: "Reddington VI",
         type: "in-house",
-        image: PLACEHOLDER_IMG,
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775664415/DR._CHRISTIAN_AKUDE_sv9ixm.jpg',
     },
     {
         id: 15,
@@ -140,7 +140,7 @@ export const inHouseDoctors: Doctor[] = [
         specialty: "Radiologist",
         hospital: "Reddington VI",
         type: "in-house",
-        image: PLACEHOLDER_IMG,
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775664564/DR._NWACHUKWU_NZEGWU_jejygy.jpg',
     },
 ]
 
