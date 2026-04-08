@@ -5,7 +5,7 @@ const AboutUsHero = () => {
       <div 
         className="absolute inset-0 bg-cover"
       >
-        <img src="/image/about/about.png" alt="" className="w-full h-full object-cover"/>
+        <img src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603062/about_idyymu.png" alt="" className="w-full h-full object-cover"/>
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#0000001A]"></div>
       </div>

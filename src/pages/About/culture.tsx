@@ -114,7 +114,7 @@ export default function Culture() {
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
                                         <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
-                                                <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/aa2a5e94-2e16-484f-844a-e97fd996bf87" />
+                                                <img alt="" className="block " src="/icon/safety.svg" />
                                             </div>
                                             <p className="mt-[2px]  font-semibold text-[14px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                                 Patient Safety
@@ -128,7 +128,7 @@ export default function Culture() {
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
                                         <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
-                                                <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/f9b4d700-a2ce-431b-99a6-e1e4600e3249" />
+                                                <img alt="" className="block " src="/icon/respect.svg" />
                                             </div>
                                             <p className="mt-[2px] font-semibold text-[14px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                                 Respect
@@ -142,7 +142,7 @@ export default function Culture() {
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
                                         <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
-                                                <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/fe58af18-9cb7-4de9-8540-0f06096d5b1a" />
+                                                <img alt="" className="block " src="/icon/account.svg" />
                                             </div>
                                             <p className="mt-[2px]  font-semibold text-[14px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                                 Accountability
@@ -156,7 +156,7 @@ export default function Culture() {
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
                                         <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
-                                                <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/7c655244-0cdd-4ce8-a4d0-3a61c540dd66" />
+                                                <img alt="" className="block " src="/icon/compassion.svg" />
                                             </div>
                                             <p className="mt-[2px]  font-semibold text-[14px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                                 Compassion
@@ -170,7 +170,7 @@ export default function Culture() {
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
                                         <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
-                                                <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/90c93c59-a46f-4471-a9ce-caf5b72bb610" />
+                                                <img alt="" className="block " src="/icon/trust.svg" />
                                             </div>
                                             <p className="mt-[2px]  font-semibold text-[14px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                                 Trust
@@ -184,7 +184,7 @@ export default function Culture() {
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
                                         <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
-                                                <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/07209bb9-5141-40bc-8b2d-b0db497ba07a" />
+                                                <img alt="" className="block " src="/icon/integrity.svg" />
                                             </div>
                                             <p className="mt-[2px]  font-semibold text-[14px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                                 Integrity
@@ -198,7 +198,7 @@ export default function Culture() {
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
                                         <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
-                                                <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/f10b304b-1593-496c-83cb-629942a0e884" />
+                                                <img alt="" className="block " src="/icon/Excellence.svg" />
                                             </div>
                                             <p className="mt-[2px]  font-semibold text-[14px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                                 Clinical Excellence
@@ -212,7 +212,7 @@ export default function Culture() {
                                     <div className="border-b border-[#2D2D2D] pb-[18px]">
                                         <div className="flex items-center gap-[12px]">
                                             <div className="shrink-0 rounded-[10px] bg-[#E40714] p-[10px]">
-                                                <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/f3658aa0-1b3d-4836-9fd5-f5f1c861775d" />
+                                                <img alt="" className="block " src="/icon/communication.svg" />
                                             </div>
                                             <p className="mt-[2px]  font-semibold text-[14px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                                 Effective Communication
@@ -241,7 +241,7 @@ export default function Culture() {
                                 {/* Row 1 */}
                                 <div className="absolute left-[39px] top-[120px] w-[258px] h-[152px] border-b border-[#2D2D2D]">
                                     <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/aa2a5e94-2e16-484f-844a-e97fd996bf87" />
+                                        <img alt="" className="block " src="/icon/safety.svg" />
                                     </div>
                                     <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                         Patient Safety
@@ -253,7 +253,7 @@ export default function Culture() {
 
                                 <div className="absolute left-[calc(25%+7.5px)] top-[120px] w-[297px] h-[152px] border-b border-[#2D2D2D]">
                                     <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/f9b4d700-a2ce-431b-99a6-e1e4600e3249" />
+                                        <img alt="" className="block " src="/icon/respect.svg" />
                                     </div>
                                     <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                         Respect
@@ -265,7 +265,7 @@ export default function Culture() {
 
                                 <div className="absolute left-[calc(50%+15px)] top-[120px] w-[298px] h-[152px] border-b border-[#2D2D2D]">
                                     <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/fe58af18-9cb7-4de9-8540-0f06096d5b1a" />
+                                        <img alt="" className="block " src="/icon/account.svg" />
                                     </div>
                                     <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                         Accountability
@@ -277,7 +277,7 @@ export default function Culture() {
 
                                 <div className="absolute left-[calc(75%+23.5px)] top-[120px] w-[288px] h-[152px] border-b border-[#2D2D2D]">
                                     <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/7c655244-0cdd-4ce8-a4d0-3a61c540dd66" />
+                                        <img alt="" className="block " src="/icon/compassion.svg" />
                                     </div>
                                     <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                         Compassion
@@ -290,7 +290,7 @@ export default function Culture() {
                                 {/* Row 2 */}
                                 <div className="absolute left-[39px] top-[296px] w-[258px] h-[152px] border-b border-[#2D2D2D]">
                                     <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/90c93c59-a46f-4471-a9ce-caf5b72bb610" />
+                                        <img alt="" className="block " src="/icon/trust.svg" />
                                     </div>
                                     <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                         Trust
@@ -302,7 +302,7 @@ export default function Culture() {
 
                                 <div className="absolute left-[calc(25%+7.5px)] top-[296px] w-[297px] h-[152px] border-b border-[#2D2D2D]">
                                     <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/07209bb9-5141-40bc-8b2d-b0db497ba07a" />
+                                        <img alt="" className="block " src="/icon/integrity.svg" />
                                     </div>
                                     <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                         Integrity
@@ -314,7 +314,7 @@ export default function Culture() {
 
                                 <div className="absolute left-[calc(50%+15px)] top-[296px] w-[298px] h-[152px] border-b border-[#2D2D2D]">
                                     <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/f10b304b-1593-496c-83cb-629942a0e884" />
+                                        <img alt="" className="block " src="/icon/Excellence.svg" />
                                     </div>
                                     <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                         Clinical Excellence
@@ -326,7 +326,7 @@ export default function Culture() {
 
                                 <div className="absolute left-[calc(75%+23.5px)] top-[296px] w-[298px] h-[152px] border-b border-[#2D2D2D]">
                                     <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block size-[24px]" src="https://www.figma.com/api/mcp/asset/f3658aa0-1b3d-4836-9fd5-f5f1c861775d" />
+                                        <img alt="" className="block " src="/icon/communication.svg" />
                                     </div>
                                     <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
                                         Effective Communication
