@@ -1,30 +1,40 @@
 import { Link } from "react-router-dom"
 import { useState, useEffect, useRef, type Key } from "react"
+import ResponsiveImage from "../../components/ResponsiveImage"
+
+const serviceAnchorMap: Record<string, string> = {
+    Cardiology: "cardiology",
+    "Diagnostic Imaging": "diagnostic-imaging-purple-ray",
+    "Surgical Services": "general-surgery",
+    "Emergency Services": "emergency-medicine",
+    "Clinical Laboratory": "health-screening",
+    Endoscopy: "gastroenterology-and-endoscopy",
+};
 
 const serviceCards = [
     {
         title: 'Cardiology',
-        images: ['/image/home/cardiology-1.jpg', '/image/home/grid-1.png', '/image/home/cardiology-2.jpg']
+        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603094/cardiology-1_iciq6q.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603100/grid-1_goqeiq.png', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603105/cardiology-2_plp3sj.jpg']
     },
     {
         title: 'Diagnostic Imaging',
-        images: ['/image/home/img-1.jpg', '/image/home/img-2.jpg', '/image/home/img-3.jpg']
+        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603766/img-1_xs9ijb.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603186/img-2_u73gxu.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603753/img-3_g94yni.jpg']
     },
     {
         title: 'Surgical Services',
-        images: ['/image/home/surg-1.jpg', '/image/home/surg-2.jpg', '/image/home/surg-3.jpg']
+        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603828/surg-1_dif5hf.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603301/surg-2_lw3l9i.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603294/surg-3_wfr6an.jpg']
     },
     {
         title: 'Emergency Services',
-        images: ['/image/home/emerg-1.jpg', '/image/home/emerg-2.jpg']
+        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603086/emerg-1_dxvafh.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603109/emerg-2_yyydxa.jpg']
     },
     {
         title: 'Clinical Laboratory',
-        images: ['/image/home/lab-1.jpg', '/image/home/lab-2.jpg', '/image/home/lab-3.jpg']
+        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603711/lab-1_rg3mgm.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603842/lab-2_lrnavm.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603799/lab-3_pgmudl.jpg']
     },
     {
         title: 'Endoscopy',
-        images: ['/image/home/endo-1.jpg']
+        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603136/endo-1_k8diac.jpg']
     },
 ];
 
@@ -61,29 +71,40 @@ const ServiceCard = ({ card, height }: { card: typeof serviceCards[0]; height: s
     };
 
     return (
-        <div
-            className="relative rounded-[12px] overflow-hidden group cursor-pointer"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onTouchStart={handleMouseEnter}
-            onTouchEnd={handleMouseLeave}
+        <Link
+            to={`/services#${serviceAnchorMap[card.title]}`}
+            className="block"
+            aria-label={`View ${card.title} details`}
         >
-            <div className={`${height} w-full bg-gray-100 relative overflow-hidden`}>
-                {card.images.map((image: string | undefined, index: Key | null | undefined) => (
-                    <img
-                        key={index}
-                        src={image}
-                        alt={card.title}
-                        className={`w-full h-full object-cover transition-all duration-300 ease-out absolute inset-0 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
-                            }`}
-                    />
-                ))}
-                {/* Title overlay at bottom */}
-                <h3 className="absolute bottom-0 left-0 right-0 text-white font-semibold text-[14px] lg:text-[15px] py-[21px] px-[30px]" style={{ backgroundImage: 'linear-gradient(140deg, rgba(26, 26, 26, 0.00) -44.46%, rgba(26, 26, 26, 0.64) 77.1%)' }}>
-                    {card.title}
-                </h3>
+            <div
+                className="relative rounded-[12px] overflow-hidden group cursor-pointer"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                onTouchStart={handleMouseEnter}
+                onTouchEnd={handleMouseLeave}
+            >
+                <div className={`${height} w-full bg-gray-100 relative overflow-hidden`}>
+                    {card.images.map((image: string, index: Key | null | undefined) => (
+                        <ResponsiveImage
+                            key={index}
+                            src={image}
+                            alt={card.title}
+                            width={900}
+                            height={700}
+                            crop="fill"
+                            sizes="(min-width: 1024px) 33vw, 100vw"
+                            loading={index === 0 ? "lazy" : "lazy"}
+                            className={`w-full h-full object-cover transition-all duration-300 ease-out absolute inset-0 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                                }`}
+                        />
+                    ))}
+                    {/* Title overlay at bottom */}
+                    <h3 className="absolute bottom-0 left-0 right-0 text-white font-semibold text-[14px] lg:text-[15px] py-[21px] px-[30px]" style={{ backgroundImage: 'linear-gradient(140deg, rgba(26, 26, 26, 0.00) -44.46%, rgba(26, 26, 26, 0.64) 77.1%)' }}>
+                        {card.title}
+                    </h3>
+                </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

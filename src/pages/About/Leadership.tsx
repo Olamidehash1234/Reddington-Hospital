@@ -7,7 +7,7 @@ type Leader = {
     image: string
 }
 
-const PLACEHOLDER_IMG = "/image/home/doctor/dct-1.png"
+const PLACEHOLDER_IMG = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603078/dct-1_tdhl11.png"
 
 const boardMembers: Leader[] = [
     {

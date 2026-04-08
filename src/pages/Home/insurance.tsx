@@ -1,28 +1,30 @@
+import ResponsiveImage from "../../components/ResponsiveImage";
+
 export default function InsurancePartners() {
   // Logo images from Figma (node 546:6029)
   const logos = {
-    r46: '/icon/Insurancelogos/AIG.svg',
-    r47: '/icon/Insurancelogos/AIMS.svg',
-    r48: '/icon/Insurancelogos/allianz.svg',
-    r49: '/icon/Insurancelogos/anvil.svg',
-    r50: '/icon/Insurancelogos/april.svg',
-    r51: '/icon/Insurancelogos/assist.svg',
-    r52: '/icon/Insurancelogos/bupa.svg',
-    r53: '/icon/Insurancelogos/cigna.svg',
-    r54: '/icon/Insurancelogos/expedise.svg',
-    r55: '/icon/Insurancelogos/euro.svg',
-    r57: '/icon/Insurancelogos/Geo.svg',
-    r58: '/icon/Insurancelogos/healix.svg',
-    r59: '/icon/Insurancelogos/henner.svg',
-    r60: '/icon/Insurancelogos/international.svg',
-    r61: '/icon/Insurancelogos/mso.svg',
-    r62: '/icon/Insurancelogos/msh.svg',
-    r63: '/icon/Insurancelogos/now.svg',
-    r64: '/icon/Insurancelogos/ses.svg',
-    r65: '/icon/Insurancelogos/swan.svg',
-    r78: '/icon/Insurancelogos/tie.svg',
-    r79: '/icon/Insurancelogos/tricare.svg',
-    r80: '/icon/Insurancelogos/benefit.svg',
+    r46: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606658/AIG_mrkddx.svg',
+    r47: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606660/AIMS_zv8oad.svg',
+    r48: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606663/allianz_e8ilo3.svg',
+    r49: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606659/anvil_bvxmm6.svg',
+    r50: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606661/april_cn8xot.svg',
+    r51: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606661/assist_igaugh.svg',
+    r52: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606663/bupa_dyfudw.svg',
+    r53: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606664/cigna_qjswew.svg',
+    r54: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606664/expedise_yxp3v2.svg',
+    r55: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606666/euro_m0jdu2.svg',
+    r57: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606665/Geo_vssysx.svg',
+    r58: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606666/healix_z32k03.svg',
+    r59: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606667/henner_zcbd5x.svg',
+    r60: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606673/international_qo4e61.svg',
+    r61: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606669/mso_ip1efl.svg',
+    r62: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606667/msh_i1hjlw.svg',
+    r63: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606668/now_hfv869.svg',
+    r64: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606731/ses_ice6cv.svg',
+    r65: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606672/swan_rej9dv.svg',
+    r78: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606672/tie_qv5vy7.svg',
+    r79: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606673/tricare_lvvqan.svg',
+    r80: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606662/benefit_k3yr09.svg',
   };
 
   const rows = [
@@ -67,7 +69,7 @@ export default function InsurancePartners() {
         height: `clamp(${Math.round(h * 0.65)}px, 18vw, ${h}px)`,
       }}
     >
-      <img src={src} alt="" aria-hidden="true" className="w-full h-full object-contain" />
+      <ResponsiveImage src={src} alt="" aria-hidden="true" className="w-full h-full object-contain" />
     </div>
   );
 

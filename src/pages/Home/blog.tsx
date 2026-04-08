@@ -1,7 +1,7 @@
 export default function BlogSection() {
   // Assets taken from the Figma node 546:5865
   const heroImg =
-    'image/home/blog/heart.png';
+    'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png';
   // const headerUnderline = 'https://www.figma.com/api/mcp/asset/ee4978e9-b91d-4e3d-86e4-2a7ff78c50d7';
 
   const featured = {

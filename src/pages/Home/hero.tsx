@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { branches as allBranches } from '../../data/branches';
 import { branchNameToSlug } from '../../utils/slugify';
+import ResponsiveImage from '../../components/ResponsiveImage';
 // import Navbar from '../../components/Navbar';
 
 const stats = [
@@ -261,17 +262,21 @@ export default function HeroSection() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const slideRefs = useRef<Array<HTMLImageElement | null>>([]);
     const carouselImages = [
-        '/image/home/hero/img1.png',
-        '/image/home/hero/img2.png',
-        '/image/home/hero/img3.png',
-        '/image/home/hero/img4.png',
-        '/image/home/hero/img5.png',
-        '/image/home/hero/img6.png',
-        '/image/home/hero/img7.png',
-        '/image/home/hero/img8.png',
-        '/image/home/hero/img9.png',
-        '/image/home/hero/img10.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603139/img1_esbjjz.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603123/img2_uoyupa.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603165/img3_nordso.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603157/img4_us87jl.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603142/img5_vai25p.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603171/img6_z6of1x.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603175/img7_bxvea5.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603163/img8_kmp8gg.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603171/img9_lcrsfh.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603136/img10_xfidmw.png',
     ];
+    const loadedSlides = useMemo(() => {
+        const nextIndex = (currentImageIndex + 1) % carouselImages.length;
+        return new Set([0, currentImageIndex, nextIndex]);
+    }, [currentImageIndex, carouselImages.length]);
 
     // Countdown state
     const [displayValues, setDisplayValues] = useState(stats.map(() => 0));
@@ -388,18 +393,26 @@ export default function HeroSection() {
                 <div className="relative mb-8 lg:mb-0">
                     <div className="relative rounded-lg overflow-hidden h-[390px] lg:h-[486px] z-0">
                         {/* Carousel Images with Fade Transition */}
-                        {carouselImages.map((image, index) => (
-                            <img
-                                key={index}
-                                ref={(el) => {
-                                    slideRefs.current[index] = el;
-                                }}
-                                src={image}
-                                alt={`Medical Team ${index + 1}`}
-                                className="absolute inset-0 w-full h-full object-cover"
-                                style={{ opacity: index === 0 ? 1 : 0 }}
-                            />
-                        ))}
+                        {carouselImages.map((image, index) =>
+                            loadedSlides.has(index) ? (
+                                <ResponsiveImage
+                                    key={index}
+                                    ref={(el) => {
+                                        slideRefs.current[index] = el;
+                                    }}
+                                    src={image}
+                                    alt={`Medical Team ${index + 1}`}
+                                    width={1600}
+                                    height={972}
+                                    crop="fill"
+                                    priority={index === 0}
+                                    loading={index === 0 ? "eager" : "lazy"}
+                                    sizes="(min-width: 1024px) 90vw, 100vw"
+                                    className="absolute inset-0 w-full h-full object-cover"
+                                    style={{ opacity: index === 0 ? 1 : 0 }}
+                                />
+                            ) : null
+                        )}
 
                         {/* Image overlay decoration */}
                         <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
