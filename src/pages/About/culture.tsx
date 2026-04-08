@@ -15,7 +15,7 @@ export default function Culture() {
                         At the heart of Reddington lies a culture defined not merely by clinical excellence, but by genuine humanity. We believe that healing extends beyond diagnosis and treatment—it encompasses how we make our patients feel at every point of contact. Our culture is built upon five core pillars: putting patient safety at the centre of all we do, delivering service excellence with warmth and attentiveness, pursuing continuous improvement in every process and outcome, conducting ourselves with unwavering honesty and integrity, and recognising that the best results emerge when we work together as one cohesive team. This is why a Reddington patient experiences more than advanced medicine; they experience respect, compassion, and a sincere commitment to their wellbeing. It is a culture that attracts the finest consultants and nurses—professionals who share our belief that healthcare is not just what we do, but who we are.
                     </p>
 
-                    {/* Vision + Core Values (from Figma) */}
+                    {/* Vision + Core Values */}
                     <div className="mt-[20px] lg:mt-[50px] flex flex-col gap-[20px] lg:gap-[40px]">
                         {/* Our Vision card */}
                         <div className="w-full">
@@ -226,7 +226,7 @@ export default function Culture() {
                             </div>
 
                             {/* Desktop layout (pixel-matched to Figma frame) */}
-                            <div className="relative hidden lg:block rounded-[12px]">
+                            <div className="relative hidden border border-[#E40714] lg:block rounded-[12px]">
                                 <img src="/icon/illustrations/values-frame.svg" alt="Core Values Frame" className="relative w-full h-full object-cover" />
                                 <p className="absolute left-[39px] top-[39px]  text-[24px] leading-[normal] text-black whitespace-nowrap" style={{ fontFamily: "TexGyreAdventor" }}>
                                     Our Core Values
