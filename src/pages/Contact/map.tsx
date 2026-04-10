@@ -1,5 +1,4 @@
-import { ArrowRight, MapPin } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { branches } from "../../data/branches";
 
 type ContactLocation = {
@@ -37,6 +36,7 @@ export default function Map() {
             }));
     }, []);
 
+    const mapContainerRef = useRef<HTMLDivElement>(null);
     const [activeLocationId, setActiveLocationId] = useState<number>(
         contactLocations[0]?.id ?? 0
     );
@@ -50,7 +50,7 @@ export default function Map() {
     }
 
     return (
-        <section className="bg-[#F9F9F9] px-[16px] pt-[50px] lg:px-[80px] lg:pb-[0px]">
+        <section className="bg-[#F9F9F9] px-[16px] pt-[30px] lg:pt-[50px] lg:px-[80px] lg:pb-[0px]">
             <div className="">
                 <div className="grid grid-cols-1 gap-[22px] lg:grid-cols-[0.95fr_1.1fr] lg:items-stretch lg:gap-[28px]">
                     <div className="flex flex-col gap-[18px] lg:gap-[30px]">
@@ -61,7 +61,14 @@ export default function Map() {
                                 <button
                                     key={location.id}
                                     type="button"
-                                    onClick={() => setActiveLocationId(location.id)}
+                                    onClick={() => {
+                                        setActiveLocationId(location.id);
+                                        setTimeout(() => {
+                                            if (window.innerWidth < 1024 && mapContainerRef.current) {
+                                                mapContainerRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                            }
+                                        }, 0);
+                                    }}
                                     className={`group flex w-full items-start justify-between rounded-[20px] border px-[18px] py-[20px] text-left transition-all duration-300 lg:px-[20px] lg:py-[22px] ${isActive
                                             ? "border-[#FF1D16] bg-[#FF1D16] text-white shadow-[0_16px_40px_rgba(228,7,20,0.16)]"
                                             : "border border-dashed border-[#E40714]/35 bg-white text-[#111111] hover:border-[#E40714] hover:shadow-[0_14px_32px_rgba(17,17,17,0.06)]"
@@ -79,20 +86,20 @@ export default function Map() {
 
                                         <div className="space-y-[8px]">
                                             <h3
-                                                className={`text-[18px] lg:text-[20px] leading-normal ${isActive ? "text-white" : "text-[#2D2D2D]"
+                                                className={`text-[16px] lg:text-[20px] leading-normal ${isActive ? "text-white" : "text-[#2D2D2D]"
                                                     }`}
                                                 style={{ fontFamily: "TexGyreAdventor" }}
                                             >
                                                 {location.title}
                                             </h3>
                                             <p
-                                                className={`text-[14px] font-medium leading-[19px] ${isActive ? "text-white/90" : "text-[#4B4B4B]"
+                                                className={`text-[13px] lg:text-[14px] font-medium leading-[19px] ${isActive ? "text-white/90" : "text-[#4B4B4B]"
                                                     }`}
                                             >
                                                 {location.subtitle}
                                             </p>
                                             <p
-                                                className={`text-[14px] font-medium leading-[19px] ${isActive ? "text-white" : "text-[#6F7271]"
+                                                className={`text-[13px] lg:text-[14px] font-medium leading-[19px] ${isActive ? "text-white" : "text-[#6F7271]"
                                                     }`}
                                             >
                                                 <a href={`tel:${location.phone}`} className="hover:underline">
@@ -120,7 +127,7 @@ export default function Map() {
                         })}
                     </div>
 
-                    <div className="overflow-hidden rounded-[24px] border border-[#E5E5E5] bg-white shadow-[0_14px_40px_rgba(17,17,17,0.06)]">
+                    <div ref={mapContainerRef} className="overflow-hidden rounded-[14px] lg:rounded-[24px] border border-[#E5E5E5] bg-white shadow-[0_14px_40px_rgba(17,17,17,0.06)] scroll-mt-[25px] lg:scroll-mt-0">
                         <iframe
                             key={activeLocation.id}
                             title={`${activeLocation.title} map`}

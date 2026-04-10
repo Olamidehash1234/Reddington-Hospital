@@ -62,12 +62,12 @@ export default function Navbar() {
   );
 
   const appointmentButton = (
-    <button
-      type="button"
+    <Link
+      to="/contact#contact-form"
       className="bg-[#FFFFFF] text-[#E40714] px-6 py-2 lg:px-[16px] lg:py-[12px] rounded-[20px] font-semibold text-sm hover:bg-opacity-90 transition-all whitespace-nowrap"
     >
       Request Appointment
-    </button>
+    </Link>
   );
 
   return (
@@ -174,12 +174,13 @@ export default function Navbar() {
                 <span className="text-white text-sm font-medium">Emergency Response</span>
               </button>
 
-              <button
-                type="button"
-                className="w-full bg-white text-[#E40714] px-6 py-[14px] rounded-full font-semibold text-sm hover:bg-opacity-90 transition-all"
+              <Link
+                to="/contact#contact-form"
+                className="block w-full bg-white text-[#E40714] px-6 py-[14px] rounded-full font-semibold text-sm hover:bg-opacity-90 transition-all text-center"
+                onClick={() => setIsOpen(false)}
               >
                 Request Appointment
-              </button>
+              </Link>
             </div>
           </div>
         </div>
