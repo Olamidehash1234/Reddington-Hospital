@@ -1,4 +1,4 @@
-import { useId, useState } from "react";
+import { useId, useState, useEffect } from "react";
 import Dropdown from "../../components/Dropdown";
 import DatePicker from "../../components/ui/date-picker";
 import TimePicker from "../../components/ui/time-picker";
@@ -8,8 +8,19 @@ export default function Contactform() {
     const [preferredDate, setPreferredDate] = useState<Date | undefined>();
     const [preferredTime, setPreferredTime] = useState<string>();
 
+    useEffect(() => {
+        if (window.location.hash === "#contact-form") {
+            const element = document.getElementById("contact-form");
+            if (element) {
+                setTimeout(() => {
+                    element.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 100);
+            }
+        }
+    }, []);
+
     return (
-        <section className="bg-[#F9F9F9] px-[16px] py-[40px] lg:py-[80px] lg:px-[80px]">
+        <section id="contact-form" className="bg-[#F9F9F9] px-[16px] py-[40px] lg:py-[80px] lg:px-[80px]">
             <div className="">
                 <div className="overflow-hidden rounded-[20px] bg-[#E40714] px-4 pb-12 pt-10 lg:pt-[50px] lg:px-0">
                     <div className="text-center text-white">
@@ -167,7 +178,7 @@ export default function Contactform() {
                             <div className="md:col-span-2">
                                 <button
                                     type="submit"
-                                    className="h-[50px] w-full rounded-[12px] bg-[#E40714] px-6 text-[14px] font-semibold text-white transition-opacity hover:opacity-95 focus:outline-none focus:ring-2 focus:ring-[#E40714]/45"
+                                    className="h-[50px] w-full rounded-[12px] bg-[#E40714] px-6 text-[13px] lg:text-[14px] font-semibold text-white transition-opacity hover:opacity-95 focus:outline-none"
                                 >
                                     Book Appointment
                                 </button>
