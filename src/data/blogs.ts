@@ -8,9 +8,11 @@ export type BlogArticle = {
   link: string
 }
 
-const heartImg = "/image/home/blog/heart.png"
-const surgeryImg = "/image/home/blog/surgery.png"
-const specialtyImg = "/image/home/blog/specialty.png"
+const heartImg = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png"
+const surgeryImg = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775824912/surgery_mjgzm3.png"
+// const specialtyImg = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png"
+const Heart = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775825053/heart_sextpb.png"
+const Maxy = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603364/Maxy-hero_hrie05.png"
 
 export const blogArticles: BlogArticle[] = [
   {
@@ -37,16 +39,16 @@ export const blogArticles: BlogArticle[] = [
     date: 'January 15, 2024',
     category: 'Announcements',
     description: 'The Reddington Hospital Group has launched a new healthcare facility that provides super specialized medical services with state-of-the-art equipment...',
-    image: specialtyImg,
+    image: Maxy,
     link: '/blog/maxi-super-specialty-centre'
   },
   {
     id: 'heart-health',
-    title: 'UNDERSTANDING HEART HEALTH AND PREVENTION',
+    title: 'WHAT DO YOU KNOW ABOUT YOUR HEART',
     date: 'December 20, 2023',
     category: 'Research',
     description: 'Recent research shows that preventive care is key to maintaining a healthy heart. Learn about the latest findings and recommendations...',
-    image: heartImg,
+    image: Heart,
     link: '/blog/heart-health-prevention'
   },
   {
