@@ -1,10 +1,15 @@
+import Newsletter from '../Home/Newsletter';
 import Hero from './hero';
+import Contactform from './Contactform';
+import Map from './map';
 
 export default function Contact() {
     return (
         <div>
             <Hero />
-            {/* Additional content for the Contact page can be added here */}
+            <Map />
+            <Contactform />
+            <Newsletter />
         </div>
     );
 }
