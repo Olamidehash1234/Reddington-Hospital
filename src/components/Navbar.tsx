@@ -74,9 +74,8 @@ export default function Navbar() {
     <>
       {/* Backdrop: mobile (&lt;1025) + tablet mid (1025–1400) when menu open; hidden ≥1401 */}
       <div
-        className={`navbar-menu-backdrop inset-0 bg-black/45 z-40 transition-opacity duration-200 ${
-          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+        className={`navbar-menu-backdrop inset-0 bg-black/45 z-40 transition-opacity duration-200 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
         onClick={() => setIsOpen(false)}
         aria-hidden="true"
       />
@@ -84,9 +83,8 @@ export default function Navbar() {
       {/* Main Navbar */}
       <nav className="max-w-[2600px] absolute lg:px-[30px] w-full px-[12px] pt-[20px] lg:pt-[30px] lg:pb-0 z-50">
         <div
-          className={`bg-[#E40714] shadow-lg px-6 py-4 lg:py-[23px] lg:px-[40px] ${
-            isOpen ? 'rounded-t-[30px]' : 'rounded-full'
-          }`}
+          className={`bg-[#E40714] shadow-lg px-6 py-4 lg:py-[23px] lg:px-[40px] ${isOpen ? 'rounded-t-[30px]' : 'rounded-full'
+            }`}
         >
           <div className="mx-auto flex items-center justify-between gap-3">
             <Link to="/" className="flex items-center space-x-2 flex-shrink-0 min-w-0">
@@ -104,11 +102,10 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className={`relative text-white text-[14px] font-medium transition-all duration-300 after:absolute after:left-0 after:-bottom-[1px] after:h-[1px] after:w-full after:bg-white after:origin-left after:transition-transform after:duration-300 ${
-                      isActiveLink(link.href)
-                        ? 'after:scale-x-100'
-                        : 'after:scale-x-0 hover:after:scale-x-100'
-                    }`}
+                    className={`relative text-white text-[14px] font-medium transition-all duration-300 after:absolute after:left-0 after:-bottom-[1px] after:h-[1px] after:w-full after:bg-white after:origin-left after:transition-transform after:duration-300 ${isActiveLink(link.href)
+                      ? 'after:scale-x-100'
+                      : 'after:scale-x-0 hover:after:scale-x-100'
+                      }`}
                   >
                     {link.name}
                   </Link>
@@ -154,11 +151,10 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 to={link.href}
-                className={`relative text-white text-sm font-medium transition-all duration-300 px-2 py-2 after:absolute after:left-2 after:right-2 after:-bottom-[2px] after:h-[2px] after:bg-white after:origin-left after:transition-transform after:duration-300 ${
-                  isActiveLink(link.href)
-                    ? 'after:scale-x-100'
-                    : 'after:scale-x-0 hover:after:scale-x-100'
-                }`}
+                className={`relative text-white text-sm font-medium transition-all duration-300 px-2 py-2 after:absolute after:left-2 after:right-2 after:-bottom-[2px] after:h-[2px] after:bg-white after:origin-left after:transition-transform after:duration-300 ${isActiveLink(link.href)
+                  ? 'after:scale-x-100'
+                  : 'after:scale-x-0 hover:after:scale-x-100'
+                  }`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
