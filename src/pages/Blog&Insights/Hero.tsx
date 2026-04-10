@@ -1,3 +1,4 @@
+import ResponsiveImage from "../../components/ResponsiveImage";
 const BlogHero = () => {
     return (
         <div className="relative h-[300px] lg:h-[424px] overflow-hidden">
@@ -5,7 +6,16 @@ const BlogHero = () => {
             <div
                 className="absolute inset-0 bg-cover"
             >
-                <img src="/image/branches/hero.png" alt="" className="w-full h-full object-cover" />
+                <ResponsiveImage
+                    src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603475/hero_xaclsn.png"
+                    alt=""
+                    width={1600}
+                    height={424}
+                    crop="fill"
+                    priority
+                    sizes="100vw"
+                    className="w-full h-full object-cover"
+                />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-[#2D2D2D66]"></div>
             </div>
