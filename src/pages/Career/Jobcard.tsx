@@ -92,7 +92,7 @@ export default function JobCard({ job, isExpanded, onToggle, }: JobCardProps) {
                             {/* Objective Section */}
                             <div>
                                 <button className=" border-l-[4px] border-[#0046B0] px-[10px] py-[5px] text-base lg:text-[16px] font-medium text-[#2D2D2D] mb-3">Objective</button>
-                                <p className="text-[#2D2D2D] font-[300] leading-relaxed lg:leading-[24px] text-sm lg:text-[16px]">
+                                <p className="text-[#2D2D2D] font-[300] leading-relaxed lg:leading-[24px] text-sm lg:text-[15px]">
                                     "{job.objective}"
                                 </p>
                             </div>
@@ -102,7 +102,7 @@ export default function JobCard({ job, isExpanded, onToggle, }: JobCardProps) {
                                 <button className=" border-l-[4px] border-[#0046B0] px-[10px] py-[5px] text-base lg:text-[16px] font-medium text-[#2D2D2D] mb-3">Duties & Responsibilities</button>
                                 <ul className="space-y-2 lg:space-y-[8px]">
                                     {job.dutiesAndResponsibilities.map((duty, index) => (
-                                        <li key={index} className="flex ml-[10px] gap-2 text-sm lg:text-base text-[#2D2D2D]">
+                                        <li key={index} className="flex ml-[10px] gap-2 text-sm lg:text-[15px] text-[#2D2D2D]">
                                             <span className="text-[#2D2D2D]  font-bold flex-shrink-0">•</span>
                                             <span className='tracking-[-0.54px] lg:leading-[24px] font-[300]'>{duty}</span>
                                         </li>
@@ -121,7 +121,7 @@ export default function JobCard({ job, isExpanded, onToggle, }: JobCardProps) {
                                 <div>
                                     <ul className="space-y-2">
                                         {job.qualificationsAndRequirements.required.map((qual, index) => (
-                                            <li key={index} className="flex ml-[10px] gap-2 text-sm lg:text-base text-[#2D2D2D]">
+                                            <li key={index} className="flex ml-[10px] gap-2 text-sm lg:text-[15px] text-[#2D2D2D]">
                                                 <span className="text-[#2D2D2D]  font-bold flex-shrink-0">•</span>
                                                 <span className='tracking-[-0.54px] lg:leading-[24px] font-[300]'>{qual}</span>
                                             </li>
