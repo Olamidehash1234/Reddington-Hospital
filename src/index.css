@@ -16,7 +16,7 @@
 
 @layer base {
   html {
-    font-family: 'montserrat', system-ui, sans-serif;
+    font-family: 'Montserrat', system-ui, sans-serif;
     background-color: #FFFFFF;
     margin: 0 auto;
     max-width: 2500px !important;
