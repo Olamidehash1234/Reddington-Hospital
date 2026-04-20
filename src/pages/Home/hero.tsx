@@ -186,7 +186,7 @@ function BranchBubbles({ enabled = true }: { enabled?: boolean }) {
             <button
                 type="button"
                 onClick={handleCancel}
-                className="pointer-events-auto absolute right-4 top-[96px] lg:right-8 lg:top-[112px] rounded-full bg-black/70 text-white text-sm px-4 py-2 backdrop-blur-md border border-white/25 hover:bg-black/80 transition"
+                className="pointer-events-auto absolute right-4 top-[96px] lg:right-8 lg:top-[132px] rounded-full bg-white border border-[#E12] text-white text-sm px-4 py-2 backdrop-blur-md border border-white/25 hover:bg-black/10 transition"
                 aria-label="Cancel bubbles animation"
             >
                 <img src="/icon/close.svg" alt="" />
