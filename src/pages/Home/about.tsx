@@ -39,7 +39,7 @@ export default function HeroEuracare() {
 
                         {/* cta button */}
                         <Link to="/about">
-                            <button className=" hidden lg:block border border-[#E40714] lg:px-[80px] px-[40px] py-[0px] lg:py-[16px] rounded-[12px] mt-[20px] lg:mt-[45px] font-medium tracking-[-0.84px] text-[14px] leading-[40px] lg:text-[14px] lg:leading-[100%] text-[#E40714]">
+                            <button className=" hidden lg:block border border-[#E40714] lg:px-[80px] px-[40px] py-[0px] lg:py-[16px] rounded-[12px] mt-[20px] lg:mt-[45px] font-medium tracking-[-0.84px] text-[14px] leading-[40px] lg:text-[14px] lg:leading-[100%] text-[#E40714] hover:bg-[#E40714] hover:text-white transition-all duration-300">
                                 Read more...
                             </button>
                         </Link>
@@ -64,7 +64,7 @@ export default function HeroEuracare() {
                     </div>
 
                     <Link to="/about">
-                        <button className=" block lg:hidden border border-[#E40714] lg:px-[80px] px-[40px] py-[0px] lg:py-[16px] rounded-[12px] mb-[40px] lg:mt-[45px] font-medium tracking-[-0.84px] text-[14px] leading-[40px] lg:text-[14px] lg:leading-[100%] text-[#E40714]">
+                        <button className=" block lg:hidden border border-[#E40714] lg:px-[80px] px-[40px] py-[0px] lg:py-[16px] rounded-[12px] mb-[40px] lg:mt-[45px] font-medium tracking-[-0.84px] text-[14px] leading-[40px] lg:text-[14px] lg:leading-[100%] text-[#E40714] hover:bg-[#E40714] hover:text-white transition-all duration-300">
                             Read more...
                         </button>
                     </Link>

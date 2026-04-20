@@ -18,7 +18,7 @@ const serviceCards = [
     },
     {
         title: 'Diagnostic Imaging',
-        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603766/img-1_xs9ijb.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603186/img-2_u73gxu.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603753/img-3_g94yni.jpg']
+        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603186/img-2_u73gxu.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603186/img-2_u73gxu.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603753/img-3_g94yni.jpg']
     },
     {
         title: 'Surgical Services',
@@ -47,7 +47,7 @@ const ServiceCard = ({ card, height }: { card: typeof serviceCards[0]; height: s
         if (isHovering) {
             intervalRef.current = setInterval(() => {
                 setCurrentImageIndex((prev) => (prev + 1) % card.images.length);
-            }, 1500);
+            }, 850);
         } else {
             if (intervalRef.current) {
                 clearInterval(intervalRef.current);
@@ -63,6 +63,9 @@ const ServiceCard = ({ card, height }: { card: typeof serviceCards[0]; height: s
     }, [isHovering, card.images.length]);
 
     const handleMouseEnter = () => {
+        if (card.images.length > 1) {
+            setCurrentImageIndex(1);
+        }
         setIsHovering(true);
     };
 
