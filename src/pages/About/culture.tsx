@@ -78,7 +78,7 @@ export default function Culture() {
                                 </div>
 
                                 <div className="hidden lg:block relative h-full rounded-[12px] text-white overflow-hidden">
-                                    <img src="/icon/illustrations/vision.svg" alt="Vision Frame" className="relative w-full h-full object-cover" />
+                                    <img src="/icon/illustrations/vision.svg" alt="Vision Frame" className="relative w-full h-full gobject-cover" />
                                     <div className="absolute left-[26px] top-[25px]">
                                         <img
                                             alt=""
