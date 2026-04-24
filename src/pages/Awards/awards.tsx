@@ -14,7 +14,7 @@ export default function AwardsMediaSection() {
                     className="text-center text-[24px] lg:text-[32px] text-[#000000] mb-[40px] lg:mb-[40px]"
                     style={{ fontFamily: 'TexGyreAdventor' }}
                 >
-                    Our Award Medias
+                    Our Award Media
                 </h2>
 
                 {/* Gallery Grid */}

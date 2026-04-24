@@ -44,6 +44,7 @@ export default function Navbar() {
   }, [isOpen]);
 
   const navLinks = [
+    { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Our Services', href: '/services' },
     { name: 'Find a Doctor', href: '/doctors' },
