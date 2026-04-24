@@ -27,7 +27,7 @@ export default function Branches() {
                         {/* Content */}
                         <div className="flex flex-col flex-grow p-[20px] lg:p-[24px]">
                             {/* Name */}
-                            <h3 className="text-[14px] lg:text-[15px] leading-[22px] lg:leading-[24px] text-[#000000] mb-[12px]">
+                            <h3 className="text-[14px] font-medium uppercase lg:text-[15px] leading-[22px] lg:leading-[24px] text-[#000000] mb-[12px]">
                                 {branch.name}
                             </h3>
 

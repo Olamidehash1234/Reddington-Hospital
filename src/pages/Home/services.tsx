@@ -14,23 +14,23 @@ const serviceAnchorMap: Record<string, string> = {
 const serviceCards = [
     {
         title: 'Cardiology',
-        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603094/cardiology-1_iciq6q.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603100/grid-1_goqeiq.png', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603105/cardiology-2_plp3sj.jpg']
+        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603100/grid-1_goqeiq.png', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603094/cardiology-1_iciq6q.jpg']
     },
     {
         title: 'Diagnostic Imaging',
-        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603766/img-1_xs9ijb.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603186/img-2_u73gxu.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603753/img-3_g94yni.jpg']
+        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/v1776772658/diag-1_maycrm.png', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603343/diagnostic_lqermh.png']
     },
     {
         title: 'Surgical Services',
-        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603828/surg-1_dif5hf.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603301/surg-2_lw3l9i.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603294/surg-3_wfr6an.jpg']
+        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603828/surg-1_dif5hf.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603294/surg-3_wfr6an.jpg']
     },
     {
         title: 'Emergency Services',
-        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603086/emerg-1_dxvafh.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603109/emerg-2_yyydxa.jpg']
+        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603086/emerg-1_dxvafh.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1776773556/emerg_frhpm5.heic']
     },
     {
         title: 'Clinical Laboratory',
-        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603711/lab-1_rg3mgm.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603842/lab-2_lrnavm.jpg', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603799/lab-3_pgmudl.jpg']
+        images: ['https://res.cloudinary.com/dbe6jr3nj/image/upload/v1776772184/lab-1new_gbvbyy.png', 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1776772897/lab-2new_d9ec4i.png']
     },
     {
         title: 'Endoscopy',
@@ -47,7 +47,7 @@ const ServiceCard = ({ card, height }: { card: typeof serviceCards[0]; height: s
         if (isHovering) {
             intervalRef.current = setInterval(() => {
                 setCurrentImageIndex((prev) => (prev + 1) % card.images.length);
-            }, 1500);
+            }, 850);
         } else {
             if (intervalRef.current) {
                 clearInterval(intervalRef.current);
@@ -63,6 +63,9 @@ const ServiceCard = ({ card, height }: { card: typeof serviceCards[0]; height: s
     }, [isHovering, card.images.length]);
 
     const handleMouseEnter = () => {
+        if (card.images.length > 1) {
+            setCurrentImageIndex(1);
+        }
         setIsHovering(true);
     };
 
@@ -89,9 +92,9 @@ const ServiceCard = ({ card, height }: { card: typeof serviceCards[0]; height: s
                             key={index}
                             src={image}
                             alt={card.title}
-                            width={900}
-                            height={700}
-                            crop="fill"
+                            // width={900}
+                            // height={700}
+                            // crop="fill"
                             sizes="(min-width: 1024px) 33vw, 100vw"
                             loading={index === 0 ? "lazy" : "lazy"}
                             className={`w-full h-full object-cover transition-all duration-300 ease-out absolute inset-0 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
@@ -99,7 +102,7 @@ const ServiceCard = ({ card, height }: { card: typeof serviceCards[0]; height: s
                         />
                     ))}
                     {/* Title overlay at bottom */}
-                    <h3 className="absolute bottom-0 left-0 right-0 text-white font-semibold text-[14px] lg:text-[15px] py-[21px] px-[30px]" style={{ backgroundImage: 'linear-gradient(140deg, rgba(26, 26, 26, 0.00) -44.46%, rgba(26, 26, 26, 0.64) 77.1%)' }}>
+                    <h3 className="absolute bottom-0 play left-0 right-0 text-white font-semibold text-[14px] lg:text-[15px] py-[19px] px-[30px]" style={{ backgroundImage: 'linear-gradient(140deg, rgba(26, 26, 26, 0.00) -44.46%, rgba(26, 26, 26, 0.64) 77.1%)' }}>
                         {card.title}
                     </h3>
                 </div>

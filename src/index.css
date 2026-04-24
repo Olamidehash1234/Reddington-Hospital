@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 @font-face {
   font-family: 'TexGyreAdventor';
@@ -42,11 +43,15 @@
     border-radius: 2px;
   }
 
+  .play{
+    font-family: 'Playfair Display', serif;
+  }
+
   /*
    * Navbar breakpoints (match design):
    * - max 1024px: hamburger + slide menu; emergency inside menu; backdrop when open
-   * - 1025px–1400px: same menu width as floating nav (30px inset); emergency in header beside hamburger; hide emergency in menu; backdrop when open
-   * - min 1401px: full desktop nav + inline emergency; no hamburger / no mobile menu
+   * - 1025px–1299px: same menu width as floating nav (30px inset); emergency in header beside hamburger; hide emergency in menu; backdrop when open
+   * - min 1300px: full desktop nav + inline emergency; no hamburger / no mobile menu
    */
 
   /* Backdrop: only on viewports where the flyout menu exists */
@@ -54,13 +59,13 @@
     display: none;
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1299px) {
     .navbar-menu-backdrop {
       display: block;
     }
   }
 
-  @media (min-width: 1401px) {
+  @media (min-width: 1300px) {
     .navbar-menu-backdrop {
       display: none !important;
     }
@@ -91,7 +96,7 @@
   }
 
   /* Match floating nav inset (Tailwind `lg` = 1024px uses 30px left/right) */
-  @media (min-width: 1024px) and (max-width: 1400px) {
+  @media (min-width: 1024px) and (max-width: 1299px) {
     .navbar-mobile-menu-position {
       left: 30px !important;
       right: 30px !important;
@@ -99,7 +104,7 @@
   }
 
   /* Full desktop: show link row + desktop emergency; hide hamburger & flyout */
-  @media (min-width: 1401px) {
+  @media (min-width: 1300px) {
     .navbar-desktop-nav {
       display: flex !important;
     }
@@ -118,7 +123,7 @@
   }
 
   /* Tablet mid: hamburger + flyout; emergency in header (not in menu) */
-  @media (min-width: 1025px) and (max-width: 1400px) {
+  @media (min-width: 1025px) and (max-width: 1299px) {
     .navbar-desktop-nav {
       display: none !important;
     }

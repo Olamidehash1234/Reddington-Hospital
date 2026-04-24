@@ -55,7 +55,7 @@ const Wellness = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603308/
 export const branches: Branch[] = [
     {
         id: 1,
-        name: "Reddington Multi-Specialist Hospital V.I",
+        name: "Reddington Multi-Specialist Hospital Victoria Island",
         location: "12a Idowu Martins Street, Victoria Island, Lagos",
         address: "12a Idowu Martins Street, Victoria Island, Lagos",
         description: "Our flagship hospital and the heart of the Reddington Healthcare Group, this multi-specialist..",

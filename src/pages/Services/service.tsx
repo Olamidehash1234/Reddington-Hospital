@@ -96,7 +96,7 @@ export default function ServicesGrid() {
             <>
                 <p
                     ref={descRef}
-                    className="text-[13px]  text-[#2D2D2DCC] leading-[20px] lg:leading-[22px] flex-grow"
+                    className="text-[13px] text-[#2D2D2DCC] leading-[20px] lg:leading-[20px] flex-grow"
                     style={isExpanded ? undefined : clampStyle}
                 >
                     {isExpanded ? fullDescription ?? description : description}
@@ -159,7 +159,7 @@ export default function ServicesGrid() {
                                 />
                             </div>
                             <div className="p-5 lg:pt-[20px] flex flex-col flex-grow">
-                                <h3 className="font-medium  text-[14px] lg:text-[16px] tracking-[-0.5px] leading-[26px] mb-[20px]">
+                                <h3 className="font-medium  text-[14px] lg:text-[15px] tracking-[-0.5px] leading-[26px] mb-[20px]">
                                     {service.title}
                                 </h3>
                                 <ServiceDescription
