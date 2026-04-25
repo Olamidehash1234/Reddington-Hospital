@@ -1,16 +1,18 @@
-import { useNavigate } from "react-router-dom"
-import { branches } from "../../data/branches"
-import { branchNameToSlug } from '../../utils/slugify'
-import ResponsiveImage from "../../components/ResponsiveImage"
+import { useNavigate } from "react-router-dom";
+import { branches } from "../../data/branches";
+import { branchNameToSlug } from "../../utils/slugify";
+import ResponsiveImage from "../../components/ResponsiveImage";
 export default function Branches() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     return (
         <section className="relative bg-[#F5F5F5] px-[16px] py-[40px] lg:px-[80px] lg:py-[80px]">
-
             <div className="grid grid-cols-1 gap-[24px] sm:grid-cols-2 lg:grid-cols-3 lg:gap-[32px]">
                 {branches.map((branch) => (
-                    <div key={branch.id} className="flex flex-col bg-white rounded-2xl overflow-hidden">
+                    <div
+                        key={branch.id}
+                        className="flex flex-col bg-white rounded-2xl overflow-hidden"
+                    >
                         {/* Image */}
                         <div className="relative h-[200px] w-full bg-gray-100">
                             <ResponsiveImage
@@ -50,7 +52,9 @@ export default function Branches() {
 
                             {/* Learn More Button */}
                             <button
-                                onClick={() => navigate(`/branches/${branchNameToSlug(branch.name)}`)}
+                                onClick={() =>
+                                    navigate(`/branches/${branchNameToSlug(branch.name)}`)
+                                }
                                 className="text-[#E40714] font-semibold text-[13px] hover:underline text-left inline"
                             >
                                 Learn More
@@ -60,5 +64,5 @@ export default function Branches() {
                 ))}
             </div>
         </section>
-    )
+    );
 }
