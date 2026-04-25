@@ -20,16 +20,17 @@ export default function HeroSection() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const slideRefs = useRef<Array<HTMLImageElement | null>>([]);
     const carouselImages = [
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603139/img1_esbjjz.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603123/img2_uoyupa.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603165/img3_nordso.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603157/img4_us87jl.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603142/img5_vai25p.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603171/img6_z6of1x.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603175/img7_bxvea5.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603163/img8_kmp8gg.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603171/img9_lcrsfh.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603136/img10_xfidmw.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777109094/hero-new1_vvph7a.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777109081/hero-new2_iscrce.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777109071/hero-new3_qvyesk.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777109062/hero-new4_amdtgt.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777109050/hero-new5_i1x1il.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110290/hero-new6_eqyfrq.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110307/hero-new7_lbdzkl.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110318/hero-new8_bpui2x.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110333/hero-new9_uc38ym.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110353/hero-new10_uvxtwl.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110368/hero-new11_r6w66q.png'
     ];
     const loadedSlides = useMemo(() => {
         const nextIndex = (currentImageIndex + 1) % carouselImages.length;
@@ -134,22 +135,25 @@ export default function HeroSection() {
                             Welcome To Reddington<br />
                             <span>Multispecialist Hospital</span>
                         </h1>
-                        {/* <p>in pursuit of medical excellence</p> */}
+                        <p className='italic hidden lg:block'>"in pursuit of medical excellence"</p>
                     </div>
 
                     {/* Right Side - Description */}
-                    <div className="flex flex-col justify-center">
+                    <div className="flex flex-col">
                         <div className="lg:border-l-[1px] border-[#2D2D2D] lg:pl-6">
-                            <p className="text-[#2D2D2D] text-[16px] lg:text-[24px] lg:tracking-[-4%] leading-[24px] lg:leading-[100%]">
+                            <p className="text-[#2D2D2D] text-[16px] lg:text-[24px] lg:tracking-[-2%] leading-[24px] lg:leading-[30px]">
                                 Reddington is your trusted partner for exceptional health. We combine internationally trained specialists with cutting-edge technology to provide comprehensive, patient-centred care across Lagos.
                             </p>
                         </div>
                     </div>
+
+                    <p className='mt-4 italic block lg:hidden'>"in pursuit of medical excellence"</p>
+
                 </div>
 
                 {/* Hero Image Carousel Section */}
                 <div className="relative mb-8 lg:mb-0">
-                    <div className="relative rounded-lg overflow-hidden h-[390px] lg:h-[486px] z-0">
+                    <div className="relative rounded-lg overflow-hidden h-[390px] lg:h-[500px] z-0">
                         {/* Carousel Images with Fade Transition */}
                         {carouselImages.map((image, index) =>
                             loadedSlides.has(index) ? (
@@ -160,9 +164,9 @@ export default function HeroSection() {
                                     }}
                                     src={image}
                                     alt={`Medical Team ${index + 1}`}
-                                    width={1600}
-                                    height={972}
-                                    crop="fill"
+                                    // width={1600}
+                                    // height={972}
+                                    // crop="fill"
                                     priority={index === 0}
                                     loading={index === 0 ? "eager" : "lazy"}
                                     sizes="(min-width: 1024px) 90vw, 100vw"
@@ -178,7 +182,7 @@ export default function HeroSection() {
 
                     {/* Statistics Bar - Positioned at bottom left of image */}
                     <div className="absolute bottom-0 left-0 right-0 lg:right-auto bg-[#E40714] rounded-b-lg lg:rounded-tl lg:rounded-xl px-4 lg:px-[17px] py-6 lg:py-[19px] shadow-xl">
-                        <div className="grid grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-[30px]">
+                        <div className="grid grid-cols-3 lg:flex lg:flex-row gap-4 lg:gap-[50px]">
                             {stats.map((stat, index) => (
                                 <div key={index} className="flex flex-col items-center text-center">
                                     <p className="text-[18px] lg:text-[40px] font-medium text-white mb-1 lg:mb-2 tabular-nums">
