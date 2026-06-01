@@ -2,6 +2,7 @@ import { useId, useState, useEffect } from "react";
 import Dropdown from "../../components/Dropdown";
 import DatePicker from "../../components/ui/date-picker";
 import TimePicker from "../../components/ui/time-picker";
+import { services } from "../../data/services";
 
 export default function Contactform() {
     const id = useId();
@@ -132,12 +133,10 @@ export default function Contactform() {
                                     id={`${id}-service`}
                                     name="service"
                                     placeholder="Select Service/Department"
-                                    options={[
-                                        { value: "general", label: "General Consultation" },
-                                        { value: "pediatrics", label: "Pediatrics" },
-                                        { value: "cardiology", label: "Cardiology" },
-                                        { value: "laboratory", label: "Laboratory" },
-                                    ]}
+                                    options={services.map((service) => ({
+                                        value: service.title.toLowerCase().replace(/\s+/g, "-"),
+                                        label: service.title,
+                                    }))}
                                 />
                             </div>
 
@@ -155,10 +154,10 @@ export default function Contactform() {
                                         { value: "lekki", label: "Reddington Care Hospital Lekki" },
                                         { value: "maxy", label: "Reddington Maxy Super-Specialty Centre" },
                                         { value: "purple-ray", label: "Purple Ray Diagnostic Centre" },
-                                        { value: "breast-gynae", label: "Reddington Breast & Gynaecology Centre" },
-                                        { value: "davidson", label: "Davidson Surgical & Critical Care Centre" },
+                                        { value: "breast-gynae", label: "Reddington Breast and Gynaecology Centre" },
+                                        { value: "davidson", label: "Davidson Surgical and Critical Care Centre" },
                                         { value: "bodycare", label: "The BodyCare Plastic Surgery Centre" },
-                                        { value: "wellness", label: "Reddington Wellness & Medical Check-Up Centre" },
+                                        { value: "wellness", label: "Reddington Wellness and Medical Check-Up Centre" },
                                     ]}
                                 />
                             </div>

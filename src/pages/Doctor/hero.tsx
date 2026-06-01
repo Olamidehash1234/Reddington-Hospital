@@ -29,7 +29,7 @@ const DoctorHero = () => {
                         Find a Specialist
                     </h1>
                     <p className="text-[#FFFFFF] text-[14px] lg:text-[16] font-bold leading-[20px]">
-                        Find & Connect with the right specialist from our team of highly trained surgeons and medical experts.
+                        Find and Connect with the right specialist from our team of highly trained surgeons and medical experts.
                     </p>
                 </div>
             </div>

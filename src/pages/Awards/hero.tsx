@@ -27,7 +27,7 @@ const AwardsSection = () => {
             <img src="/arrow.svg" alt="" />
           {/* Heading */}
           <h1 className="text-[24px] lg:text-[48px] font-bold lg:leading-normal text-white capitalize" style={{ fontFamily : "TexGyreAdventor"}}>
-            Awards & Recognition
+            Awards and Recognition
           </h1>
         </div>
       </div>

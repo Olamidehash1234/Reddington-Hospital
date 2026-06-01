@@ -10,8 +10,8 @@ const ContactHero = () => {
                 <ResponsiveImage
                     src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603424/hero_fnclxb.png"
                     alt=""
-                    width={1600}
-                    height={424}
+                    // width={1600}
+                    // height={424}
                     crop="fill"
                     priority
                     sizes="100vw"

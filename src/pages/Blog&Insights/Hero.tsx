@@ -25,7 +25,7 @@ const BlogHero = () => {
                 <div className="text-center">
                     {/* Heading */}
                     <h1 className="text-[24px] mb-[10px] lg:mb-0 lg:text-[48px] font-bold lg:leading-normal text-white capitalize" style={{ fontFamily: "TexGyreAdventor" }}>
-                        Insights & Updates
+                        Insights and Updates
                     </h1>
                     <p className="text-[#FFFFFF] text-[13px] lg:text-[16] max-w-[786px] font-bold leading-[20px]">
                         Stay informed with the latest health tips, hospital news, research breakthroughs, and community events from the Reddington Hospital Group.

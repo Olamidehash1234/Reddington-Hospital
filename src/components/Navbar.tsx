@@ -118,7 +118,7 @@ export default function Navbar() {
                 </div>
               </div>
 
-              {/* Mid breakpoint (1025–1400): desktop emergency beside menu button; hidden on mobile & full desktop */}
+              {/* Mid breakpoint (1025–1400): desktop emergency beside menu button; hidden on mobile and full desktop */}
               <div className="navbar-emergency-mid hidden items-center space-x-4 lg:space-x-6 flex-shrink-0">
                 {emergencyButton}
                 {/* {appointmentButton} */}

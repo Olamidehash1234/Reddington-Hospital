@@ -33,7 +33,7 @@ export const inHouseDoctors: Doctor[] = [
     {
         id: 3,
         name: "Dr. Muyiwa Fagbohun",
-        specialty: "Obstetrician & Gynaecologist",
+        specialty: "Obstetrician and Gynaecologist",
         hospital: "Reddington VI",
         type: "in-house",
         image: Muyiwa,
@@ -41,7 +41,7 @@ export const inHouseDoctors: Doctor[] = [
     {
         id: 4,
         name: "Dr. Chioma Ojiegbe",
-        specialty: "Obstetrician & Gynaecologist",
+        specialty: "Obstetrician and Gynaecologist",
         hospital: "Reddington VI",
         type: "in-house",
         image: Chioma,
@@ -49,7 +49,7 @@ export const inHouseDoctors: Doctor[] = [
     {
         id: 5,
         name: "Dr. John Afolabi",
-        specialty: "Obstetrician & Gynaecologist",
+        specialty: "Obstetrician and Gynaecologist",
         hospital: "Reddington VI",
         type: "in-house",
         image: PLACEHOLDER_IMG,

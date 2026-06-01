@@ -18,10 +18,7 @@ export default function Branches() {
                             <ResponsiveImage
                                 src={branch.image}
                                 alt={branch.name}
-                                width={720}
-                                height={400}
                                 crop="fill"
-                                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                                 className="h-full w-full object-cover"
                             />
                         </div>

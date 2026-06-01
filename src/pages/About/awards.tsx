@@ -14,7 +14,7 @@ export default function AwardsSection() {
                     </p>
 
                     <h1 className="text-[#fff] text-[22px] lg:text-[32px] leading-normal" style={{ fontFamily: "TexGyreAdventor" }}>
-                        Awards & Accreditation
+                        Awards and Accreditation
                     </h1>
                 </div>
 
