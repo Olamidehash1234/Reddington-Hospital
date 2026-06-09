@@ -44,7 +44,7 @@ const DOCTOR_IMG = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_a
 const Pharmacy = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603334/Pharmacy_wzigt3.png"
 const Dental = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603347/dental_abydqg.png"
 const Blog = "/image/home/blog/heart.png"
-const VI = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603457/V.I-hero_vyzusr.png"
+const VI = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603340/Ikeja-hero_wtksoz.png"
 const Ikeja = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603340/Ikeja-hero_wtksoz.png"
 const Lekki = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603340/Lekki-hero_ylk27m.png"
 const Breast = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603348/Breast-hero_wmtz9d.png"
@@ -110,23 +110,22 @@ export const branches: Branch[] = [
             { name: "Cardiology Care", image: Pharmacy },
         ],
         doctors: [
-            { id: 5, name: "DR. OLUFISAYO BALOGUN", specialization: "CONSULTANT O&G /MEDICAL DIRECTOR", image: DOCTOR_IMG },
-            { id: 6, name: "DR. VALENTINE OKWARA", specialization: "CONSULTANT O&G", image: DOCTOR_IMG },
+            { id: 5, name: "DR. OLUFISAYO BALOGUN", specialization: "CONSULTANT OandG /MEDICAL DIRECTOR", image: DOCTOR_IMG },
+            { id: 6, name: "DR. VALENTINE OKWARA", specialization: "CONSULTANT OandG", image: DOCTOR_IMG },
             { id: 7, name: "DR. TAFA OSUNLAJA", specialization: "CONSULTANT ANASTHETIST", image: DOCTOR_IMG },
             { id: 8, name: "DR. EYITAYO OLONADE", specialization: "CONSULTANT PAEDIATRICIAN", image: DOCTOR_IMG },
-            { id: 9, name: "DR. EMMANUEL CHUKWURAH", specialization: "CONSULTANT PAEDIATRICIAN", image: DOCTOR_IMG },
+            { id: 9, name: "DR. EMMANUEL CHUKWURAH", specialization: "CONSULTANT RADIOLOGIST", image: DOCTOR_IMG },
             { id: 10, name: "DR. KENNETH OCHULOR", specialization: "CONSULTANT CARDIOLOGIST", image: DOCTOR_IMG },
             { id: 10, name: "DR. DORKA DORA BEKEE", specialization: "CONSULTANT PAEDIATRICIAN", image: DOCTOR_IMG },
-            { id: 10, name: "DR ALIYU ABDULMUMEEN", specialization: "EVENING FAMILY PHYSICIAN", image: DOCTOR_IMG },
         ],
         emails: ["enquiries@reddingtonhospital.com"],
-        contact: ["0707 870 1595", "0707 876 0874"],
+        contact: ["09093928064", "07078760874", "07078761595", "08092804119"],
         servicesDescription: "All Specialty care",
         Heroimage: Ikeja
     },
     {
         id: 3,
-        name: "Reddington Care Hospital Lekki",
+        name: "Reddington Lekki Hospital",
         location: "15c Admiralty Way, Lekki Phase 1, Lagos",
         address: "15c Admiralty Way, Lekki Phase 1, Lagos",
         description: "A 5-star, one-stop multi-specialist facility established to bring Reddington's signature excelle..",
@@ -199,7 +198,7 @@ export const branches: Branch[] = [
                 ]
             },
             {
-                name: "Audiology & Vestibular Clinic",
+                name: "Audiology and Vestibular Clinic",
                 image: Dental,
                 description: [
                     "Hearing tests",
@@ -257,14 +256,14 @@ export const branches: Branch[] = [
     },
     {
         id: 6,
-        name: "Reddington Breast & Gynaecology Centre",
+        name: "Reddington Breast and Gynaecology Centre",
         location: "276A Kofo Abayomi Street, near Intercontinental Hotel, Victoria Island, Lagos",
         address: "276A Kofo Abayomi Street, near Intercontinental Hotel, Victoria Island, Lagos",
-        description: "The Breast & Gynae Centre is Nigeria's only dedicate...",
-        fullDescription: "The Breast & Gynae Centre is Nigeria's only dedicated women's healthcare centre providing comprehensive, holistic care for women at every life stage. Our mission is to deliver advanced, compassionate, and personalized care that spans wellness, curative treatment, and aesthetic services. By bringing together an exclusive team of UK and Nigeria-based specialists with cutting-edge technology, we have created a model for the future of women's health in West Africa.",
+        description: "The Breast and Gynae Centre is Nigeria's only dedicate...",
+        fullDescription: "The Breast and Gynae Centre is Nigeria's only dedicated women's healthcare centre providing comprehensive, holistic care for women at every life stage. Our mission is to deliver advanced, compassionate, and personalized care that spans wellness, curative treatment, and aesthetic services. By bringing together an exclusive team of UK and Nigeria-based specialists with cutting-edge technology, we have created a model for the future of women's health in West Africa.",
         image: Breast,
         services: [
-            { name: "Gynaecology & Reproductive Health", image: SERVICE_PLACEHOLDER },
+            { name: "Gynaecology and Reproductive Health", image: SERVICE_PLACEHOLDER },
             { name: " Fibroid Clinic (offering the full spectrum of management options)", image: SERVICE_PLACEHOLDER },
             { name: "Breast Health Clinic (preventive, curative, and aesthetic)", image: SERVICE_PLACEHOLDER },
             { name: "Women's Wellness Clinic", image: SERVICE_PLACEHOLDER },
@@ -287,7 +286,7 @@ export const branches: Branch[] = [
     },
     {
         id: 7,
-        name: "Davidson Surgical & Critical Care Centre",
+        name: "Davidson Surgical and Critical Care Centre",
         location: "2nd Floor, Reddington Hospital, 12a Idowu Martins Street, Victoria Island, Lagos",
         address: "2nd Floor, Reddington Hospital, 12a Idowu Martins Street, Victoria Island, Lagos",
         description: "Named in honour of our founding medical director...",
@@ -324,7 +323,7 @@ export const branches: Branch[] = [
         fullDescription: "The Bodycare Centre is the latest innovation from the Reddington Healthcare Group, offering an extensive range of aesthetic plastic surgery procedures in a confidential and safe environment. Led by highly experienced plastic surgeon Dr Stanley Okoro, who maintains successful practices in both Nigeria and the United States, our team provides customized cosmetic solutions alongside remedial and reconstructive services for congenital defects and burn injuries.",
         image: PLACEHOLDER_IMG,
         services: [
-            { name: "Breast Lift & Enhancement", image: SERVICE_PLACEHOLDER },
+            { name: "Breast Lift and Enhancement", image: SERVICE_PLACEHOLDER },
             { name: "Breast Reduction", image: SERVICE_PLACEHOLDER },
             { name: "Facial Rejuvenation", image: SERVICE_PLACEHOLDER },
             { name: "Mommy Makeover", image: SERVICE_PLACEHOLDER },
@@ -348,7 +347,7 @@ export const branches: Branch[] = [
     },
     {
         id: 9,
-        name: "Reddington Wellness & Medical Check-Up Centre",
+        name: "Reddington Wellness and Medical Check-Up Centre",
         location: "6th Floor, 12a Idowu Martins Street, V.I, Lagos",
         address: "276A Kofo Abayomi Street, near Intercontinental Hotel, Victoria Island, Lagos",
         description: "Good health is our most valuable asset, yet often t...",

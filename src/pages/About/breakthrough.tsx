@@ -3,7 +3,7 @@ export default function Breakthrough() {
         <section className="relative bg-[#E4071405] px-[16px] lg:px-[80px] py-[20px] lg:py-[80px]">
             <div className="flex flex-col items-center text-center justify-center gap-[20px]">
                 <h1 className="text-[#000000] text-[24px] leading-[100%] lg:text-[32px] text-center" style={{ fontFamily: "TexGyreAdventor" }}>
-                    Our Medical Breakthrough & Innovation
+                    Our Medical Breakthrough and Innovation
                 </h1>
 
                 <div className="space-y-[20px] lg:space-y-[35px] text-[13px] lg:text-[16px] lg:leading-[24px] leading-[20px]">

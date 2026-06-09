@@ -94,7 +94,7 @@ export const jobPositions: JobPosition[] = [
 //   {
 //     id: 'lab-scientist-1',
 //     title: 'MEDICAL LABORATORY SCIENTIST',
-//     department: 'Diagnostics & Imaging',
+//     department: 'Diagnostics and Imaging',
 //     type: 'Full Time',
 //     location: 'Lagos, Nigeria',
 //     postedDate: 'Posted 1 week ago',
@@ -129,7 +129,7 @@ export const jobPositions: JobPosition[] = [
 //   {
 //     id: 'quality-officer-1',
 //     title: 'QUALITY IMPROVEMENT OFFICER',
-//     department: 'Quality & Safety',
+//     department: 'Quality and Safety',
 //     type: 'Full Time',
 //     location: 'Lagos, Nigeria',
 //     postedDate: 'Posted 1 week ago',
@@ -200,7 +200,7 @@ export const jobPositions: JobPosition[] = [
 
 export const categoryLabels: Record<JobPosition['category'], string> = {
   'CLINICAL_SERVICES': 'CLINICAL SERVICES',
-  'DIAGNOSTICS_IMAGING': 'DIAGNOSTICS & IMAGING',
+  'DIAGNOSTICS_IMAGING': 'DIAGNOSTICS and IMAGING',
   'PHARMACY': 'PHARMACY',
-  'QUALITY_SAFETY': 'QUALITY & SAFETY',
+  'QUALITY_SAFETY': 'QUALITY and SAFETY',
 };

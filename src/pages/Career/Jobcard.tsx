@@ -97,9 +97,9 @@ export default function JobCard({ job, isExpanded, onToggle, }: JobCardProps) {
                                 </p>
                             </div>
 
-                            {/* Duties & Responsibilities Section */}
+                            {/* Duties and Responsibilities Section */}
                             <div>
-                                <button className=" border-l-[4px] border-[#0046B0] px-[10px] py-[5px] text-base lg:text-[16px] font-medium text-[#2D2D2D] mb-3">Duties & Responsibilities</button>
+                                <button className=" border-l-[4px] border-[#0046B0] px-[10px] py-[5px] text-base lg:text-[16px] font-medium text-[#2D2D2D] mb-3">Duties and Responsibilities</button>
                                 <ul className="space-y-2 lg:space-y-[8px]">
                                     {job.dutiesAndResponsibilities.map((duty, index) => (
                                         <li key={index} className="flex ml-[10px] gap-2 text-sm lg:text-[15px] text-[#2D2D2D]">
@@ -115,7 +115,7 @@ export default function JobCard({ job, isExpanded, onToggle, }: JobCardProps) {
                         <div className="lg:col-span-1">
                             <div className="bg-[#626F820A] border border-[#0046B0] rounded-xl p-6">
                                 <button className=" border-l-[4px] border-[#0046B0] px-[10px] py-[5px] text-base lg:text-[16px] font-medium text-[#2D2D2D] mb-4">
-                                    Qualifications & Requirements
+                                    Qualifications and Requirements
                                 </button>
                                 {/* Required Qualifications */}
                                 <div>

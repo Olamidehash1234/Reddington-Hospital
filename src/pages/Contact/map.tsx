@@ -16,21 +16,24 @@ function buildMapEmbedUrl(query: string) {
 export default function Map() {
     const contactLocations = useMemo<ContactLocation[]>(() => {
         const preferredBranches = [
-            "Reddington Multi-Specialist Hospital V.I",
+            "Reddington Multi-Specialist Hospital Victoria Island",
             "Reddington Hospital Ikeja",
-            "Reddington Care Hospital Lekki",
+            "Reddington Lekki Hospital",
+            // "Reddington Maxy Super-Specialty Centre",
+            // "Purple Ray Diagnostic Centre",
+            "Reddington Breast and Gynaecology Centre",
+            // "Davidson Surgical and Critical Care Centre",
+            // "The BodyCare Plastic Surgery Centre",
+            // "Reddington Wellness and Medical Check-Up Centre",
         ];
 
         return preferredBranches
             .map((name) => branches.find((branch) => branch.name === name))
             .filter((branch): branch is NonNullable<typeof branch> => Boolean(branch))
-            .map((branch, index) => ({
+            .map((branch) => ({
                 id: branch.id,
-                title:
-                    index === 0
-                        ? "Reddington Hospital, Victoria Island - HQ"
-                        : branch.name,
-                subtitle: branch.location,
+                title: branch.name,
+                subtitle: branch.address || branch.location,
                 phone: branch.contact?.[0] ?? "",
                 query: `${branch.name}, ${branch.location}`,
             }));

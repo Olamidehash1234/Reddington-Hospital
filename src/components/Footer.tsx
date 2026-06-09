@@ -12,7 +12,7 @@ const Footer = () => {
     'Find a Doctor',
     'Our Branches',
     'Contact Us',
-    'Accreditations & Awards',
+    'Accreditations and Awards',
   ];
 
   const departmentsLinks = [

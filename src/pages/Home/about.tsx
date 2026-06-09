@@ -25,7 +25,7 @@ export default function HeroEuracare() {
                         {/* Headline */}
                         <h1 className="text-[#000000] tracking-tight leading-[24px] lg:leading-[40px] lg:tracking-[-1.8px]" style={{ fontFamily: 'TexGyreAdventor' }}>
                             <span className=" text-[22px] lg:text-[44px]">
-                                Committed to Your Health & Wellbeing
+                                Committed to Your Health and Wellbeing
                             </span>
                         </h1>
 

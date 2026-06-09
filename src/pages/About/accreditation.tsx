@@ -8,7 +8,7 @@ export default function Accreditation() {
 
                 <div className="justify-center items-center text-center mb-[10px] lg:mb-[20px]">
                     <h1 className="text-[#FFFFFF] text-[22px] lg:text-[32px] text-center leading-[24px] lg:leading-[100%] mb-[20px] lg:mb-[25px]" style={{ fontFamily: "TexGyreAdventor" }}>
-                        International Accreditation & Quality Standards
+                        International Accreditation and Quality Standards
                     </h1>
 
                     <div className="space-y-[20px] text-[#FFFFFF] justify-center items-center lg:space-y-[30px] text-[13px] lg:text-[16px] lg:leading-[24px] leading-[20px]">

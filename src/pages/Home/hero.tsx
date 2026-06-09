@@ -135,7 +135,7 @@ export default function HeroSection() {
                             Welcome To Reddington<br />
                             <span>Multispecialist Hospital</span>
                         </h1>
-                        <p className='italic hidden lg:block'>"in pursuit of medical excellence"</p>
+                        <p className='italic hidden lg:block'>"...in pursuit of medical excellence..."</p>
                     </div>
 
                     {/* Right Side - Description */}
@@ -147,7 +147,7 @@ export default function HeroSection() {
                         </div>
                     </div>
 
-                    <p className='mt-4 italic block lg:hidden'>"in pursuit of medical excellence"</p>
+                    <p className='mt-4 italic block lg:hidden'>"...in pursuit of medical excellence..."</p>
 
                 </div>
 
