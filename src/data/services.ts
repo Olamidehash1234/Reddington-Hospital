@@ -86,14 +86,14 @@ export const services = [
     {
         id: 12,
         title: "Neurology and Neurosurgery",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003605/Neurology_ghxmwv.jpg',
         description: "Expert diagnosis and surgical treatment for conditions affecting the brain, spine, and nervous system—helping you navigate complex neurological challenges.",
         fullDescription: "Expert diagnosis and surgical treatment for conditions affecting the brain, spine, and nervous system—helping you navigate complex neurological challenges.",
     },
     {
         id: 13,
         title: "Ophthalmology (Eye Care)",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003730/optha_hwyhig.jpg',
         description: "High-tech eye care including consultations, diagnostic testing, and treatment for glaucoma, cataracts, diabetic retinopathy, and other vision disorders.",
         fullDescription: "High-tech eye care including consultations, diagnostic testing, and treatment for glaucoma, cataracts, diabetic retinopathy, and other vision disorders.",
     },
@@ -114,7 +114,7 @@ export const services = [
     {
         id: 16,
         title: "Physiotherapy",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003738/physio_tvu0ii.jpg',
         description: "Rehabilitation and movement restoration services, supporting recovery from injury, surgery, or chronic conditions through evidence-based therapeutic techniques.",
         fullDescription: "Rehabilitation and movement restoration services, supporting recovery from injury, surgery, or chronic conditions through evidence-based therapeutic techniques.",
     },
@@ -142,7 +142,7 @@ export const services = [
     {
         id: 20,
         title: "Plastic and Reconstructive Surgery",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003829/Plastic_ftfbfa.jpg',
         description: "Aesthetic and reconstructive procedures including breast surgery, body contouring, facial rejuvenation, and post-burn reconstruction—restoring both form and confidence.",
         fullDescription: "Aesthetic and reconstructive procedures including breast surgery, body contouring, facial rejuvenation, and post-burn reconstruction—restoring both form and confidence.",
     }
