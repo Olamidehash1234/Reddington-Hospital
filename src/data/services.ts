@@ -2,7 +2,7 @@ export const services = [
     {
         id: 1,
         title: 'Family Medicine (Primary Care)',
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775662874/family_pxfwie.png',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002887/Fam_med_zeobaw.jpg',
         description: 'Your first point of contact for everyday health concerns, our Family Medicine clinic provides comprehensive, continuous care for individuals and families of all ages. From managing acute illnesses and chronic conditions to preventive health advice and routine check-ups, our experienced general practitioners take time to understand your complete health picture. We build lasting relationships with our patients, ensuring that whether you need treatment for a minor ailment or guidance toward specialist care, you always have a trusted medical home.',
         fullDescription: 'Your first point of contact for everyday health concerns, our Family Medicine clinic provides comprehensive, continuous care for individuals and families of all ages. From managing acute illnesses and chronic conditions to preventive health advice and routine check-ups, our experienced general practitioners take time to understand your complete health picture. We build lasting relationships with our patients, ensuring that whether you need treatment for a minor ailment or guidance toward specialist care, you always have a trusted medical home..',
     },
@@ -100,7 +100,7 @@ export const services = [
     {
         id: 14,
         title: "Ear, Nose and Throat (ENT)",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002705/ent_exsxqu.jpg',
         description: "Comprehensive care for conditions affecting the head and neck, from sinusitis and hearing loss to voice disorders and paediatric ENT problems.",
         fullDescription: "Comprehensive care for conditions affecting the head and neck, from sinusitis and hearing loss to voice disorders and paediatric ENT problems.",
     },
