@@ -16,14 +16,14 @@ export const services = [
     {
         id: 3,
         title: 'General Surgery',
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775662409/surgery_lpnm6u.png',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003085/surgery_pjflgp.jpg',
         description: 'Expert surgical care for a wide range of conditions, utilising both open and minimally invasive techniques to ensure optimal recovery and outcomes.',
         fullDescription: 'Expert surgical care for a wide range of conditions, utilising both open and minimally invasive techniques to ensure optimal recovery and outcomes.',
     },
     {
         id: 4,
         title: 'Orthopaedics',
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003365/ortho_ztb8rj.jpg',
         description: 'Treatment for bone, joint, and muscle conditions, including sports injuries, degenerative diseases, and trauma—helping you restore mobility and regain quality of life.',
         fullDescription: 'Treatment for bone, joint, and muscle conditions, including sports injuries, degenerative diseases, and trauma—helping you restore mobility and regain quality of life.',
     },
@@ -44,7 +44,7 @@ export const services = [
     {
         id: 7,
         title: 'Paediatrics',
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003393/paediatrics_jyzpky.jpg',
         description: 'Comprehensive medical care for children and infants, including immunisations, growth monitoring, and treatment for childhood illnesses—because your child\'s health is our priority.',
         fullDescription: 'Comprehensive medical care for children and infants, including immunisations, growth monitoring, and treatment for childhood illnesses—because your child\'s health is our priority.',
     },
@@ -72,14 +72,14 @@ export const services = [
     {
         id: 10,
         title : "Gastroenterology and Endoscopy",
-        image : 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603136/endo-1_k8diac.jpg',
+        image : 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003066/gastro_rhmwtb.jpg',
         description : "Diagnosis and treatment of digestive disorders, with advanced endoscopic procedures including colonoscopy and gastroscopy performed by UK-trained specialists.",
         fullDescription : "Diagnosis and treatment of digestive disorders, with advanced endoscopic procedures including colonoscopy and gastroscopy performed by UK-trained specialists.",
     },
     {
         id: 11,
         title : "Nephrology and Dialysis",
-        image : 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png',
+        image : 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003461/Neph_hs7gz8.jpg',
         description : "Comprehensive kidney care, including chronic disease management and haemodialysis in modern, comfortable treatment bays.",
         fullDescription : "Comprehensive kidney care, including chronic disease management and haemodialysis in modern, comfortable treatment bays.",
     },
