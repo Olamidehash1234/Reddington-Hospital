@@ -9,7 +9,7 @@ export const services = [
     {
         id: 2,
         title: 'Cardiology',
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603094/cardiology-1_iciq6q.jpg',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002193/Cardiology_1_vprqz3.jpg',
         description: 'Comprehensive heart care, from diagnostic testing and cardiac catheterisation to interventional procedures and rehabilitation—helping you maintain a healthy, active heart.',
         fullDescription: 'Comprehensive heart care, from diagnostic testing and cardiac catheterisation to interventional procedures and rehabilitation—helping you maintain a healthy, active heart.',
     },
@@ -37,7 +37,7 @@ export const services = [
     {
         id: 6,
         title: 'Breast Health',
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002083/Breast_Health1_wfdryi.jpg',
         description: 'Specialised screening, diagnosis, and treatment for breast conditions, from preventive wellness checks to curative and aesthetic breast surgery.',
         fullDescription: 'Specialised screening, diagnosis, and treatment for breast conditions, from preventive wellness checks to curative and aesthetic breast surgery.',
     },
@@ -65,7 +65,7 @@ export const services = [
     {
         id: 9,
         title: "Diagnostic Imaging (Purple Ray)",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603186/img-2_u73gxu.jpg',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002570/diag-img_ty3bmk.jpg',
         description: "State-of-the-art imaging services including MRI, CT scan, digital X-ray, mammography, and ultrasound—delivering accurate diagnoses to guide your treatment journey. ",
         fullDescription: "State-of-the-art imaging services including MRI, CT scan, digital X-ray, mammography, and ultrasound—delivering accurate diagnoses to guide your treatment journey. ",
     },
@@ -107,7 +107,7 @@ export const services = [
     {
         id: 15,
         title: "Dentistry and Maxillofacial Surgery",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775662041/dentistry_eo8nyu.png",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002543/Dentistry_yk9kbv.jpg",
         description: "Complete dental care including cosmetic dentistry, orthodontics, implants, and oral surgery—helping you maintain a healthy, confident smile.",
         fullDescription: "Complete dental care including cosmetic dentistry, orthodontics, implants, and oral surgery—helping you maintain a healthy, confident smile.",
     },
@@ -135,7 +135,7 @@ export const services = [
     {
         id: 19,
         title: "Critical Care",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002404/critical_care_h7azeb.jpg',
         description: "Intensive and high-dependency care for patients with life-threatening conditions, delivered by experienced specialists in state-of-the-art facilities.",
         fullDescription: "Intensive and high-dependency care for patients with life-threatening conditions, delivered by experienced specialists in state-of-the-art facilities.",
     },
