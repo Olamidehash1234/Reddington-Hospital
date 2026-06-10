@@ -6,7 +6,7 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
     return (
         <div className="flex w-full flex-col items-start">
             <div className="relative z-20 mb-[20px] w-full">
-                <div className="relative h-[300px] w-full sm:h-[400px] lg:h-[400px]">
+                <div className="relative aspect-[13/16] w-full">
                     <div className="absolute bottom-[3.93%] border left-[3.45%] right-[3.79%] top-[3.28%] overflow-hidden rounded-br-[52px] rounded-tl-[52px] rounded-bl-none rounded-tr-none lg:bottom-[10px] lg:left-[10px] lg:right-[11px] lg:top-[10px] lg:rounded-br-[52px] lg:rounded-tl-[52px]">
                         <ResponsiveImage
                             src={doctor.image}

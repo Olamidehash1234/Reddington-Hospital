@@ -8,8 +8,6 @@ export type Doctor = {
 }
 
 const PLACEHOLDER_IMG = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603078/dct-1_tdhl11.png"
-const Abiodun = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603087/dr.abiodun_ekejvw.jpg"
-const Audu = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603074/dr.audu_pxxbrf.jpg"
 const Chioma = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603084/dr.chioma_rqml1r.jpg"
 const Muyiwa = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603115/dr.muyiwa_kbm5jk.jpg"
 
@@ -20,7 +18,7 @@ export const inHouseDoctors: Doctor[] = [
         specialty: "Internal Medicine and Medical Director",
         hospital: "Reddington VI",
         type: "in-house",
-        image: Abiodun,
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102858/Dr_Osibamowo_-_Internal_Medicine_mt99ye.jpg',
     },
     {
         id: 2,
@@ -28,7 +26,7 @@ export const inHouseDoctors: Doctor[] = [
         specialty: "Neonatologist",
         hospital: "Reddington VI",
         type: "in-house",
-        image: Audu,
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102562/Dr_Audu_-_Neonatology_c7qel0.jpg",
     },
     {
         id: 3,
@@ -60,7 +58,7 @@ export const inHouseDoctors: Doctor[] = [
         specialty: "General Surgeon",
         hospital: "Reddington VI",
         type: "in-house",
-        image: PLACEHOLDER_IMG,
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102780/Dr_Nwose_-_General_Surgery_qv12po.jpg',
     },
     {
         id: 7,
@@ -92,7 +90,7 @@ export const inHouseDoctors: Doctor[] = [
         specialty: "Orthopaedic Surgeon",
         hospital: "Reddington VI",
         type: "in-house",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775664109/DR._BABAJIDE_LAWSON_k7dfeo.jpg',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102869/Dr_Lawson_-_Orthopedic_Surgery_wetvtb.jpg',
     },
     {
         id: 11,
@@ -105,18 +103,18 @@ export const inHouseDoctors: Doctor[] = [
     {
         id: 12,
         name: "Dr. Esther Adejinmi",
-        specialty: "Wellness",
+        specialty: "Primary care and Wellness services",
         hospital: "Reddington VI",
         type: "in-house",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775664208/DR._ESTHER_ADEJINMI_fzj7su.jpg',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102728/Dr_Adejinmi_-_Primary_Care_and_Wellness_Services_dt7fwn.jpg',
     },
     {
         id: 13,
         name: "Dr. Williams Idoko",
-        specialty: "Emergency Room",
+        specialty: "Emergency Medicine",
         hospital: "Reddington VI",
         type: "in-house",
-        image: PLACEHOLDER_IMG,
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102785/Dr_Idoko_-_Emergency_Medicine_rgbspo.jpg',
     },
     {
         id: 14,
@@ -124,7 +122,7 @@ export const inHouseDoctors: Doctor[] = [
         specialty: "Family Medicine",
         hospital: "Reddington VI",
         type: "in-house",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775664415/DR._CHRISTIAN_AKUDE_sv9ixm.jpg',
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102770/Dr_Akude_-_Family_Medicine_koiwvv.jpg',
     },
     {
         id: 15,
@@ -141,6 +139,70 @@ export const inHouseDoctors: Doctor[] = [
         hospital: "Reddington VI",
         type: "in-house",
         image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775664564/DR._NWACHUKWU_NZEGWU_jejygy.jpg',
+    },
+    {
+        id: 17,
+        name: "Dr. Alawode",
+        specialty: "Intensive Care",
+        hospital: "Reddington VI",
+        type: "in-house",
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102895/Dr_Alawode_-_Intensive_Care_all28z.jpg',
+    },
+    {
+        id: 18,
+        name: "Dr. Uchechukwu",
+        specialty: "Gastroenterologist",
+        hospital: "Reddington VI",
+        type: "in-house",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102893/Dr_Uchechukwu_-_Gastroenterologist_Visiting_Consultant_uuzkmm.jpg",
+    },
+    {
+        id: 19,
+        name: "Dr. Aramide Olasope",
+        specialty: "Nephrologist",
+        hospital: "Reddington VI",
+        type: "in-house",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102936/Dr_Olasope_-_Nephrology_fewqhg.jpg",
+    },
+    {
+        id: 20,
+        name: "Dr. Otegbeye",
+        specialty: "Anaesthetist",
+        hospital: "Reddington VI",
+        type: "in-house",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102867/Dr_Otegbeye_-_Anesthesia_imilwc.jpg",
+    },
+    {
+        id: 21,
+        name: "Dr. Adaobi Cynthia",
+        specialty: "Anaesthetist",
+        hospital: "Reddington VI",
+        type: "in-house",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102841/Dr_Adaobi_Cynthia-Ezeli_-_Anaesthetist_de6xzw.jpg",
+    },
+    {
+        id: 22,
+        name: "Dr. Olufolajin",
+        specialty: "Quality and Compliance",
+        hospital: "Reddington VI",
+        type: "in-house",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102837/Dr_Olufolajin_-_Quality_and_Compliance_qmqcbd.jpg",
+    },
+    {
+        id: 23,
+        name: "Dr. Sam Amaihan",
+        specialty: "Family Medicine",
+        hospital: "Reddington VI",
+        type: "in-house",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102772/Dr_Sam_Amaihan_-_Family_Medicine_h8yzzp.jpg",
+    },
+    {
+        id: 24,
+        name: "Dr. Adekunle Jimoh",
+        specialty: "Family Medicine",
+        hospital: "Reddington VI",
+        type: "in-house",
+        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102851/Dr_Jimoh_-_Family_Medicine_ythj2o.jpg',
     },
 ]
 
@@ -186,23 +248,7 @@ export const externalDoctors: Doctor[] = [
         image: PLACEHOLDER_IMG,
     },
     {
-        id: 6,
-        name: "Dr. Adekunle Jimoh",
-        specialty: "Family Medicine",
-        hospital: "Reddington VI",
-        type: "external",
-        image: PLACEHOLDER_IMG,
-    },
-    {
         id: 7,
-        name: "Dr. Joy Uchechukwu",
-        specialty: "Gastroenterologist",
-        hospital: "Reddington VI",
-        type: "external",
-        image: PLACEHOLDER_IMG,
-    },
-    {
-        id: 8,
         name: "Dr. Busola Quadri",
         specialty: "Psychiatrist",
         hospital: "Reddington VI",
@@ -210,7 +256,7 @@ export const externalDoctors: Doctor[] = [
         image: PLACEHOLDER_IMG,
     },
     {
-        id: 9,
+        id: 8,
         name: "Dr. Olumide Okeowo",
         specialty: "Psychologist",
         hospital: "Reddington VI",
@@ -218,7 +264,7 @@ export const externalDoctors: Doctor[] = [
         image: PLACEHOLDER_IMG,
     },
     {
-        id: 10,
+        id: 9,
         name: "Dr. Florentina Okeke",
         specialty: "Rheumatologist",
         hospital: "Reddington VI",
@@ -226,7 +272,7 @@ export const externalDoctors: Doctor[] = [
         image: PLACEHOLDER_IMG,
     },
     {
-        id: 11,
+        id: 10,
         name: "Dr. Johnbull Bright",
         specialty: "Family Medicine",
         hospital: "Reddington VI",
@@ -234,11 +280,11 @@ export const externalDoctors: Doctor[] = [
         image: PLACEHOLDER_IMG,
     },
     {
-        id: 8,
-        name: "Dr. Aramide Olasope",
-        specialty: "Nephrologist",
+        id: 11,
+        name: "Dr. Adewoyin",
+        specialty: "Hematologist",
         hospital: "Reddington VI",
         type: "external",
-        image: PLACEHOLDER_IMG,
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102890/Dr_Adewoyin_-_Hematologist_Visiting_Consultant_ubmv2z.jpg",
     },
 ]

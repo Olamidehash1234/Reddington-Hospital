@@ -15,16 +15,40 @@ const Footer = () => {
     'Accreditations and Awards',
   ];
 
-  const departmentsLinks = [
-    'Interventional Cardiology',
-    'Surgical services',
-    'Interventional Radiology',
-    'Diagnostic Imaging',
-    'Clinical Laboratory',
-    'Endoscopy',
-    'Emergency Response',
-    'General Paediactric Service',
-    'Clinical Specialities',
+  const departmentGroups = [
+    {
+      title: 'Clinical Departments',
+      links: [
+        'Emergency Medicine',
+        'Internal Medicine',
+        'Surgery',
+        'Obstetrics and Gynaecology',
+        'Paediatrics',
+        'Family Medicine',
+        'Psychiatry and Clinical Psychology',
+        'Ophthalmology',
+        'Ear, Nose and Throat (ENT)',
+        'Dental Services',
+        'Physiotherapy',
+      ],
+    },
+    {
+      title: 'Diagnostic and Therapeutic Departments',
+      links: [
+        'Laboratory Services',
+        'Radiology and Imaging',
+        'Pharmacy',
+        'Nutrition and Dietetics',
+      ],
+    },
+    {
+      title: 'Specialized Centers',
+      links: [
+        'Wellness and Executive Medical Check-up Center',
+        'Cardiac Center - Cath Lab and Cardiac Surgery',
+        'Dialysis Center - Haemodialysis and Peritoneal Dialysis',
+      ],
+    },
   ];
 
   const mediaLinks = [
@@ -91,15 +115,22 @@ const Footer = () => {
               <h3 className="text-[18px] lg:text-[22px] text-black" style={{ fontFamily: 'TexGyreAdventor' }}>
                 Our Departments
               </h3>
-              <ul className="mt-[18px] space-y-[14px] text-[#2D2D2D] text-[14px] lg:text-[15px] leading-[19px]">
-                {departmentsLinks.map((t) => (
-                  <li key={t}>
-                    <Link to="#" className="hover:opacity-80 text-[#2D2D2D]">
-                      {t}
-                    </Link>
-                  </li>
+              <div className="mt-[18px] space-y-[16px] text-[#2D2D2D] text-[14px] lg:text-[14px] leading-[19px]">
+                {departmentGroups.map((group) => (
+                  <div key={group.title}>
+                    <p className="font-semibold text-black">{group.title}</p>
+                    <ul className="mt-[10px] space-y-[8px]">
+                      {group.links.map((t) => (
+                        <li key={t}>
+                          <Link to="#" className="hover:opacity-80 text-[#2D2D2D]">
+                            {t}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
 
             {/* Media */}
@@ -124,11 +155,11 @@ const Footer = () => {
                 Contact Information
               </h3>
               <div className="mt-[18px] text-[14px] lg:text-[15px] leading-[28px] space-y-[10px]">
-                <p className="font-medium">• 12 Idowu Martins Street, V.I, Lagos</p>
+                <p className="font-medium">• Reddington Multi Specialist Hospital, Victoria Island</p>
                 <p>09165359769, 012715340 - 4</p>
-                <p className="font-medium">• Lekki Phase 1, Lagos</p>
+                <p className="font-medium">• Reddington Lekki Hospital, Lekki Phase 1</p>
                 <p>+234 916 535 9769</p>
-                <p className="font-medium">• Ikeja GRA, Lagos</p>
+                <p className="font-medium">• Reddington Hospital, Ikeja GRA</p>
                 <p>+234 812 800 8187</p>
               </div>
             </div>
