@@ -92,7 +92,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap md:flex-wrap lg:flex-row justify-between gap-[36px] md:gap-[30px] lg:gap-[48px]">
+          <div className="grid flex-1 grid-cols-[repeat(auto-fit,minmax(210px,1fr))] gap-[36px] md:gap-[30px] lg:gap-[0px]">
             {/* Left: Logo + description + socials */}
             {/* Company */}
             <div>
@@ -154,7 +154,7 @@ const Footer = () => {
               <h3 className="text-[18px] lg:text-[18px] text-black" style={{ fontFamily: 'TexGyreAdventor' }}>
                 Contact Information
               </h3>
-              <div className="mt-[15px] text-[14px] lg:text-[15px] max-w-[250px] leading-[28px] space-y-[10px]">
+              <div className="mt-[15px] text-[14px] lg:text-[14px] max-w-[250px] leading-[22px] space-y-[10px]">
                 <p className="font-medium">• Reddington Multi Specialist Hospital, Victoria Island</p>
                 <p>09165359769, 012715340 - 4</p>
                 <p className="font-medium">• Reddington Lekki Hospital, Lekki Phase 1</p>
