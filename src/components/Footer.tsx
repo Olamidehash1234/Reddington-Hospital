@@ -61,14 +61,14 @@ const Footer = () => {
     <footer className="relative bg-white text-[#2d2d2d] border-t border-[#2d2d2d]/10 overflow-hidden">
       <img src="/icon/illustrations/ft-1.svg" alt="Decorative Circle" className="absolute bottom-[0px] left-[0px] z-10"></img>
 
-      <div className="px-[16px] lg:px-[80px] py-[50px] lg:py-[60px]">
-        <div className="flex flex-wrap justify-between lg:flex-row gap-[40px] lg:gap-[55px]">
+      <div className="px-[16px] lg:px-[40px] py-[50px] lg:py-[60px]">
+        <div className="flex flex-wrap lg:flex-row gap-[40px] lg:gap-[40px]">
           <div className="flex flex-col">
             <div className="flex items-start">
-              <img src="/icon/footer-logo.svg" alt="" />
+              <img src="/icon/footer-logo.svg" alt="" className='lg:w-[250px]'/>
             </div>
 
-            <p className="mt-[14px] text-[14px] lg:text-[15px] leading-[24px] max-w-[313px]">
+            <p className="mt-[14px] text-[14px] lg:text-[14px] leading-[24px] max-w-[280px]">
               Renowned at home and abroad for medical excellence, attracting world-class specialist
               Doctors and Surgeons committed to your health and wellbeing.
             </p>
@@ -96,7 +96,7 @@ const Footer = () => {
             {/* Left: Logo + description + socials */}
             {/* Company */}
             <div>
-              <h3 className="text-[18px] lg:text-[22px] text-black" style={{ fontFamily: 'TexGyreAdventor' }}>
+              <h3 className="text-[18px] lg:text-[18px] text-black" style={{ fontFamily: 'TexGyreAdventor' }}>
                 Company
               </h3>
               <ul className="mt-[18px] space-y-[14px] text-[#2D2D2D] text-[14px] lg:text-[15px] leading-[19px]">
@@ -112,7 +112,7 @@ const Footer = () => {
 
             {/* Our Departments */}
             <div>
-              <h3 className="text-[18px] lg:text-[22px] text-black" style={{ fontFamily: 'TexGyreAdventor' }}>
+              <h3 className="text-[18px] lg:text-[18px] text-black" style={{ fontFamily: 'TexGyreAdventor' }}>
                 Our Departments
               </h3>
               <div className="mt-[18px] space-y-[16px] text-[#2D2D2D] text-[14px] lg:text-[14px] leading-[19px]">
@@ -135,7 +135,7 @@ const Footer = () => {
 
             {/* Media */}
             <div>
-              <h3 className="text-[18px] lg:text-[22px] text-black" style={{ fontFamily: 'TexGyreAdventor' }}>
+              <h3 className="text-[18px] lg:text-[18px] text-black" style={{ fontFamily: 'TexGyreAdventor' }}>
                 Media
               </h3>
               <ul className="mt-[18px] space-y-[14px] text-[#2D2D2D] text-[14px] lg:text-[15px] leading-[19px]">
@@ -151,10 +151,10 @@ const Footer = () => {
 
             {/* Contact Information */}
             <div>
-              <h3 className="text-[18px] lg:text-[22px] text-black" style={{ fontFamily: 'TexGyreAdventor' }}>
+              <h3 className="text-[18px] lg:text-[18px] text-black" style={{ fontFamily: 'TexGyreAdventor' }}>
                 Contact Information
               </h3>
-              <div className="mt-[18px] text-[14px] lg:text-[15px] leading-[28px] space-y-[10px]">
+              <div className="mt-[15px] text-[14px] lg:text-[15px] max-w-[250px] leading-[28px] space-y-[10px]">
                 <p className="font-medium">• Reddington Multi Specialist Hospital, Victoria Island</p>
                 <p>09165359769, 012715340 - 4</p>
                 <p className="font-medium">• Reddington Lekki Hospital, Lekki Phase 1</p>
