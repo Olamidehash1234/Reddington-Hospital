@@ -1,7 +1,7 @@
 export const services = [
     {
         id: 1,
-        title: 'Family Medicine (Primary Care)',
+        title: 'Family Medicine',
         image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002887/Fam_med_zeobaw.jpg',
         description: 'Your first point of contact for everyday health concerns, our Family Medicine clinic provides comprehensive, continuous care for individuals and families of all ages. From managing acute illnesses and chronic conditions to preventive health advice and routine check-ups, our experienced general practitioners take time to understand your complete health picture. We build lasting relationships with our patients, ensuring that whether you need treatment for a minor ailment or guidance toward specialist care, you always have a trusted medical home.',
         fullDescription: 'Your first point of contact for everyday health concerns, our Family Medicine clinic provides comprehensive, continuous care for individuals and families of all ages. From managing acute illnesses and chronic conditions to preventive health advice and routine check-ups, our experienced general practitioners take time to understand your complete health picture. We build lasting relationships with our patients, ensuring that whether you need treatment for a minor ailment or guidance toward specialist care, you always have a trusted medical home..',
@@ -54,13 +54,6 @@ export const services = [
         image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775662523/emergency_q7tmpg.png',
         description: 'Round-the-clock emergency care, equipped and staffed to respond rapidly to any medical crisis with advanced life-support capabilities.',
         fullDescription: 'Round-the-clock emergency care, equipped and staffed to respond rapidly to any medical crisis with advanced life-support capabilities.',
-    },
-    {
-        id: 9,
-        title: "Health Screening",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png',
-        description: "Reddington hospital also offers affordable health check-up packages for people. Good health is the key to a happy and fruitful life; it is also the most neglected asset. ",
-        fullDescription: "Reddington hospital also offers affordable health check-up packages for people. Good health is the key to a happy and fruitful life; it is also the most neglected asset. ",
     },
     {
         id: 9,

@@ -76,6 +76,12 @@ export function buildCloudinarySrcSet(
         .sort((a, b) => a - b);
 
     return uniqueWidths
-        .map((width) => `${buildCloudinaryUrl(src, { ...options, width })} ${width}w`)
+        .map((width) => {
+            const height = options.width && options.height
+                ? Math.round((options.height / options.width) * width)
+                : options.height;
+
+            return `${buildCloudinaryUrl(src, { ...options, width, height })} ${width}w`;
+        })
         .join(", ");
 }
