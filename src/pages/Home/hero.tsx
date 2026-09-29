@@ -30,7 +30,9 @@ export default function HeroSection() {
         'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110318/hero-new8_bpui2x.png',
         'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110333/hero-new9_uc38ym.png',
         'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110353/hero-new10_uvxtwl.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110368/hero-new11_r6w66q.png'
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110368/hero-new11_r6w66q.png',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790718724/IMG_4921_zu5212.jpg',
+        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790718513/IMG_4928_ebcdvd.jpg'
     ];
     const loadedSlides = useMemo(() => {
         const nextIndex = (currentImageIndex + 1) % carouselImages.length;
