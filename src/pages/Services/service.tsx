@@ -20,21 +20,36 @@ export default function ServicesGrid() {
 
         const serviceId = location.hash.slice(1);
 
-        const scrollToService = () => {
+        // Matches the cards' scroll-mt-28 (7rem) so the card sits just below the sticky header.
+        const OFFSET = 112;
+
+        const alignToService = () => {
             const target = document.getElementById(serviceId);
             if (!target) return;
 
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-            });
+            const top = target.getBoundingClientRect().top + window.scrollY - OFFSET;
+            if (Math.abs(window.scrollY - top) < 4) return;
+
+            // "instant" is required: the global `scroll-behavior: smooth` otherwise animates,
+            // and that animation gets cancelled by the re-alignment passes and React re-renders
+            // when arriving from another page, so the page never reaches the target.
+            window.scrollTo({ top, behavior: "instant" });
         };
 
-        const frame = window.requestAnimationFrame(() => {
-            window.requestAnimationFrame(scrollToService);
-        });
+        // First attempt once the route has painted...
+        const frame = window.requestAnimationFrame(alignToService);
 
-        return () => window.cancelAnimationFrame(frame);
+        // ...then re-align after lazy-loaded images shift the layout. Using window.scrollTo
+        // (rather than scrollIntoView) is reliable even when arriving from another page with
+        // a retained scroll position.
+        const timers = [300, 700, 1200].map((delay) =>
+            window.setTimeout(alignToService, delay)
+        );
+
+        return () => {
+            window.cancelAnimationFrame(frame);
+            timers.forEach((timer) => window.clearTimeout(timer));
+        };
     }, [location.hash]);
 
     // Close expanded description when clicking outside the expanded service card.
