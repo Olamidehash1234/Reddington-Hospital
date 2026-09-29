@@ -7,52 +7,52 @@ const Footer = () => {
   const imgYoutubeLine = '/icon/youtube.svg';
 
   const companyLinks = [
-    'About Us',
-    'Our Departments',
-    'Find a Doctor',
-    'Our Branches',
-    'Contact Us',
-    'Accreditations and Awards',
+    { text: 'About Us', path: '/about' },
+    { text: 'Our Departments', path: '/services' },
+    { text: 'Find a Doctor', path: '/doctors' },
+    { text: 'Our Branches', path: '/our-branches' },
+    { text: 'Contact Us', path: '/contact' },
+    { text: 'Accreditations and Awards', path: '/awards' },
   ];
 
   const departmentGroups = [
     {
       title: 'Clinical Departments',
       links: [
-        'Emergency Medicine',
-        'Internal Medicine',
-        'Surgery',
-        'Obstetrics and Gynaecology',
-        'Paediatrics',
-        'Family Medicine',
-        'Psychiatry and Clinical Psychology',
-        'Ophthalmology',
-        'Ear, Nose and Throat (ENT)',
-        'Dental Services',
-        'Physiotherapy',
+        { text: 'Emergency Medicine', path: '/services#emergency-medicine' },
+        { text: 'Internal Medicine', path: '/services' },
+        { text: 'Surgery', path: '/services#general-surgery' },
+        { text: 'Obstetrics and Gynaecology', path: '/services#obstetrics-and-gynaecology' },
+        { text: 'Paediatrics', path: '/services#paediatrics' },
+        { text: 'Family Medicine', path: '/services#family-medicine' },
+        { text: 'Psychiatry and Clinical Psychology', path: '/services' },
+        { text: 'Ophthalmology', path: '/services#ophthalmology-eye-care' },
+        { text: 'Ear, Nose and Throat (ENT)', path: '/services#ear-nose-and-throat-ent' },
+        { text: 'Dental Services', path: '/services#dentistry-and-maxillofacial-surgery' },
+        { text: 'Physiotherapy', path: '/services#physiotherapy' },
       ],
     },
     {
       title: 'Diagnostic and Therapeutic Departments',
       links: [
-        'Laboratory Services',
-        'Radiology and Imaging',
-        'Pharmacy',
-        'Nutrition and Dietetics',
+        { text: 'Laboratory Services', path: '/services' },
+        { text: 'Radiology and Imaging', path: '/services#diagnostic-imaging-purple-ray' },
+        { text: 'Pharmacy', path: '/services' },
+        { text: 'Nutrition and Dietetics', path: '/services' },
       ],
     },
     {
       title: 'Specialized Centers',
       links: [
-        'Wellness and Executive Medical Check-up Center',
-        'Cardiac Center - Cath Lab and Cardiac Surgery',
-        'Dialysis Center - Haemodialysis and Peritoneal Dialysis',
+        { text: 'Wellness and Executive Medical Check-up Center', path: '/services#health-screening-and-wellness' },
+        { text: 'Cardiac Center - Cath Lab and Cardiac Surgery', path: '/services#cardiology' },
+        { text: 'Dialysis Center - Haemodialysis and Peritoneal Dialysis', path: '/services#nephrology-and-dialysis' },
       ],
     },
   ];
 
   const mediaLinks = [
-    { text: 'Blog & Article', path: '/blog&insights' },
+    { text: 'Articles', path: '/blog&insights' },
     { text: 'News & Events', path: '/blog&insights' },
     { text: 'Careers', path: '/career' }
   ];
@@ -100,10 +100,10 @@ const Footer = () => {
                 Company
               </h3>
               <ul className="mt-[18px] space-y-[14px] text-[#2D2D2D] text-[14px] lg:text-[15px] leading-[19px]">
-                {companyLinks.map((t) => (
-                  <li key={t}>
-                    <Link to="#" className="hover:opacity-80 text-[#2D2D2D]">
-                      {t}
+                {companyLinks.map((link) => (
+                  <li key={link.text}>
+                    <Link to={link.path} className="hover:opacity-80 text-[#2D2D2D]">
+                      {link.text}
                     </Link>
                   </li>
                 ))}
@@ -120,10 +120,10 @@ const Footer = () => {
                   <div key={group.title}>
                     <p className="font-semibold text-black">{group.title}</p>
                     <ul className="mt-[10px] space-y-[8px]">
-                      {group.links.map((t) => (
-                        <li key={t}>
-                          <Link to="#" className="hover:opacity-80 text-[#2D2D2D]">
-                            {t}
+                      {group.links.map((link) => (
+                        <li key={link.text}>
+                          <Link to={link.path} className="hover:opacity-80 text-[#2D2D2D]">
+                            {link.text}
                           </Link>
                         </li>
                       ))}

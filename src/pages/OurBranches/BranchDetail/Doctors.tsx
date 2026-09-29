@@ -11,6 +11,9 @@ export default function BranchDoctors() {
 
     if (!branch) return null
 
+    // Hide the specialists section entirely when a branch has no consultants with photos yet
+    if (branch.doctors.length === 0) return null
+
     const itemsPerView = 8
     const totalPages = Math.ceil(branch.doctors.length / itemsPerView)
     const showPagination = branch.doctors.length > 8
