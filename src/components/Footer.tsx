@@ -7,52 +7,52 @@ const Footer = () => {
   const imgYoutubeLine = '/icon/youtube.svg';
 
   const companyLinks = [
-    'About Us',
-    'Our Departments',
-    'Find a Doctor',
-    'Our Branches',
-    'Contact Us',
-    'Accreditations and Awards',
+    { text: 'About Us', path: '/about' },
+    { text: 'Our Departments', path: '/services' },
+    { text: 'Find a Doctor', path: '/doctors' },
+    { text: 'Our Branches', path: '/our-branches' },
+    { text: 'Contact Us', path: '/contact' },
+    { text: 'Accreditations and Awards', path: '/awards' },
   ];
 
   const departmentGroups = [
     {
       title: 'Clinical Departments',
       links: [
-        'Emergency Medicine',
-        'Internal Medicine',
-        'Surgery',
-        'Obstetrics and Gynaecology',
-        'Paediatrics',
-        'Family Medicine',
-        'Psychiatry and Clinical Psychology',
-        'Ophthalmology',
-        'Ear, Nose and Throat (ENT)',
-        'Dental Services',
-        'Physiotherapy',
+        { text: 'Emergency Medicine', path: '/services#emergency-medicine' },
+        { text: 'Internal Medicine', path: '/services' },
+        { text: 'Surgery', path: '/services#general-surgery' },
+        { text: 'Obstetrics and Gynaecology', path: '/services#obstetrics-and-gynaecology' },
+        { text: 'Paediatrics', path: '/services#paediatrics' },
+        { text: 'Family Medicine', path: '/services#family-medicine' },
+        { text: 'Psychiatry and Clinical Psychology', path: '/services' },
+        { text: 'Ophthalmology', path: '/services#ophthalmology-eye-care' },
+        { text: 'Ear, Nose and Throat (ENT)', path: '/services#ear-nose-and-throat-ent' },
+        { text: 'Dental Services', path: '/services#dentistry-and-maxillofacial-surgery' },
+        { text: 'Physiotherapy', path: '/services#physiotherapy' },
       ],
     },
     {
       title: 'Diagnostic and Therapeutic Departments',
       links: [
-        'Laboratory Services',
-        'Radiology and Imaging',
-        'Pharmacy',
-        'Nutrition and Dietetics',
+        { text: 'Laboratory Services', path: '/services' },
+        { text: 'Radiology and Imaging', path: '/services#diagnostic-imaging-purple-ray' },
+        { text: 'Pharmacy', path: '/services' },
+        { text: 'Nutrition and Dietetics', path: '/services' },
       ],
     },
     {
       title: 'Specialized Centers',
       links: [
-        'Wellness and Executive Medical Check-up Center',
-        'Cardiac Center - Cath Lab and Cardiac Surgery',
-        'Dialysis Center - Haemodialysis and Peritoneal Dialysis',
+        { text: 'Wellness and Executive Medical Check-up Center', path: '/services#health-screening-and-wellness' },
+        { text: 'Cardiac Center - Cath Lab and Cardiac Surgery', path: '/services#cardiology' },
+        { text: 'Dialysis Center - Haemodialysis and Peritoneal Dialysis', path: '/services#nephrology-and-dialysis' },
       ],
     },
   ];
 
   const mediaLinks = [
-    { text: 'Blog & Article', path: '/blog&insights' },
+    { text: 'Articles', path: '/blog&insights' },
     { text: 'News & Events', path: '/blog&insights' },
     { text: 'Careers', path: '/career' }
   ];
@@ -92,7 +92,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap md:flex-wrap lg:flex-row justify-between gap-[36px] md:gap-[30px] lg:gap-[48px]">
+          <div className="grid flex-1 grid-cols-[repeat(auto-fit,minmax(210px,1fr))] gap-[36px] md:gap-[30px] lg:gap-[0px]">
             {/* Left: Logo + description + socials */}
             {/* Company */}
             <div>
@@ -100,10 +100,10 @@ const Footer = () => {
                 Company
               </h3>
               <ul className="mt-[18px] space-y-[14px] text-[#2D2D2D] text-[14px] lg:text-[15px] leading-[19px]">
-                {companyLinks.map((t) => (
-                  <li key={t}>
-                    <Link to="#" className="hover:opacity-80 text-[#2D2D2D]">
-                      {t}
+                {companyLinks.map((link) => (
+                  <li key={link.text}>
+                    <Link to={link.path} className="hover:opacity-80 text-[#2D2D2D]">
+                      {link.text}
                     </Link>
                   </li>
                 ))}
@@ -120,10 +120,10 @@ const Footer = () => {
                   <div key={group.title}>
                     <p className="font-semibold text-black">{group.title}</p>
                     <ul className="mt-[10px] space-y-[8px]">
-                      {group.links.map((t) => (
-                        <li key={t}>
-                          <Link to="#" className="hover:opacity-80 text-[#2D2D2D]">
-                            {t}
+                      {group.links.map((link) => (
+                        <li key={link.text}>
+                          <Link to={link.path} className="hover:opacity-80 text-[#2D2D2D]">
+                            {link.text}
                           </Link>
                         </li>
                       ))}
@@ -154,7 +154,7 @@ const Footer = () => {
               <h3 className="text-[18px] lg:text-[18px] text-black" style={{ fontFamily: 'TexGyreAdventor' }}>
                 Contact Information
               </h3>
-              <div className="mt-[15px] text-[14px] lg:text-[15px] max-w-[250px] leading-[28px] space-y-[10px]">
+              <div className="mt-[15px] text-[14px] lg:text-[14px] max-w-[250px] leading-[22px] space-y-[10px]">
                 <p className="font-medium">• Reddington Multi Specialist Hospital, Victoria Island</p>
                 <p>09165359769, 012715340 - 4</p>
                 <p className="font-medium">• Reddington Lekki Hospital, Lekki Phase 1</p>

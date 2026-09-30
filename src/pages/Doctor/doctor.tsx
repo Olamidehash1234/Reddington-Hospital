@@ -1,5 +1,4 @@
-import { useState } from "react"
-import { inHouseDoctors, externalDoctors, type Doctor } from "../../data/doctors"
+import { inHouseDoctors, type Doctor } from "../../data/doctors"
 import ResponsiveImage from "../../components/ResponsiveImage"
 
 function DoctorCard({ doctor }: { doctor: Doctor }) {
@@ -50,8 +49,7 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
 }
 
 export default function Doctors() {
-    const [activeTab, setActiveTab] = useState<"in-house" | "external">("in-house")
-    const doctors = activeTab === "in-house" ? inHouseDoctors : externalDoctors
+    const doctors = inHouseDoctors
 
     return (
         <div className="relative bg-[#E4071405] px-[16px] py-[40px] lg:px-[80px] lg:py-[40px]">
@@ -66,44 +64,11 @@ export default function Doctors() {
                 </div>
             </div>
 
-            <div className="mb-[28px] flex flex-col justify-center gap-[20px] lg:mb-[40px] lg:flex-row">
-                <div
-                    className="flex lg:rounded-[20px] mx-auto lg:w-auto w-[370px] items-center justify-center rounded-[16px] border border-[#E40714] p-[8px]"
-                    role="tablist"
-                    aria-label="Doctor groups"
-                >
-                    <button
-                        type="button"
-                        role="tab"
-                        aria-selected={activeTab === "in-house"}
-                        onClick={() => setActiveTab("in-house")}
-                        className={`lg:rounded-[20px] rounded-[16px] px-[18px] py-[12px] text-[13px] font-semibold transition-colors lg:px-[40px] lg:py-[18px] lg:text-[14px] ${
-                            activeTab === "in-house"
-                                ? "bg-[#E40714] text-white"
-                                : "bg-transparent text-[#E40714]"
-                        }`}
-                    >
-                        In - House Consultant
-                    </button>
-                    <button
-                        type="button"
-                        role="tab"
-                        aria-selected={activeTab === "external"}
-                        onClick={() => setActiveTab("external")}
-                        className={`lg:rounded-[20px] rounded-[14px] px-[18px] py-[12px] text-[13px] font-semibold transition-colors lg:px-[40px] lg:py-[18px] lg:text-[14px] ${
-                            activeTab === "external"
-                                ? "bg-[#E40714] text-white"
-                                : "bg-transparent text-[#E40714]"
-                        }`}
-                    >
-                        External Consultant
-                    </button>
-                </div>
-            </div>
+            {/* Consultant tabs (In-House / External) hidden for now — only in-house consultants are shown */}
 
             <div className="grid grid-cols-1 gap-[28px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-[40px] lg:gap-y-[32px]">
                 {doctors.map((doctor) => (
-                    <DoctorCard key={`${activeTab}-${doctor.id}`} doctor={doctor} />
+                    <DoctorCard key={doctor.id} doctor={doctor} />
                 ))}
             </div>
         </div>
