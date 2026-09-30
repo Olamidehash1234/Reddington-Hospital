@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react"
 import { inHouseDoctors, type Doctor } from "../../data/doctors"
 import ResponsiveImage from "../../components/ResponsiveImage"
 
@@ -49,7 +50,18 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
 }
 
 export default function Doctors() {
-    const doctors = inHouseDoctors
+    const [query, setQuery] = useState("")
+
+    const doctors = useMemo(() => {
+        const q = query.trim().toLowerCase()
+        if (!q) return inHouseDoctors
+        return inHouseDoctors.filter(
+            (doctor) =>
+                doctor.specialty.toLowerCase().includes(q) ||
+                doctor.name.toLowerCase().includes(q) ||
+                doctor.hospital.toLowerCase().includes(q)
+        )
+    }, [query])
 
     return (
         <div className="relative bg-[#E4071405] px-[16px] py-[40px] lg:px-[80px] lg:py-[40px]">
@@ -58,6 +70,8 @@ export default function Doctors() {
                     <img src="/icon/search.svg" alt="" className="w-[20px] h-[20px] lg:w-auto lg:h-auto"/>
                     <input
                         type="text"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
                         placeholder="Search for a medical specialty"
                         className="w-full outline-none bg-transparent text-[14px] lg:text-[14px] text-gray-700 placeholder:text-[#0C214166]"
                     />
@@ -66,11 +80,18 @@ export default function Doctors() {
 
             {/* Consultant tabs (In-House / External) hidden for now — only in-house consultants are shown */}
 
-            <div className="grid grid-cols-1 gap-[28px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-[40px] lg:gap-y-[32px]">
-                {doctors.map((doctor) => (
-                    <DoctorCard key={doctor.id} doctor={doctor} />
-                ))}
-            </div>
+            {doctors.length > 0 ? (
+                <div className="grid grid-cols-1 gap-[28px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-[40px] lg:gap-y-[32px]">
+                    {doctors.map((doctor) => (
+                        <DoctorCard key={doctor.id} doctor={doctor} />
+                    ))}
+                </div>
+            ) : (
+                <div className="py-12 text-center">
+                    <p className="text-[#2D2D2D] text-lg">No consultants found</p>
+                    <p className="text-[#2D2D2D] text-sm mt-2">Try a different specialty or name</p>
+                </div>
+            )}
         </div>
     )
 }

@@ -160,7 +160,11 @@ const Footer = () => {
                 <p className="font-medium">• Reddington Lekki Hospital, Lekki Phase 1</p>
                 <p>+234 916 535 9769</p>
                 <p className="font-medium">• Reddington Hospital, Ikeja GRA</p>
-                <p>+234 812 800 8187</p>
+                <p>09093928064, 07078760874, 07078761595, 08092804119</p>
+                <p className="font-medium">• Reddington Maxy Super Speciality Centre, 14 Akin Olugbade Street, Victoria Island</p>
+                <p>0803 585 6227, 0810 129 1300, 0816 294 4221</p>
+                <p className="font-medium">• Reddington Breast & Gynae Centre, 276A Kofo Abayomi Street, Victoria Island</p>
+                <p>09071978966, 09072776884</p>
               </div>
             </div>
           </div>

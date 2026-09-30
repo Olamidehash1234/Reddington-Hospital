@@ -55,6 +55,18 @@ export default function InsurancePartners() {
       logo: (
         <ResponsiveImage src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775606718/tolara_d7mnxq.svg" alt="" className="h-full w-full object-contain" />
       )
+    },
+    {
+      name: "WAPCO",
+      logo: (
+        <ResponsiveImage src="/icon/wapco.jpeg" alt="WAPCO" className="h-full w-full object-contain" />
+      )
+    },
+    {
+      name: "Fidson",
+      logo: (
+        <ResponsiveImage src="/icon/fidson.jpeg" alt="Fidson" className="h-full w-full object-contain" />
+      )
     }
   ];
 

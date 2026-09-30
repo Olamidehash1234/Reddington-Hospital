@@ -4,6 +4,29 @@ import DatePicker from "../../components/ui/date-picker";
 import TimePicker from "../../components/ui/time-picker";
 import { services } from "../../data/services";
 
+// Visiting consultant specialties offered in addition to the core departments.
+const visitingSpecialties = [
+    "Urology",
+    "Endocrinology",
+    "Psychiatry",
+    "Clinical Psychology",
+    "Dermatology",
+    "Rheumatology",
+    "Pulmonology",
+    "Haematology",
+];
+
+const departmentOptions = [
+    ...services.map((service) => ({
+        value: service.title.toLowerCase().replace(/\s+/g, "-"),
+        label: service.title,
+    })),
+    ...visitingSpecialties.map((name) => ({
+        value: name.toLowerCase().replace(/\s+/g, "-"),
+        label: name,
+    })),
+];
+
 export default function Contactform() {
     const id = useId();
     const [preferredDate, setPreferredDate] = useState<Date | undefined>();
@@ -133,10 +156,7 @@ export default function Contactform() {
                                     id={`${id}-service`}
                                     name="service"
                                     placeholder="Select Service/Department"
-                                    options={services.map((service) => ({
-                                        value: service.title.toLowerCase().replace(/\s+/g, "-"),
-                                        label: service.title,
-                                    }))}
+                                    options={departmentOptions}
                                 />
                             </div>
 
