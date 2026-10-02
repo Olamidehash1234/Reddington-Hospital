@@ -119,7 +119,7 @@ export const branches: Branch[] = [
             { id: 10, name: "DR. DORKA DORA BEKEE", specialization: "CONSULTANT PAEDIATRICIAN", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630896/Dr_Bekee.png_Consultant_Paediatrician__mnpfky.png" },
         ],
         emails: ["customerservice.ikeja@reddingtonhospital.com"],
-        contact: ["08092804119", "09093928064", "08078701595"],
+        contact: ["09093928064", "07078761595", "08092804119"],
         emergency: "07078760874",
         servicesDescription: "All Specialty care",
         Heroimage: Ikeja
@@ -225,7 +225,7 @@ export const branches: Branch[] = [
 
         ],
         emails: ["customerservice@maxycentre.com"],
-        contact: ["08101291300", "08162944221"],
+        contact: ["0803 585 6227", "0810 129 1300", "0816 294 4221"],
         Heroimage: Maxy,
         servicesDescription: "Multi and Sub-Specialty care across all disciplines"
     },
@@ -283,7 +283,7 @@ export const branches: Branch[] = [
             // { id: 23, name: "Dr. Akin Oluwaseun", specialization: "Ultrasound Specialist", image: DOCTOR_IMG }, // no photo yet
             // { id: 24, name: "Dr. Rukayat Suliat", specialization: "Breast Care Nurse", image: DOCTOR_IMG }, // no photo yet
         ],
-        contact: ["09072776884", "0907197866"],
+        contact: ["09071978966", "09072776884"],
         emails: ["customer.service@breastandgynae.com"],
         Heroimage: Breast
     },
