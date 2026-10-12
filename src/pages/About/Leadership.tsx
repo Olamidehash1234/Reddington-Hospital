@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 type Leader = {
     id: number
     name: string
@@ -7,59 +5,54 @@ type Leader = {
     image: string
 }
 
-const PLACEHOLDER_IMG = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603078/dct-1_tdhl11.png"
-
-const boardMembers: Leader[] = [
+const leaders: Leader[] = [
     {
         id: 1,
-        name: "Dr Olusesan Onabowale",
-        title: "Medical Director of The Heritage Hospital",
-        image: PLACEHOLDER_IMG,
+        name: "Dr. Adeyemi Onabowale",
+        title: "Founder/CEO",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/DR._ADEYEMI_ONOBOWALE_mbe6ng.png",
     },
     {
         id: 2,
-        name: "Mrs. Oludayo Onabowale",
-        title: "Proprietor/CEO of Treasure House School",
-        image: PLACEHOLDER_IMG,
+        name: "Dr. Ekundayo Omogbehin",
+        title: "Group Chief Operating Officer",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/DR._EKUNDAYO_OMOGBEHIN_jsdpko.png",
     },
     {
         id: 3,
-        name: "Dr Adeyemi Onabowale",
-        title: "Founder of the Reddington Hospital",
-        image: PLACEHOLDER_IMG,
+        name: "Dr. Olafunke Ijimakin",
+        title: "Director of Medical Services & Compliance",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/DR._OLAFUNKE_IJIMAKIN_cgyoq1.png",
     },
     {
         id: 4,
-        name: "Mr Rilwan Adeola",
-        title: "President/CEO of Touch Down Travels",
-        image: PLACEHOLDER_IMG,
-    },
-]
-
-const seniorManagement: Leader[] = [
-    {
-        id: 1,
-        name: "Dr Olusesan Onabowale",
-        title: "Medical Director of The Heritage Hospital",
-        image: PLACEHOLDER_IMG,
+        name: "Dami Ogala",
+        title: "Group Operations & Strategy Advisor",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/DAMI_OGALA_oyyxzn.png",
     },
     {
-        id: 2,
-        name: "Dr Olusesan Onabowale",
-        title: "Medical Director of The Heritage Hospital",
-        image: PLACEHOLDER_IMG,
+        id: 5,
+        name: "Andy Cunliffe",
+        title: "General Manager, Victoria Island",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/ANDY_CUNLIFFE_zy30sm.png",
     },
     {
-        id: 3,
-        name: "Dr Olusesan Onabowale",
-        title: "Medical Director of The Heritage Hospital",
-        image: PLACEHOLDER_IMG,
+        id: 6,
+        name: "Bola Akinsola",
+        title: "Executive Director, Reddington Hospital Ikeja",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Bola_Akinsola_azn9nk.png",
     },
     {
-        id: 4,
-        name: "Dr Olusesan Onabowale",
-        title: "Medical Director of The Heritage Hospital",
-        image: PLACEHOLDER_IMG,
+        id: 7,
+        name: "Gbolahan Sonoiki",
+        title: "Group Chief Financial Officer",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/GBOLAHAN_SONOIKI_wtbytc.png",
+    },
+    {
+        id: 8,
+        name: "Fisayo Eluyera",
+        title: "Group Legal Counsel",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Fisayo_Eluyera_lm9xbe.png",
     },
 ]
 
@@ -103,9 +96,6 @@ function LeadershipMemberCard({ leader }: { leader: Leader }) {
 }
 
 export default function Leadership() {
-    const [activeTab, setActiveTab] = useState<"board" | "management">("board")
-    const leaders = activeTab === "board" ? boardMembers : seniorManagement
-
     return (
         <div className="relative bg-[#E4071405] px-[16px] py-[40px] lg:px-[80px] lg:py-[80px]">
             <img
@@ -119,7 +109,7 @@ export default function Leadership() {
                 className="pointer-events-none absolute right-[0px] top-[0px] z-10 h-[100px] w-[100px] opacity-30  lg:bottom-[0px] lg:top-0 lg:h-auto lg:w-auto"
             />
 
-            <div className="mb-[28px] flex flex-col gap-[20px] lg:mb-[40px] lg:flex-row lg:items-end lg:justify-between">
+            <div className="mb-[28px] flex flex-col gap-[20px] lg:mb-[40px]">
                 <div className="space-y-[10px]">
                     <h1
                         className="text-[22px] leading-normal text-[#000000] lg:text-[32px]"
@@ -132,50 +122,13 @@ export default function Leadership() {
                         We trust that this group of professionals will assist us in taking the giant leap forward and support us in directing, organizing, and implementing our strategic plans and aspirations.
                     </p>
                 </div>
-
-                <div
-                    className="inline-flex shrink-0 rounded-[20px] border border-[#E40714] p-[8px]"
-                    role="tablist"
-                    aria-label="Leadership groups"
-                >
-                    <button
-                        type="button"
-                        role="tab"
-                        aria-selected={activeTab === "board"}
-                        onClick={() => setActiveTab("board")}
-                        className={`rounded-[20px] px-[18px] py-[12px] text-[13px] font-semibold transition-colors lg:px-[55px] lg:py-[18px] lg:text-[14px] ${
-                            activeTab === "board"
-                                ? "bg-[#E40714] text-white"
-                                : "bg-transparent text-[#E40714]"
-                        }`}
-                    >
-                        Board Members
-                    </button>
-                    <button
-                        type="button"
-                        role="tab"
-                        aria-selected={activeTab === "management"}
-                        onClick={() => setActiveTab("management")}
-                        className={`rounded-[20px] px-[18px] py-[12px] text-[13px] font-semibold transition-colors lg:px-[20px] lg:py-[18px] lg:text-[14px] ${
-                            activeTab === "management"
-                                ? "bg-[#E40714] text-white"
-                                : "bg-transparent text-[#E40714]"
-                        }`}
-                    >
-                        Senior Management Team
-                    </button>
-                </div>
             </div>
 
             <div className="grid grid-cols-1 gap-[28px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-[40px] lg:gap-y-[32px]">
                 {leaders.map((leader) => (
-                    <LeadershipMemberCard key={`${activeTab}-${leader.id}`} leader={leader} />
+                    <LeadershipMemberCard key={leader.id} leader={leader} />
                 ))}
             </div>
-
-            <p className="mt-[40px] text-center text-[13px] leading-[20px] text-[#2D2D2D] lg:mt-[60px] lg:text-[15px] lg:leading-[24px]">
-                This is a short profile of members of the Board of Directors of Reddington Multi-Specialist Hospital Group (RHG). This new and dynamic board consists of business professionals from a wide range of backgrounds and experiences in small to large corporate businesses. The following is just a brief synopsis of the particular skills and experiences of each of the board members.
-            </p>
         </div>
     )
 }

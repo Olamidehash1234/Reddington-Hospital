@@ -8,7 +8,7 @@ export type Doctor = {
 }
 
 // PLACEHOLDER_IMG retired — doctors without a real photo are commented out for now
-const Chioma = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603084/dr.chioma_rqml1r.jpg"
+const Chioma = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1791842353/Dr_zsm27s.png"
 
 export const inHouseDoctors: Doctor[] = [
     {
@@ -39,19 +39,18 @@ export const inHouseDoctors: Doctor[] = [
         id: 4,
         name: "Dr. Chioma Ojiegbe",
         specialty: "Obstetrician and Gynaecologist",
-        hospital: "Reddington VI",
+        hospital: "Reddington Breast & Gynae",
         type: "in-house",
         image: Chioma,
     },
-    // No photo yet:
-    // {
-    //     id: 5,
-    //     name: "Dr. John Afolabi",
-    //     specialty: "Obstetrician and Gynaecologist",
-    //     hospital: "Reddington VI",
-    //     type: "in-house",
-    //     image: PLACEHOLDER_IMG,
-    // },
+    {
+        id: 5,
+        name: "Dr. John Afolabi",
+        specialty: "Obstetrician and Gynaecologist",
+        hospital: "Reddington Breast & Gynae",
+        type: "in-house",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr_rr7ac5.png",
+    },
     {
         id: 6,
         name: "Dr. Paschal Nwose",
@@ -62,20 +61,21 @@ export const inHouseDoctors: Doctor[] = [
     },
     {
         id: 7,
-        name: "Dr. Funmi Yusuf",
+        name: "Dr. Mariam Yusuf",
         specialty: "Paediatrician",
-        hospital: "Reddington VI",
+        hospital: "Reddington Lekki",
         type: "in-house",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630443/Dr_Yusuff.png_Consultant_Paediatrician__fvunxg.png",
     },
-    {
-        id: 8,
-        name: "Dr. Latre Bakoshi",
-        specialty: "Dental Surgeon",
-        hospital: "Reddington VI",
-        type: "in-house",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775663894/DR._LATRE_BAKOSHI_gnyjqk.jpg',
-    },
+    // Not on Reddington's updated consultant list — hidden pending confirmation:
+    // {
+    //     id: 8,
+    //     name: "Dr. Latre Bakoshi",
+    //     specialty: "Dental Surgeon",
+    //     hospital: "Reddington VI",
+    //     type: "in-house",
+    //     image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775663894/DR._LATRE_BAKOSHI_gnyjqk.jpg',
+    // },
     {
         id: 9,
         name: "Dr. Chinyere Uzoma",
@@ -125,15 +125,14 @@ export const inHouseDoctors: Doctor[] = [
         type: "in-house",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630280/Dr_Akude.png_Consultant_Family_Physician__ih2nkk.png",
     },
-    // No photo yet:
-    // {
-    //     id: 15,
-    //     name: "Dr. Olushola Omoyele",
-    //     specialty: "Radiologist",
-    //     hospital: "Reddington VI",
-    //     type: "in-house",
-    //     image: PLACEHOLDER_IMG,
-    // },
+    {
+        id: 15,
+        name: "Dr. Olushola Omoyele",
+        specialty: "Radiologist",
+        hospital: "Reddington VI",
+        type: "in-house",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr._Omoyele_VI_jyuqgr.png",
+    },
     // Commented out:
     // {
     //     id: 16,
@@ -326,6 +325,22 @@ export const inHouseDoctors: Doctor[] = [
         hospital: "Reddington VI",
         type: "in-house",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630750/Dr_Adewoyin.png_Consultant_Hematologist_locum_oyys7y.png",
+    },
+    {
+        id: 40,
+        name: "Dr. Joy Oshun",
+        specialty: "Cardiologist",
+        hospital: "Reddington VI",
+        type: "in-house",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr.Joy_Oshun_qkgjqy.png",
+    },
+    {
+        id: 41,
+        name: "Dr. Tafa Osunlaja",
+        specialty: "Anaesthetist",
+        hospital: "Reddington Ikeja",
+        type: "in-house",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/DR_bxspyk.png",
     },
 ]
 
