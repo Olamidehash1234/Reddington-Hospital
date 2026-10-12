@@ -119,7 +119,7 @@ export const branches: Branch[] = [
             { id: 10, name: "DR. DORKA DORA BEKEE", specialization: "CONSULTANT PAEDIATRICIAN", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630896/Dr_Bekee.png_Consultant_Paediatrician__mnpfky.png" },
         ],
         emails: ["customerservice.ikeja@reddingtonhospital.com"],
-        contact: ["09093928064", "07078761595", "08092804119"],
+        contact: ["08092804119", "09093928064", "07078760874"],
         emergency: "07078760874",
         servicesDescription: "All Specialty care",
         Heroimage: Ikeja
@@ -128,7 +128,7 @@ export const branches: Branch[] = [
         id: 3,
         name: "Reddington Lekki Hospital",
         location: "15c Admiralty Way, Lekki",
-        address: "15c Admiralty Way, Lekki",
+        address: "15c Admiralty Way, Lekki Phase 1, Lagos",
         description: "A 5-star, one-stop multi-specialist facility established to bring Reddington's signature excelle..",
         fullDescription: "A star, one-stop multi-specialist facility established to bring Reddington's signature excellence and quality care to the Lekki axis. Our facility is equipped with the latest medical technology and staffed with experienced healthcare professionals committed to your wellbeing.",
         image: Lekki,
@@ -225,7 +225,7 @@ export const branches: Branch[] = [
 
         ],
         emails: ["customerservice@maxycentre.com"],
-        contact: ["0803 585 6227", "0810 129 1300", "0816 294 4221"],
+        contact: ["08035856227", "08101291300", "08162944221"],
         Heroimage: Maxy,
         servicesDescription: "Multi and Sub-Specialty care across all disciplines"
     },
@@ -285,7 +285,7 @@ export const branches: Branch[] = [
             // { id: 23, name: "Dr. Akin Oluwaseun", specialization: "Ultrasound Specialist", image: DOCTOR_IMG }, // no photo yet
             // { id: 24, name: "Dr. Rukayat Suliat", specialization: "Breast Care Nurse", image: DOCTOR_IMG }, // no photo yet
         ],
-        contact: ["09071978966", "09072776884", "08021193912", "08120494763"],
+        contact: ["09071978966", "08021193912", "08120494763"],
         emails: ["customer.service@breastandgynae.com"],
         Heroimage: Breast
     },
