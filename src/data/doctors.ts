@@ -8,7 +8,7 @@ export type Doctor = {
 }
 
 // PLACEHOLDER_IMG retired — doctors without a real photo are commented out for now
-const Chioma = "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603084/dr.chioma_rqml1r.jpg"
+const Chioma = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1791842353/Dr_zsm27s.png"
 
 export const inHouseDoctors: Doctor[] = [
     {
@@ -39,7 +39,7 @@ export const inHouseDoctors: Doctor[] = [
         id: 4,
         name: "Dr. Chioma Ojiegbe",
         specialty: "Obstetrician and Gynaecologist",
-        hospital: "Reddington VI",
+        hospital: "Reddington Breast & Gynae",
         type: "in-house",
         image: Chioma,
     },

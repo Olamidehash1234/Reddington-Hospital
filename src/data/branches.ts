@@ -141,7 +141,6 @@ export const branches: Branch[] = [
         ],
         doctors: [
             { id: 9, name: "Dr. Muyiwa Fagbohun", specialization: "Consultant Gynecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630586/Dr_Fagbohun.png_Consultant_O_G_gpsixu.png" },
-            { id: 10, name: "Dr. Chioma Ojiegbe", specialization: "Consultant Obstetrician and Gynaecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775603084/dr.chioma_rqml1r.jpg" },
             // { id: 11, name: "Dr. Folake Adewale", specialization: "Psychiatrist", image: DOCTOR_IMG }, // no photo yet
             // { id: 12, name: "Dr. Ismail Hassan", specialization: "Wellness Physician", image: DOCTOR_IMG }, // no photo yet
         ],
@@ -280,6 +279,7 @@ export const branches: Branch[] = [
         ],
         doctors: [
             { id: 21, name: "Dr. John Afolabi", specialization: "Consultant Obstetrician and Gynaecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr_rr7ac5.png" },
+            { id: 22, name: "Dr. Chioma Ojiegbe", specialization: "Consultant Obstetrician and Gynaecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1791842353/Dr_zsm27s.png" },
             // { id: 21, name: "Dr. Femi Okafor", specialization: "Breast Surgeon", image: DOCTOR_IMG }, // no photo yet
             // { id: 22, name: "Dr. Nneka Ezeoke", specialization: "Consultant Gynaecologist", image: DOCTOR_IMG }, // no photo yet
             // { id: 23, name: "Dr. Akin Oluwaseun", specialization: "Ultrasound Specialist", image: DOCTOR_IMG }, // no photo yet
