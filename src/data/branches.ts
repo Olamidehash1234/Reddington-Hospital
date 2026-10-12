@@ -75,17 +75,17 @@ export const branches: Branch[] = [
         doctors: [
             { id: 1, name: "Dr. Abiodun Osibamowo", specialization: "Medical Director", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630439/Dr_Oshibamwo.png_Consultant_Internal_Medcine__jqzhy7.png" },
             { id: 2, name: "DR. LAWSON BABAJIDE", specialization: "CONSULTANT ORTHO SURG", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630730/Dr_Lawson.png_Consultant_Orthopedic_trauma_Surgeon_r4wmzo.png" },
-            // { id: 3, name: "DR. OMOYELE OLUSOLA", specialization: "CONSULTANT RADIOLOGIST", image: DOCTOR_IMG }, // no photo yet
+            { id: 3, name: "DR. OMOYELE OLUSOLA", specialization: "CONSULTANT RADIOLOGIST", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr._Omoyele_VI_jyuqgr.png" },
             // { id: 4, name: "DR. JIMOH ADEKUNLE", specialization: "CONSULTANT FAMILY PHYSICIAN", image: DOCTOR_IMG }, // no new photo / not in updated list
             // { id: 5, name: "DR. OKUNEYE TAOFEEK", specialization: "CONSULTANT FAMILY PHYSICIAN", image: DOCTOR_IMG }, // no photo yet
-            // { id: 6, name: "DR. OSHUN JOY", specialization: "CARDIOLOGY CONSULTANT", image: DOCTOR_IMG }, // no photo yet
+            { id: 6, name: "DR. OSHUN JOY", specialization: "CARDIOLOGY CONSULTANT", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr.Joy_Oshun_qkgjqy.png" },
             { id: 7, name: "DR. NWOSE PASCHAL", specialization: "CONSULTANT GENERAL SURGEON", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630299/Dr_Nwose.png_Consultant_General_Surgeon_ars4ec.png" },
             { id: 8, name: "DR. ALAWODE ADENIYI", specialization: "CONSULTANT INTENSIVIST/ANAESTHESIA", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630593/Dr_Alawode.png_consultant_anesthesiologist_Intensivist__xrwjko.png" },
             // { id: 9, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG }, // no photo yet
         ],
         servicesDescription: "Multi and Sub-Specialty care across all disciplines",
         emails: ["customerservice.vi@reddingtonhospital.com"],
-        contact: ["09165359769", "07069196882"],
+        contact: ["02012715341-3", "09165359769", "07069196882"],
         emergency: "09155555217",
         Heroimage: VI
     },
@@ -112,7 +112,7 @@ export const branches: Branch[] = [
         doctors: [
             { id: 5, name: "DR. OLUFISAYO BALOGUN", specialization: "Consultant Obstetrician and Gynaecologist / Medical Director", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630293/Dr_Fisayo_Balogun.png_Consultant_O_G_MD_Ikeja_o0xoag.png" },
             { id: 6, name: "DR. VALENTINE OKWARA", specialization: "Consultant Obstetrician and Gynaecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630719/Dr_Valentine_Okwara.png_Consultant_O_G__msck8s.png" },
-            // { id: 7, name: "DR. TAFA OSUNLAJA", specialization: "CONSULTANT ANASTHETIST", image: DOCTOR_IMG }, // no photo yet
+            { id: 7, name: "DR. TAFA OSUNLAJA", specialization: "CONSULTANT ANAESTHETIST", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/DR_bxspyk.png" },
             { id: 8, name: "DR. EYITAYO OLONADE", specialization: "CONSULTANT PAEDIATRICIAN", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630559/Dr_Olonade.png_Consultant_Paediatrician__rlsevb.png" },
             { id: 9, name: "DR. EMMANUEL CHUKWURAH", specialization: "CONSULTANT RADIOLOGIST", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630596/Dr_Chukwura.png_Consultant_Radiologist__yvvdgk.png" },
             { id: 10, name: "DR. KENNETH OCHULOR", specialization: "CONSULTANT CARDIOLOGIST", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630873/Dr_Ochulor_Kenneth.png_Consultant_Cardiologist__vg9xzi.png" },
@@ -147,6 +147,7 @@ export const branches: Branch[] = [
         ],
         emails: ["customerservice@reddingtonlekki.com"],
         contact: ["09070633144", "08140848692"],
+        emergency: "08084078995",
         Heroimage: Lekki,
     },
     {
@@ -278,12 +279,13 @@ export const branches: Branch[] = [
             { name: "Advanced Women'sImaging (3D Mammography, 3D ABUS, Stereotactic Biopsy, DEXA Bone Density Scan)", image: SERVICE_PLACEHOLDER },
         ],
         doctors: [
+            { id: 21, name: "Dr. John Afolabi", specialization: "Consultant Obstetrician and Gynaecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr_rr7ac5.png" },
             // { id: 21, name: "Dr. Femi Okafor", specialization: "Breast Surgeon", image: DOCTOR_IMG }, // no photo yet
             // { id: 22, name: "Dr. Nneka Ezeoke", specialization: "Consultant Gynaecologist", image: DOCTOR_IMG }, // no photo yet
             // { id: 23, name: "Dr. Akin Oluwaseun", specialization: "Ultrasound Specialist", image: DOCTOR_IMG }, // no photo yet
             // { id: 24, name: "Dr. Rukayat Suliat", specialization: "Breast Care Nurse", image: DOCTOR_IMG }, // no photo yet
         ],
-        contact: ["09071978966", "09072776884"],
+        contact: ["09071978966", "09072776884", "08021193912", "08120494763"],
         emails: ["customer.service@breastandgynae.com"],
         Heroimage: Breast
     },
