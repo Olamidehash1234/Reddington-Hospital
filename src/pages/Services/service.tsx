@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import { useLocation } from "react-router-dom";
 import { services } from "../../data/services";
@@ -13,7 +13,18 @@ const createServiceAnchor = (title: string) =>
 
 export default function ServicesGrid() {
     const [expandedServiceId, setExpandedServiceId] = useState<number | null>(null);
+    const [query, setQuery] = useState("");
     const location = useLocation();
+
+    const filteredServices = useMemo(() => {
+        const q = query.trim().toLowerCase();
+        if (!q) return services;
+        return services.filter(
+            (service) =>
+                service.title.toLowerCase().includes(q) ||
+                service.description.toLowerCase().includes(q)
+        );
+    }, [query]);
 
     useEffect(() => {
         if (!location.hash) return;
@@ -141,6 +152,8 @@ export default function ServicesGrid() {
                     <img src="/icon/search.svg" alt="" className="w-[20px] h-[20px] lg:w-auto lg:h-auto"/>
                     <input
                         type="text"
+                        value={query}
+                        onChange={(e) => setQuery(e.target.value)}
                         placeholder="Search for a medical specialty"
                         className="w-full outline-none bg-transparent text-[14px] lg:text-[14px] text-gray-700 placeholder:text-[#0C214166]"
                     />
@@ -149,7 +162,7 @@ export default function ServicesGrid() {
 
             {/* Cards Grid */}
             <div className="grid gap-6 lg:gap-[13px] lg:gap-y-[40px] sm:grid-cols-2 lg:grid-cols-4 mb-8">
-                {services.map((service) => {
+                {filteredServices.map((service) => {
                     const isExpanded = expandedServiceId === service.id;
 
                     return (
@@ -192,7 +205,7 @@ export default function ServicesGrid() {
             </div>
 
             {/* No results message */}
-            {services.length === 0 && (
+            {filteredServices.length === 0 && (
                 <div className="text-center py-12">
                     <p className="text-[#02070D] text-lg">No services found</p>
                     <p className="text-[#02070D] text-sm mt-2">Try adjusting your search terms</p>
