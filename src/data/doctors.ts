@@ -67,14 +67,15 @@ export const inHouseDoctors: Doctor[] = [
         type: "in-house",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630443/Dr_Yusuff.png_Consultant_Paediatrician__fvunxg.png",
     },
-    {
-        id: 8,
-        name: "Dr. Latre Bakoshi",
-        specialty: "Dental Surgeon",
-        hospital: "Reddington VI",
-        type: "in-house",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775663894/DR._LATRE_BAKOSHI_gnyjqk.jpg',
-    },
+    // Not on Reddington's updated consultant list — hidden pending confirmation:
+    // {
+    //     id: 8,
+    //     name: "Dr. Latre Bakoshi",
+    //     specialty: "Dental Surgeon",
+    //     hospital: "Reddington VI",
+    //     type: "in-house",
+    //     image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775663894/DR._LATRE_BAKOSHI_gnyjqk.jpg',
+    // },
     {
         id: 9,
         name: "Dr. Chinyere Uzoma",
