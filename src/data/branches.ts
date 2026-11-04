@@ -141,8 +141,9 @@ export const branches: Branch[] = [
         ],
         doctors: [
             { id: 9, name: "Dr. Muyiwa Fagbohun", specialization: "Consultant Gynecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630586/Dr_Fagbohun.png_Consultant_O_G_gpsixu.png" },
-            // { id: 11, name: "Dr. Folake Adewale", specialization: "Psychiatrist", image: DOCTOR_IMG }, // no photo yet
-            // { id: 12, name: "Dr. Ismail Hassan", specialization: "Wellness Physician", image: DOCTOR_IMG }, // no photo yet
+            { id: 10, name: "Dr. Jaho", specialization: "Consultant Cardiologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630288/Dr_Jaho.png_Consultant_Cardiologist_CD_Lekki_ym4qje.png" },
+            { id: 11, name: "Dr. Grace Andero", specialization: "Consultant Family Physician", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630732/Dr_Grace_Andero.png_Consultant_Family_Physician_Lekki_weioge.png" },
+            { id: 12, name: "Dr. Ajayi", specialization: "Paediatric SR", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790631020/Dr_Ajayi.png_Paediatric_SR_gzgmv9.png" },
         ],
         emails: ["customerservice@reddingtonlekki.com"],
         contact: ["09070633144", "08140848692"],

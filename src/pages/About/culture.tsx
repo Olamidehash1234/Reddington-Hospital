@@ -58,38 +58,28 @@ export default function Culture() {
                                 </div>
                             </div>
 
-                            {/* Desktop layout (pixel-matched to Figma frame) */}
-                            <div className="grid grid-cols-2 gap-[40px] justify-between">
-                                <div className="relative hidden lg:block rounded-[12px]">
-                                    <img src="/icon/illustrations/mission.svg" alt="mission Frame" className="relative w-full h-full object-cover border border-[#E40714] rounded-[12px]" />
-                                    <div className="absolute left-[26px] top-[25px]">
-                                        <img
-                                            alt=""
-                                            className=""
-                                            src="/icon/mission.svg"
-                                        />
+                            {/* Desktop layout — content-sized cards so text never clips */}
+                            <div className="hidden lg:grid grid-cols-2 gap-[40px] items-stretch">
+                                <div className="flex min-h-[156px] flex-col rounded-[12px] border border-[#E40714] bg-white px-[26px] py-[25px]">
+                                    <div className="flex items-center gap-[16px]">
+                                        <img alt="" src="/icon/mission.svg" />
+                                        <p className="text-[22px] lg:text-[24px] leading-[normal]" style={{ fontFamily: "TexGyreAdventor" }}>
+                                            Our Mission
+                                        </p>
                                     </div>
-                                    <p className="absolute left-[80px] top-[28px] text-[22px] lg:text-[24px] leading-[normal] whitespace-nowrap" style={{ fontFamily: "TexGyreAdventor" }}>
-                                        Our Mission
-                                    </p>
-                                    <p className="absolute left-[26px] top-[90px] w-[577px] text-[16px] leading-[20px] lg:leading-[24px]">
+                                    <p className="mt-[20px] text-[16px] leading-[20px] lg:leading-[24px] text-[#2D2D2D]">
                                         To deliver a comprehensive first-world medical service exceeding all expectations of our valued patients.
                                     </p>
                                 </div>
 
-                                <div className="hidden lg:block relative h-full rounded-[12px] text-white overflow-hidden">
-                                    <img src="/icon/illustrations/vision.svg" alt="Vision Frame" className="relative w-full h-full gobject-cover" />
-                                    <div className="absolute left-[26px] top-[25px]">
-                                        <img
-                                            alt=""
-                                            className=""
-                                            src="/icon/vision.svg"
-                                        />
+                                <div className="flex min-h-[156px] flex-col rounded-[12px] bg-[#E40714] px-[26px] py-[25px] text-white">
+                                    <div className="flex items-center gap-[16px]">
+                                        <img alt="" src="/icon/vision.svg" />
+                                        <p className="text-[22px] lg:text-[24px] leading-[normal]" style={{ fontFamily: "TexGyreAdventor" }}>
+                                            Our Vision
+                                        </p>
                                     </div>
-                                    <p className="absolute left-[80px] top-[28px] text-[22px] lg:text-[24px] leading-[normal] whitespace-nowrap" style={{ fontFamily: "TexGyreAdventor" }}>
-                                        Our Vision
-                                    </p>
-                                    <p className="absolute left-[26px] top-[90px] w-[577px] text-[16px] leading-[20px] lg:leading-[24px]">
+                                    <p className="mt-[20px] text-[16px] leading-[20px] lg:leading-[24px]">
                                         To be Nigeria&apos;s most advanced independent tertiary hospital working to the highest standards of technology and of care.
                                     </p>
                                 </div>

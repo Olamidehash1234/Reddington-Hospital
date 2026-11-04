@@ -8,7 +8,6 @@ const Footer = () => {
 
   const companyLinks = [
     { text: 'About Us', path: '/about' },
-    { text: 'Our Departments', path: '/services' },
     { text: 'Find a Doctor', path: '/doctors' },
     { text: 'Our Branches', path: '/our-branches' },
     { text: 'Contact Us', path: '/contact' },

@@ -5,7 +5,7 @@ type ContactLocation = {
     id: number;
     title: string;
     subtitle: string;
-    phone: string;
+    phones: string[];
     query: string;
 };
 
@@ -34,7 +34,7 @@ export default function Map() {
                 id: branch.id,
                 title: branch.name,
                 subtitle: branch.address || branch.location,
-                phone: branch.contact?.[0] ?? "",
+                phones: branch.contact ?? [],
                 query: `${branch.name}, ${branch.location}`,
             }));
     }, []);
@@ -105,9 +105,14 @@ export default function Map() {
                                                 className={`text-[13px] lg:text-[14px] font-medium leading-[19px] ${isActive ? "text-white" : "text-[#6F7271]"
                                                     }`}
                                             >
-                                                <a href={`tel:${location.phone}`} className="hover:underline">
-                                                    {location.phone}
-                                                </a>
+                                                {location.phones.map((phone, index) => (
+                                                    <span key={phone}>
+                                                        {index > 0 && ", "}
+                                                        <a href={`tel:${phone.replace(/\s+/g, "")}`} className="hover:underline">
+                                                            {phone}
+                                                        </a>
+                                                    </span>
+                                                ))}
                                             </p>
                                         </div>
                                     </div>
