@@ -63,6 +63,15 @@ const SvcPhysio = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003738
 const SvcBreast = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002083/Breast_Health1_wfdryi.jpg"
 const SvcDentistry = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002543/Dentistry_yk9kbv.jpg"
 const SvcAudiology = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png"
+const SvcInternalMedicine = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296313/internal-medicine_cev5c5.jpg"
+const SvcDermatology = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296310/dermatology_uert5l.jpg"
+const SvcDietetics = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296297/Nutrition_and_Dietetics_h60nn8.jpg"
+const SvcRheumatology = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296285/Rheumatology_cm4a1u.jpg"
+const SvcEndocrinology = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296275/Endocrinology_yzhfwy.jpg"
+const SvcHaematology = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296273/Haematology_bzgqcx.jpg"
+const SvcPsychiatry = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296257/Psychiatry_and_Clinical_Psychology_pfwc3r.jpg"
+const SvcPulmonology = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296248/Pulmonology_yd7upv.jpg"
+const SvcUrology = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296235/Urology_zwgben.jpg"
 
 export const branches: Branch[] = [
     {
@@ -77,17 +86,17 @@ export const branches: Branch[] = [
             { name: "Anaesthesia", image: SERVICE_PLACEHOLDER },
             { name: "Cardiology", image: SvcCardiology },
             { name: "Critical Care (ICU, NICU, CCU)", image: SvcCriticalCare },
-            { name: "Dermatology", image: SERVICE_PLACEHOLDER },
+            { name: "Dermatology", image: SvcDermatology },
             { name: "Diagnostic Imaging (Purple Ray)", image: SvcDiagImaging },
             { name: "Dialysis", image: SvcNephrology },
-            { name: "Dietetics", image: SERVICE_PLACEHOLDER },
-            { name: "Endocrinology", image: SERVICE_PLACEHOLDER },
+            { name: "Dietetics", image: SvcDietetics },
+            { name: "Endocrinology", image: SvcEndocrinology },
             { name: "Emergency Medicine", image: SvcEmergency },
             { name: "Family Medicine & Primary Care", image: SvcFamilyMedicine },
             { name: "Gastroenterology", image: SvcGastro },
-            { name: "Haematology", image: SERVICE_PLACEHOLDER },
+            { name: "Haematology", image: SvcHaematology },
             { name: "Health Screening & Wellness", image: SvcHealth },
-            { name: "Internal Medicine", image: SERVICE_PLACEHOLDER },
+            { name: "Internal Medicine", image: SvcInternalMedicine },
             { name: "Laboratory Services", image: MSL },
             { name: "Nephrology", image: SvcNephrology },
             { name: "Neurology", image: SvcNeurology },
@@ -95,11 +104,11 @@ export const branches: Branch[] = [
             { name: "Orthopaedics", image: SvcOrthopaedics },
             { name: "Paediatrics", image: SvcPaediatrics },
             { name: "Plastic Surgery", image: SvcPlastic },
-            { name: "Psychiatry / Clinical Psychology", image: SERVICE_PLACEHOLDER },
-            { name: "Pulmonology", image: SERVICE_PLACEHOLDER },
-            { name: "Rheumatology", image: SERVICE_PLACEHOLDER },
+            { name: "Psychiatry / Clinical Psychology", image: SvcPsychiatry },
+            { name: "Pulmonology", image: SvcPulmonology },
+            { name: "Rheumatology", image: SvcRheumatology },
             { name: "Surgical Services", image: SvcSurgery },
-            { name: "Urology", image: SERVICE_PLACEHOLDER },
+            { name: "Urology", image: SvcUrology },
         ],
         doctors: [
             { id: 1, name: "Dr. Abiodun Osibamowo", specialization: "Medical Director", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630439/Dr_Oshibamwo.png_Consultant_Internal_Medcine__jqzhy7.png" },
@@ -129,13 +138,13 @@ export const branches: Branch[] = [
         services: [
             { name: "Anaesthesia", image: SERVICE_PLACEHOLDER },
             { name: "Cardiology", image: SvcCardiology },
-            { name: "Dietetics", image: SERVICE_PLACEHOLDER },
+            { name: "Dietetics", image: SvcDietetics },
             { name: "Ear, Nose & Throat (ENT)", image: SvcENT },
             { name: "Emergency Medicine", image: SvcEmergency },
-            { name: "Endocrinology", image: SERVICE_PLACEHOLDER },
+            { name: "Endocrinology", image: SvcEndocrinology },
             { name: "Family Medicine & Primary Care", image: SvcFamilyMedicine },
             { name: "Gastroenterology", image: SvcGastro },
-            { name: "Haematology", image: SERVICE_PLACEHOLDER },
+            { name: "Haematology", image: SvcHaematology },
             { name: "Health Screening & Wellness", image: SvcHealth },
             { name: "Neurology", image: SvcNeurology },
             { name: "Obstetrics & Gynaecology", image: SvcOandG },
@@ -143,10 +152,10 @@ export const branches: Branch[] = [
             { name: "Paediatrics", image: SvcPaediatrics },
             { name: "Physiotherapy", image: SvcPhysio },
             { name: "Plastic & Reconstructive Surgery", image: SvcPlastic },
-            { name: "Psychiatry / Clinical Psychology", image: SERVICE_PLACEHOLDER },
-            { name: "Pulmonology", image: SERVICE_PLACEHOLDER },
+            { name: "Psychiatry / Clinical Psychology", image: SvcPsychiatry },
+            { name: "Pulmonology", image: SvcPulmonology },
             { name: "Surgical Services", image: SvcSurgery },
-            { name: "Urology", image: SERVICE_PLACEHOLDER },
+            { name: "Urology", image: SvcUrology },
         ],
         doctors: [
             { id: 5, name: "DR. OLUFISAYO BALOGUN", specialization: "Consultant Obstetrician and Gynaecologist / Medical Director", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630293/Dr_Fisayo_Balogun.png_Consultant_O_G_MD_Ikeja_o0xoag.png" },
@@ -174,10 +183,10 @@ export const branches: Branch[] = [
         services: [
             { name: "Cardiology", image: SvcCardiology },
             { name: "Diagnostic Imaging (Purple Ray)", image: SvcDiagImaging },
-            { name: "Dietetics", image: SERVICE_PLACEHOLDER },
+            { name: "Dietetics", image: SvcDietetics },
             { name: "Ear, Nose & Throat (ENT)", image: SvcENT },
             { name: "Emergency Medicine", image: SvcEmergency },
-            { name: "Endocrinology", image: SERVICE_PLACEHOLDER },
+            { name: "Endocrinology", image: SvcEndocrinology },
             { name: "Family Medicine & Primary Care", image: SvcFamilyMedicine },
             { name: "Health Screening & Wellness", image: SvcHealth },
             { name: "Nephrology", image: SvcNephrology },
@@ -298,7 +307,7 @@ export const branches: Branch[] = [
             { name: "Laparoscopic (Keyhole) Surgery", image: SERVICE_PLACEHOLDER },
             { name: "Orthopaedic and Spinal Surgery", image: SERVICE_PLACEHOLDER },
             { name: "Cardiothoracic Surgery", image: SERVICE_PLACEHOLDER },
-            { name: "Urology", image: SERVICE_PLACEHOLDER },
+            { name: "Urology", image: SvcUrology },
             { name: "Percutaneous Cardiac Interventions ", image: SERVICE_PLACEHOLDER },
             { name: "Full Intensive Care", image: SERVICE_PLACEHOLDER },
             { name: "High Dependency Care", image: SERVICE_PLACEHOLDER },

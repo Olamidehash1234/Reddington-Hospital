@@ -1,7 +1,3 @@
-// Interim image for services that don't have a photo yet.
-// Replace each with a real Cloudinary URL once the client supplies the photos.
-const IMAGE_PENDING = 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603305/placeholder_pqduas.png'
-
 export const services = [
     {
         id: 1,
@@ -146,63 +142,63 @@ export const services = [
     {
         id: 22,
         title: "Internal Medicine",
-        image: IMAGE_PENDING,
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296313/internal-medicine_cev5c5.jpg",
         description: "Comprehensive medical care for adults, covering the diagnosis, treatment and ongoing management of acute and chronic conditions, with a focus on coordinated care and overall health.",
         fullDescription: "Comprehensive medical care for adults, covering the diagnosis, treatment and ongoing management of acute and chronic conditions, with a focus on coordinated care and overall health.",
     },
     {
         id: 23,
         title: "Dermatology",
-        image: IMAGE_PENDING,
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296310/dermatology_uert5l.jpg",
         description: "Specialist care for conditions affecting the skin, hair and nails, with a focus on accurate diagnosis, appropriate treatment and the management of dermatological conditions.",
         fullDescription: "Specialist care for conditions affecting the skin, hair and nails, with a focus on accurate diagnosis, appropriate treatment and the management of dermatological conditions.",
     },
     {
         id: 24,
         title: "Endocrinology",
-        image: IMAGE_PENDING,
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296275/Endocrinology_yzhfwy.jpg",
         description: "Specialist diagnosis, evaluation and management of hormonal and metabolic disorders, including diabetes and its complications, thyroid conditions and other endocrine disorders in adults, children and adolescents.",
         fullDescription: "Specialist diagnosis, evaluation and management of hormonal and metabolic disorders, including diabetes and its complications, thyroid conditions and other endocrine disorders in adults, children and adolescents.",
     },
     {
         id: 25,
         title: "Haematology",
-        image: IMAGE_PENDING,
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296273/Haematology_bzgqcx.jpg",
         description: "Specialist diagnosis and management of blood disorders, including anaemia, sickle cell disease, blood clotting disorders, bleeding conditions and blood cancers, with comprehensive evaluation and ongoing care to support blood health.",
         fullDescription: "Specialist diagnosis and management of blood disorders, including anaemia, sickle cell disease, blood clotting disorders, bleeding conditions and blood cancers, with comprehensive evaluation and ongoing care to support blood health.",
     },
     {
         id: 26,
         title: "Pulmonology",
-        image: IMAGE_PENDING,
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296248/Pulmonology_yd7upv.jpg",
         description: "Specialist care for respiratory and lung conditions, including asthma, chronic obstructive pulmonary disease (COPD), pneumonia, sleep-related breathing disorders and other respiratory illnesses, with a focus on accurate diagnosis and effective management.",
         fullDescription: "Specialist care for respiratory and lung conditions, including asthma, chronic obstructive pulmonary disease (COPD), pneumonia, sleep-related breathing disorders and other respiratory illnesses, with a focus on accurate diagnosis and effective management.",
     },
     {
         id: 27,
         title: "Rheumatology",
-        image: IMAGE_PENDING,
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296285/Rheumatology_cm4a1u.jpg",
         description: "Specialist diagnosis and management of joint, muscle and autoimmune conditions, including arthritis, lupus, gout and other inflammatory disorders, helping to relieve symptoms, preserve mobility and improve quality of life.",
         fullDescription: "Specialist diagnosis and management of joint, muscle and autoimmune conditions, including arthritis, lupus, gout and other inflammatory disorders, helping to relieve symptoms, preserve mobility and improve quality of life.",
     },
     {
         id: 28,
         title: "Urology",
-        image: IMAGE_PENDING,
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296235/Urology_zwgben.jpg",
         description: "Comprehensive care for conditions affecting the urinary tract and male reproductive system, including prostate disorders, kidney and urinary stones, urinary tract infections and other urological conditions, through specialist evaluation and treatment.",
         fullDescription: "Comprehensive care for conditions affecting the urinary tract and male reproductive system, including prostate disorders, kidney and urinary stones, urinary tract infections and other urological conditions, through specialist evaluation and treatment.",
     },
     {
         id: 29,
         title: "Psychiatry and Clinical Psychology",
-        image: IMAGE_PENDING,
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296257/Psychiatry_and_Clinical_Psychology_pfwc3r.jpg",
         description: "Comprehensive mental health services, including psychological assessments, counselling, psychotherapy and psychiatric care for conditions such as anxiety, depression, mood disorders and other mental health concerns, supporting emotional and psychological wellbeing.",
         fullDescription: "Comprehensive mental health services, including psychological assessments, counselling, psychotherapy and psychiatric care for conditions such as anxiety, depression, mood disorders and other mental health concerns, supporting emotional and psychological wellbeing.",
     },
     {
         id: 30,
         title: "Nutrition and Dietetics",
-        image: IMAGE_PENDING,
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794296297/Nutrition_and_Dietetics_h60nn8.jpg",
         description: "Personalised nutritional care, including dietary assessments, nutrition planning and guidance tailored to individual health needs, supporting healthy eating habits and better management of nutrition-related conditions.",
         fullDescription: "Personalised nutritional care, including dietary assessments, nutrition planning and guidance tailored to individual health needs, supporting healthy eating habits and better management of nutrition-related conditions.",
     },
