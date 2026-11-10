@@ -30,20 +30,9 @@ export type Branch = {
 }
 
 const PLACEHOLDER_IMG = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603305/placeholder_pqduas.png"
-const FamilyMedicine = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603304/medicine_ekdfz6.png"
-const EmergencyCare = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603296/emergency_hrokmk.png"
-const CATHLAB = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603342/cathlab_vsbwam.png"
-const Diagnostic = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603343/diagnostic_lqermh.png"
 const MSL = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603346/msl_z5cy5q.png"
-const Intensive = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603346/intensive_lu6sor.png"
-const Urgent = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603341/urgent_gruoj4.png"
-const coronary = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603333/coronary_ceay9g.png"
-const Operating = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603360/operating_eak0in.png"
 const SERVICE_PLACEHOLDER = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603305/placeholder_pqduas.png"
 // DOCTOR_IMG placeholder retired — doctors without a real photo are commented out for now
-const Pharmacy = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603334/Pharmacy_wzigt3.png"
-const Dental = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603347/dental_abydqg.png"
-const Blog = "/image/home/blog/heart.png"
 const VI = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603340/Ikeja-hero_wtksoz.png"
 const Ikeja = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790718468/IMG_4929_p1bi92.jpg"
 const Lekki = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603340/Lekki-hero_ylk27m.png"
@@ -51,6 +40,29 @@ const Breast = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603348/Br
 const Maxy = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603364/Maxy-hero_hrie05.png"
 const Davidson = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603331/davidson-hero_ggro9k.png"
 const Wellness = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603308/wellness-hero_ommvb1.png"
+
+// Service-tile images (shared with the services page). Services without a photo use SERVICE_PLACEHOLDER
+// until the client supplies an image.
+const SvcCardiology = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002193/Cardiology_1_vprqz3.jpg"
+const SvcCriticalCare = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002404/critical_care_h7azeb.jpg"
+const SvcDiagImaging = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002570/diag-img_ty3bmk.jpg"
+const SvcNephrology = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003461/Neph_hs7gz8.jpg"
+const SvcEmergency = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775662523/emergency_q7tmpg.png"
+const SvcFamilyMedicine = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002887/Fam_med_zeobaw.jpg"
+const SvcGastro = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003066/gastro_rhmwtb.jpg"
+const SvcHealth = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775662168/health_wevig8.png"
+const SvcNeurology = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003605/Neurology_ghxmwv.jpg"
+const SvcOrthopaedics = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003365/ortho_ztb8rj.jpg"
+const SvcPaediatrics = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003393/paediatrics_jyzpky.jpg"
+const SvcPlastic = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003829/Plastic_ftfbfa.jpg"
+const SvcSurgery = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003085/surgery_pjflgp.jpg"
+const SvcENT = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002705/ent_exsxqu.jpg"
+const SvcOandG = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775662588/gyna_p4u0ea.png"
+const SvcOphthalmology = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003730/optha_hwyhig.jpg"
+const SvcPhysio = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781003738/physio_tvu0ii.jpg"
+const SvcBreast = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002083/Breast_Health1_wfdryi.jpg"
+const SvcDentistry = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781002543/Dentistry_yk9kbv.jpg"
+const SvcAudiology = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775660857/heart_fg0spv.png"
 
 export const branches: Branch[] = [
     {
@@ -62,15 +74,32 @@ export const branches: Branch[] = [
         fullDescription: "Our flagship hospital and the heart of the Reddington Hospital Group, this multi-specialist tertiary facility has set the standard for private healthcare in Nigeria since 2006. It serves as the hub for our most complex medical and surgical cases, bringing together an unparalleled team of consultants and cutting-edge technology under one roof.",
         image: VI,
         services: [
-            { name: "Family Medicine", image: FamilyMedicine },
-            { name: "24-hour Emergency Care", image: EmergencyCare },
-            { name: "Cardiac Catheterisation Laboratory (CATH LAB)", image: CATHLAB },
-            { name: "Full Diagnostic and Imaging Services", image: Diagnostic },
-            { name: "Medical Science Laboratory", image: MSL },
-            { name: "Primary and Urgent Care", image: Urgent },
-            { name: "Intensive Care Unit", image: Intensive },
-            { name: "Coronary Care Unit", image: coronary },
-            { name: "Operating Theatres", image: Operating },
+            { name: "Anaesthesia", image: SERVICE_PLACEHOLDER },
+            { name: "Cardiology", image: SvcCardiology },
+            { name: "Critical Care (ICU, NICU, CCU)", image: SvcCriticalCare },
+            { name: "Dermatology", image: SERVICE_PLACEHOLDER },
+            { name: "Diagnostic Imaging (Purple Ray)", image: SvcDiagImaging },
+            { name: "Dialysis", image: SvcNephrology },
+            { name: "Dietetics", image: SERVICE_PLACEHOLDER },
+            { name: "Endocrinology", image: SERVICE_PLACEHOLDER },
+            { name: "Emergency Medicine", image: SvcEmergency },
+            { name: "Family Medicine & Primary Care", image: SvcFamilyMedicine },
+            { name: "Gastroenterology", image: SvcGastro },
+            { name: "Haematology", image: SERVICE_PLACEHOLDER },
+            { name: "Health Screening & Wellness", image: SvcHealth },
+            { name: "Internal Medicine", image: SERVICE_PLACEHOLDER },
+            { name: "Laboratory Services", image: MSL },
+            { name: "Nephrology", image: SvcNephrology },
+            { name: "Neurology", image: SvcNeurology },
+            { name: "Neurosurgery", image: SvcNeurology },
+            { name: "Orthopaedics", image: SvcOrthopaedics },
+            { name: "Paediatrics", image: SvcPaediatrics },
+            { name: "Plastic Surgery", image: SvcPlastic },
+            { name: "Psychiatry / Clinical Psychology", image: SERVICE_PLACEHOLDER },
+            { name: "Pulmonology", image: SERVICE_PLACEHOLDER },
+            { name: "Rheumatology", image: SERVICE_PLACEHOLDER },
+            { name: "Surgical Services", image: SvcSurgery },
+            { name: "Urology", image: SERVICE_PLACEHOLDER },
         ],
         doctors: [
             { id: 1, name: "Dr. Abiodun Osibamowo", specialization: "Medical Director", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630439/Dr_Oshibamwo.png_Consultant_Internal_Medcine__jqzhy7.png" },
@@ -98,16 +127,26 @@ export const branches: Branch[] = [
         fullDescription: "For nearly two decades, Reddington Hospital Ikeja has served as a trusted healthcare partner to communities across the Lagos mainland. This one-stop multi-specialist facility brings together experienced consultants, comprehensive diagnostic capabilities, and emergency care in a convenient location, ensuring mainland residents have access to the same quality care our group is renowned for.",
         image: Ikeja,
         services: [
-            { name: "Family Medicine", image: FamilyMedicine },
-            { name: "24-hour Emergency Care", image: EmergencyCare },
-            { name: "Full Diagnostic Services", image: Diagnostic },
-            { name: "Outpatient Clinics", image: Urgent },
-            { name: "Pharmacy", image: Pharmacy },
-            { name: "Maternity Services", image: coronary },
-            { name: "Laboratory Services", image: MSL },
-            { name: "Surgery", image: Operating },
-            { name: "Paediatrics", image: Urgent },
-            { name: "Cardiology Care", image: Pharmacy },
+            { name: "Anaesthesia", image: SERVICE_PLACEHOLDER },
+            { name: "Cardiology", image: SvcCardiology },
+            { name: "Dietetics", image: SERVICE_PLACEHOLDER },
+            { name: "Ear, Nose & Throat (ENT)", image: SvcENT },
+            { name: "Emergency Medicine", image: SvcEmergency },
+            { name: "Endocrinology", image: SERVICE_PLACEHOLDER },
+            { name: "Family Medicine & Primary Care", image: SvcFamilyMedicine },
+            { name: "Gastroenterology", image: SvcGastro },
+            { name: "Haematology", image: SERVICE_PLACEHOLDER },
+            { name: "Health Screening & Wellness", image: SvcHealth },
+            { name: "Neurology", image: SvcNeurology },
+            { name: "Obstetrics & Gynaecology", image: SvcOandG },
+            { name: "Orthopaedics", image: SvcOrthopaedics },
+            { name: "Paediatrics", image: SvcPaediatrics },
+            { name: "Physiotherapy", image: SvcPhysio },
+            { name: "Plastic & Reconstructive Surgery", image: SvcPlastic },
+            { name: "Psychiatry / Clinical Psychology", image: SERVICE_PLACEHOLDER },
+            { name: "Pulmonology", image: SERVICE_PLACEHOLDER },
+            { name: "Surgical Services", image: SvcSurgery },
+            { name: "Urology", image: SERVICE_PLACEHOLDER },
         ],
         doctors: [
             { id: 5, name: "DR. OLUFISAYO BALOGUN", specialization: "Consultant Obstetrician and Gynaecologist / Medical Director", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630293/Dr_Fisayo_Balogun.png_Consultant_O_G_MD_Ikeja_o0xoag.png" },
@@ -133,11 +172,21 @@ export const branches: Branch[] = [
         fullDescription: "A star, one-stop multi-specialist facility established to bring Reddington's signature excellence and quality care to the Lekki axis. Our facility is equipped with the latest medical technology and staffed with experienced healthcare professionals committed to your wellbeing.",
         image: Lekki,
         services: [
-            { name: "Consultation", image: SERVICE_PLACEHOLDER },
-            { name: "Diagnostics", image: SERVICE_PLACEHOLDER },
-            { name: "Surgery", image: SERVICE_PLACEHOLDER },
-            { name: "Mental Health", image: SERVICE_PLACEHOLDER },
-            { name: "Wellness Programs", image: SERVICE_PLACEHOLDER },
+            { name: "Cardiology", image: SvcCardiology },
+            { name: "Diagnostic Imaging (Purple Ray)", image: SvcDiagImaging },
+            { name: "Dietetics", image: SERVICE_PLACEHOLDER },
+            { name: "Ear, Nose & Throat (ENT)", image: SvcENT },
+            { name: "Emergency Medicine", image: SvcEmergency },
+            { name: "Endocrinology", image: SERVICE_PLACEHOLDER },
+            { name: "Family Medicine & Primary Care", image: SvcFamilyMedicine },
+            { name: "Health Screening & Wellness", image: SvcHealth },
+            { name: "Nephrology", image: SvcNephrology },
+            { name: "Obstetrics & Gynaecology", image: SvcOandG },
+            { name: "Optometry", image: SvcOphthalmology },
+            { name: "Orthopaedics", image: SvcOrthopaedics },
+            { name: "Paediatrics", image: SvcPaediatrics },
+            { name: "Physiotherapy", image: SvcPhysio },
+            { name: "Surgical Services", image: SvcSurgery },
         ],
         doctors: [
             { id: 9, name: "Dr. Muyiwa Fagbohun", specialization: "Consultant Gynecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630586/Dr_Fagbohun.png_Consultant_O_G_gpsixu.png" },
@@ -159,65 +208,12 @@ export const branches: Branch[] = [
         fullDescription: "The Maxy Super-specialty Centre is a unique, multi-disciplinary ambulatory care facility designed to deliver high-quality care in an office-like environment, away from traditional hospital bureaucracy. Staffed by a carefully selected group of highly skilled clinicians, the centre focuses on day-case and outpatient specialty services, ensuring patients receive safe, effective, and efficient care according to internationally accepted guidelines.",
         image: Maxy,
         services: [
-            {
-                name: "Maxy Dental Centre",
-                image: Dental,
-                description: [
-                    "Cosmetic Dentistry",
-                    "Invisalign",
-                    "Teeth Whitening",
-                    "Implants",
-                    "Orthodontics",
-                    "Oral and Maxillofacial Surgery"
-                ]
-            },
-            {
-                name: "Maxy ENT Centre",
-                image: Blog,
-                description: [
-                    "Ophthalmic consultations",
-                    "Glaucoma treatment",
-                    "Cataract surgery",
-                    "Diabetic retinopathy evaluation",
-                ]
-            },
-            {
-                name: "Maxy Endoscopy Centre",
-                image: Blog,
-                description: [
-                    "Colonoscopy",
-                    "Gastroscopy",
-                    "Bronchoscopy",
-                    "Therapeutic endoscopic procedures",
-                ]
-            },
-            {
-                name: "Physiotherapy Centre",
-                image: Blog,
-                description: [
-                    "vices rendered",
-                    "Joint manipulation",
-                    "Rehabilitation",
-                    "Sports injury treatment",
-                ]
-            },
-            {
-                name: "Audiology and Vestibular Clinic",
-                image: Dental,
-                description: [
-                    "Hearing tests",
-                    "Hearing aid services",
-                    "Balance disorders",
-                ]
-            },
-            {
-                name: "Neurodiagnostic Centre",
-                image: Blog,
-                description: [
-                    "Ambulatory EEG Monitoring",
-                    "Transcranial Doppler Ultrasound",
-                ]
-            },
+            { name: "Audiology", image: SvcAudiology },
+            { name: "Dentistry & Maxillofacial Surgery", image: SvcDentistry },
+            { name: "Ear, Nose & Throat (ENT)", image: SvcENT },
+            { name: "Endoscopy, Gastroscopy & Colonoscopy", image: SvcGastro },
+            { name: "Ophthalmology / Optometry", image: SvcOphthalmology },
+            { name: "Physiotherapy", image: SvcPhysio },
         ],
         doctors: [
             // { id: 13, name: "Dr. Kunle Fadeji", specialization: "Specialist Consultant", image: DOCTOR_IMG }, // no photo yet
@@ -267,16 +263,14 @@ export const branches: Branch[] = [
         fullDescription: "The Breast and Gynae Centre is Nigeria's only dedicated women's healthcare centre providing comprehensive, holistic care for women at every life stage. Our mission is to deliver advanced, compassionate, and personalized care that spans wellness, curative treatment, and aesthetic services. By bringing together an exclusive team of UK and Nigeria-based specialists with cutting-edge technology, we have created a model for the future of women's health in West Africa.",
         image: Breast,
         services: [
-            { name: "Gynaecology and Reproductive Health", image: SERVICE_PLACEHOLDER },
-            { name: " Fibroid Clinic (offering the full spectrum of management options)", image: SERVICE_PLACEHOLDER },
-            { name: "Breast Health Clinic (preventive, curative, and aesthetic)", image: SERVICE_PLACEHOLDER },
-            { name: "Women's Wellness Clinic", image: SERVICE_PLACEHOLDER },
-            { name: "Weight Loss Clinic", image: SERVICE_PLACEHOLDER },
-            { name: "Comprehensive Medical Check-up", image: SERVICE_PLACEHOLDER },
-            { name: "Fertility Assessment and Infertility Care", image: SERVICE_PLACEHOLDER },
-            { name: "Menopausal Health", image: SERVICE_PLACEHOLDER },
-            { name: "Menopausal Health", image: SERVICE_PLACEHOLDER },
-            { name: "Advanced Women'sImaging (3D Mammography, 3D ABUS, Stereotactic Biopsy, DEXA Bone Density Scan)", image: SERVICE_PLACEHOLDER },
+            { name: "Antenatal Care", image: SERVICE_PLACEHOLDER },
+            { name: "Breast Clinic", image: SvcBreast },
+            { name: "Bodycare (Plastic Surgery)", image: SvcPlastic },
+            { name: "Diagnostic Imaging (Radiology)", image: SvcDiagImaging },
+            { name: "Family Planning", image: SERVICE_PLACEHOLDER },
+            { name: "Health Screening & Wellness", image: SvcHealth },
+            { name: "Laboratory Services", image: MSL },
+            { name: "Obstetrics & Gynaecology", image: SvcOandG },
         ],
         doctors: [
             { id: 21, name: "Dr. John Afolabi", specialization: "Consultant Obstetrician and Gynaecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr_rr7ac5.png" },
