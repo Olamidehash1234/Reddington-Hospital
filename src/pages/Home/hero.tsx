@@ -19,19 +19,13 @@ export default function HeroSection() {
     // Carousel state
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const slideRefs = useRef<Array<HTMLImageElement | null>>([]);
+    // Facility rotation per client's correction: one shot each, no night duplicates.
+    // 1) VI (Day)  2) Lekki (Day)  3) Breast & Gynae  4) VI 6th-floor interior  5) Ikeja
     const carouselImages = [
         'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777109094/hero-new1_vvph7a.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777109081/hero-new2_iscrce.png',
         'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777109071/hero-new3_qvyesk.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777109062/hero-new4_amdtgt.png',
         'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777109050/hero-new5_i1x1il.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110290/hero-new6_eqyfrq.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110307/hero-new7_lbdzkl.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110318/hero-new8_bpui2x.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110333/hero-new9_uc38ym.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110353/hero-new10_uvxtwl.png',
         'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1777110368/hero-new11_r6w66q.png',
-        'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790718724/IMG_4921_zu5212.jpg',
         'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790718513/IMG_4928_ebcdvd.jpg'
     ];
     const loadedSlides = useMemo(() => {

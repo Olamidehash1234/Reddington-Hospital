@@ -27,14 +27,14 @@ const leaders: Leader[] = [
     {
         id: 4,
         name: "Dami Ogala",
-        title: "Group Operations & Strategy Advisor",
+        title: "Group Operations and Strategy Manager",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/DAMI_OGALA_oyyxzn.png",
     },
     {
         id: 5,
         name: "Andy Cunliffe",
         title: "General Manager, Victoria Island",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/ANDY_CUNLIFFE_zy30sm.png",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1793774152/Andy_Cunliffe_new_njez9a.jpg",
     },
     {
         id: 6,
@@ -46,7 +46,7 @@ const leaders: Leader[] = [
         id: 7,
         name: "Gbolahan Sonoiki",
         title: "Group Chief Financial Officer",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/GBOLAHAN_SONOIKI_wtbytc.png",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1793774153/Gbolahan_Sonoiki_new_oexpoi.jpg",
     },
     {
         id: 8,

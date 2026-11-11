@@ -19,14 +19,15 @@ export const inHouseDoctors: Doctor[] = [
         type: "in-house",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630439/Dr_Oshibamwo.png_Consultant_Internal_Medcine__jqzhy7.png",
     },
-    {
-        id: 2,
-        name: "Dr. John-Ameh Audu",
-        specialty: "Neonatologist",
-        hospital: "Reddington VI",
-        type: "in-house",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630440/Dr_Audu.png_Consultant_Neonatologist__mq1muz.png",
-    },
+    // Removed from the consultant list per client (4 Nov 2026) — hidden pending confirmation:
+    // {
+    //     id: 2,
+    //     name: "Dr. John-Ameh Audu",
+    //     specialty: "Neonatologist",
+    //     hospital: "Reddington VI",
+    //     type: "in-house",
+    //     image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630440/Dr_Audu.png_Consultant_Neonatologist__mq1muz.png",
+    // },
     {
         id: 3,
         name: "Dr. Muyiwa Fagbohun",
