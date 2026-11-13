@@ -21,7 +21,7 @@ export default function Accreditation() {
                         </p>
 
                         <p>
-                            Today, we remain continuously accredited, with our most recent re-accreditation extending through to 2028. Yet we understand that the journey to excellence is never truly completed. Each day presents a fresh opportunity to refine our processes, enhance our facilities, and elevate the care we provide. At Reddington, the pursuit of quality is perpetual.
+                            Today, we remain continuously accredited, with our most recent re-accreditation extending through to 2027. Yet we understand that the journey to excellence is never truly completed. Each day presents a fresh opportunity to refine our processes, enhance our facilities, and elevate the care we provide. At Reddington, the pursuit of quality is perpetual.
                         </p>
                     </div>
                 </div>

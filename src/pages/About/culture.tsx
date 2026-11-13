@@ -1,3 +1,46 @@
+const coreValues = [
+    {
+        title: "Patient Safety",
+        icon: "/icon/safety.svg",
+        description: "Your safety and wellbeing always come first.",
+    },
+    {
+        title: "Respect",
+        icon: "/icon/respect.svg",
+        description: "You will be treated with dignity, kindness, and respect.",
+    },
+    {
+        title: "Accountability",
+        icon: "/icon/account.svg",
+        description: "We take responsibility for our actions and your care",
+    },
+    {
+        title: "Compassion",
+        icon: "/icon/compassion.svg",
+        description: "We listen, care, and support you with empathy.",
+    },
+    {
+        title: "Trust",
+        icon: "/icon/trust.svg",
+        description: "You can rely on us to be honest, dependable, and professional.",
+    },
+    {
+        title: "Integrity",
+        icon: "/icon/integrity.svg",
+        description: "We do what is right, always.",
+    },
+    {
+        title: "Clinical Excellence",
+        icon: "/icon/Excellence.svg",
+        description: "We provide high-quality care based on the best",
+    },
+    {
+        title: "Effective Communication",
+        icon: "/icon/communication.svg",
+        description: "We explain things clearly and keep you informed.",
+    },
+];
+
 export default function Culture() {
     return (
         <section className="bg-[#F9F9F9] pb-[40px] lg:pb-[80px]">
@@ -215,117 +258,45 @@ export default function Culture() {
                                 </div>
                             </div>
 
-                            {/* Desktop layout (pixel-matched to Figma frame) */}
-                            <div className="relative hidden border border-[#E40714] lg:block rounded-[12px]">
-                                <img src="/icon/illustrations/values-frame.svg" alt="Core Values Frame" className="relative w-full h-full object-cover" />
-                                <p className="absolute left-[39px] top-[39px]  text-[24px] leading-[normal] text-black whitespace-nowrap" style={{ fontFamily: "TexGyreAdventor" }}>
-                                    Our Core Values
-                                </p>
-                                <p className="absolute left-[39px] top-[81px]  font-normal text-[16px] text-[#2D2D2D] whitespace-nowrap">
-                                    <span className="leading-[19px]">{`The principles that drive our pursuit in medical excellence - `}</span>
-                                    <span className=" font-semibold leading-[19px] text-[#E40714]">
-                                        PRACTICE
-                                    </span>
-                                </p>
+                            <div className="relative hidden overflow-hidden rounded-[12px] border border-[#E40714] bg-white lg:block">
+                                <img
+                                    src="/icon/illustrations/values-frame.svg"
+                                    alt=""
+                                    aria-hidden="true"
+                                    className="pointer-events-none absolute inset-0 h-full w-full object-fill"
+                                />
+                                <div className="relative z-10 px-6 py-7 lg:px-8 lg:py-8 2xl:px-10 2xl:py-10">
+                                    <h2
+                                        className="text-[24px] leading-normal text-black"
+                                        style={{ fontFamily: "TexGyreAdventor" }}
+                                    >
+                                        Our Core Values
+                                    </h2>
+                                    <p className="mt-2 flex flex-wrap gap-x-1 text-[16px] leading-6 text-[#2D2D2D]">
+                                        <span>The principles that drive our pursuit in medical excellence -</span>
+                                        <span className="font-semibold text-[#E40714]">PRACTICE</span>
+                                    </p>
 
-                                {/* Row 1 */}
-                                <div className="absolute left-[39px] top-[120px] w-[258px] h-[152px] border-b border-[#2D2D2D]">
-                                    <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block " src="/icon/safety.svg" />
+                                    <div className="mt-8 grid grid-cols-2 gap-x-8 gap-y-7 2xl:grid-cols-4">
+                                        {coreValues.map((value) => (
+                                            <div key={value.title} className="min-w-0 border-b border-[#2D2D2D]/50 pb-5">
+                                                <div className="flex min-h-[60px] items-center gap-3">
+                                                    <div className="flex h-[60px] w-[60px] shrink-0 items-center justify-center rounded-[12px] bg-[#E40714] p-[10px]">
+                                                        <img alt="" src={value.icon} />
+                                                    </div>
+                                                    <h3 className="min-w-0 text-[16px] font-semibold leading-5 text-[#2D2D2D]">
+                                                        {value.title}
+                                                    </h3>
+                                                </div>
+                                                <p className="mt-4 text-[16px] leading-6 text-[#2D2D2D]">
+                                                    {value.description}
+                                                </p>
+                                            </div>
+                                        ))}
                                     </div>
-                                    <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
-                                        Patient Safety
-                                    </p>
-                                    <p className="absolute left-0 top-[84px] w-[258px]  font-normal text-[16px] leading-[24px] tracking-[-0.32px] text-[#2D2D2D]">
-                                        Your safety and wellbeing always come first.
-                                    </p>
-                                </div>
-
-                                <div className="absolute left-[calc(25%+7.5px)] top-[120px] w-[297px] h-[152px] border-b border-[#2D2D2D]">
-                                    <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block " src="/icon/respect.svg" />
-                                    </div>
-                                    <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
-                                        Respect
-                                    </p>
-                                    <p className="absolute left-0 top-[84px] w-[297px]  font-normal text-[16px] leading-[24px] tracking-[-0.32px] text-[#2D2D2D]">
-                                        You will be treated with dignity, kindness, and respect.
-                                    </p>
-                                </div>
-
-                                <div className="absolute left-[calc(50%+15px)] top-[120px] w-[298px] h-[152px] border-b border-[#2D2D2D]">
-                                    <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block " src="/icon/account.svg" />
-                                    </div>
-                                    <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
-                                        Accountability
-                                    </p>
-                                    <p className="absolute left-0 top-[84px] w-[298px]  font-normal text-[16px] leading-[24px] tracking-[-0.32px] text-[#2D2D2D]">
-                                        We take responsibility for our actions and your care
-                                    </p>
-                                </div>
-
-                                <div className="absolute left-[calc(75%+23.5px)] top-[120px] w-[288px] h-[152px] border-b border-[#2D2D2D]">
-                                    <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block " src="/icon/compassion.svg" />
-                                    </div>
-                                    <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
-                                        Compassion
-                                    </p>
-                                    <p className="absolute left-0 top-[84px] w-[298px]  font-normal text-[16px] leading-[24px] tracking-[-0.32px] text-[#2D2D2D]">
-                                        We listen, care, and support you with empathy.
-                                    </p>
-                                </div>
-
-                                {/* Row 2 */}
-                                <div className="absolute left-[39px] top-[296px] w-[258px] h-[152px] border-b border-[#2D2D2D]">
-                                    <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block " src="/icon/trust.svg" />
-                                    </div>
-                                    <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
-                                        Trust
-                                    </p>
-                                    <p className="absolute left-0 top-[84px] w-[258px]  font-normal text-[16px] leading-[24px] tracking-[-0.32px] text-[#2D2D2D]">
-                                        You can rely on us to be honest, dependable, and professional.
-                                    </p>
-                                </div>
-
-                                <div className="absolute left-[calc(25%+7.5px)] top-[296px] w-[297px] h-[152px] border-b border-[#2D2D2D]">
-                                    <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block " src="/icon/integrity.svg" />
-                                    </div>
-                                    <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
-                                        Integrity
-                                    </p>
-                                    <p className="absolute left-0 top-[84px] w-[297px]  font-normal text-[16px] leading-[24px] tracking-[-0.32px] text-[#2D2D2D]">
-                                        We do what is right, always.
-                                    </p>
-                                </div>
-
-                                <div className="absolute left-[calc(50%+15px)] top-[296px] w-[298px] h-[152px] border-b border-[#2D2D2D]">
-                                    <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block " src="/icon/Excellence.svg" />
-                                    </div>
-                                    <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
-                                        Clinical Excellence
-                                    </p>
-                                    <p className="absolute left-0 top-[84px] w-[298px]  font-normal text-[16px] leading-[24px] tracking-[-0.32px] text-[#2D2D2D]">
-                                        We provide high-quality care based on the best
-                                    </p>
-                                </div>
-
-                                <div className="absolute left-[calc(75%+23.5px)] top-[296px] w-[298px] h-[152px] border-b border-[#2D2D2D]">
-                                    <div className="absolute left-0 top-[20px] rounded-[10px] bg-[#E40714] p-[10px]">
-                                        <img alt="" className="block " src="/icon/communication.svg" />
-                                    </div>
-                                    <p className="absolute left-[54px] top-[33px]  font-semibold text-[16px] leading-[19px] text-[#2D2D2D] whitespace-nowrap">
-                                        Effective Communication
-                                    </p>
-                                    <p className="absolute left-0 top-[84px] w-[298px]  font-normal text-[16px] leading-[24px] tracking-[-0.32px] text-[#2D2D2D]">
-                                        We explain things clearly and keep you informed.
-                                    </p>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

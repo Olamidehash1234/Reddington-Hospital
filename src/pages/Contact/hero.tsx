@@ -1,15 +1,27 @@
 import ResponsiveImage from "../../components/ResponsiveImage";
 
-const ContactHero = () => {
+const ContactHero = ({
+    title = "Contact Us",
+    description = "Please fill the form below or call the numbers attached to each branch to book an appointment.",
+    imageSrc = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603424/hero_fnclxb.png",
+    imageAlt = "",
+    className = "",
+}: {
+    title?: string;
+    description?: string;
+    imageSrc?: string;
+    imageAlt?: string;
+    className?: string;
+}) => {
     return (
-        <div className="relative h-[300px] lg:h-[424px] overflow-hidden">
+        <div className={`relative h-[300px] lg:h-[424px] overflow-hidden ${className}`}>
             {/* Background Image */}
             <div
                 className="absolute inset-0 bg-cover"
             >
                 <ResponsiveImage
-                    src="https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775603424/hero_fnclxb.png"
-                    alt=""
+                    src={imageSrc}
+                    alt={imageAlt}
                     // width={1600}
                     // height={424}
                     crop="fill"
@@ -26,10 +38,10 @@ const ContactHero = () => {
                 <div className="text-center">
                     {/* Heading */}
                     <h1 className="text-[24px] mb-[10px] lg:mb-0 lg:text-[48px] font-bold lg:leading-normal text-white capitalize" style={{ fontFamily: "TexGyreAdventor" }}>
-                        Contact Us
+                        {title}
                     </h1>
-                    <p className="text-[#FFFFFF] text-[13px] lg:text-[16] max-w-[857px] font-bold leading-[20px]">
-                        Get in touch with us for appointments, inquiries, or emergency services.
+                    <p className="text-[#FFFFFF] text-[16px] lg:text-[18px] max-w-[857px] leading-[24px]">
+                        {description}
                     </p>
                 </div>
             </div>

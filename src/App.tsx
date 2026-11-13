@@ -8,6 +8,7 @@ import Doctor from './pages/Doctor'
 import Ourbranches from './pages/OurBranches'
 import BranchDetail from './pages/OurBranches/BranchDetail'
 import Contact from './pages/Contact';
+import EmergencyResponse from './pages/EmergencyResponse';
 import Awards from './pages/Awards';
 import Career from './pages/Career'
 import Blog from './pages/Blog&Insights';
@@ -26,6 +27,7 @@ function App() {
           <Route path="/our-branches" element={<Ourbranches />} />
           <Route path="/branches/:name" element={<BranchDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/emergency-response" element={<EmergencyResponse />} />
           <Route path="/awards" element={<Awards />} />
           <Route path="/career" element={<Career />} />
           <Route path="/blog&insights" element={<Blog />} />

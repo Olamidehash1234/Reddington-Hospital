@@ -10,6 +10,8 @@ type TimePickerProps = {
     onChange: (time: string) => void;
     placeholder?: string;
     className?: string;
+    required?: boolean;
+    invalid?: boolean;
 };
 
 const TIME_SLOTS = Array.from({ length: 24 }, (_, hour) => hour)
@@ -28,6 +30,8 @@ export default function TimePicker({
     onChange,
     placeholder = "Preferred Time",
     className,
+    required = false,
+    invalid = false,
 }: TimePickerProps) {
     const [open, setOpen] = useState(false);
 
@@ -39,6 +43,8 @@ export default function TimePicker({
                     <button
                         id={id}
                         type="button"
+                        aria-required={required || undefined}
+                        aria-invalid={invalid || undefined}
                         className={cn(
                             "flex h-[50px] w-full items-center justify-between rounded-[12px] border border-[#6F7271]/60 bg-white px-5 text-left text-[13px] lg:text-[14px] tracking-[-0.54px] text-[#111111] transition-colors",
                             "focus:outline-none focus:border-[#E40714]",
