@@ -12,6 +12,8 @@ type DatePickerProps = {
     onChange: (date: Date | undefined) => void;
     placeholder?: string;
     className?: string;
+    required?: boolean;
+    invalid?: boolean;
 };
 
 export default function DatePicker({
@@ -21,6 +23,8 @@ export default function DatePicker({
     onChange,
     placeholder = "Preferred Date",
     className,
+    required = false,
+    invalid = false,
 }: DatePickerProps) {
     const [open, setOpen] = useState(false);
 
@@ -36,6 +40,8 @@ export default function DatePicker({
                     <button
                         id={id}
                         type="button"
+                        aria-required={required || undefined}
+                        aria-invalid={invalid || undefined}
                         className={cn(
                             "flex h-[50px] w-full items-center justify-between rounded-[12px] border border-[#6F7271]/60 bg-white px-5 text-left text-[13px] lg:text-[14px] tracking-[-0.54px] text-[#111111] transition-colors",
                             "focus:outline-none focus:border-[#E40714]",

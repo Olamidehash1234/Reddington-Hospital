@@ -1,3 +1,5 @@
+import ResponsiveImage from "../../components/ResponsiveImage";
+
 type Leader = {
     id: number
     name: string
@@ -10,7 +12,7 @@ const leaders: Leader[] = [
         id: 1,
         name: "Dr. Adeyemi Onabowale",
         title: "Founder/CEO",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/DR._ADEYEMI_ONOBOWALE_mbe6ng.png",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794559424/Dr._Adeyemi_Onabowale_oodmsp.jpg",
     },
     {
         id: 2,
@@ -20,33 +22,33 @@ const leaders: Leader[] = [
     },
     {
         id: 3,
-        name: "Dr. Olafunke Ijimakin",
+        name: "Dr. Olufunke Ijimakin",
         title: "Director of Medical Services & Compliance",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/DR._OLAFUNKE_IJIMAKIN_cgyoq1.png",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794560039/Dr._Olufunke_Ijimakin_uq9jz7.jpg",
     },
     {
         id: 4,
         name: "Dami Ogala",
         title: "Group Operations and Strategy Manager",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/DAMI_OGALA_oyyxzn.png",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794559421/Dami_Ogala_ipiusd.jpg",
     },
     {
         id: 5,
         name: "Andy Cunliffe",
         title: "General Manager, Victoria Island",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1793774152/Andy_Cunliffe_new_njez9a.jpg",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794559407/Andy_Cunliffe_mtjtvu.jpg",
     },
     {
         id: 6,
         name: "Bola Akinsola",
         title: "Executive Director, Reddington Hospital Ikeja",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Bola_Akinsola_azn9nk.png",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794560043/Bola_Akinsola_qlsntm.jpg",
     },
     {
         id: 7,
         name: "Gbolahan Sonoiki",
         title: "Group Chief Financial Officer",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1793774153/Gbolahan_Sonoiki_new_oexpoi.jpg",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794560036/Gbolahan_Sonoiki_mwqws4.jpg",
     },
     {
         id: 8,
@@ -62,10 +64,22 @@ function LeadershipMemberCard({ leader }: { leader: Leader }) {
             <div className="relative z-20 mb-[20px] w-full">
                 <div className="relative h-[300px] w-full sm:h-[320px] lg:h-[355px]">
                     <div className="absolute bottom-[3.93%] left-[3.45%] right-[3.79%] top-[3.28%] overflow-hidden rounded-br-[52px] rounded-tl-[52px] rounded-bl-none rounded-tr-none lg:bottom-[10px] lg:left-[10px] lg:right-[11px] lg:top-[10px] lg:rounded-br-[52px] lg:rounded-tl-[52px]">
-                        <img
+                        <ResponsiveImage
                             src={leader.image}
                             alt={leader.name}
+                            // width={640}
+                            // height={710}
+                            // crop="fill"
+                            quality="auto"
+                            format="auto"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                            widths={[320, 480, 640, 768]}
+                            loading="lazy"
+                            decoding="async"
                             className="h-full w-full object-cover"
+                            style={{
+                                objectPosition: leader.id === 6 || leader.id === 7 ? "center top" : "center",
+                            }}
                         />
                     </div>
 

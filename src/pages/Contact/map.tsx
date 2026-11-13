@@ -13,19 +13,25 @@ function buildMapEmbedUrl(query: string) {
     return `https://www.google.com/maps?q=${encodeURIComponent(query)}&z=16&output=embed`;
 }
 
-export default function Map() {
+const contactBranches = [
+    "Reddington Multi-Specialist Hospital Victoria Island",
+    "Reddington Hospital Ikeja",
+    "Reddington Lekki Hospital",
+    "Reddington Maxy Super Speciality Centre",
+    "Reddington Breast and Gynae Centre",
+];
+
+const emergencyBranches = contactBranches.slice(0, 3);
+
+export default function Map({
+    emergencyOnly = false,
+    className = "",
+}: {
+    emergencyOnly?: boolean;
+    className?: string;
+}) {
     const contactLocations = useMemo<ContactLocation[]>(() => {
-        const preferredBranches = [
-            "Reddington Multi-Specialist Hospital Victoria Island",
-            "Reddington Hospital Ikeja",
-            "Reddington Lekki Hospital",
-            "Reddington Maxy Super Speciality Centre",
-            // "Purple Ray Diagnostic Centre",
-            "Reddington Breast and Gynae Centre",
-            // "Davidson Surgical and Critical Care Centre",
-            // "The BodyCare Plastic Surgery Centre",
-            // "Reddington Wellness and Medical Check-Up Centre",
-        ];
+        const preferredBranches = emergencyOnly ? emergencyBranches : contactBranches;
 
         return preferredBranches
             .map((name) => branches.find((branch) => branch.name === name))
@@ -37,7 +43,7 @@ export default function Map() {
                 phones: branch.contact ?? [],
                 query: `${branch.name}, ${branch.location}`,
             }));
-    }, []);
+    }, [emergencyOnly]);
 
     const mapContainerRef = useRef<HTMLDivElement>(null);
     const [activeLocationId, setActiveLocationId] = useState<number>(
@@ -53,7 +59,7 @@ export default function Map() {
     }
 
     return (
-        <section className="bg-[#F9F9F9] px-[16px] pt-[30px] lg:pt-[50px] lg:px-[80px] lg:pb-[0px]">
+        <section className={`bg-[#F9F9F9] px-[16px] pt-[30px] lg:pt-[50px] lg:px-[80px] lg:pb-[0px] ${className}`}>
             <div className="">
                 <div className="grid grid-cols-1 gap-[22px] lg:grid-cols-[0.95fr_1.1fr] lg:items-stretch lg:gap-[28px]">
                     <div className="flex flex-col gap-[18px] lg:gap-[30px]">

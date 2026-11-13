@@ -53,13 +53,13 @@ export default function Navbar() {
   ];
 
   const emergencyButton = (
-    <button
-      type="button"
+    <Link
+      to="/emergency-response"
       className="text-white items-center hover:underline underline-offset-[4px] space-x-2 px-4 rounded-full flex"
     >
       <img src="/icon/call.svg" alt="" className="animate-bounce" style={{ animationDelay: '0s' }} />
       <span className="text-sm font-medium">Emergency Response</span>
-    </button>
+    </Link>
   );
 
   const appointmentButton = (
@@ -163,13 +163,14 @@ export default function Navbar() {
             ))}
 
             <div className="pt-4 border-t border-white border-opacity-30 space-y-3">
-              <button
-                type="button"
+              <Link
+                to="/emergency-response"
                 className="navbar-emergency-mobile flex items-center space-x-2 text-white hover:underline underline-offset-[4px] w-full justify-center"
+                onClick={() => setIsOpen(false)}
               >
                 <img src="/icon/call.svg" alt="" className="w-[30px] h-[30px] animate-bounce" style={{ animationDelay: '0s' }} />
                 <span className="text-white text-sm font-medium">Emergency Response</span>
-              </button>
+              </Link>
 
               <Link
                 to="/contact#contact-form"
