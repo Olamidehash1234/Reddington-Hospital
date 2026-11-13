@@ -7,10 +7,11 @@ interface DropdownProps {
     name: string;
     placeholder: string;
     options: DropdownOption[];
+    required?: boolean;
 }
 
 export default function Dropdown(props: DropdownProps) {
-    const { id, name, placeholder, options } = props;
+    const { id, name, placeholder, options, required = false } = props;
     const buttonRef = useRef<HTMLButtonElement | null>(null);
     const listRef = useRef<HTMLDivElement | null>(null);
     const [open, setOpen] = useState(false);
@@ -71,6 +72,7 @@ export default function Dropdown(props: DropdownProps) {
                 ref={buttonRef}
                 id={id}
                 type="button"
+                aria-required={required || undefined}
                 aria-haspopup="listbox"
                 aria-expanded={open}
                 aria-controls={`${id}-listbox`}
