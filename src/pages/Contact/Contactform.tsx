@@ -56,6 +56,20 @@ export default function Contactform() {
         }
     }, [location.hash, location.pathname]);
 
+    useEffect(() => {
+        if (!submitted) return;
+
+        const timeoutId = window.setTimeout(() => {
+            setAppointmentOptions(
+                Array.from({ length: 3 }, () => ({ date: undefined as Date | undefined, time: "" }))
+            );
+            setScheduleError(false);
+            setSubmitted(false);
+        }, 5000);
+
+        return () => window.clearTimeout(timeoutId);
+    }, [submitted]);
+
     return (
         <section id="contact-form" className="bg-[#F9F9F9] px-[16px] py-[40px] lg:py-[80px] lg:px-[80px]">
             <div className="">
@@ -78,6 +92,9 @@ export default function Contactform() {
                                 <h3 className="text-[22px] font-semibold">Appointment preferences received</h3>
                                 <p className="mx-auto mt-4 max-w-[680px] text-[16px] leading-7">
                                     Thank you very much for sending in your appointment preferences. A member of our team will reach out to you to confirm your appointment within 24 hours
+                                </p>
+                                <p className="mt-4 text-[14px] text-[#4B4B4B]">
+                                    This form will reset in 5 seconds.
                                 </p>
                             </div>
                         ) : (
