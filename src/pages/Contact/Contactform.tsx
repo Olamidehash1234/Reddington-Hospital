@@ -1,37 +1,18 @@
-import { useId, useState, useEffect } from "react";
+import { useId, useState, useEffect, useCallback, type FormEvent } from "react";
 import { useLocation } from "react-router-dom";
 import Dropdown from "../../components/Dropdown";
 import DatePicker from "../../components/ui/date-picker";
 import TimePicker from "../../components/ui/time-picker";
-import { services } from "../../data/services";
-
-// Visiting consultant specialties offered in addition to the core departments.
-const visitingSpecialties = [
-    "Urology",
-    "Endocrinology",
-    "Psychiatry",
-    "Clinical Psychology",
-    "Dermatology",
-    "Rheumatology",
-    "Pulmonology",
-    "Haematology",
-];
-
-const departmentOptions = [
-    ...services.map((service) => ({
-        value: service.title.toLowerCase().replace(/\s+/g, "-"),
-        label: service.title,
-    })),
-    ...visitingSpecialties.map((name) => ({
-        value: name.toLowerCase().replace(/\s+/g, "-"),
-        label: name,
-    })),
-];
+import Toast from "../../components/Toast";
+import { EmailJSConfigurationError, sendAppointmentRequest } from "./appointmentEmail";
+import { branchOptions, departmentOptions, genderOptions } from "./formOptions";
 
 export default function Contactform() {
     const id = useId();
     const location = useLocation();
     const [submitted, setSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [toastMessage, setToastMessage] = useState("");
     const [appointmentOptions, setAppointmentOptions] = useState(
         Array.from({ length: 3 }, () => ({ date: undefined as Date | undefined, time: "" }))
     );
@@ -43,6 +24,49 @@ export default function Contactform() {
         );
         setAppointmentOptions(nextOptions);
         setScheduleError(nextOptions.some((option) => !option.date || !option.time));
+    };
+
+    const hideToast = useCallback(() => setToastMessage(""), []);
+
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        hideToast();
+
+        const missingOption = appointmentOptions.findIndex((option) => !option.date || !option.time);
+        if (missingOption !== -1) {
+            setScheduleError(true);
+            setToastMessage("Please choose a date and time for each of the three appointment options.");
+            document.getElementById(`${id}-preferredDate${missingOption + 1}`)?.focus();
+            return;
+        }
+
+        const formData = new FormData(event.currentTarget);
+        const getValue = (name: string) => formData.get(name)?.toString() ?? "";
+        const missingDropdown = [
+            { name: "gender", label: "gender" },
+            { name: "service", label: "service or department" },
+            { name: "branch", label: "preferred branch" },
+        ].find((field) => !getValue(field.name));
+
+        if (missingDropdown) {
+            setToastMessage(`Please select a ${missingDropdown.label} before sending your appointment request.`);
+            document.getElementById(`${id}-${missingDropdown.name}`)?.focus();
+            return;
+        }
+
+        setIsSubmitting(true);
+        try {
+            await sendAppointmentRequest(formData);
+            setSubmitted(true);
+        } catch (error) {
+            setToastMessage(
+                error instanceof EmailJSConfigurationError
+                    ? "We can’t accept appointment requests right now. Please call your preferred branch to book."
+                    : "Your request couldn’t be sent. Please try again, or call your preferred branch to book."
+            );
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     useEffect(() => {
@@ -72,6 +96,7 @@ export default function Contactform() {
 
     return (
         <section id="contact-form" className="bg-[#F9F9F9] px-[16px] py-[40px] lg:py-[80px] lg:px-[80px]">
+            <Toast message={toastMessage} type="error" show={Boolean(toastMessage)} onHide={hideToast} />
             <div className="">
                 <div className="overflow-hidden rounded-[20px] bg-[#E40714] px-4 pb-12 pt-10 lg:pt-[50px] lg:px-0">
                     <div className="text-center text-white">
@@ -81,7 +106,7 @@ export default function Contactform() {
                         >
                             Schedule Your Visit Today
                         </h2>
-                        <p className="mx-auto mt-3 max-w-[760px] text-[15px] lg:text-[16px] font-semibold leading-[23px] text-[#FFFFFF]">
+                        <p className="mx-auto mt-3 max-w-[760px] text-[15px] lg:text-[16px] leading-[23px] text-[#FFFFFF]">
                             Please fill the form below or call the numbers attached to each branch above to book an appointment.
                         </p>
                     </div>
@@ -100,16 +125,7 @@ export default function Contactform() {
                         ) : (
                         <form
                             className="grid grid-cols-1 gap-x-6 gap-y-[10px] lg:gap-y-5 md:grid-cols-2"
-                            onSubmit={(event) => {
-                                event.preventDefault();
-                                const missingOption = appointmentOptions.findIndex((option) => !option.date || !option.time);
-                                if (missingOption !== -1) {
-                                    setScheduleError(true);
-                                    document.getElementById(`${id}-preferredDate${missingOption + 1}`)?.focus();
-                                    return;
-                                }
-                                setSubmitted(true);
-                            }}
+                            onSubmit={handleSubmit}
                         >
                             <div>
                                 <label htmlFor={`${id}-fullName`} className="mb-2 block text-[14px] font-medium text-[#2D2D2D]">
@@ -206,12 +222,6 @@ export default function Contactform() {
                                     </div>
                                 </fieldset>
                             ))}
-                            {scheduleError && (
-                                <p role="alert" className="md:col-span-2 text-[14px] font-medium text-[#B00020]">
-                                    Choose a date and time for each of the three appointment options.
-                                </p>
-                            )}
-
                             <div className="relative">
                                 <label htmlFor={`${id}-gender`} className="mb-2 block text-[14px] font-medium text-[#2D2D2D]">
                                     Gender <span className="text-[#E40714]">*</span>
@@ -220,67 +230,57 @@ export default function Contactform() {
                                     id={`${id}-gender`}
                                     name="gender"
                                     placeholder="Choose an option"
-                                    options={[
-                                        { value: "female", label: "Female" },
-                                        { value: "male", label: "Male" },
-                                        { value: "other", label: "Other" },
-                                        { value: "prefer_not_to_say", label: "Prefer not to say" },
-                                    ]}
+                                    options={genderOptions}
+                                    required
                                 />
                             </div>
 
                             <div className="relative">
                                 <label htmlFor={`${id}-service`} className="mb-2 block text-[14px] font-medium text-[#2D2D2D]">
-                                    Service or department
+                                    Service or department <span className="text-[#E40714]">*</span>
                                 </label>
                                 <Dropdown
                                     id={`${id}-service`}
                                     name="service"
                                     placeholder="Choose a department"
                                     options={departmentOptions}
+                                    required
                                 />
                             </div>
 
                             <div className="relative">
                                 <label htmlFor={`${id}-branch`} className="mb-2 block text-[14px] font-medium text-[#2D2D2D]">
-                                    Preferred branch
+                                    Preferred branch <span className="text-[#E40714]">*</span>
                                 </label>
                                 <Dropdown
                                     id={`${id}-branch`}
                                     name="branch"
                                     placeholder="Choose a branch"
-                                    options={[
-                                        { value: "multi-specialist-vi", label: "Reddington Multi-Specialist Hospital V.I" },
-                                        { value: "ikeja", label: "Reddington Hospital Ikeja" },
-                                        { value: "lekki", label: "Reddington Care Hospital Lekki" },
-                                        { value: "maxy", label: "Reddington Maxy Super-Specialty Centre" },
-                                        { value: "purple-ray", label: "Purple Ray Diagnostic Centre" },
-                                        { value: "breast-gynae", label: "Reddington Breast and Gynaecology Centre" },
-                                        { value: "davidson", label: "Davidson Surgical and Critical Care Centre" },
-                                        { value: "bodycare", label: "The BodyCare Plastic Surgery Centre" },
-                                        { value: "wellness", label: "Reddington Wellness and Medical Check-Up Centre" },
-                                    ]}
+                                    options={branchOptions}
+                                    required
                                 />
                             </div>
 
                             <div className="md:col-span-2">
                                 <label htmlFor={`${id}-message`} className="mb-2 block text-[14px] font-medium text-[#2D2D2D]">
-                                    Reason for visit
+                                    Reason for visit <span className="text-[#E40714]">*</span>
                                 </label>
                                 <textarea
                                     id={`${id}-message`}
                                     name="message"
                                     placeholder="e.g. Follow-up consultation for knee pain"
                                     className="h-[184px] w-full resize-none rounded-[12px] border border-[#6F7271]/60 px-5 py-5 text-[16px] text-[#111] placeholder:text-[#6F7271] focus:outline-none focus:border-[#E40714]"
+                                    required
                                 />
                             </div>
 
                             <div className="md:col-span-2">
                                 <button
                                     type="submit"
-                                    className="h-[50px] w-full rounded-[12px] bg-[#E40714] px-6 text-[16px] font-semibold text-white transition-opacity hover:opacity-95 focus:outline-none"
+                                    disabled={isSubmitting}
+                                    className="h-[50px] w-full rounded-[12px] bg-[#E40714] px-6 text-[16px] font-semibold text-white transition-opacity hover:opacity-95 focus:outline-none disabled:cursor-wait disabled:opacity-70"
                                 >
-                                    Book Appointment
+                                    {isSubmitting ? "Sending request..." : "Book Appointment"}
                                 </button>
                             </div>
                         </form>
