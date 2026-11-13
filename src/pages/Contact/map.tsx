@@ -22,6 +22,11 @@ const contactBranches = [
 ];
 
 const emergencyBranches = contactBranches.slice(0, 3);
+const emergencyPhones: Record<number, string> = {
+    1: "07089270845",
+    2: "07078760874",
+    3: "08084078995",
+};
 
 export default function Map({
     emergencyOnly = false,
@@ -40,7 +45,9 @@ export default function Map({
                 id: branch.id,
                 title: branch.name,
                 subtitle: branch.address || branch.location,
-                phones: branch.contact ?? [],
+                phones: emergencyOnly
+                    ? [emergencyPhones[branch.id]]
+                    : branch.contact ?? [],
                 query: `${branch.name}, ${branch.location}`,
             }));
     }, [emergencyOnly]);
