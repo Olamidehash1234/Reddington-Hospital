@@ -49,16 +49,9 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
     )
 }
 
-const consultantTabs = [
-    { key: "in-house", label: "In-House Consultants" },
-    { key: "external", label: "Visiting / External Consultants" },
-] as const
-
-type ConsultantTab = (typeof consultantTabs)[number]["key"]
-
 export default function Doctors() {
     const [query, setQuery] = useState("")
-    const [activeTab, setActiveTab] = useState<ConsultantTab>("in-house")
+    const [activeTab, setActiveTab] = useState<"in-house" | "external">("in-house")
 
     const doctors = useMemo(() => {
         const source = activeTab === "in-house" ? inHouseDoctors : externalDoctors
@@ -87,24 +80,40 @@ export default function Doctors() {
                 </div>
             </div>
 
-            {/* Consultant tabs (In-House / Visiting-External) */}
-            <div className="flex flex-wrap items-center gap-[10px] lg:gap-[14px] mb-8 lg:mb-[40px]">
-                {consultantTabs.map((tab) => {
-                    const isActive = activeTab === tab.key
-                    return (
-                        <button
-                            key={tab.key}
-                            type="button"
-                            onClick={() => setActiveTab(tab.key)}
-                            className={`rounded-full px-[18px] py-[10px] text-[13px] lg:text-[14px] transition-colors ${isActive
+            {/* Consultant tabs (In-House / External) */}
+            <div className="mb-[28px] flex flex-col justify-center gap-[20px] lg:mb-[40px] lg:flex-row">
+                <div
+                    className="flex lg:rounded-[20px] mx-auto lg:w-auto w-[370px] items-center justify-center rounded-[16px] border border-[#E40714] p-[8px]"
+                    role="tablist"
+                    aria-label="Doctor groups"
+                >
+                    <button
+                        type="button"
+                        role="tab"
+                        aria-selected={activeTab === "in-house"}
+                        onClick={() => setActiveTab("in-house")}
+                        className={`lg:rounded-[20px] rounded-[16px] px-[18px] py-[12px] text-[13px] font-semibold transition-colors lg:px-[40px] lg:py-[18px] lg:text-[14px] ${
+                            activeTab === "in-house"
                                 ? "bg-[#E40714] text-white"
-                                : "bg-white text-[#2D2D2D] border border-[#ADB4BF] hover:border-[#E40714]"
-                                }`}
-                        >
-                            {tab.label}
-                        </button>
-                    )
-                })}
+                                : "bg-transparent text-[#E40714]"
+                        }`}
+                    >
+                        In - House Consultant
+                    </button>
+                    <button
+                        type="button"
+                        role="tab"
+                        aria-selected={activeTab === "external"}
+                        onClick={() => setActiveTab("external")}
+                        className={`lg:rounded-[20px] rounded-[14px] px-[18px] py-[12px] text-[13px] font-semibold transition-colors lg:px-[40px] lg:py-[18px] lg:text-[14px] ${
+                            activeTab === "external"
+                                ? "bg-[#E40714] text-white"
+                                : "bg-transparent text-[#E40714]"
+                        }`}
+                    >
+                        External Consultant
+                    </button>
+                </div>
             </div>
 
             {doctors.length > 0 ? (
