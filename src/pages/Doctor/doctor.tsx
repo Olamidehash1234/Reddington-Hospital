@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react"
-import { inHouseDoctors, type Doctor } from "../../data/doctors"
+import { inHouseDoctors, externalDoctors, type Doctor } from "../../data/doctors"
 import ResponsiveImage from "../../components/ResponsiveImage"
 
 function DoctorCard({ doctor }: { doctor: Doctor }) {
@@ -49,19 +49,28 @@ function DoctorCard({ doctor }: { doctor: Doctor }) {
     )
 }
 
+const consultantTabs = [
+    { key: "in-house", label: "In-House Consultants" },
+    { key: "external", label: "Visiting / External Consultants" },
+] as const
+
+type ConsultantTab = (typeof consultantTabs)[number]["key"]
+
 export default function Doctors() {
     const [query, setQuery] = useState("")
+    const [activeTab, setActiveTab] = useState<ConsultantTab>("in-house")
 
     const doctors = useMemo(() => {
+        const source = activeTab === "in-house" ? inHouseDoctors : externalDoctors
         const q = query.trim().toLowerCase()
-        if (!q) return inHouseDoctors
-        return inHouseDoctors.filter(
+        if (!q) return source
+        return source.filter(
             (doctor) =>
                 doctor.specialty.toLowerCase().includes(q) ||
                 doctor.name.toLowerCase().includes(q) ||
                 doctor.hospital.toLowerCase().includes(q)
         )
-    }, [query])
+    }, [query, activeTab])
 
     return (
         <div className="relative bg-[#E4071405] px-[16px] py-[40px] lg:px-[80px] lg:py-[40px]">
@@ -78,7 +87,25 @@ export default function Doctors() {
                 </div>
             </div>
 
-            {/* Consultant tabs (In-House / External) hidden for now — only in-house consultants are shown */}
+            {/* Consultant tabs (In-House / Visiting-External) */}
+            <div className="flex flex-wrap items-center gap-[10px] lg:gap-[14px] mb-8 lg:mb-[40px]">
+                {consultantTabs.map((tab) => {
+                    const isActive = activeTab === tab.key
+                    return (
+                        <button
+                            key={tab.key}
+                            type="button"
+                            onClick={() => setActiveTab(tab.key)}
+                            className={`rounded-full px-[18px] py-[10px] text-[13px] lg:text-[14px] transition-colors ${isActive
+                                ? "bg-[#E40714] text-white"
+                                : "bg-white text-[#2D2D2D] border border-[#ADB4BF] hover:border-[#E40714]"
+                                }`}
+                        >
+                            {tab.label}
+                        </button>
+                    )
+                })}
+            </div>
 
             {doctors.length > 0 ? (
                 <div className="grid grid-cols-1 gap-[28px] sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-[40px] lg:gap-y-[32px]">

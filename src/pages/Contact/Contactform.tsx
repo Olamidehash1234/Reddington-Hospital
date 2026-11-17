@@ -83,6 +83,18 @@ export default function Contactform() {
     useEffect(() => {
         if (!submitted) return;
 
+        const frameId = window.requestAnimationFrame(() => {
+            document
+                .querySelector("#contact-form [role='status']")
+                ?.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+
+        return () => window.cancelAnimationFrame(frameId);
+    }, [submitted]);
+
+    useEffect(() => {
+        if (!submitted) return;
+
         const timeoutId = window.setTimeout(() => {
             setAppointmentOptions(
                 Array.from({ length: 3 }, () => ({ date: undefined as Date | undefined, time: "" }))
