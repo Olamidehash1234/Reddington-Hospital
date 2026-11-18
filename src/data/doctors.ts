@@ -7,27 +7,35 @@ export type Doctor = {
     image: string
 }
 
-// PLACEHOLDER_IMG retired — doctors without a real photo are commented out for now
-const Chioma = "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1791842353/Dr_zsm27s.png"
+// Medical Directors are listed first. Hidden pending client confirmation (no photo or not on the
+// updated list): Dr. John-Ameh Audu, Dr. Latre Bakoshi, Dr. Tolu Onabowale, Dr. Nzeogwu.
+// Dr. Esther Adejinmi removed — she is now listed as Dr. Makinde (her new surname).
 
 export const inHouseDoctors: Doctor[] = [
     {
         id: 1,
         name: "Dr. Abiodun Osibamowo",
-        specialty: "Internal Medicine and Medical Director",
+        specialty: "Internal Medicine / Medical Director",
         hospital: "Reddington VI",
         type: "in-house",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630439/Dr_Oshibamwo.png_Consultant_Internal_Medcine__jqzhy7.png",
     },
-    // Removed from the consultant list per client (4 Nov 2026) — hidden pending confirmation:
-    // {
-    //     id: 2,
-    //     name: "Dr. John-Ameh Audu",
-    //     specialty: "Neonatologist",
-    //     hospital: "Reddington VI",
-    //     type: "in-house",
-    //     image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630440/Dr_Audu.png_Consultant_Neonatologist__mq1muz.png",
-    // },
+    {
+        id: 36,
+        name: "Dr. Fisayo Balogun",
+        specialty: "Obstetrician and Gynaecologist / Medical Director",
+        hospital: "Reddington Ikeja",
+        type: "in-house",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630293/Dr_Fisayo_Balogun.png_Consultant_O_G_MD_Ikeja_o0xoag.png",
+    },
+    {
+        id: 37,
+        name: "Dr. Jaho",
+        specialty: "Cardiologist / Medical Director",
+        hospital: "Reddington Lekki",
+        type: "in-house",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630288/Dr_Jaho.png_Consultant_Cardiologist_CD_Lekki_ym4qje.png",
+    },
     {
         id: 3,
         name: "Dr. Muyiwa Fagbohun",
@@ -42,7 +50,7 @@ export const inHouseDoctors: Doctor[] = [
         specialty: "Obstetrician and Gynaecologist",
         hospital: "Reddington Breast & Gynae",
         type: "in-house",
-        image: Chioma,
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1791842353/Dr_zsm27s.png",
     },
     {
         id: 5,
@@ -53,6 +61,14 @@ export const inHouseDoctors: Doctor[] = [
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr_rr7ac5.png",
     },
     {
+        id: 6,
+        name: "Dr. Paschal Nwose",
+        specialty: "General Surgeon",
+        hospital: "Reddington VI",
+        type: "in-house",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630299/Dr_Nwose.png_Consultant_General_Surgeon_ars4ec.png",
+    },
+    {
         id: 7,
         name: "Dr. Mariam Yusuf",
         specialty: "Paediatrician",
@@ -60,15 +76,6 @@ export const inHouseDoctors: Doctor[] = [
         type: "in-house",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630443/Dr_Yusuff.png_Consultant_Paediatrician__fvunxg.png",
     },
-    // Not on Reddington's updated consultant list — hidden pending confirmation:
-    // {
-    //     id: 8,
-    //     name: "Dr. Latre Bakoshi",
-    //     specialty: "Dental Surgeon",
-    //     hospital: "Reddington VI",
-    //     type: "in-house",
-    //     image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1775663894/DR._LATRE_BAKOSHI_gnyjqk.jpg',
-    // },
     {
         id: 9,
         name: "Dr. Chinyere Uzoma",
@@ -79,28 +86,11 @@ export const inHouseDoctors: Doctor[] = [
     },
     {
         id: 10,
-        name: "Dr. Babajide Lawson ",
+        name: "Dr. Babajide Lawson",
         specialty: "Orthopaedic Surgeon",
         hospital: "Reddington VI",
         type: "in-house",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630730/Dr_Lawson.png_Consultant_Orthopedic_trauma_Surgeon_r4wmzo.png",
-    },
-    // No photo yet:
-    // {
-    //     id: 11,
-    //     name: "Dr. Tolu Onabowale",
-    //     specialty: "Hematologist",
-    //     hospital: "Reddington VI",
-    //     type: "in-house",
-    //     image: PLACEHOLDER_IMG,
-    // },
-    {
-        id: 12,
-        name: "Dr. Esther Adejinmi",
-        specialty: "Primary care and Wellness services",
-        hospital: "Reddington VI",
-        type: "in-house",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102728/Dr_Adejinmi_-_Primary_Care_and_Wellness_Services_dt7fwn.jpg',
     },
     {
         id: 13,
@@ -118,15 +108,14 @@ export const inHouseDoctors: Doctor[] = [
         type: "in-house",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630280/Dr_Akude.png_Consultant_Family_Physician__ih2nkk.png",
     },
-    // Commented out:
-    // {
-    //     id: 16,
-    //     name: "Dr. Nzeogwu",
-    //     specialty: "Radiologist",
-    //     hospital: "Reddington VI",
-    //     type: "in-house",
-    //     image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/q_auto/f_auto/v1775664564/DR._NWACHUKWU_NZEGWU_jejygy.jpg',
-    // },
+    {
+        id: 15,
+        name: "Dr. Olushola Omoyele",
+        specialty: "Radiologist",
+        hospital: "Reddington VI",
+        type: "in-house",
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr._Omoyele_VI_jyuqgr.png",
+    },
     {
         id: 20,
         name: "Dr. Otegbeye",
@@ -165,7 +154,7 @@ export const inHouseDoctors: Doctor[] = [
         specialty: "Family Medicine",
         hospital: "Reddington VI",
         type: "in-house",
-        image: 'https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102851/Dr_Jimoh_-_Family_Medicine_ythj2o.jpg',
+        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102851/Dr_Jimoh_-_Family_Medicine_ythj2o.jpg",
     },
     {
         id: 25,
@@ -248,22 +237,6 @@ export const inHouseDoctors: Doctor[] = [
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630458/Dr_Wahab.png_Consultant_Radiologist_Locum_hnmvaf.png",
     },
     {
-        id: 36,
-        name: "Dr. Fisayo Balogun",
-        specialty: "Obstetrician and Gynaecologist",
-        hospital: "Reddington Ikeja",
-        type: "in-house",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630293/Dr_Fisayo_Balogun.png_Consultant_O_G_MD_Ikeja_o0xoag.png",
-    },
-    {
-        id: 37,
-        name: "Dr. Jaho",
-        specialty: "Cardiologist",
-        hospital: "Reddington Lekki",
-        type: "in-house",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630288/Dr_Jaho.png_Consultant_Cardiologist_CD_Lekki_ym4qje.png",
-    },
-    {
         id: 38,
         name: "Dr. Ogwuzie",
         specialty: "Radiologist",
@@ -290,23 +263,10 @@ export const inHouseDoctors: Doctor[] = [
 ]
 
 export const externalDoctors: Doctor[] = [
-    // Independent consultants (per the client's CONSULTANTS list):
-    {
-        id: 6,
-        name: "Dr. Paschal Nwose",
-        specialty: "General Surgeon",
-        hospital: "Reddington VI",
-        type: "external",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630299/Dr_Nwose.png_Consultant_General_Surgeon_ars4ec.png",
-    },
-    {
-        id: 15,
-        name: "Dr. Olushola Omoyele",
-        specialty: "Radiologist",
-        hospital: "Reddington VI",
-        type: "external",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr._Omoyele_VI_jyuqgr.png",
-    },
+    // Independent & locum consultants (per the client's CONSULTANTS list).
+    // Hidden pending confirmation: Dr. Odunayo Ikueorowo, Prof. Edward Jolayemi,
+    // Prof. Olufemi Ojo, Dr. Viola Ikebudu, Dr. Busola Quadri, Dr. Olumide Okeowo,
+    // Dr. Florentina Okeke, Dr. Johnbull Bright.
     {
         id: 17,
         name: "Dr. Alawode",
@@ -347,7 +307,6 @@ export const externalDoctors: Doctor[] = [
         type: "external",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630750/Dr_Adewoyin.png_Consultant_Hematologist_locum_oyys7y.png",
     },
-    // Locum consultants (per the client's CONSULTANTS list):
     {
         id: 42,
         name: "Dr. Chinwe Onyia",
@@ -364,7 +323,4 @@ export const externalDoctors: Doctor[] = [
         type: "external",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794905561/Dr._Seyi_Roberts_-_Neurologist_syk7tq.png",
     },
-    // Not on the client's current consultant list — kept hidden pending confirmation:
-    // Dr. Odunayo Ikueorowo, Prof. Edward Jolayemi, Prof. Olufemi Ojo, Dr. Viola Ikebudu,
-    // Dr. Busola Quadri, Dr. Olumide Okeowo, Dr. Florentina Okeke, Dr. Johnbull Bright
 ]

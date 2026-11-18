@@ -15,7 +15,7 @@ function buildMapEmbedUrl(query: string) {
 
 const contactBranches = [
     "Reddington Multi-Specialist Hospital Victoria Island",
-    "Reddington Hospital Ikeja",
+    "Reddington Multi-Specialist Hospital Ikeja",
     "Reddington Lekki Hospital",
     "Reddington Maxy Super Speciality Centre",
     "Reddington Breast and Gynae Centre",

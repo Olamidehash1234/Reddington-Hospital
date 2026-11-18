@@ -4,6 +4,7 @@ interface DoctorCardProps {
         name: string;
         specialization: string;
         image: string;
+        type?: "in-house" | "external";
     };
     className?: string;
 }
@@ -41,6 +42,11 @@ export default function DoctorCard({ doctor, className = '' }: DoctorCardProps) 
                 >
                     {doctor.name}
                 </h3>
+                {doctor.type && (
+                    <p className="text-white/80 text-[11px] leading-[14px] font-semibold uppercase tracking-[0.5px]">
+                        {doctor.type === "external" ? "External Consultant" : "In-House Consultant"}
+                    </p>
+                )}
                 <div className="w-[42px] h-[1px] bg-[#FFFFFF] mt-[0px]"></div>
 
                 {/* Doctor Specialization */}
