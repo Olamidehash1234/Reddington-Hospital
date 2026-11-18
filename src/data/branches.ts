@@ -10,6 +10,7 @@ export type Doctor = {
     name: string
     specialization: string
     image: string
+    type?: "in-house" | "external"
 }
 
 export type Branch = {
@@ -111,14 +112,14 @@ export const branches: Branch[] = [
             { name: "Urology", image: SvcUrology },
         ],
         doctors: [
-            { id: 1, name: "Dr. Abiodun Osibamowo", specialization: "Medical Director", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630439/Dr_Oshibamwo.png_Consultant_Internal_Medcine__jqzhy7.png" },
-            { id: 2, name: "DR. LAWSON BABAJIDE", specialization: "CONSULTANT ORTHO SURG", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630730/Dr_Lawson.png_Consultant_Orthopedic_trauma_Surgeon_r4wmzo.png" },
-            { id: 3, name: "DR. OMOYELE OLUSOLA", specialization: "CONSULTANT RADIOLOGIST", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr._Omoyele_VI_jyuqgr.png" },
-            // { id: 4, name: "DR. JIMOH ADEKUNLE", specialization: "CONSULTANT FAMILY PHYSICIAN", image: DOCTOR_IMG }, // no new photo / not in updated list
-            // { id: 5, name: "DR. OKUNEYE TAOFEEK", specialization: "CONSULTANT FAMILY PHYSICIAN", image: DOCTOR_IMG }, // no photo yet
-            { id: 6, name: "DR. OSHUN JOY", specialization: "CARDIOLOGY CONSULTANT", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr.Joy_Oshun_qkgjqy.png" },
-            { id: 7, name: "DR. NWOSE PASCHAL", specialization: "CONSULTANT GENERAL SURGEON", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630299/Dr_Nwose.png_Consultant_General_Surgeon_ars4ec.png" },
-            { id: 8, name: "DR. ALAWODE ADENIYI", specialization: "CONSULTANT INTENSIVIST/ANAESTHESIA", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630593/Dr_Alawode.png_consultant_anesthesiologist_Intensivist__xrwjko.png" },
+            { id: 1, name: "Dr. Abiodun Osibamowo", specialization: "Consultant Internal Medicine / Medical Director", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630439/Dr_Oshibamwo.png_Consultant_Internal_Medcine__jqzhy7.png", type: "in-house" },
+            { id: 2, name: "DR. LAWSON BABAJIDE", specialization: "Consultant Orthopaedic Surgeon", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630730/Dr_Lawson.png_Consultant_Orthopedic_trauma_Surgeon_r4wmzo.png", type: "in-house" },
+            { id: 3, name: "DR. OMOYELE OLUSOLA", specialization: "Consultant Radiologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr._Omoyele_VI_jyuqgr.png", type: "in-house" },
+            // { id: 4, name: "DR. JIMOH ADEKUNLE", specialization: "Consultant Family Physician", image: DOCTOR_IMG }, // no new photo / not in updated list
+            // { id: 5, name: "DR. OKUNEYE TAOFEEK", specialization: "Consultant Family Physician", image: DOCTOR_IMG }, // no photo yet
+            { id: 6, name: "DR. OSHUN JOY", specialization: "Consultant Cardiologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr.Joy_Oshun_qkgjqy.png", type: "in-house" },
+            { id: 7, name: "DR. NWOSE PASCHAL", specialization: "Consultant General Surgeon", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630299/Dr_Nwose.png_Consultant_General_Surgeon_ars4ec.png", type: "in-house" },
+            { id: 8, name: "DR. ALAWODE ADENIYI", specialization: "Consultant Intensivist / Anaesthetist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630593/Dr_Alawode.png_consultant_anesthesiologist_Intensivist__xrwjko.png", type: "external" },
             // { id: 9, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG }, // no photo yet
         ],
         servicesDescription: "Multi and Sub-Specialty care across all disciplines",
@@ -129,11 +130,11 @@ export const branches: Branch[] = [
     },
     {
         id: 2,
-        name: "Reddington Hospital Ikeja",
+        name: "Reddington Multi-Specialist Hospital Ikeja",
         location: "39 Isaac John Street, GRA, Ikeja",
         address: "39 Isaac John Street, GRA, Ikeja",
-        description: "For nearly two decades, Reddington Hospital Ikeja has served as a trusted healthcare partner to com...",
-        fullDescription: "For nearly two decades, Reddington Hospital Ikeja has served as a trusted healthcare partner to communities across the Lagos mainland. This one-stop multi-specialist facility brings together experienced consultants, comprehensive diagnostic capabilities, and emergency care in a convenient location, ensuring mainland residents have access to the same quality care our group is renowned for.",
+        description: "For nearly two decades, Reddington Multi-Specialist Hospital Ikeja has served as a trusted healthcare partner to com...",
+        fullDescription: "For nearly two decades, Reddington Multi-Specialist Hospital Ikeja has served as a trusted healthcare partner to communities across the Lagos mainland. This one-stop multi-specialist facility brings together experienced consultants, comprehensive diagnostic capabilities, and emergency care in a convenient location, ensuring mainland residents have access to the same quality care our group is renowned for.",
         image: Ikeja,
         services: [
             { name: "Anaesthesia", image: SERVICE_PLACEHOLDER },
@@ -158,13 +159,13 @@ export const branches: Branch[] = [
             { name: "Urology", image: SvcUrology },
         ],
         doctors: [
-            { id: 5, name: "DR. OLUFISAYO BALOGUN", specialization: "Consultant Obstetrician and Gynaecologist / Medical Director", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630293/Dr_Fisayo_Balogun.png_Consultant_O_G_MD_Ikeja_o0xoag.png" },
-            { id: 6, name: "DR. VALENTINE OKWARA", specialization: "Consultant Obstetrician and Gynaecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630719/Dr_Valentine_Okwara.png_Consultant_O_G__msck8s.png" },
-            { id: 7, name: "DR. TAFA OSUNLAJA", specialization: "CONSULTANT ANAESTHETIST", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/DR_bxspyk.png" },
-            { id: 8, name: "DR. EYITAYO OLONADE", specialization: "CONSULTANT PAEDIATRICIAN", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630559/Dr_Olonade.png_Consultant_Paediatrician__rlsevb.png" },
-            { id: 9, name: "DR. EMMANUEL CHUKWURAH", specialization: "CONSULTANT RADIOLOGIST", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630596/Dr_Chukwura.png_Consultant_Radiologist__yvvdgk.png" },
-            { id: 10, name: "DR. KENNETH OCHULOR", specialization: "CONSULTANT CARDIOLOGIST", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630873/Dr_Ochulor_Kenneth.png_Consultant_Cardiologist__vg9xzi.png" },
-            { id: 10, name: "DR. DORKA DORA BEKEE", specialization: "CONSULTANT PAEDIATRICIAN", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630896/Dr_Bekee.png_Consultant_Paediatrician__mnpfky.png" },
+            { id: 5, name: "DR. OLUFISAYO BALOGUN", specialization: "Consultant Obstetrician and Gynaecologist / Medical Director", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630293/Dr_Fisayo_Balogun.png_Consultant_O_G_MD_Ikeja_o0xoag.png", type: "in-house" },
+            { id: 6, name: "DR. VALENTINE OKWARA", specialization: "Consultant Obstetrician and Gynaecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630719/Dr_Valentine_Okwara.png_Consultant_O_G__msck8s.png", type: "in-house" },
+            { id: 7, name: "DR. TAFA OSUNLAJA", specialization: "Consultant Anaesthetist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/DR_bxspyk.png", type: "in-house" },
+            { id: 8, name: "DR. EYITAYO OLONADE", specialization: "Consultant Paediatrician", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630559/Dr_Olonade.png_Consultant_Paediatrician__rlsevb.png", type: "in-house" },
+            { id: 9, name: "DR. EMMANUEL CHUKWURAH", specialization: "Consultant Radiologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630596/Dr_Chukwura.png_Consultant_Radiologist__yvvdgk.png", type: "in-house" },
+            { id: 10, name: "DR. KENNETH OCHULOR", specialization: "Consultant Cardiologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630873/Dr_Ochulor_Kenneth.png_Consultant_Cardiologist__vg9xzi.png", type: "in-house" },
+            { id: 11, name: "DR. DORKA DORA BEKEE", specialization: "Consultant Paediatrician", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630896/Dr_Bekee.png_Consultant_Paediatrician__mnpfky.png", type: "in-house" },
         ],
         emails: ["customerservice.ikeja@reddingtonhospital.com"],
         contact: ["08092804119", "09093928064", "07078760874"],
@@ -198,10 +199,10 @@ export const branches: Branch[] = [
             { name: "Surgical Services", image: SvcSurgery },
         ],
         doctors: [
-            { id: 9, name: "Dr. Muyiwa Fagbohun", specialization: "Consultant Gynecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630586/Dr_Fagbohun.png_Consultant_O_G_gpsixu.png" },
-            { id: 10, name: "Dr. Jaho", specialization: "Consultant Cardiologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630288/Dr_Jaho.png_Consultant_Cardiologist_CD_Lekki_ym4qje.png" },
-            { id: 11, name: "Dr. Grace Andero", specialization: "Consultant Family Physician", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630732/Dr_Grace_Andero.png_Consultant_Family_Physician_Lekki_weioge.png" },
-            { id: 12, name: "Dr. Ajayi", specialization: "Paediatric SR", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790631020/Dr_Ajayi.png_Paediatric_SR_gzgmv9.png" },
+            { id: 10, name: "Dr. Jaho", specialization: "Consultant Cardiologist / Medical Director", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630288/Dr_Jaho.png_Consultant_Cardiologist_CD_Lekki_ym4qje.png", type: "in-house" },
+            { id: 9, name: "Dr. Muyiwa Fagbohun", specialization: "Consultant Gynaecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630586/Dr_Fagbohun.png_Consultant_O_G_gpsixu.png", type: "in-house" },
+            { id: 11, name: "Dr. Grace Andero", specialization: "Consultant Family Physician", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630732/Dr_Grace_Andero.png_Consultant_Family_Physician_Lekki_weioge.png", type: "in-house" },
+            { id: 12, name: "Dr. Ajayi", specialization: "Paediatric Senior Registrar", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790631020/Dr_Ajayi.png_Paediatric_SR_gzgmv9.png", type: "in-house" },
         ],
         emails: ["customerservice@reddingtonlekki.com"],
         contact: ["09070633144", "08140848692"],
@@ -282,8 +283,8 @@ export const branches: Branch[] = [
             { name: "Obstetrics & Gynaecology", image: SvcOandG },
         ],
         doctors: [
-            { id: 21, name: "Dr. John Afolabi", specialization: "Consultant Obstetrician and Gynaecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr_rr7ac5.png" },
-            { id: 22, name: "Dr. Chioma Ojiegbe", specialization: "Consultant Obstetrician and Gynaecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1791842353/Dr_zsm27s.png" },
+            { id: 21, name: "Dr. John Afolabi", specialization: "Consultant Obstetrician and Gynaecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/Dr_rr7ac5.png", type: "in-house" },
+            { id: 22, name: "Dr. Chioma Ojiegbe", specialization: "Consultant Obstetrician and Gynaecologist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1791842353/Dr_zsm27s.png", type: "in-house" },
             // { id: 21, name: "Dr. Femi Okafor", specialization: "Breast Surgeon", image: DOCTOR_IMG }, // no photo yet
             // { id: 22, name: "Dr. Nneka Ezeoke", specialization: "Consultant Gynaecologist", image: DOCTOR_IMG }, // no photo yet
             // { id: 23, name: "Dr. Akin Oluwaseun", specialization: "Ultrasound Specialist", image: DOCTOR_IMG }, // no photo yet

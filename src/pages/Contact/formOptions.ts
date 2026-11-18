@@ -31,8 +31,8 @@ export const genderOptions = [
 
 export const branchOptions = [
     { value: "multi-specialist-vi", label: "Reddington Multi-Specialist Hospital V.I" },
-    { value: "ikeja", label: "Reddington Hospital Ikeja" },
-    { value: "lekki", label: "Reddington Care Hospital Lekki" },
+    { value: "ikeja", label: "Reddington Multi-Specialist Hospital Ikeja" },
+    { value: "lekki", label: "Reddington Lekki Hospital" },
     { value: "maxy", label: "Reddington Maxy Super-Specialty Centre" },
     { value: "purple-ray", label: "Purple Ray Diagnostic Centre" },
     { value: "breast-gynae", label: "Reddington Breast and Gynaecology Centre" },
