@@ -260,6 +260,14 @@ export const inHouseDoctors: Doctor[] = [
         type: "in-house",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/DR_bxspyk.png",
     },
+    {
+        id: 46,
+        name: "Dr. Michael Adejumo",
+        specialty: "Dental Surgeon",
+        hospital: "Reddington VI",
+        type: "in-house",
+        image: "/doctors/dr-michael-adejumo.webp",
+    },
 ]
 
 export const externalDoctors: Doctor[] = [
@@ -322,5 +330,21 @@ export const externalDoctors: Doctor[] = [
         hospital: "Reddington VI",
         type: "external",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794905561/Dr._Seyi_Roberts_-_Neurologist_syk7tq.png",
+    },
+    {
+        id: 44,
+        name: "Dr. Olubukola Fasina",
+        specialty: "Ear, Nose & Throat Surgeon",
+        hospital: "Reddington VI",
+        type: "external",
+        image: "/doctors/dr-olubukola-fasina.webp",
+    },
+    {
+        id: 45,
+        name: "Dr. Bright Ateraye",
+        specialty: "Family Physician / Diabetologist",
+        hospital: "Reddington VI",
+        type: "external",
+        image: "/doctors/dr-bright-ateraye.webp",
     },
 ]
