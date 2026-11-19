@@ -121,6 +121,9 @@ export const branches: Branch[] = [
             { id: 7, name: "DR. NWOSE PASCHAL", specialization: "Consultant General Surgeon", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630299/Dr_Nwose.png_Consultant_General_Surgeon_ars4ec.png", type: "in-house" },
             { id: 8, name: "DR. ALAWODE ADENIYI", specialization: "Consultant Intensivist / Anaesthetist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630593/Dr_Alawode.png_consultant_anesthesiologist_Intensivist__xrwjko.png", type: "external" },
             // { id: 9, name: "Dr. Jimoh Aderounle", specialization: "Consultant Family Physician", image: DOCTOR_IMG }, // no photo yet
+            { id: 10, name: "Dr. Chinwe Onyia", specialization: "Consultant Gastroenterologist / Hepatologist & Endoscopist", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794905572/Dr._Chinwe_Philomena_Onyia_-_Gastror_cgje1f.png", type: "external" },
+            { id: 11, name: "Dr. Seyi Roberts", specialization: "Consultant Neurologist & Electroencephalographer", image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1794905561/Dr._Seyi_Roberts_-_Neurologist_syk7tq.png", type: "external" },
+            { id: 12, name: "Dr. Bright Ateraye", specialization: "Consultant Family Physician / Diabetologist", image: "/doctors/dr-bright-ateraye.webp", type: "external" },
         ],
         servicesDescription: "Multi and Sub-Specialty care across all disciplines",
         emails: ["customerservice.vi@reddingtonhospital.com"],
@@ -229,6 +232,8 @@ export const branches: Branch[] = [
             // { id: 13, name: "Dr. Kunle Fadeji", specialization: "Specialist Consultant", image: DOCTOR_IMG }, // no photo yet
             // { id: 14, name: "Dr. Adekunle Adeniyi", specialization: "Diagnostic Expert", image: DOCTOR_IMG }, // no photo yet
             // { id: 15, name: "Dr. Sade Okafor", specialization: "Day Surgery Specialist", image: DOCTOR_IMG }, // no photo yet
+            { id: 16, name: "Dr. Olubukola Fasina", specialization: "Consultant Ear, Nose & Throat Surgeon", image: "/doctors/dr-olubukola-fasina.webp", type: "external" },
+            { id: 17, name: "Dr. Michael Adejumo", specialization: "Dental Surgeon", image: "/doctors/dr-michael-adejumo.webp", type: "in-house" },
 
         ],
         emails: ["customerservice@maxycentre.com"],
