@@ -262,7 +262,7 @@ export const inHouseDoctors: Doctor[] = [
     },
     {
         id: 46,
-        name: "Dr. Michael Adejumo",
+        name: "Dr. Adejumo Michael Olamilekan",
         specialty: "Dental Surgeon",
         hospital: "Reddington VI",
         type: "in-house",
@@ -275,6 +275,7 @@ export const externalDoctors: Doctor[] = [
     // Hidden pending confirmation: Dr. Odunayo Ikueorowo, Prof. Edward Jolayemi,
     // Prof. Olufemi Ojo, Dr. Viola Ikebudu, Dr. Busola Quadri, Dr. Olumide Okeowo,
     // Dr. Florentina Okeke, Dr. Johnbull Bright.
+    // Dr. Joy Nnenna Uchechukwu removed at the client's request.
     {
         id: 17,
         name: "Dr. Alawode",
@@ -282,14 +283,6 @@ export const externalDoctors: Doctor[] = [
         hospital: "Reddington VI",
         type: "external",
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630593/Dr_Alawode.png_consultant_anesthesiologist_Intensivist__xrwjko.png",
-    },
-    {
-        id: 18,
-        name: "Dr. Uchechukwu",
-        specialty: "Gastroenterologist",
-        hospital: "Reddington VI",
-        type: "external",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630433/Dr_Uchechukwu.png_Consultant_Gastroenterologist_Locum_okr0qf.png",
     },
     {
         id: 19,
@@ -317,7 +310,7 @@ export const externalDoctors: Doctor[] = [
     },
     {
         id: 42,
-        name: "Dr. Chinwe Onyia",
+        name: "Dr. Chinwe Philomena Onyia",
         specialty: "Gastroenterologist / Hepatologist & Endoscopist",
         hospital: "Reddington VI",
         type: "external",
