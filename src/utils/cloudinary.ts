@@ -5,6 +5,7 @@ export type CloudinaryImageOptions = {
     height?: number;
     crop?: CloudinaryCropMode;
     gravity?: string;
+    zoom?: number;
     quality?: string | number;
     format?: "auto" | "webp" | "avif" | "jpg" | "png" | "svg";
     dpr?: "auto" | number;
@@ -32,6 +33,7 @@ export function buildCloudinaryUrl(src: string, options: CloudinaryImageOptions 
         height,
         crop = "fill",
         gravity,
+        zoom,
         quality = "auto",
         format = "auto",
         dpr = "auto",
@@ -45,6 +47,7 @@ export function buildCloudinaryUrl(src: string, options: CloudinaryImageOptions 
         width ? `w_${Math.round(width)}` : "",
         height ? `h_${Math.round(height)}` : "",
         gravity ? `g_${gravity}` : "",
+        zoom ? `z_${zoom}` : "",
     ].filter(Boolean);
 
     const [prefix, uploadAndRest] = src.split("/upload/");
