@@ -149,14 +149,6 @@ export const inHouseDoctors: Doctor[] = [
         image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1790630417/Dr_Sam_Amaihan.png_Consultant_Family_Physician_Locum_kz5gsn.png",
     },
     {
-        id: 24,
-        name: "Dr. Adekunle Jimoh",
-        specialty: "Family Medicine",
-        hospital: "Reddington VI",
-        type: "in-house",
-        image: "https://res.cloudinary.com/dbe6jr3nj/image/upload/v1781102851/Dr_Jimoh_-_Family_Medicine_ythj2o.jpg",
-    },
-    {
         id: 25,
         name: "Dr. Ajayi",
         specialty: "Paediatric SR",
